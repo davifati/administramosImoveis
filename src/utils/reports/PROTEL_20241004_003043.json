@@ -1,0 +1,890 @@
+[
+  {
+    "rpa": "PROTEL",
+    "operation": "0 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "0 - Preenchendo #usuario_login => 4337021004",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "0 - Preenchendo #usuario_senha => 7137",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "0 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "1 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "1 - Preenchendo #usuario_login => 4337010704",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "1 - Preenchendo #usuario_senha => 1156",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "1 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "2 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "2 - Preenchendo #usuario_login => 173201030600",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "2 - Preenchendo #usuario_senha => 1359",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "2 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "3 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "3 - Preenchendo #usuario_login => 3963011001",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "3 - Preenchendo #usuario_senha => 3805",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "3 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "4 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "4 - Preenchendo #usuario_login => 238601030800",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "4 - Preenchendo #usuario_senha => 4064",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "4 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "5 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "5 - Preenchendo #usuario_login => 091002060200",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "5 - Preenchendo #usuario_senha => 656",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "5 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "6 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "6 - Preenchendo #usuario_login => 3963020501",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "6 - Preenchendo #usuario_senha => 3428",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "6 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "7 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "7 - Preenchendo #usuario_login => 3963011002",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "7 - Preenchendo #usuario_senha => 426",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "7 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "8 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "8 - Preenchendo #usuario_login => 050501060400",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "8 - Preenchendo #usuario_senha => 0865",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "8 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "9 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "9 - Preenchendo #usuario_login => 300201101400",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "9 - Preenchendo #usuario_senha => 1489",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "9 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "10 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "10 - Preenchendo #usuario_login => 050502040800",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "10 - Preenchendo #usuario_senha => 0368",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "10 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "11 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "11 - Preenchendo #usuario_login => 3963020302",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "11 - Preenchendo #usuario_senha => 7149",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "11 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "12 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "12 - Preenchendo #usuario_login => 2808Gr220700",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "12 - Preenchendo #usuario_senha => 2692",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "12 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "13 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "13 - Preenchendo #usuario_login => 194602120500 ",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "13 - Preenchendo #usuario_senha => 5339",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "13 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "14 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "14 - Preenchendo #usuario_login => 4145011310",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "14 - Preenchendo #usuario_senha => 6024",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "14 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "15 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "15 - Preenchendo #usuario_login => 229901010300",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "15 - Preenchendo #usuario_senha => 1915",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "15 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "16 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "16 - Preenchendo #usuario_login => 4145011012",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "16 - Preenchendo #usuario_senha => 5772",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "16 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "17 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "17 - Preenchendo #usuario_login => 091001020500",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "17 - Preenchendo #usuario_senha => 0088",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "17 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "18 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "18 - Preenchendo #usuario_login => 091002010100",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "18 - Preenchendo #usuario_senha => 0078",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "18 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "19 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "19 - Preenchendo #usuario_login => 050501080300",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "19 - Preenchendo #usuario_senha => 0066",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "19 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "20 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "20 - Preenchendo #usuario_login => 211501050400",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "20 - Preenchendo #usuario_senha => 9688",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "20 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "21 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "21 - Preenchendo #usuario_login => 173201030600",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "21 - Preenchendo #usuario_senha => 1359",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "21 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "22 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "22 - Preenchendo #usuario_login => 3963011001",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "22 - Preenchendo #usuario_senha => 3805",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "22 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "23 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "23 - Preenchendo #usuario_login => 238601030800",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "23 - Preenchendo #usuario_senha => 4064",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "23 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "24 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "24 - Preenchendo #usuario_login => 091002060200",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "24 - Preenchendo #usuario_senha => 656",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "24 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "25 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "25 - Preenchendo #usuario_login => 3963011002",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "25 - Preenchendo #usuario_senha => 426",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "25 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "26 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "26 - Preenchendo #usuario_login => 050501060400",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "26 - Preenchendo #usuario_senha => 0865",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "26 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "27 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "27 - Preenchendo #usuario_login => 300201101400",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "27 - Preenchendo #usuario_senha => 1489",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "27 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "28 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "28 - Preenchendo #usuario_login => 050502040800",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "28 - Preenchendo #usuario_senha => 0368",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "28 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "29 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "29 - Preenchendo #usuario_login => 3963020302",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "29 - Preenchendo #usuario_senha => 7149",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "29 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "30 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "30 - Preenchendo #usuario_login => 2808Gr220700",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "30 - Preenchendo #usuario_senha => 2692",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "30 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "31 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "31 - Preenchendo #usuario_login => 243004010600",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "31 - Preenchendo #usuario_senha => 3589",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "31 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "32 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "32 - Preenchendo #usuario_login => 194602120500 ",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "32 - Preenchendo #usuario_senha => 5339",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "32 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "33 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "33 - Preenchendo #usuario_login => 4145011310",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "33 - Preenchendo #usuario_senha => 6024",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "33 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "34 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "34 - Preenchendo #usuario_login => 229901010300",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "34 - Preenchendo #usuario_senha => 1915",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "34 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "35 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "35 - Preenchendo #usuario_login => 091001020500",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "35 - Preenchendo #usuario_senha => 0088",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "35 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "36 - Abrindo Página => https://condominio.protel.com.br/login",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "36 - Preenchendo #usuario_login => 091002010100",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "36 - Preenchendo #usuario_senha => 0078",
+    "result": null
+  },
+  "ok",
+  {
+    "rpa": "PROTEL",
+    "operation": "36 - Tentando localizar => #botao_login",
+    "result": null
+  },
+  "ok"
+]
