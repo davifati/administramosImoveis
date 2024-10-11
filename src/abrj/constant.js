@@ -4,8 +4,8 @@ PDF_DOWNLOAD_FOLDER: "/Users/davidlima/Documents/WSPACE/gridweb/bill-bots/downlo
 
 // AWS
 
-export const AWS_ACCESS_KEY = "HCAyV7GNAz2MHhXl/Mub+AZXqiOAgx+q6ruorsK1"
-export const AWS_KEY_ID = "AKIA2OAJT7MO6MSASCVC"
+export const AWS_ACCESS_KEY = ""
+export const AWS_KEY_ID = ""
 
 
 export const ENVVAR = {
