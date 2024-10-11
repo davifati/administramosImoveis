@@ -14,11 +14,11 @@ export const ENVVAR = {
     DB_USER: "",
     DB_PASSWORD: "",
 
-    RPA_BCF_URL: "https://app.bcfadm.com.br/Index.aspx",
+    RPA_BCF_URL: "",
     RPA_BCF_LOGIN: "",
     RPA_BCF_PASSWORD: "",
 
-    RPA_SUPERLOGICA_LOGIN: "administrativo1@administramosimoveis.com.br",
+    RPA_SUPERLOGICA_LOGIN: "",
     RPA_SUPERLOGICA_PASSWORD: "",
 
     RPA_APSA_LOGIN: "",
