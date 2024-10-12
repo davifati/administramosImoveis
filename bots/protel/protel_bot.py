@@ -1,0 +1,45 @@
+from bots.protel.protel_login_page import ProtelLoginPage
+from bots.protel.protel_home_page import ProtelHomePage
+from bots.protel.protel_download_page import ProtelDownloadPage
+from common.driver_config import WebDriverConfig
+from common.utils import DynamoDBQuery, admin_login_list
+
+class ProtelBot:
+    def __init__(self):
+        self.driver = WebDriverConfig.get_firefox_driver(headless=False)
+        self.login_page = ProtelLoginPage(self.driver)
+        self.home_page = ProtelHomePage(self.driver)
+        self.download_page = ProtelDownloadPage(self.driver)
+
+    def run(self, username, password):
+        try:
+            self.login_page.login(username, password)
+            
+            if self.home_page.check_login_success():
+                self.home_page.click_boleto()
+            
+                boleto_disponivel = self.download_page.check_boleto()
+
+                if boleto_disponivel:
+                    print("Download do boleto realizado com sucesso.")
+                else:
+                    print("Nenhum boleto disponível para download.")
+        finally:
+            self.driver.quit()
+            print("Concluído com sucesso.")
+
+if __name__ == "__main__":
+
+    query = DynamoDBQuery()
+    items = query.getAdminLoginDetails(administradora="protel")
+    login_info = admin_login_list(items)
+
+    print()
+    if login_info:
+        for id_usuario, id_imobiliaria, username, password in login_info:
+            print(f"Executando o bot para o {username}")
+            bot = ProtelBot()
+            bot.run(username, password)
+            print(f"Processo finalizado para {username}\n")
+    else:
+        print("Nenhum login encontrado.")

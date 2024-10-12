@@ -1,0 +1,9 @@
+INFO_ADMINISTRATIVA_IMOBILIARIA.db
+```bash
+__pycache__/
+*.pyc
+.env
+.vscode/
+.idea/
+venv/
+utils.py
