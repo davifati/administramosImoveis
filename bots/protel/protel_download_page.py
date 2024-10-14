@@ -20,7 +20,7 @@ class ProtelDownloadPage:
         except:
             try:
                 boleto_table_e = wait.until(EC.visibility_of_element_located(self.boleto_table_locator))
-                print("Tabela de boletos encontrada, verificando boletos")
+                print("Tabela de boletos encontrada, verificando boletos.")
 
                 try:
                     boleto_pdf_link_e = wait.until(EC.element_to_be_clickable(self.boleto_pdf_locator))
