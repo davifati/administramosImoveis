@@ -10,6 +10,7 @@ class ProtelLoginPage:
         self.input_username_locator = (By.ID, "usuario_login")
         self.input_password_locator = (By.ID, "usuario_senha")
         self.btn_ok_locator = (By.ID, "botao_login")
+        self.invalid_login_message_locator = (By.XPATH, "//h2[text()='Login inválido']")
 
     def login(self, username, password):
         
@@ -25,6 +26,12 @@ class ProtelLoginPage:
             btn_ok_e.click()
             print("Preencheu username, password e clicou em ok.")
 
+            if self.is_ivalid_login():
+                print(f"Login inválido para o usuário {username}")
+                return False
+            else:
+                print(f"Login bem-sucedido para o usuário {username}")
+
         except TimeoutException:
             print("O tempo de espera foi excedido. Um ou mais elementos não foram encontrados na página.") 
         except NoSuchElementException:
@@ -32,3 +39,11 @@ class ProtelLoginPage:
         except Exception as e:
             print(f"Ocorreu um erro inesperado durante o login: {e}")
 
+    def is_ivalid_login(self):
+        try:
+            wait = WebDriverWait(self.driver, 20)
+            invalid_login_message_e = wait.until(EC.presence_of_element_located(self.invalid_login_message_locator))
+            return True
+        except:
+            return False
+    

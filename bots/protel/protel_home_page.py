@@ -12,7 +12,7 @@ class ProtelHomePage:
     def check_login_success(self):
         try:
             WebDriverWait(self.driver, 20).until(
-                EC.visibility_of_element_located(self.protel_logo_locator)
+                EC.visibility_of_element_located(self.btn_segunda_via_locator)
             )
             print("Login bem-sucedido e home page carregada.")
             return True
