@@ -42,7 +42,7 @@ class BcfLoginPage:
     def is_invalid_login(self):
         try:
             wait = WebDriverWait(self.driver, 5)
-            invalid_login_message_e = wait.until(EC.presence_of_element_located(self.invalid_login_message_locator))
+            invalid_login_message_e = wait.until(EC.element_to_be_clickable(self.invalid_login_message_locator))
             return True
         except:
             return False
