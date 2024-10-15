@@ -39,7 +39,7 @@ if __name__ == "__main__":
 
     print()
     if login_info:
-        for id_usuario, id_imobiliaria, username, password in login_info:
+        for id_imobiliaria, username, password in login_info:
             print(f"Executando o bot para o usuário: {username}")
             bot = ProtelBot()
             bot.run(username, password)

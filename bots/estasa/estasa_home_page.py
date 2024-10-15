@@ -2,29 +2,27 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-class ProtelHomePage:
+class EstasaHomePage:
     def __init__(self, driver):
-        self.url = "https://condominio.protel.com.br/unidades"
+        self.url = "https://estasa.icondo.com.br/"
         self.driver = driver
-        self.protel_logo_locator = (By.ID, "logo_protel")
-        self.btn_segunda_via_locator = (By.ID, "segunda_via")
+        self.segunda_via_locator = (By.XPATH, "/html/body/div/div[1]/div/div/div[2]/div[2]/div/div/ul/li[3]/a")
 
     def check_login_success(self):
         try:
-            WebDriverWait(self.driver, 20).until(
-                EC.visibility_of_element_located(self.btn_segunda_via_locator)
-            )
+            wait = WebDriverWait(self.driver, 20)
+            wait.until(EC.visibility_of_element_located(self.segunda_via_locator))
             print("Login bem-sucedido e home page carregada.")
             return True
         except Exception as e:
             print(f"Erro ao verificar login: {e}")
             return False
         
-    def click_boleto(self):
+    def click_segunda_via_boleto(self):
         try:
             wait = WebDriverWait(self.driver, 20)
-            btn_segunda_via_e = wait.until(EC.element_to_be_clickable(self.btn_segunda_via_locator))
-            btn_segunda_via_e.click()
+            segunda_via_e = wait.until(EC.presence_of_element_located(self.segunda_via_locator))
+            segunda_via_e.click()
             print("Botão de segunda via clicado com sucesso.")
         except Exception as e:
             print(f"Erro ao clicar no botão segunda via: {e}")
