@@ -9,3 +9,4 @@ venv/
 utils.py
 downloads/
 db.py
+db

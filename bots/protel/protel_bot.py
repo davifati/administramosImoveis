@@ -9,7 +9,7 @@ from common.utils import DynamoDBQuery, admin_login_list
 
 class ProtelBot:
     def __init__(self):
-        self.driver = WebDriverConfig.get_firefox_driver(download_dir=r"C:\Users\Jose\Documents\GitHub\administramosImoveis\bots\protel\downloads", headless=True)
+        self.driver = WebDriverConfig.get_firefox_driver(download_dir=r"C:\Users\Jose\Documents\GitHub\administramosImoveis\bots\protel\downloads", download=True, headless=True)
         self.login_page = ProtelLoginPage(self.driver)
         self.home_page = ProtelHomePage(self.driver)
         self.download_page = ProtelDownloadPage(self.driver)
