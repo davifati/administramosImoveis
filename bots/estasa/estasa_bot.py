@@ -29,7 +29,7 @@ class EstasaBot():
                     print("Download do boleto realizado com sucesso.")
 
         finally:
-            self.driver.quit()
+            #self.driver.quit()
             print(f"Processo finalizado para usuário: {username}.\n")
 
 if __name__ == "__main__":
@@ -40,7 +40,7 @@ if __name__ == "__main__":
 
     print()
     if login_info:
-        for id_imobiliaria, username, password in login_info:
+        for id_imobiliaria, username, password, condominio, proprietario, endereco in login_info:
             print(f"Executando o bot para o usuário: {username}")
             bot = EstasaBot()
             bot.run(username, password)
