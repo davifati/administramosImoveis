@@ -29,7 +29,7 @@ class ApsaDownloadPage:
             print(f"Não conseguiu chegar na listagem de Boletos. Erro: {e}")
             return False
 
-    def get_info_boleto(self):
+    def get_info_boleto(self, endereco):
 
         try:
             wait = WebDriverWait(self.driver, 20)
@@ -53,10 +53,12 @@ class ApsaDownloadPage:
                 if situacao.lower() == "em aberto":
                     
                     boletos_info.append({
-                        'vencimento': vencimento,
-                        'valor': valor,
+                        'data_vencimento': vencimento,
+                        'vlr_boleto': valor,
                         'situacao': situacao,
-                        'download_concluido': False
+                        'download_concluido': False,
+                        'endereco_imovel': endereco,
+                        'nome_administradora': "apsa (login: 32179787 senha 123456)"
                     })
 
                     botao_2a_via = item.find_element(*self.btn_2a_via_locator)

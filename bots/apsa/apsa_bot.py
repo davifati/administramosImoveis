@@ -15,7 +15,7 @@ class ApsaBot:
         self.home_page = ApsaHomePage(self.driver)
         self.download_page = ApsaDownloadPage(self.driver)
 
-    def run(self, username, password):
+    def run(self, username, password, endereco):
         try:
             listagem_boleto = False
             if not self.login_page.login(username, password):
@@ -27,7 +27,7 @@ class ApsaBot:
                     
             listagem_boleto = self.download_page.listagem_boleto()
             if listagem_boleto:
-                boletos_info = self.download_page.get_info_boleto()
+                boletos_info = self.download_page.get_info_boleto(endereco)
                 if boletos_info > 0:
                     print(boletos_info) 
                 else:
