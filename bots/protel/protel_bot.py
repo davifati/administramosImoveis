@@ -9,12 +9,12 @@ from common.utils import DynamoDBQuery, admin_login_list
 
 class ProtelBot:
     def __init__(self):
-        self.driver = WebDriverConfig.get_firefox_driver(download_dir=r"C:\Users\Jose\Documents\GitHub\administramosImoveis\bots\protel\downloads", download=True, headless=True)
+        self.driver = WebDriverConfig.get_firefox_driver(download_dir=r"C:\Users\Jose\Documents\GitHub\administramosImoveis\bots\protel\downloads", download=True, headless=False)
         self.login_page = ProtelLoginPage(self.driver)
         self.home_page = ProtelHomePage(self.driver)
         self.download_page = ProtelDownloadPage(self.driver)
 
-    def run(self, username, password):
+    def run(self, username, password, endereco):
         try:
             if not self.login_page.login(username, password):
                 print(f"Login falhou para o usuário {username}. Pulando para o próximo.")
@@ -23,7 +23,7 @@ class ProtelBot:
             if self.home_page.check_login_success():
                 self.home_page.click_boleto()
             
-                boleto_disponivel = self.download_page.check_boleto()
+                boleto_disponivel = self.download_page.check_boleto(endereco)
 
                 if boleto_disponivel:
                     print("Download do boleto realizado com sucesso.")
@@ -42,6 +42,6 @@ if __name__ == "__main__":
         for id_imobiliaria, username, password, condominio, proprietario, endereco in login_info:
             print(f"Executando o bot para o usuário: {username}")
             bot = ProtelBot()
-            bot.run(username, password)
+            bot.run(username, password, endereco)
     else:
         print("Nenhum login encontrado.")
