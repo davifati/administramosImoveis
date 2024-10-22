@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from common.utils import wait_for_new_file, get_downloaded_files
+import pyperclip
 import time
 
 
@@ -15,6 +16,7 @@ class ApsaDownloadPage:
         self.vencimento_locator = (By.XPATH, ".//div[contains(@class, 'Label') and text()='Vencimento:']/following-sibling::div[contains(@class, 'Highlighted')]")
         self.situacao_locator = (By.XPATH, ".//div[contains(@class, 'Label') and text()='Situação']/following-sibling::div[contains(@class, 'Highlighted')]")
         self.btn_2a_via_locator = (By.XPATH, ".//div[contains(@class, 'Actions_Option_Label') and contains(text(), 'Emitir 2ª via')]")
+        self.btn_copiar_linha_digitavel = (By.XPATH, ".//div[contains(@class, 'Actions_Option_Label') and contains(text(), 'Copiar código de barras')]")
 
     def listagem_boleto(self):
         try:
@@ -43,14 +45,20 @@ class ApsaDownloadPage:
             for item in lista_items_e:
                 valor_e = item.find_element(*self.valor_locator)
                 valor = valor_e.text.strip()            
+                #print(valor)
 
                 vencimento_element = item.find_element(*self.vencimento_locator)
                 vencimento = vencimento_element.text.strip()
+                #print(vencimento)
 
                 situacao_element = item.find_element(*self.situacao_locator)
                 situacao = situacao_element.text.strip()                
+                #print(situacao)
+
 
                 if situacao.lower() == "em aberto":
+                    linha_digitavel = self.copiar_linha_digitavel()
+                    time.sleep(5)
                     
                     boletos_info.append({
                         'data_vencimento': vencimento,
@@ -58,7 +66,8 @@ class ApsaDownloadPage:
                         'situacao': situacao,
                         'download_concluido': False,
                         'endereco_imovel': endereco,
-                        'nome_administradora': "apsa (login: 32179787 senha 123456)"
+                        'nome_administradora': "apsa (login: 32179787 senha 123456)",
+                        'linha_digitavel': linha_digitavel
                     })
 
                     botao_2a_via = item.find_element(*self.btn_2a_via_locator)
@@ -77,4 +86,16 @@ class ApsaDownloadPage:
 
         except Exception as e:
             print(f"Erro ao buscar informações dos boletos: {e}")
-            return False
+            return e 
+
+    def copiar_linha_digitavel(self):
+        try:
+            wait = WebDriverWait(self.driver, 20)
+            btn_copiar_linha_digitavel_e = self.driver.find_element(*self.btn_copiar_linha_digitavel)
+            btn_copiar_linha_digitavel_e.click()
+            time.sleep(1)
+            linha_digitavel = pyperclip.paste()
+            return linha_digitavel
+        except Exception as e:
+            print(f"Erro ao copiar a linha digitável, erro: {e}")
+            return e
