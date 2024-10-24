@@ -6,9 +6,9 @@ __pycache__/
 .vscode/
 .idea/
 venv/
-utils.py
+
 downloads/
-db.py
+
 db
 .venv/
 
