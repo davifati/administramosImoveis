@@ -10,7 +10,7 @@ from bots.protel.protel_login_page import ProtelLoginPage
 from bots.protel.protel_home_page import ProtelHomePage
 from bots.protel.protel_download_page import ProtelDownloadPage
 from bots.protel.driver_config import WebDriverConfig
-from src.bots.protel.utils import DynamoDBQuery, admin_login_list
+from bots.protel.utils import DynamoDBQuery, admin_login_list
 
 
 class ProtelBot:
