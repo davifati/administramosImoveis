@@ -4,8 +4,8 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(
 from bots.apsa.apsa_login_page import ApsaLoginPage
 from bots.apsa.apsa_home_page import ApsaHomePage
 from bots.apsa.apsa_download_page import ApsaDownloadPage
-from common.driver_config import WebDriverConfig
-from administramosImoveis.src.bots.common.utils import DynamoDBQuery, admin_login_list, delete_all_files_in_directory, save_rpa_reports
+from administramosImoveis.src.bots.protel.driver_config import WebDriverConfig
+from administramosImoveis.src.bots.protel.utils import DynamoDBQuery, admin_login_list, delete_all_files_in_directory, save_rpa_reports
 from datetime import datetime
 
 class ApsaBot:

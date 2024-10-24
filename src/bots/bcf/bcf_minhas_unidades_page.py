@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
-from administramosImoveis.src.bots.common.utils import normalize_text
+from administramosImoveis.src.bots.protel.utils import normalize_text
 
 class BcfMinhasUnidadesPage:
     def __init__(self, driver):
