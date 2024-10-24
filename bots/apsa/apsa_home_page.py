@@ -15,20 +15,20 @@ class ApsaHomePage:
             wait = WebDriverWait(self.driver, 10)
             close_pop_e = wait.until(EC.presence_of_element_located(self.close_pop_locator))
             close_pop_e.click()
-            print(f"Clicou em fechar Pop_Up.")
+            #print(f"Clicou em fechar Pop_Up.")
             return True
         except Exception as e:
-            print(f"Pop_Up não está aberto, continuar.")
+            #print(f"Pop_Up não está aberto, continuar.")
             return False
 
     def check_login_success(self):
         try:
             wait = WebDriverWait(self.driver, 10)
             wait.until(EC.visibility_of_element_located(self.header_logo_locator))
-            print("Login bem-sucedido e home page carregada.")
+            #print("Login bem-sucedido e home page carregada.")
             return True
         except Exception as e:
-            print(f"Erro ao verificar login {e}")
+            #print(f"Erro ao verificar login {e}")
             return False
 
             

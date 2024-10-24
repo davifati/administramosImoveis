@@ -18,42 +18,38 @@ class ProtelDownloadPage:
     def check_boleto(self, endereco):
         try:
             wait = WebDriverWait(self.driver, 20)
-            no_boleto_message_e = wait.until(EC.presence_of_element_located(self.no_boleto_message_locator)) 
-            print("Não existem boletos para segunda via.")
-            return False
-        except:
+
             try:
-                boleto_table_e = wait.until(EC.visibility_of_element_located(self.boleto_table_locator))
-                print("Tabela de boletos encontrada, verificando boletos.")
-
-                try:
-                    boleto_pdf_link_e = wait.until(EC.element_to_be_clickable(self.boleto_pdf_locator))
-
-                    if boleto_pdf_link_e:
-                        vencimento = wait.until(EC.visibility_of_element_located(self.vencimento_locator)).text
-                        valor = wait.until(EC.visibility_of_element_located(self.valor_pagar_hoje_locator)).text
-                        cod_barras = wait.until(EC.visibility_of_element_located(self.linha_digitavel_locator)).text
-                        cod_barras = cod_barras.replace("Linha Digitável:", "").replace(".", "").replace(" ", "").replace("-", "")
-                        cod_barras = cod_barras.strip()
-                    
-                        boleto_pdf_link_e.click()
-                        print(f"Boleto em PDF clicado para download.")
-                    
-                    boleto_info = {
-                        "linha_digitavel": cod_barras,
-                        "data_vencimento": vencimento,
-                        "vlr_boleto": valor,
-                        "nome_administradora": "protel",
-                        "endereco_imovel": endereco
-                    }
-
-                    print(boleto_info)
-
-                    return boleto_info
-                
-                except Exception as e:
-                    print(f"Erro ao tentar clicar no boleto PDF: {e}")
+                no_boleto_message_e = wait.until(EC.presence_of_element_located(self.no_boleto_message_locator))
+                if no_boleto_message_e:
+                    #print("Não existem boletos para segunda via.")
                     return False
-            except Exception as e:
-                print(f"Erro ao encontrar a tabela de boletoss: {e}")
-                return False
+
+            except:
+                boleto_table_e = wait.until(EC.visibility_of_element_located(self.boleto_table_locator))
+                #print("Tabela de boletos encontrada, verificando boletos.")
+
+                boleto_pdf_link_e = wait.until(EC.element_to_be_clickable(self.boleto_pdf_locator))
+
+                vencimento = wait.until(EC.visibility_of_element_located(self.vencimento_locator)).text
+                valor = wait.until(EC.visibility_of_element_located(self.valor_pagar_hoje_locator)).text
+                cod_barras = wait.until(EC.visibility_of_element_located(self.linha_digitavel_locator)).text
+                cod_barras = cod_barras.replace("Linha Digitável:", "").replace(".", "").replace(" ", "").replace("-", "").strip()
+
+                boleto_pdf_link_e.click()
+                #print(f"Boleto em PDF clicado para download.")
+
+                boleto_info = {
+                    "linha_digitavel": cod_barras,
+                    "data_vencimento": vencimento,
+                    "vlr_boleto": valor,
+                    "nome_administradora": "protel",
+                    "endereco_imovel": endereco
+                }
+
+                #print(boleto_info)
+                return boleto_info
+
+        except Exception as e:
+            #print(f"Erro ao tentar verificar ou clicar no boleto PDF: {e}")
+            return False

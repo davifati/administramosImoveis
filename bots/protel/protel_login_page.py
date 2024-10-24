@@ -25,20 +25,23 @@ class ProtelLoginPage:
             input_username_e.send_keys(username)
             input_password_e.send_keys(password)
             btn_ok_e.click()
-            print("Preencheu username, password e clicou em ok.")
+            #print("Preencheu username, password e clicou em ok.")
 
             if self.is_invalid_login():
-                print(f"Login inválido para o usuário {username}")
+                #print(f"Login inválido para o usuário {username}")
                 return False
             else:
                 return True
 
         except TimeoutException:
-            print("O tempo de espera foi excedido. Um ou mais elementos não foram encontrados na página.") 
+            #print("O tempo de espera foi excedido. Um ou mais elementos não foram encontrados na página.") 
+            return False
         except NoSuchElementException:
-            print("Um dos elementos não foi encontrado na página. Verifique os localizadores.")
+            #print("Um dos elementos não foi encontrado na página. Verifique os localizadores.")
+            return False
         except Exception as e:
-            print(f"Ocorreu um erro inesperado durante o login: {e}")
+            #print(f"Ocorreu um erro inesperado durante o login: {e}")
+            return False
 
     def is_invalid_login(self):
         try:

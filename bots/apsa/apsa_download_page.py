@@ -25,10 +25,10 @@ class ApsaDownloadPage:
             self.driver.get(self.url_boleto)
             listagem_boletos_e = wait.until(EC.visibility_of_element_located(self.lista_items_locator))
             if listagem_boletos_e:
-                print("Entrou na listagem de Boletos.")
+                #print("Entrou na listagem de Boletos.")
                 return True
         except Exception as e:
-            print(f"Não conseguiu chegar na listagem de Boletos. Erro: {e}")
+            #print(f"Não conseguiu chegar na listagem de Boletos. Erro: {e}")
             return False
 
     def get_info_boleto(self, endereco):
@@ -72,20 +72,20 @@ class ApsaDownloadPage:
 
                     botao_2a_via = item.find_element(*self.btn_2a_via_locator)
                     botao_2a_via.click()
-                    print("Clicou no botão de Emitir 2ª via.")
+                    #print("Clicou no botão de Emitir 2ª via.")
 
                     try:
                         new_file = wait_for_new_file(download_dir, previous_files)
-                        print(f"Novo arquivo baixado: {new_file}.")
+                        #print(f"Novo arquivo baixado: {new_file}.")
                         boletos_info[-1]['download_concluido'] = True
                     except TimeoutError:
-                        print("O download do arquivo excedeu o tempo limite.")
+                        #print("O download do arquivo excedeu o tempo limite.")
                         boletos_info[-1]['download_concluido'] = False
 
             return boletos_info
 
         except Exception as e:
-            print(f"Erro ao buscar informações dos boletos: {e}")
+            #print(f"Erro ao buscar informações dos boletos: {e}")
             return e 
 
     def copiar_linha_digitavel(self):
@@ -97,5 +97,5 @@ class ApsaDownloadPage:
             linha_digitavel = pyperclip.paste()
             return linha_digitavel
         except Exception as e:
-            print(f"Erro ao copiar a linha digitável, erro: {e}")
+            #print(f"Erro ao copiar a linha digitável, erro: {e}")
             return e

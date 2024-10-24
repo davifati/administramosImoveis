@@ -9,7 +9,8 @@ from common.utils import DynamoDBQuery, admin_login_list
 
 class EstasaBot():
     def __init__(self):
-        self.driver = WebDriverConfig.get_firefox_driver(download_dir=r"C:\Users\Jose\Documents\GitHub\administramosImoveis\bots\estasa\downloads", headless=False)
+        self.download_dir = r"C:\Users\Jose\Documents\GitHub\administramosImoveis\bots\estasa\downloads"
+        self.driver = WebDriverConfig.get_firefox_driver(download_dir=self.download_dir, download=True, headless=False)
         self.login_page = EstasaLoginPage(self.driver)
         self.home_page = EstasaHomePage(self.driver)
         self.download_page = EstasaDownloadPage(self.driver)
@@ -29,7 +30,7 @@ class EstasaBot():
                     print("Download do boleto realizado com sucesso.")
 
         finally:
-            #self.driver.quit()
+            self.driver.quit()
             print(f"Processo finalizado para usuário: {username}.\n")
 
 if __name__ == "__main__":

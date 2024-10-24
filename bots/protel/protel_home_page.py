@@ -14,10 +14,10 @@ class ProtelHomePage:
             WebDriverWait(self.driver, 20).until(
                 EC.visibility_of_element_located(self.btn_segunda_via_locator)
             )
-            print("Login bem-sucedido e home page carregada.")
+            #print("Login bem-sucedido e home page carregada.")
             return True
         except Exception as e:
-            print(f"Erro ao verificar login: {e}")
+            #print(f"Erro ao verificar login: {e}")
             return False
         
     def click_boleto(self):
@@ -25,6 +25,8 @@ class ProtelHomePage:
             wait = WebDriverWait(self.driver, 20)
             btn_segunda_via_e = wait.until(EC.element_to_be_clickable(self.btn_segunda_via_locator))
             btn_segunda_via_e.click()
-            print("Botão de segunda via clicado com sucesso.")
+            #print("Botão de segunda via clicado com sucesso.")
+            return True
         except Exception as e:
-            print(f"Erro ao clicar no botão segunda via: {e}")
+            #print(f"Erro ao clicar no botão segunda via: {e}")
+            return False
