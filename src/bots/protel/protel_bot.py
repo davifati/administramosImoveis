@@ -6,11 +6,11 @@ sys.path.append(
     os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 )
 
-from bots.protel.protel_login_page import ProtelLoginPage
-from bots.protel.protel_home_page import ProtelHomePage
-from bots.protel.protel_download_page import ProtelDownloadPage
-from bots.protel.driver_config import WebDriverConfig
-from bots.protel.utils import DynamoDBQuery, admin_login_list
+from protel_login_page import ProtelLoginPage
+from protel_home_page import ProtelHomePage
+from protel_download_page import ProtelDownloadPage
+from driver_config import WebDriverConfig
+from utils import DynamoDBQuery, admin_login_list
 
 
 class ProtelBot:
