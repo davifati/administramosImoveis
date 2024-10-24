@@ -5,7 +5,7 @@ from bots.estasa.estasa_login_page import EstasaLoginPage
 from bots.estasa.estasa_home_page import EstasaHomePage
 from bots.estasa.estasa_download_page import EstasaDownloadPage
 from common.driver_config import WebDriverConfig
-from common.utils import DynamoDBQuery, admin_login_list
+from administramosImoveis.src.bots.common.utils import DynamoDBQuery, admin_login_list
 
 class EstasaBot():
     def __init__(self):

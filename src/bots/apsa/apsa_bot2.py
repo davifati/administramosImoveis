@@ -8,7 +8,7 @@ from bots.apsa.apsa_login_page import ApsaLoginPage
 from bots.apsa.apsa_home_page import ApsaHomePage
 from bots.apsa.apsa_download_page import ApsaDownloadPage
 from common.driver_config import WebDriverConfig
-from common.utils import DynamoDBQuery, admin_login_list, delete_all_files_in_directory, save_rpa_reports
+from administramosImoveis.src.bots.common.utils import DynamoDBQuery, admin_login_list, delete_all_files_in_directory, save_rpa_reports
 
 # Configurando logging para melhor controle de logs
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")

@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Atualiza o sistema
-sudo yum update -y
+sudo apt update -y
 
 # Instala o Python 3, pip e Git
-sudo yum install -y python3 python3-pip git
+sudo apt install -y python3 python3-pip git
 
 # Verifica se o Python foi instalado corretamente
 python3 --version

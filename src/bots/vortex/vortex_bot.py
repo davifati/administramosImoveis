@@ -5,7 +5,7 @@ from bots.vortex.vortex_login_page import VortexLoginPage
 from bots.vortex.vortex_home_page import VortexHomePage
 from bots.vortex.vortex_download_page import VortexDownloadPage
 from common.driver_config import WebDriverConfig
-from common.utils import DynamoDBQuery, admin_login_list
+from administramosImoveis.src.bots.common.utils import DynamoDBQuery, admin_login_list
 
 
 class VortexBot:

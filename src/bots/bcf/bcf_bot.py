@@ -4,7 +4,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(
 from bots.bcf.bcf_login_page import BcfLoginPage
 from bots.bcf.bcf_home_page import BcfHomePage
 from common.driver_config import WebDriverConfig
-from common.utils import DynamoDBQuery, admin_login_list
+from administramosImoveis.src.bots.common.utils import DynamoDBQuery, admin_login_list
 
 class BcfBot:
     def __init__(self):
