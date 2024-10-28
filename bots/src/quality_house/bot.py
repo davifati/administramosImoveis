@@ -5,21 +5,21 @@ from datetime import datetime
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
-from src.estasa.login_page import EstasaLoginPage
-from src.estasa.home_page import EstasaHomePage
-from src.estasa.download_page import EstasaDownloadPage
+from src.quality_house.login_page import QualityHouseLoginPage
+from src.quality_house.home_page import QualityHouseHomePage
+from src.quality_house.download_page import QualityHouseDownloadPage
 from common.driver_config import WebDriverConfig
 from common.utils import DynamoDBQuery, admin_login_list, save_rpa_reports
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
-class EstasaBot():
+class QualityHouseBot():
     def __init__(self):
-        self.download_dir = r"C:\Users\Jose\Documents\GitHub\administramosImoveis\bots\src\estasa\downloads"
+        self.download_dir = r"C:\Users\Jose\Documents\GitHub\administramosImoveis\bots\src\quality_house\downloads"
         self.driver = WebDriverConfig.get_firefox_driver(download_dir=self.download_dir, download=True, headless=False)
-        self.login_page = EstasaLoginPage(self.driver)
-        self.home_page = EstasaHomePage(self.driver)
-        self.download_page = EstasaDownloadPage(self.driver)
+        self.login_page = QualityHouseLoginPage(self.driver)
+        self.home_page = QualityHouseHomePage(self.driver)
+        self.download_page = QualityHouseDownloadPage(self.driver)
 
     def run(self, username, password):
 
@@ -29,7 +29,7 @@ class EstasaBot():
             if not self.login_page.login(username, password):
                 self.add_report(reports, f"Login falhou para o usuário: {username}", "FAIL")
                 return
-
+            
             if self.home_page.check_login_success():
                 self.add_report(reports, f"Login bem-sucedido para o usuário: {username}", "OK")
                 self.home_page.click_segunda_via_boleto()
@@ -49,7 +49,7 @@ class EstasaBot():
             self.add_report(reports, f"Erro inesperado para o usuário: {username}", "FAIL")
 
         finally:
-            save_rpa_reports(reports, "vortex")
+            save_rpa_reports(reports, "quality house")
             print(reports)
             self.driver.quit()
             logging.info(f"Processo finalizado para o usuário: {username}")
@@ -60,17 +60,16 @@ class EstasaBot():
             "msg": msg,
             "status": status
         })     
-    
-        
+
 if __name__ == "__main__":
 
     query = DynamoDBQuery()
-    items = query.getAdminLoginDetails(administradora="estasa")
+    items = query.getAdminLoginDetails(administradora="quality house")
     login_info = admin_login_list(items)
 
     print()
     if login_info:
         for id_imobiliaria, username, password, condominio, proprietario, endereco in login_info:
             #print(f"Executando o bot para o usuário: {username}")
-            bot = EstasaBot()
+            bot = QualityHouseBot()
             bot.run(username, password)

@@ -24,20 +24,23 @@ class VortexLoginPage:
             input_username_e.send_keys(username)
             input_password_e.send_keys(password)
             btn_entrar_e.click()
-            print("Preencheu username, password e clicou em ok.")
+            #print("Preencheu username, password e clicou em ok.")
 
             if self.is_invalid_login():
-                print(f"Login inválido para o usuário {username}")
+                #print(f"Login inválido para o usuário {username}")
                 return False
             else:
                 return True
         
         except TimeoutException:
-            print("O tempo de espera foi excedido. Um ou mais elementos não foram encontrados na página.") 
+            return False
+            #print("O tempo de espera foi excedido. Um ou mais elementos não foram encontrados na página.") 
         except NoSuchElementException:
-            print("Um dos elementos não foi encontrado na página. Verifique os localizadores.")
+            return False
+            #print("Um dos elementos não foi encontrado na página. Verifique os localizadores.")
         except Exception as e:
-            print(f"Ocorreu um erro inesperado durante o login: {e}")
+            return False
+            #print(f"Ocorreu um erro inesperado durante o login: {e}")
 
     def is_invalid_login(self):
         try:

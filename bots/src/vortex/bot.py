@@ -4,19 +4,18 @@ import logging
 from datetime import datetime
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
-from administramosImoveis.bots.vortex.login_page import VortexLoginPage
-from administramosImoveis.bots.vortex.home_page import VortexHomePage
-from administramosImoveis.bots.vortex.download_page import VortexDownloadPage
-from administramosImoveis.src.bots.protel.driver_config import WebDriverConfig
-from administramosImoveis.src.bots.protel.utils import DynamoDBQuery, admin_login_list
-
+from bots.src.vortex.login_page import VortexLoginPage
+from bots.src.vortex.home_page import VortexHomePage
+from bots.src.vortex.download_page import VortexDownloadPage
+from common.driver_config import WebDriverConfig
+from common.utils import DynamoDBQuery, admin_login_list, save_rpa_reports
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 class VortexBot:
     
     def __init__(self):
-        self.download_dir = r"C:\Users\Jose\Documents\GitHub\administramosImoveis\bots\vortex\downloads"
+        self.download_dir = r"C:\Users\Jose\Documents\GitHub\administramosImoveis\bots\src\vortex\downloads"
         self.driver = WebDriverConfig.get_firefox_driver(download_dir=self.download_dir, download=True, headless=True)
         self.login_page = VortexLoginPage(self.driver)
         self.home_page = VortexHomePage(self.driver)

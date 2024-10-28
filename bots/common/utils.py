@@ -13,6 +13,15 @@ AWS_ACCESS_KEY_ID = "AKIA2OAJT7MOSWOXM6U2"
 AWS_SECRET_ACCESS_KEY = "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"
 REGION_NAME = "us-east-1"
 
+def get_latest_pdf(download_dir, extensions=[".pdf", ".png"]):
+    files = []
+    for ext in extensions:
+        files.extend(glob.glob(os.path.join(download_dir, f"*{ext}")))
+    if not files:
+        return None
+    latest_file = max(files, key=os.path.getctime)
+    return latest_file
+
 def extract_linha_digitavel_pymupdf(pdf_path):
     try:
 
@@ -166,7 +175,6 @@ class DynamoDBQuery:
             print(f"Erro ao executar a consulta: {e}")
             return None
 
-
 def save_rpa_reports(reports: list[dict], administadora: str):
     s3_client = boto3.client(
         "s3",
@@ -195,7 +203,6 @@ def save_rpa_reports(reports: list[dict], administadora: str):
         if os.path.exists(temp_file):
             os.remove(temp_file)
 
-
 def save_boletos(pdf_file_path: str, administadora: str):
     s3_client = boto3.client(
         "s3",
@@ -204,7 +211,8 @@ def save_boletos(pdf_file_path: str, administadora: str):
         region_name=REGION_NAME,
     )
 
-    temp_file = f"/tmp/{os.path.basename(pdf_file_path)}"
+    temp_dir = tempfile.gettempdir()
+    temp_file = os.path.join(temp_dir, os.path.basename(pdf_file_path))
     os.replace(pdf_file_path, temp_file)
 
     data_atual = datetime.now().strftime("%Y_%m_%d")
@@ -214,8 +222,10 @@ def save_boletos(pdf_file_path: str, administadora: str):
     try:
         s3_client.upload_file(temp_file, bucket_name, object_name)
         print(f"Arquivo enviado para S3: s3://{bucket_name}/{object_name}")
+        return f"s3://{bucket_name}/{object_name}"
     except Exception as e:
         print(f"Erro ao enviar o arquivo para S3: {e}")
+        return None
     finally:
         if os.path.exists(temp_file):
             os.remove(temp_file)

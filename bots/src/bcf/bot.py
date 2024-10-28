@@ -1,10 +1,10 @@
 import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
-from administramosImoveis.bots.bcf.login_page import BcfLoginPage
-from administramosImoveis.bots.bcf.home_page import BcfHomePage
-from administramosImoveis.src.bots.protel.driver_config import WebDriverConfig
-from administramosImoveis.src.bots.protel.utils import DynamoDBQuery, admin_login_list
+from bots.bots.bcf.login_page import BcfLoginPage
+from bots.bots.bcf.home_page import BcfHomePage
+from bots.src.bots.protel.driver_config import WebDriverConfig
+from bots.src.bots.protel.utils import DynamoDBQuery, admin_login_list
 
 class BcfBot:
     def __init__(self):

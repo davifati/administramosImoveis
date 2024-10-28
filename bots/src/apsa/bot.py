@@ -3,11 +3,11 @@ import os
 import logging
 from datetime import datetime
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
-from administramosImoveis.bots.apsa.login_page import ApsaLoginPage
-from administramosImoveis.bots.apsa.home_page import ApsaHomePage
-from administramosImoveis.bots.apsa.download_page import ApsaDownloadPage
-from administramosImoveis.src.bots.protel.driver_config import WebDriverConfig
-from administramosImoveis.src.bots.protel.utils import DynamoDBQuery, admin_login_list, delete_all_files_in_directory, save_rpa_reports
+from bots.bots.apsa.login_page import ApsaLoginPage
+from bots.bots.apsa.home_page import ApsaHomePage
+from bots.bots.apsa.download_page import ApsaDownloadPage
+from bots.src.bots.protel.driver_config import WebDriverConfig
+from bots.src.bots.protel.utils import DynamoDBQuery, admin_login_list, delete_all_files_in_directory, save_rpa_reports
 from datetime import datetime
 
 class ApsaBot:

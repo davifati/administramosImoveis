@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from administramosImoveis.src.bots.protel.utils import wait_for_new_file, get_downloaded_files
+from bots.src.bots.protel.utils import wait_for_new_file, get_downloaded_files
 import pyperclip
 import time
 

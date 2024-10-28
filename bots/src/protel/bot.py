@@ -6,9 +6,9 @@ sys.path.append(
     os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 )
 
-from administramosImoveis.bots.protel.login_page import ProtelLoginPage
-from administramosImoveis.bots.protel.home_page import ProtelHomePage
-from administramosImoveis.bots.protel.download_page import ProtelDownloadPage
+from bots.bots.protel.login_page import ProtelLoginPage
+from bots.bots.protel.home_page import ProtelHomePage
+from bots.bots.protel.download_page import ProtelDownloadPage
 from common.driver_config import WebDriverConfig
 
 
