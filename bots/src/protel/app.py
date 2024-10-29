@@ -4,7 +4,7 @@ import os
 sys.path.append(
     os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 )
-from protel.bot import ProtelBot
+from bot import ProtelBot
 from common.utils import DynamoDBQuery, admin_login_list
 
 

@@ -6,9 +6,9 @@ sys.path.append(
     os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 )
 
-from bots.bots.protel.login_page import ProtelLoginPage
-from bots.bots.protel.home_page import ProtelHomePage
-from bots.bots.protel.download_page import ProtelDownloadPage
+from login_page import ProtelLoginPage
+from home_page import ProtelHomePage
+from download_page import ProtelDownloadPage
 from common.driver_config import WebDriverConfig
 
 
@@ -21,6 +21,7 @@ class ProtelBot:
         self.driver = WebDriverConfig.get_firefox_driver(
             download_dir=self.download_dir, download=True, headless=True
         )
+        
         self.login_page = ProtelLoginPage(self.driver)
         self.home_page = ProtelHomePage(self.driver)
         self.download_page = ProtelDownloadPage(self.driver)
@@ -42,4 +43,5 @@ class ProtelBot:
                     print("Download do boleto realizado com sucesso.")
         finally:
             self.driver.quit()
+            save_rpa_reports(reports, "apsa")
             print(f"Processo finalizado para usuário: {username}.\n")

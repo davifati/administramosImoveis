@@ -9,9 +9,10 @@ import fitz
 import tempfile
 from datetime import datetime
 
-AWS_ACCESS_KEY_ID = "AKIA2OAJT7MOSWOXM6U2"
-AWS_SECRET_ACCESS_KEY = "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"
+AWS_ACCESS_KEY_ID = "AKIA2OAJT7MOR3B6LVTS"
+AWS_SECRET_ACCESS_KEY = "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"
 REGION_NAME = "us-east-1"
+
 
 def get_latest_pdf(download_dir, extensions=[".pdf", ".png"]):
     files = []
@@ -21,6 +22,7 @@ def get_latest_pdf(download_dir, extensions=[".pdf", ".png"]):
         return None
     latest_file = max(files, key=os.path.getctime)
     return latest_file
+
 
 def extract_linha_digitavel_pymupdf(pdf_path):
     try:
@@ -34,16 +36,17 @@ def extract_linha_digitavel_pymupdf(pdf_path):
                 if len(line) >= 47 and line.replace(" ", "").isdigit():
                     print(f"Linha Digitável encontrada: {line.strip()}")
                     return line.strip()
-    
+
     except Exception as e:
         print(f"Erro ao tentar extrair a linha digitável: {e}")
         return None
+
 
 def admin_login_list(items):
     login_details = []
 
     for item in items:
-        
+
         id_imobiliaria = item.get("idImobiliaria", {}).get("S", "")
         login_usuario = item.get("login_usuario", {}).get("S", "")
         login_senha = item.get("login_senha", {}).get("S", "")
@@ -51,9 +54,19 @@ def admin_login_list(items):
         proprietario = item.get("proprietario", {}).get("S", "")
         endereco_condominio = item.get("endereco_condominio", {}).get("S", "")
 
-        login_details.append((id_imobiliaria, login_usuario, login_senha, condominio, proprietario, endereco_condominio))
+        login_details.append(
+            (
+                id_imobiliaria,
+                login_usuario,
+                login_senha,
+                condominio,
+                proprietario,
+                endereco_condominio,
+            )
+        )
 
     return login_details
+
 
 def delete_all_files_in_directory(download_dir):
     files = glob.glob(os.path.join(download_dir, "*"))
@@ -64,9 +77,15 @@ def delete_all_files_in_directory(download_dir):
         except Exception as e:
             print(f"Erro ao remover o arquivo {file}: {e}")
 
+
 def get_downloaded_files(download_dir):
     # Retorna a lista de arquivos na pasta 'download_dir'
-    return {f for f in os.listdir(download_dir) if os.path.isfile(os.path.join(download_dir, f))}
+    return {
+        f
+        for f in os.listdir(download_dir)
+        if os.path.isfile(os.path.join(download_dir, f))
+    }
+
 
 def wait_for_new_file(download_dir, previous_files, timeout=60):
     start_time = time.time()
@@ -78,40 +97,45 @@ def wait_for_new_file(download_dir, previous_files, timeout=60):
         time.sleep(1)
     raise TimeoutError("O download do arquivo excedeu o tempo limite.")
 
+
 def extract_text_from_pdf(pdf_path):
-    with open(pdf_path, 'rb') as file:
+    with open(pdf_path, "rb") as file:
         reader = PyPDF2.PdfReader(file)
         text = ""
         for page_num in range(len(reader.pages)):
             text += reader.pages[page_num].extract_text()
         return text
 
+
 def extract_boleto_info(text):
     boleto_info = {}
 
-    pagador_match = re.search(r'Pagador\n(.*) - CPF: ([\d\.\-]+)', text)
+    pagador_match = re.search(r"Pagador\n(.*) - CPF: ([\d\.\-]+)", text)
     if pagador_match:
-        boleto_info['pagador'] = pagador_match.group(1).strip()
-        boleto_info['cpf'] = pagador_match.group(2).strip()
+        boleto_info["pagador"] = pagador_match.group(1).strip()
+        boleto_info["cpf"] = pagador_match.group(2).strip()
 
-    endereco_match = re.search(r'RUA (.*) - CEP: ([\d\-]+)', text)
+    endereco_match = re.search(r"RUA (.*) - CEP: ([\d\-]+)", text)
     if endereco_match:
-        boleto_info['endereco'] = f"RUA {endereco_match.group(1).strip()}"
-        boleto_info['cep'] = endereco_match.group(2).strip()
+        boleto_info["endereco"] = f"RUA {endereco_match.group(1).strip()}"
+        boleto_info["cep"] = endereco_match.group(2).strip()
 
-    valor_match = re.search(r'R\$ ([\d\.,]+)', text)
+    valor_match = re.search(r"R\$ ([\d\.,]+)", text)
     if valor_match:
-        boleto_info['valor'] = f"R$ {valor_match.group(1).strip()}"
+        boleto_info["valor"] = f"R$ {valor_match.group(1).strip()}"
 
-    vencimento_match = re.search(r'PAGÁVEL EM QU.*?(\d{2}/\d{2}/\d{4})', text)
+    vencimento_match = re.search(r"PAGÁVEL EM QU.*?(\d{2}/\d{2}/\d{4})", text)
     if vencimento_match:
-        boleto_info['vencimento'] = vencimento_match.group(1).strip()    
+        boleto_info["vencimento"] = vencimento_match.group(1).strip()
 
-    codigo_barras_match = re.search(r'(\d{5}\.\d{5} \d{5}\.\d{6} \d{5}\.\d{6} \d \d{14})', text)
+    codigo_barras_match = re.search(
+        r"(\d{5}\.\d{5} \d{5}\.\d{6} \d{5}\.\d{6} \d \d{14})", text
+    )
     if codigo_barras_match:
-        boleto_info['codigo_barras'] = codigo_barras_match.group(1).strip()
+        boleto_info["codigo_barras"] = codigo_barras_match.group(1).strip()
 
     return boleto_info
+
 
 def process_boleto(download_dir, previous_file, timeout=60):
     new_file = wait_for_new_file(download_dir, previous_file, timeout)
@@ -121,6 +145,7 @@ def process_boleto(download_dir, previous_file, timeout=60):
     boleto_info = extract_boleto_info(pdf_text)
 
     return boleto_info
+
 
 def process_multiple_boletos(download_dir, n_boletos=60, timeout=60):
     previous_files = get_downloaded_files(download_dir)
@@ -136,6 +161,7 @@ def process_multiple_boletos(download_dir, n_boletos=60, timeout=60):
             break
 
     return boletos_info
+
 
 class DynamoDBQuery:
     def __init__(self, table_name="AdministramosImoveis"):
@@ -175,6 +201,7 @@ class DynamoDBQuery:
             print(f"Erro ao executar a consulta: {e}")
             return None
 
+
 def save_rpa_reports(reports: list[dict], administadora: str):
     s3_client = boto3.client(
         "s3",
@@ -193,6 +220,12 @@ def save_rpa_reports(reports: list[dict], administadora: str):
 
     bucket_name = "administramosimoveis-rpa-observability"
     object_name = f"{administadora}/{data_atual}"
+    
+    print(f"Arquivo enviado para S3: s3://{bucket_name}/{object_name}")
+    print(f"Nome do arquivo: {object_name}")
+    print(f"Conteúdo do arquivo: {json_data}")  # Log do conteúdo
+    print(f"Horário de salvamento: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    
 
     try:
         s3_client.upload_file(temp_file, bucket_name, object_name)
@@ -202,6 +235,7 @@ def save_rpa_reports(reports: list[dict], administadora: str):
     finally:
         if os.path.exists(temp_file):
             os.remove(temp_file)
+
 
 def save_boletos(pdf_file_path: str, administadora: str):
     s3_client = boto3.client(

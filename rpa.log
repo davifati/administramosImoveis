@@ -1,0 +1,1793 @@
+Executando arquivos em apsa...
+Executando bots/src/apsa/bot.py
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:37:27", "msg": "Login falhou para o usu\u00e1rio: giselereis", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:37:27
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:37:43", "msg": "Login falhou para o usu\u00e1rio: Gracinda Pedreira Zanolini", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:37:43
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:38:02", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:38:02
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:38:16", "msg": "Login falhou para o usu\u00e1rio: giselereis", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:38:16
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:38:45", "msg": "Login bem-sucedido para o usu\u00e1rio: helioparente", "status": "OK"}, {"timestamp": "2024-10-29 01:38:53", "msg": "Nenhum boleto encontrado ou erro ao obter boletos.", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:38:53
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:39:11", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:39:11
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:39:25", "msg": "Login falhou para o usu\u00e1rio: 26581108553", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:39:25
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:39:53", "msg": "Login bem-sucedido para o usu\u00e1rio: helioparente", "status": "OK"}, {"timestamp": "2024-10-29 01:40:01", "msg": "Nenhum boleto encontrado ou erro ao obter boletos.", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:40:01
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:40:19", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:40:19
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:40:37", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:40:37
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:40:55", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:40:55
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:41:13", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:41:13
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:41:30", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:41:30
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:41:49", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:41:49
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:42:17", "msg": "Login bem-sucedido para o usu\u00e1rio: Adrepromo", "status": "OK"}, {"timestamp": "2024-10-29 01:42:25", "msg": "Nenhum boleto encontrado ou erro ao obter boletos.", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:42:25
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:42:44", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:42:44
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:43:01", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:43:02
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:43:20", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:43:20
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:43:48", "msg": "Login bem-sucedido para o usu\u00e1rio: 62432788753", "status": "OK"}, {"timestamp": "2024-10-29 01:43:57", "msg": "Nenhum boleto encontrado ou erro ao obter boletos.", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:43:57
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:44:15", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:44:15
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:44:52", "msg": "Nenhum boleto encontrado ou erro ao obter boletos.", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:44:52
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:45:11", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:45:11
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:45:34", "msg": "Login falhou para o usu\u00e1rio: Por e-mail", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:45:34
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:45:52", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:45:52
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:46:11", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:46:11
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:46:29", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:46:29
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:46:58", "msg": "Login bem-sucedido para o usu\u00e1rio: Jardins De Alah", "status": "OK"}, {"timestamp": "2024-10-29 01:47:06", "msg": "Nenhum boleto encontrado ou erro ao obter boletos.", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:47:06
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:47:43", "msg": "Nenhum boleto encontrado ou erro ao obter boletos.", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:47:43
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:48:12", "msg": "Login bem-sucedido para o usu\u00e1rio: 62432788753", "status": "OK"}, {"timestamp": "2024-10-29 01:48:20", "msg": "Nenhum boleto encontrado ou erro ao obter boletos.", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:48:20
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:48:35", "msg": "Login falhou para o usu\u00e1rio: Gracinda Pedreira Zanolini", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:48:35
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:49:04", "msg": "Login bem-sucedido para o usu\u00e1rio: Adrepromo", "status": "OK"}, {"timestamp": "2024-10-29 01:49:12", "msg": "Nenhum boleto encontrado ou erro ao obter boletos.", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:49:12
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:49:30", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:49:30
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:50:07", "msg": "Nenhum boleto encontrado ou erro ao obter boletos.", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:50:07
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:50:25", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:50:25
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:50:43", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:50:43
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:51:06", "msg": "Login falhou para o usu\u00e1rio: Por e-mail", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:51:06
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:51:21", "msg": "Login falhou para o usu\u00e1rio: 26581108553", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:51:21
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:51:45", "msg": "Login falhou para o usu\u00e1rio: Por e-mail", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:51:45
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:52:03", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:52:03
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:52:21", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:52:21
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:52:39", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:52:39
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:52:59", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:52:59
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:53:17", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:53:17
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:53:35", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:53:35
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:53:53", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:53:54
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:54:30", "msg": "Nenhum boleto encontrado ou erro ao obter boletos.", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:54:30
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:54:48", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:54:48
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:55:11", "msg": "Login falhou para o usu\u00e1rio: Por e-mail", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:55:11
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:55:40", "msg": "Login bem-sucedido para o usu\u00e1rio: Fatima Fernandes", "status": "OK"}, {"timestamp": "2024-10-29 01:55:48", "msg": "Nenhum boleto encontrado ou erro ao obter boletos.", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:55:48
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Nome do arquivo: apsa/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 01:56:16", "msg": "Login bem-sucedido para o usu\u00e1rio: Fatima Fernandes", "status": "OK"}, {"timestamp": "2024-10-29 01:56:25", "msg": "Nenhum boleto encontrado ou erro ao obter boletos.", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 01:56:25
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/apsa/2024_10_29
+Executando arquivos em bap...
+Executando bots/src/bap/bot.py
+
+Executando o bot para o usuário: 208180201
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 208180201
+
+Executando o bot para o usuário: 208180201
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 208180201
+
+Executando o bot para o usuário: 210960014
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 210960014
+
+Executando o bot para o usuário: 204440031
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 204440031
+
+Executando o bot para o usuário: 208180552
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 208180552
+
+Executando o bot para o usuário: 207040027
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 207040027
+
+Executando o bot para o usuário: 207510116
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 207510116
+
+Executando o bot para o usuário: 203340015
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 203340015
+
+Executando o bot para o usuário: 210370101
+Preencheu username, password e clicou em ok.
+Login inválido para o usuário 210370101
+Login falhou para o usuário 210370101. Pulando para o próximo.
+Processo finalizado para usuário: 210370101
+
+Executando o bot para o usuário: 209730089
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 209730089
+
+Executando o bot para o usuário: 207640101
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 207640101
+
+Executando o bot para o usuário: 209730089
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 209730089
+
+Executando o bot para o usuário: 203340111
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 203340111
+
+Executando o bot para o usuário: 210370098
+Preencheu username, password e clicou em ok.
+Login inválido para o usuário 210370098
+Login falhou para o usuário 210370098. Pulando para o próximo.
+Processo finalizado para usuário: 210370098
+
+Executando o bot para o usuário: 210960014
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 210960014
+
+Executando o bot para o usuário: 204440031
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 204440031
+
+Executando o bot para o usuário: 204730039
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 204730039
+
+Executando o bot para o usuário: 208181215
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 208181215
+
+Executando o bot para o usuário: 209740009
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 209740009
+
+Executando o bot para o usuário: 208181086
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 208181086
+
+Executando o bot para o usuário: 203340111
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 203340111
+
+Executando o bot para o usuário: 208181086
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 208181086
+
+Executando o bot para o usuário: 208080065
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 208080065
+
+Executando o bot para o usuário: 204730039
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 204730039
+
+Executando o bot para o usuário: 210390019
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 210390019
+
+Executando o bot para o usuário: 210370001
+Preencheu username, password e clicou em ok.
+Login inválido para o usuário 210370001
+Login falhou para o usuário 210370001. Pulando para o próximo.
+Processo finalizado para usuário: 210370001
+
+Executando o bot para o usuário: 208080098
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 208080098
+
+Executando o bot para o usuário: 208181215
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 208181215
+
+Executando o bot para o usuário: 203340015
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 203340015
+
+Executando o bot para o usuário: 208180552
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 208180552
+
+Executando o bot para o usuário: 210960071
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 210960071
+
+Executando o bot para o usuário: 210390019
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 210390019
+
+Executando o bot para o usuário: 208080065
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 208080065
+
+Executando o bot para o usuário: 205200081
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 205200081
+
+Executando o bot para o usuário: 207040027
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 207040027
+
+Executando o bot para o usuário: 207640101
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 207640101
+
+Executando o bot para o usuário: 205200081
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 205200081
+
+Executando o bot para o usuário: 208080098
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 208080098
+
+Executando o bot para o usuário: 207510116
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Processo finalizado para usuário: 207510116
+
+Executando arquivos em bcf...
+Executando bots/src/bcf/bot.py
+
+ValueError: too many values to unpack (expected 3)
+Executando arquivos em cipa...
+Executando bots/src/cipa/bot.py
+
+Executando o bot para o usuário: administrativo1@administramosimoveis.com.br
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Pesquisou o condominio: A4 Offices
+Selecionou condominio: A4 Offices
+Clicou em segunda via boleto.
+Processo finalizado para usuário: administrativo1@administramosimoveis.com.br
+Executando arquivos em estasa...
+Executando bots/src/estasa/bot.py
+2024-10-29 02:02:12,444 - INFO - Processo finalizado para o usuário: 0981021302
+2024-10-29 02:02:58,562 - INFO - Processo finalizado para o usuário: 011220114
+2024-10-29 02:03:29,677 - INFO - Processo finalizado para o usuário: 01328103
+2024-10-29 02:03:59,528 - INFO - Processo finalizado para o usuário: 010140103
+2024-10-29 02:04:28,319 - INFO - Processo finalizado para o usuário: 06913109
+2024-10-29 02:04:56,270 - INFO - Processo finalizado para o usuário: 06913702
+
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png
+
+{'data_vencimento': '05/11/2024', 'vlr_boleto': '1.409,23', 'linha_digitavel': '23791.41407 90000.657271 86001.869006 1 98910000140923', 'nome_administradora': 'estasa', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av malibu, 285, apto 1302 bloco 02 - barra da tijuca - cep 22793-295', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png'}
+
+Erro ao inserir o boleto: 1062 (23000): Duplicate entry '23791.41407 90000.657271 86001.869006 1 98910000140923' for key 'scrapercondominios.scrapercondominios_unique'
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:01:58", "msg": "Login bem-sucedido para o usu\u00e1rio: 0981021302", "status": "OK"}, {"timestamp": "2024-10-29 02:02:11", "msg": "Feito download do boleto para o usu\u00e1rio: 0981021302", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:02:11
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:01:58', 'msg': 'Login bem-sucedido para o usuário: 0981021302', 'status': 'OK'}, {'timestamp': '2024-10-29 02:02:11', 'msg': 'Feito download do boleto para o usuário: 0981021302', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png
+
+{'data_vencimento': '05/11/2024', 'vlr_boleto': '1.594,46', 'linha_digitavel': '23791.41407 90000.659004 73001.869004 4 98910000159446', 'nome_administradora': 'estasa', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av malibu, 260, apto 702 bloco 02 - barra da tijuca - cep 22793-295', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png'}
+
+Erro ao inserir o boleto: 1062 (23000): Duplicate entry '23791.41407 90000.659004 73001.869004 4 98910000159446' for key 'scrapercondominios.scrapercondominios_unique'
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:02:38", "msg": "Login bem-sucedido para o usu\u00e1rio: 011220114", "status": "OK"}, {"timestamp": "2024-10-29 02:02:57", "msg": "Feito download do boleto para o usu\u00e1rio: 011220114", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:02:57
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:02:38', 'msg': 'Login bem-sucedido para o usuário: 011220114', 'status': 'OK'}, {'timestamp': '2024-10-29 02:02:57', 'msg': 'Feito download do boleto para o usuário: 011220114', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png
+
+{'data_vencimento': '10/11/2024', 'vlr_boleto': '669,09', 'linha_digitavel': '{\n  "statusCode": 500,\n  "body": "{\\"error\\": \\"Erro ao ler o arquivo estasa/2024_10_29/boleto.png: \'utf-8\' codec can\'t decode byte 0xff in position 0: invalid start byte\\"}"\n}', 'nome_administradora': 'estasa', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'estrada do rio grande, 4001, apto 103 bloco 08 - taquara - cep 22723-002', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png'}
+
+Boleto adicionada com sucesso.
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:03:14", "msg": "Login bem-sucedido para o usu\u00e1rio: 01328103", "status": "OK"}, {"timestamp": "2024-10-29 02:03:28", "msg": "Feito download do boleto para o usu\u00e1rio: 01328103", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:03:28
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:03:14', 'msg': 'Login bem-sucedido para o usuário: 01328103', 'status': 'OK'}, {'timestamp': '2024-10-29 02:03:28', 'msg': 'Feito download do boleto para o usuário: 01328103', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png
+
+{'data_vencimento': '10/11/2024', 'vlr_boleto': '1.019,67', 'linha_digitavel': '23791.41407 90000.657677 51001.869000 1 98960000101967', 'nome_administradora': 'estasa', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'rua barão de são francisco, 64, apto 103 - andarai - cep 22560-032', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png'}
+
+Erro ao inserir o boleto: 1062 (23000): Duplicate entry '23791.41407 90000.657677 51001.869000 1 98960000101967' for key 'scrapercondominios.scrapercondominios_unique'
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:03:45", "msg": "Login bem-sucedido para o usu\u00e1rio: 010140103", "status": "OK"}, {"timestamp": "2024-10-29 02:03:58", "msg": "Feito download do boleto para o usu\u00e1rio: 010140103", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:03:58
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:03:45', 'msg': 'Login bem-sucedido para o usuário: 010140103', 'status': 'OK'}, {'timestamp': '2024-10-29 02:03:58', 'msg': 'Feito download do boleto para o usuário: 010140103', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Não foi encontrado boleto disponível.
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:04:14", "msg": "Login bem-sucedido para o usu\u00e1rio: 06913109", "status": "OK"}, {"timestamp": "2024-10-29 02:04:27", "msg": "Nenhum boleto dispon\u00edvel para o usu\u00e1rio: 06913109", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:04:27
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:04:14', 'msg': 'Login bem-sucedido para o usuário: 06913109', 'status': 'OK'}, {'timestamp': '2024-10-29 02:04:27', 'msg': 'Nenhum boleto disponível para o usuário: 06913109', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Não foi encontrado boleto disponível.
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:04:43", "msg": "Login bem-sucedido para o usu\u00e1rio: 06913702", "status": "OK"}, {"timestamp": "2024-10-29 02:04:55", "msg": "Nenhum boleto dispon\u00edvel para o usu\u00e1rio: 06913702", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:04:55
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:04:43', 'msg': 'Login bem-sucedido para o usuário: 06913702', 'status': 'OK'}, {'timestamp': '2024-10-29 02:04:55', 'msg': 'Nenhum boleto disponível para o usuário: 06913702', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.2024-10-29 02:05:25,509 - INFO - Processo finalizado para o usuário: 0981021406
+2024-10-29 02:05:53,440 - INFO - Processo finalizado para o usuário: 06913702
+2024-10-29 02:06:32,592 - INFO - Processo finalizado para o usuário: 01122032
+2024-10-29 02:06:39,418 - INFO - Processo finalizado para o usuário: 8020307
+2024-10-29 02:07:08,064 - INFO - Processo finalizado para o usuário: 01580202
+2024-10-29 02:07:14,764 - INFO - Processo finalizado para o usuário: 10140103
+2024-10-29 02:07:42,920 - INFO - Processo finalizado para o usuário: 07690311
+
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png
+
+{'data_vencimento': '05/11/2024', 'vlr_boleto': '1.569,23', 'linha_digitavel': '23791.41407 90000.657271 96001.869005 9 98910000156923', 'nome_administradora': 'estasa', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av malibu, 285, apto 1406 bloco 02 - barra da tijuca - cep 22793-295', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png'}
+
+Boleto adicionada com sucesso.
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:05:11", "msg": "Login bem-sucedido para o usu\u00e1rio: 0981021406", "status": "OK"}, {"timestamp": "2024-10-29 02:05:24", "msg": "Feito download do boleto para o usu\u00e1rio: 0981021406", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:05:24
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:05:11', 'msg': 'Login bem-sucedido para o usuário: 0981021406', 'status': 'OK'}, {'timestamp': '2024-10-29 02:05:24', 'msg': 'Feito download do boleto para o usuário: 0981021406', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Não foi encontrado boleto disponível.
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:05:40", "msg": "Login bem-sucedido para o usu\u00e1rio: 06913702", "status": "OK"}, {"timestamp": "2024-10-29 02:05:52", "msg": "Nenhum boleto dispon\u00edvel para o usu\u00e1rio: 06913702", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:05:52
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:05:40', 'msg': 'Login bem-sucedido para o usuário: 06913702', 'status': 'OK'}, {'timestamp': '2024-10-29 02:05:52', 'msg': 'Nenhum boleto disponível para o usuário: 06913702', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png
+
+{'data_vencimento': '05/11/2024', 'vlr_boleto': '1.750,06', 'linha_digitavel': '23791.41407 90000.658998 91001.869006 6 98910000175006', 'nome_administradora': 'estasa', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av malibu, 260, apto 604 bloco 01 - barra da tijuca - cep 22793-295', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png'}
+
+Boleto adicionada com sucesso.
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:06:13", "msg": "Login bem-sucedido para o usu\u00e1rio: 01122032", "status": "OK"}, {"timestamp": "2024-10-29 02:06:31", "msg": "Feito download do boleto para o usu\u00e1rio: 01122032", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:06:31
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:06:13', 'msg': 'Login bem-sucedido para o usuário: 01122032', 'status': 'OK'}, {'timestamp': '2024-10-29 02:06:31', 'msg': 'Feito download do boleto para o usuário: 01122032', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login inválido para o usuário 8020307
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:06:38", "msg": "Login falhou para o usu\u00e1rio: 8020307", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 02:06:38
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:06:38', 'msg': 'Login falhou para o usuário: 8020307', 'status': 'FAIL'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png
+
+{'data_vencimento': '10/11/2024', 'vlr_boleto': '1.049,73', 'linha_digitavel': '23791.41407 90000.657891 73001.869004 7 98960000104973', 'nome_administradora': 'estasa', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'rua geminiano gois, 169, apto 202 - freguesia - cep 22743-670', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png'}
+
+Boleto adicionada com sucesso.
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:06:54", "msg": "Login bem-sucedido para o usu\u00e1rio: 01580202", "status": "OK"}, {"timestamp": "2024-10-29 02:07:06", "msg": "Feito download do boleto para o usu\u00e1rio: 01580202", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:07:06
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:06:54', 'msg': 'Login bem-sucedido para o usuário: 01580202', 'status': 'OK'}, {'timestamp': '2024-10-29 02:07:06', 'msg': 'Feito download do boleto para o usuário: 01580202', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login inválido para o usuário 10140103
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:07:13", "msg": "Login falhou para o usu\u00e1rio: 10140103", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 02:07:13
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:07:13', 'msg': 'Login falhou para o usuário: 10140103', 'status': 'FAIL'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png
+
+{'data_vencimento': '10/11/2024', 'vlr_boleto': '1.305,70', 'linha_digitavel': '23791.41407 90000.658378 00001.869007 5 98960000130570', 'nome_administradora': 'estasa', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'estrada dos tres rios, 965, apto 311 bloco 01 - freguesia (jpa) - cep 22745-004', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png'}
+
+Boleto adicionada com sucesso.
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:07:28", "msg": "Login bem-sucedido para o usu\u00e1rio: 07690311", "status": "OK"}, {"timestamp": "2024-10-29 02:07:41", "msg": "Feito download do boleto para o usu\u00e1rio: 07690311", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:07:41
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:07:28', 'msg': 'Login bem-sucedido para o usuário: 07690311', 'status': 'OK'}, {'timestamp': '2024-10-29 02:07:41', 'msg': 'Feito download do boleto para o usuário: 07690311', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png
+
+{'data_vencimento': '10/11/2024', 'vlr_boleto': '772,11', 'linha_digitavel': '23791.41407 90000.659434 28001.869008 6 98960000077211', 'nome_administradora': 'estasa', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'rua itaverava, 562, apto 204 bloco 02 - anil - cep 22750-006', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png'}2024-10-29 02:08:20,174 - INFO - Processo finalizado para o usuário: 132402204
+2024-10-29 02:08:26,533 - INFO - Processo finalizado para o usuário: 8020307
+2024-10-29 02:08:55,686 - INFO - Processo finalizado para o usuário: 11350309
+2024-10-29 02:09:27,647 - INFO - Processo finalizado para o usuário: 01122053
+2024-10-29 02:09:55,186 - INFO - Processo finalizado para o usuário: 06916708
+2024-10-29 02:10:24,748 - INFO - Processo finalizado para o usuário: 07690311
+
+
+Boleto adicionada com sucesso.
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:08:03", "msg": "Login bem-sucedido para o usu\u00e1rio: 132402204", "status": "OK"}, {"timestamp": "2024-10-29 02:08:18", "msg": "Feito download do boleto para o usu\u00e1rio: 132402204", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:08:18
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:08:03', 'msg': 'Login bem-sucedido para o usuário: 132402204', 'status': 'OK'}, {'timestamp': '2024-10-29 02:08:18', 'msg': 'Feito download do boleto para o usuário: 132402204', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login inválido para o usuário 8020307
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:08:25", "msg": "Login falhou para o usu\u00e1rio: 8020307", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 02:08:25
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:08:25', 'msg': 'Login falhou para o usuário: 8020307', 'status': 'FAIL'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png
+
+{'data_vencimento': '10/11/2024', 'vlr_boleto': '1.064,93', 'linha_digitavel': '23791.41407 90000.658519 13001.869000 5 98960000106493', 'nome_administradora': 'estasa', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'rua sylvio da rocha pollis, 431, apto 309 bloco 02 - barra da tijuca - cep 22793-395', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png'}
+
+Boleto adicionada com sucesso.
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:08:42", "msg": "Login bem-sucedido para o usu\u00e1rio: 11350309", "status": "OK"}, {"timestamp": "2024-10-29 02:08:54", "msg": "Feito download do boleto para o usu\u00e1rio: 11350309", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:08:54
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:08:42', 'msg': 'Login bem-sucedido para o usuário: 11350309', 'status': 'OK'}, {'timestamp': '2024-10-29 02:08:54', 'msg': 'Feito download do boleto para o usuário: 11350309', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png
+
+{'data_vencimento': '05/11/2024', 'vlr_boleto': '1.369,93', 'linha_digitavel': '23791.41407 90000.659004 12001.869002 9 98910000136993', 'nome_administradora': 'estasa', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av malibu, 260, apto 1001 bloco 01 - barra da tijuca - cep 22793-295', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png'}
+
+Boleto adicionada com sucesso.
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:09:13", "msg": "Login bem-sucedido para o usu\u00e1rio: 01122053", "status": "OK"}, {"timestamp": "2024-10-29 02:09:26", "msg": "Feito download do boleto para o usu\u00e1rio: 01122053", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:09:26
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:09:13', 'msg': 'Login bem-sucedido para o usuário: 01122053', 'status': 'OK'}, {'timestamp': '2024-10-29 02:09:26', 'msg': 'Feito download do boleto para o usuário: 01122053', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Não foi encontrado boleto disponível.
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:09:42", "msg": "Login bem-sucedido para o usu\u00e1rio: 06916708", "status": "OK"}, {"timestamp": "2024-10-29 02:09:53", "msg": "Nenhum boleto dispon\u00edvel para o usu\u00e1rio: 06916708", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:09:54
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:09:42', 'msg': 'Login bem-sucedido para o usuário: 06916708', 'status': 'OK'}, {'timestamp': '2024-10-29 02:09:53', 'msg': 'Nenhum boleto disponível para o usuário: 06916708', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png
+
+{'data_vencimento': '10/11/2024', 'vlr_boleto': '1.305,70', 'linha_digitavel': '23791.41407 90000.658378 00001.869007 5 98960000130570', 'nome_administradora': 'estasa', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'estrada dos tres rios, 965, apto 311 bloco 01 - freguesia (jpa) - cep 22745-004', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png'}
+
+Erro ao inserir o boleto: 1062 (23000): Duplicate entry '23791.41407 90000.658378 00001.869007 5 98960000130570' for key 'scrapercondominios.scrapercondominios_unique'
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:10:10", "msg": "Login bem-sucedido para o usu\u00e1rio: 07690311", "status": "OK"}, {"timestamp": "2024-10-29 02:10:23", "msg": "Feito download do boleto para o usu\u00e1rio: 07690311", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:10:23
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:10:10', 'msg': 'Login bem-sucedido para o usuário: 07690311', 'status': 'OK'}, {'timestamp': '2024-10-29 02:10:23', 'msg': 'Feito download do boleto para o usuário: 07690311', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png
+
+{'data_vencimento': '05/11/2024', 'vlr_boleto': '1.569,23', 'linha_digitavel': '23791.41407 90000.657271 96001.869005 9 98910000156923', 'nome_administradora': 'estasa', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av malibu, 285, apto 1406 bloco 02 - barra da tijuca - cep 22793-295', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png'}
+
+Erro ao inserir o boleto: 1062 (23000): Duplicate entry '23791.41407 90000.657271 96001.869005 9 98910000156923' for key 'scrapercondominios.scrapercondominios_unique'
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:10:39", "msg": "Login bem-sucedido para o usu\u00e1rio: 0981021406", "status": "OK"}, {"timestamp": "2024-10-29 02:10:52", "msg": "Feito download do boleto para o usu\u00e1rio: 0981021406", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:10:52
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:10:39', 'msg': 'Login bem-sucedido para o usuário: 0981021406', 'status': 'OK'}, {'timestamp': '2024-10-29 02:10:52', 'msg': 'Feito download do boleto para o usuário: 0981021406', 'status': 'OK'}]2024-10-29 02:10:53,438 - INFO - Processo finalizado para o usuário: 0981021406
+2024-10-29 02:11:26,756 - INFO - Processo finalizado para o usuário: 01122032
+2024-10-29 02:11:58,721 - INFO - Processo finalizado para o usuário: 01122053
+2024-10-29 02:12:31,138 - INFO - Processo finalizado para o usuário: 11350309
+2024-10-29 02:12:59,081 - INFO - Processo finalizado para o usuário: 06913109
+2024-10-29 02:13:25,910 - INFO - Processo finalizado para o usuário: 0981021302
+
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png
+
+{'data_vencimento': '05/11/2024', 'vlr_boleto': '1.750,06', 'linha_digitavel': '🤖', 'nome_administradora': 'estasa', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av malibu, 260, apto 604 bloco 01 - barra da tijuca - cep 22793-295', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png'}
+
+Boleto adicionada com sucesso.
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:11:08", "msg": "Login bem-sucedido para o usu\u00e1rio: 01122032", "status": "OK"}, {"timestamp": "2024-10-29 02:11:25", "msg": "Feito download do boleto para o usu\u00e1rio: 01122032", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:11:25
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:11:08', 'msg': 'Login bem-sucedido para o usuário: 01122032', 'status': 'OK'}, {'timestamp': '2024-10-29 02:11:25', 'msg': 'Feito download do boleto para o usuário: 01122032', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png
+
+{'data_vencimento': '05/11/2024', 'vlr_boleto': '1.369,93', 'linha_digitavel': '23791.41407 90000.659004 12001.869002 9 98910000136993', 'nome_administradora': 'estasa', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av malibu, 260, apto 1001 bloco 01 - barra da tijuca - cep 22793-295', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png'}
+
+Erro ao inserir o boleto: 1062 (23000): Duplicate entry '23791.41407 90000.659004 12001.869002 9 98910000136993' for key 'scrapercondominios.scrapercondominios_unique'
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:11:41", "msg": "Login bem-sucedido para o usu\u00e1rio: 01122053", "status": "OK"}, {"timestamp": "2024-10-29 02:11:57", "msg": "Feito download do boleto para o usu\u00e1rio: 01122053", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:11:57
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:11:41', 'msg': 'Login bem-sucedido para o usuário: 01122053', 'status': 'OK'}, {'timestamp': '2024-10-29 02:11:57', 'msg': 'Feito download do boleto para o usuário: 01122053', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png
+
+{'data_vencimento': '10/11/2024', 'vlr_boleto': '1.064,93', 'linha_digitavel': '{\n  "number": "5571986080639",\n  "message": "🤖 [AdministramosImoveis] - Automação de Extração de Boletos \\n*"\n}', 'nome_administradora': 'estasa', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'rua sylvio da rocha pollis, 431, apto 309 bloco 02 - barra da tijuca - cep 22793-395', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png'}
+
+Boleto adicionada com sucesso.
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:12:13", "msg": "Login bem-sucedido para o usu\u00e1rio: 11350309", "status": "OK"}, {"timestamp": "2024-10-29 02:12:30", "msg": "Feito download do boleto para o usu\u00e1rio: 11350309", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:12:30
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:12:13', 'msg': 'Login bem-sucedido para o usuário: 11350309', 'status': 'OK'}, {'timestamp': '2024-10-29 02:12:30', 'msg': 'Feito download do boleto para o usuário: 11350309', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Não foi encontrado boleto disponível.
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:12:45", "msg": "Login bem-sucedido para o usu\u00e1rio: 06913109", "status": "OK"}, {"timestamp": "2024-10-29 02:12:57", "msg": "Nenhum boleto dispon\u00edvel para o usu\u00e1rio: 06913109", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:12:57
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:12:45', 'msg': 'Login bem-sucedido para o usuário: 06913109', 'status': 'OK'}, {'timestamp': '2024-10-29 02:12:57', 'msg': 'Nenhum boleto disponível para o usuário: 06913109', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png
+
+{'data_vencimento': '05/11/2024', 'vlr_boleto': '1.409,23', 'linha_digitavel': '23791.41407 90000.657271 86001.869006 1 98910000140923', 'nome_administradora': 'estasa', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av malibu, 285, apto 1302 bloco 02 - barra da tijuca - cep 22793-295', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png'}
+
+Erro ao inserir o boleto: 1062 (23000): Duplicate entry '23791.41407 90000.657271 86001.869006 1 98910000140923' for key 'scrapercondominios.scrapercondominios_unique'
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:13:12", "msg": "Login bem-sucedido para o usu\u00e1rio: 0981021302", "status": "OK"}, {"timestamp": "2024-10-29 02:13:24", "msg": "Feito download do boleto para o usu\u00e1rio: 0981021302", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:13:24
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:13:12', 'msg': 'Login bem-sucedido para o usuário: 0981021302', 'status': 'OK'}, {'timestamp': '2024-10-29 02:13:24', 'msg': 'Feito download do boleto para o usuário: 0981021302', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png
+
+{'data_vencimento': '10/11/2024', 'vlr_boleto': '1.130,34', 'linha_digitavel': '23791.41407 90000.658386 04001.869009 7 98960000113034', 'nome_administradora': 'estasa', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'estrada dos três rios, 965, apto 605 bloco 02 - freguesia - cep 22745-004', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png'}
+
+Boleto adicionada com sucesso.
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:13:40", "msg": "Login bem-sucedido para o usu\u00e1rio: 07692605", "status": "OK"}, {"timestamp": "2024-10-29 02:13:53", "msg": "Feito download do boleto para o usu\u00e1rio: 07692605", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:13:53
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:13:40', 'msg': 'Login bem-sucedido para o usuário: 07692605', 'status': 'OK'}, {'timestamp': '2024-10-29 02:13:53', 'msg': 'Feito download do boleto para o usuário: 07692605', 'status': 'OK'}]2024-10-29 02:13:55,083 - INFO - Processo finalizado para o usuário: 07692605
+2024-10-29 02:14:23,543 - INFO - Processo finalizado para o usuário: 092604103
+2024-10-29 02:15:00,864 - INFO - Processo finalizado para o usuário: 07692605
+2024-10-29 02:15:32,454 - INFO - Processo finalizado para o usuário: 0981021405
+2024-10-29 02:16:09,362 - INFO - Processo finalizado para o usuário: 01580202
+2024-10-29 02:16:37,252 - INFO - Processo finalizado para o usuário: 0981021405
+
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Não foi encontrado boleto disponível.
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:14:09", "msg": "Login bem-sucedido para o usu\u00e1rio: 092604103", "status": "OK"}, {"timestamp": "2024-10-29 02:14:22", "msg": "Nenhum boleto dispon\u00edvel para o usu\u00e1rio: 092604103", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:14:22
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:14:09', 'msg': 'Login bem-sucedido para o usuário: 092604103', 'status': 'OK'}, {'timestamp': '2024-10-29 02:14:22', 'msg': 'Nenhum boleto disponível para o usuário: 092604103', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png
+
+{'data_vencimento': '10/11/2024', 'vlr_boleto': '1.130,34', 'linha_digitavel': '23791.41407 90000.658386 04001.869009 7 98960000113034', 'nome_administradora': 'estasa', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'estrada dos três rios, 965, apto 605 bloco 02 - freguesia - cep 22745-004', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png'}
+
+Erro ao inserir o boleto: 1062 (23000): Duplicate entry '23791.41407 90000.658386 04001.869009 7 98960000113034' for key 'scrapercondominios.scrapercondominios_unique'
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:14:38", "msg": "Login bem-sucedido para o usu\u00e1rio: 07692605", "status": "OK"}, {"timestamp": "2024-10-29 02:14:59", "msg": "Feito download do boleto para o usu\u00e1rio: 07692605", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:14:59
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:14:38', 'msg': 'Login bem-sucedido para o usuário: 07692605', 'status': 'OK'}, {'timestamp': '2024-10-29 02:14:59', 'msg': 'Feito download do boleto para o usuário: 07692605', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png
+
+{'data_vencimento': '05/11/2024', 'vlr_boleto': '2.209,23', 'linha_digitavel': '23791.41407 90000.657271 95001.869007 5 98910000220923', 'nome_administradora': 'estasa', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av malibu, 285, apto 1405 bloco 02 - barra da tijuca - cep 22793-295', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png'}
+
+Boleto adicionada com sucesso.
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:15:15", "msg": "Login bem-sucedido para o usu\u00e1rio: 0981021405", "status": "OK"}, {"timestamp": "2024-10-29 02:15:31", "msg": "Feito download do boleto para o usu\u00e1rio: 0981021405", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:15:31
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:15:15', 'msg': 'Login bem-sucedido para o usuário: 0981021405', 'status': 'OK'}, {'timestamp': '2024-10-29 02:15:31', 'msg': 'Feito download do boleto para o usuário: 0981021405', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png
+
+{'data_vencimento': '10/11/2024', 'vlr_boleto': '1.049,73', 'linha_digitavel': '23791.41407 90000.657891 73001.869004 7 98960000104973', 'nome_administradora': 'estasa', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'rua geminiano gois, 169, apto 202 - freguesia - cep 22743-670', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png'}
+
+Erro ao inserir o boleto: 1062 (23000): Duplicate entry '23791.41407 90000.657891 73001.869004 7 98960000104973' for key 'scrapercondominios.scrapercondominios_unique'
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:15:46", "msg": "Login bem-sucedido para o usu\u00e1rio: 01580202", "status": "OK"}, {"timestamp": "2024-10-29 02:16:08", "msg": "Feito download do boleto para o usu\u00e1rio: 01580202", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:16:08
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:15:46', 'msg': 'Login bem-sucedido para o usuário: 01580202', 'status': 'OK'}, {'timestamp': '2024-10-29 02:16:08', 'msg': 'Feito download do boleto para o usuário: 01580202', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png
+
+{'data_vencimento': '05/11/2024', 'vlr_boleto': '2.209,23', 'linha_digitavel': '23791.41407 90000.657271 95001.869007 5 98910000220923', 'nome_administradora': 'estasa', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av malibu, 285, apto 1405 bloco 02 - barra da tijuca - cep 22793-295', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png'}
+
+Erro ao inserir o boleto: 1062 (23000): Duplicate entry '23791.41407 90000.657271 95001.869007 5 98910000220923' for key 'scrapercondominios.scrapercondominios_unique'
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:16:23", "msg": "Login bem-sucedido para o usu\u00e1rio: 0981021405", "status": "OK"}, {"timestamp": "2024-10-29 02:16:35", "msg": "Feito download do boleto para o usu\u00e1rio: 0981021405", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:16:36
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:16:23', 'msg': 'Login bem-sucedido para o usuário: 0981021405', 'status': 'OK'}, {'timestamp': '2024-10-29 02:16:35', 'msg': 'Feito download do boleto para o usuário: 0981021405', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png
+
+{'data_vencimento': '05/11/2024', 'vlr_boleto': '903,42', 'linha_digitavel': '23791.41407 90000.656661 09001.869008 6 98910000090342', 'nome_administradora': 'estasa', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av claudio besserman vianna, 03, apto 113 bloco 02 - jacarepagua - cep 22775-036', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png'}
+
+Boleto adicionada com sucesso.
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:16:52", "msg": "Login bem-sucedido para o usu\u00e1rio: 011230173", "status": "OK"}, {"timestamp": "2024-10-29 02:17:05", "msg": "Feito download do boleto para o usu\u00e1rio: 011230173", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:17:05
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_292024-10-29 02:17:06,412 - INFO - Processo finalizado para o usuário: 011230173
+2024-10-29 02:17:37,367 - INFO - Processo finalizado para o usuário: 06916708
+2024-10-29 02:18:07,903 - INFO - Processo finalizado para o usuário: 011220114
+2024-10-29 02:18:46,184 - INFO - Processo finalizado para o usuário: 02936306
+2024-10-29 02:19:25,893 - INFO - Processo finalizado para o usuário: 011230173
+2024-10-29 02:19:57,269 - INFO - Processo finalizado para o usuário: 092604103
+
+[{'timestamp': '2024-10-29 02:16:52', 'msg': 'Login bem-sucedido para o usuário: 011230173', 'status': 'OK'}, {'timestamp': '2024-10-29 02:17:05', 'msg': 'Feito download do boleto para o usuário: 011230173', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Não foi encontrado boleto disponível.
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:17:20", "msg": "Login bem-sucedido para o usu\u00e1rio: 06916708", "status": "OK"}, {"timestamp": "2024-10-29 02:17:36", "msg": "Nenhum boleto dispon\u00edvel para o usu\u00e1rio: 06916708", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:17:36
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:17:20', 'msg': 'Login bem-sucedido para o usuário: 06916708', 'status': 'OK'}, {'timestamp': '2024-10-29 02:17:36', 'msg': 'Nenhum boleto disponível para o usuário: 06916708', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png
+
+{'data_vencimento': '05/11/2024', 'vlr_boleto': '1.594,46', 'linha_digitavel': '23791.41407 90000.659004 73001.869004 4 98910000159446', 'nome_administradora': 'estasa', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av malibu, 260, apto 702 bloco 02 - barra da tijuca - cep 22793-295', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png'}
+
+Erro ao inserir o boleto: 1062 (23000): Duplicate entry '23791.41407 90000.659004 73001.869004 4 98910000159446' for key 'scrapercondominios.scrapercondominios_unique'
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:17:51", "msg": "Login bem-sucedido para o usu\u00e1rio: 011220114", "status": "OK"}, {"timestamp": "2024-10-29 02:18:06", "msg": "Feito download do boleto para o usu\u00e1rio: 011220114", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:18:06
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:17:51', 'msg': 'Login bem-sucedido para o usuário: 011220114', 'status': 'OK'}, {'timestamp': '2024-10-29 02:18:06', 'msg': 'Feito download do boleto para o usuário: 011220114', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png
+
+{'data_vencimento': '10/11/2024', 'vlr_boleto': '675,14', 'linha_digitavel': '23791.41407 90000.658907 21001.869003 7 98960000067514', 'nome_administradora': 'estasa', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'rua geovani de castro, 90, apto 306 bloco 06 - freguesia (jpa) - cep 22763-070', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png'}
+
+Boleto adicionada com sucesso.
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:18:28", "msg": "Login bem-sucedido para o usu\u00e1rio: 02936306", "status": "OK"}, {"timestamp": "2024-10-29 02:18:45", "msg": "Feito download do boleto para o usu\u00e1rio: 02936306", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:18:45
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:18:28', 'msg': 'Login bem-sucedido para o usuário: 02936306', 'status': 'OK'}, {'timestamp': '2024-10-29 02:18:45', 'msg': 'Feito download do boleto para o usuário: 02936306', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png
+
+{'data_vencimento': '05/11/2024', 'vlr_boleto': '903,42', 'linha_digitavel': '23791.41407 90000.656661 09001.869008 6 98910000090342', 'nome_administradora': 'estasa', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av claudio besserman vianna, 03, apto 113 bloco 02 - jacarepagua - cep 22775-036', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/estasa/2024_10_29/boleto.png'}
+
+Erro ao inserir o boleto: 1062 (23000): Duplicate entry '23791.41407 90000.656661 09001.869008 6 98910000090342' for key 'scrapercondominios.scrapercondominios_unique'
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:19:02", "msg": "Login bem-sucedido para o usu\u00e1rio: 011230173", "status": "OK"}, {"timestamp": "2024-10-29 02:19:24", "msg": "Feito download do boleto para o usu\u00e1rio: 011230173", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:19:24
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:19:02', 'msg': 'Login bem-sucedido para o usuário: 011230173', 'status': 'OK'}, {'timestamp': '2024-10-29 02:19:24', 'msg': 'Feito download do boleto para o usuário: 011230173', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Não foi encontrado boleto disponível.
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:19:44", "msg": "Login bem-sucedido para o usu\u00e1rio: 092604103", "status": "OK"}, {"timestamp": "2024-10-29 02:19:56", "msg": "Nenhum boleto dispon\u00edvel para o usu\u00e1rio: 092604103", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:19:56
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:19:44', 'msg': 'Login bem-sucedido para o usuário: 092604103', 'status': 'OK'}, {'timestamp': '2024-10-29 02:19:56', 'msg': 'Nenhum boleto disponível para o usuário: 092604103', 'status': 'OK'}]
+Executando arquivos em protel...
+Executando bots/src/protel/bot.py
+Executando arquivos em protest...
+Executando bots/src/protest/bot.py
+2024-10-29 02:20:29,837 - INFO - Processo finalizado para o usuário: 2280300190
+
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/protest/2024_10_29/boleto.png
+
+{'data_vencimento': '10/11/2024', 'vlr_boleto': '590,16', 'linha_digitavel': '23790.13507 90001.011429 94003.571406 2 98960000059016', 'nome_administradora': 'protest', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'Av Salvador Allende, 931, apto 402 bloco 02 - Recreio dos Bandeirantes - Cep 22783-127', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/protest/2024_10_29/boleto.png'}
+
+Boleto adicionada com sucesso.
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/protest/2024_10_29
+Nome do arquivo: protest/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:20:13", "msg": "Login bem-sucedido para o usu\u00e1rio: 2280300190", "status": "OK"}, {"timestamp": "2024-10-29 02:20:28", "msg": "Feito download do boleto para o usu\u00e1rio: 2280300190", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:20:28
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/protest/2024_10_29
+[{'timestamp': '2024-10-29 02:20:13', 'msg': 'Login bem-sucedido para o usuário: 2280300190', 'status': 'OK'}, {'timestamp': '2024-10-29 02:20:28', 'msg': 'Feito download do boleto para o usuário: 2280300190', 'status': 'OK'}]
+Executando arquivos em quality_house...
+Executando bots/src/quality_house/bot.py
+2024-10-29 02:20:59,863 - INFO - Processo finalizado para o usuário: 2038900474
+2024-10-29 02:21:04,968 - INFO - Processo finalizado para o usuário: 
+2024-10-29 02:21:40,730 - INFO - Processo finalizado para o usuário: 2038900459
+2024-10-29 02:21:48,195 - INFO - Processo finalizado para o usuário: administrativo1@administramosimoveis.com.br
+2024-10-29 02:22:19,958 - INFO - Processo finalizado para o usuário: 2038900513
+2024-10-29 02:22:48,121 - INFO - Processo finalizado para o usuário: 2038900496
+
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png
+
+{'data_vencimento': '07/11/2024', 'vlr_boleto': '2.098,25', 'linha_digitavel': '        "🔍 "\n', 'nome_administradora': 'quality house', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av prefeito dulcidio cardoso, 2848, apto 1802 bloco 02 - barra da tijuca - cep 22631-052', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png'}
+
+Boleto adicionada com sucesso.
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+Nome do arquivo: quality house/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:20:46", "msg": "Login bem-sucedido para o usu\u00e1rio: 2038900474", "status": "OK"}, {"timestamp": "2024-10-29 02:20:58", "msg": "Feito download do boleto para o usu\u00e1rio: 2038900474", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:20:58
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+[{'timestamp': '2024-10-29 02:20:46', 'msg': 'Login bem-sucedido para o usuário: 2038900474', 'status': 'OK'}, {'timestamp': '2024-10-29 02:20:58', 'msg': 'Feito download do boleto para o usuário: 2038900474', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login inválido para o usuário 
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+Nome do arquivo: quality house/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:21:03", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 02:21:03
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+[{'timestamp': '2024-10-29 02:21:03', 'msg': 'Login falhou para o usuário: ', 'status': 'FAIL'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png
+
+{'data_vencimento': '07/11/2024', 'vlr_boleto': '2.098,25', 'linha_digitavel': '        "🔍 "\n', 'nome_administradora': 'quality house', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av prefeito dulcidio cardoso, 2848, apto 1611 bloco 02 - barra da tijuca - cep 22631-052', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png'}
+
+Erro ao inserir o boleto: 1062 (23000): Duplicate entry '        "? "
+' for key 'scrapercondominios.scrapercondominios_unique'
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+Nome do arquivo: quality house/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:21:22", "msg": "Login bem-sucedido para o usu\u00e1rio: 2038900459", "status": "OK"}, {"timestamp": "2024-10-29 02:21:39", "msg": "Feito download do boleto para o usu\u00e1rio: 2038900459", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:21:39
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+[{'timestamp': '2024-10-29 02:21:22', 'msg': 'Login bem-sucedido para o usuário: 2038900459', 'status': 'OK'}, {'timestamp': '2024-10-29 02:21:39', 'msg': 'Feito download do boleto para o usuário: 2038900459', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login inválido para o usuário administrativo1@administramosimoveis.com.br
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+Nome do arquivo: quality house/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:21:47", "msg": "Login falhou para o usu\u00e1rio: administrativo1@administramosimoveis.com.br", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 02:21:47
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+[{'timestamp': '2024-10-29 02:21:47', 'msg': 'Login falhou para o usuário: administrativo1@administramosimoveis.com.br', 'status': 'FAIL'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png
+
+{'data_vencimento': '07/11/2024', 'vlr_boleto': '1.705,40', 'linha_digitavel': '        "🔍 "\n', 'nome_administradora': 'quality house', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av prefeito dulcidio cardoso, 2848, apto 2105 bloco 02 - barra da tijuca - cep 22631-052', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png'}
+
+Erro ao inserir o boleto: 1062 (23000): Duplicate entry '        "? "
+' for key 'scrapercondominios.scrapercondominios_unique'
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+Nome do arquivo: quality house/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:22:02", "msg": "Login bem-sucedido para o usu\u00e1rio: 2038900513", "status": "OK"}, {"timestamp": "2024-10-29 02:22:18", "msg": "Feito download do boleto para o usu\u00e1rio: 2038900513", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:22:18
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+[{'timestamp': '2024-10-29 02:22:02', 'msg': 'Login bem-sucedido para o usuário: 2038900513', 'status': 'OK'}, {'timestamp': '2024-10-29 02:22:18', 'msg': 'Feito download do boleto para o usuário: 2038900513', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png
+
+{'data_vencimento': '07/11/2024', 'vlr_boleto': '2.098,25', 'linha_digitavel': '        "🔍 "\n', 'nome_administradora': 'quality house', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av prefeito dulcidio cardoso, 2848, apto 1912 bloco 02 - barra da tijuca - cep 22631-052', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png'}
+
+Erro ao inserir o boleto: 1062 (23000): Duplicate entry '        "? "
+' for key 'scrapercondominios.scrapercondominios_unique'
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+Nome do arquivo: quality house/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:22:35", "msg": "Login bem-sucedido para o usu\u00e1rio: 2038900496", "status": "OK"}, {"timestamp": "2024-10-29 02:22:47", "msg": "Feito download do boleto para o usu\u00e1rio: 2038900496", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:22:47
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+[{'timestamp': '2024-10-29 02:22:35', 'msg': 'Login bem-sucedido para o usuário: 2038900496', 'status': 'OK'}, {'timestamp': '2024-10-29 02:22:47', 'msg': 'Feito download do boleto para o usuário: 2038900496', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png
+
+{'data_vencimento': '07/11/2024', 'vlr_boleto': '2.098,25', 'linha_digitavel': '        "🔍 "\n', 'nome_administradora': 'quality house', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av prefeito dulcidio cardoso, 2848, apto 1303 bloco 01 - barra da tijuca - cep 22631-052', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png'}
+
+Erro ao inserir o boleto: 1062 (23000): Duplicate entry '        "? "
+' for key 'scrapercondominios.scrapercondominios_unique'
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_292024-10-29 02:23:19,164 - INFO - Processo finalizado para o usuário: 2038900151
+2024-10-29 02:23:46,528 - INFO - Processo finalizado para o usuário: 2042100142
+2024-10-29 02:24:17,368 - INFO - Processo finalizado para o usuário: 2066300091
+2024-10-29 02:24:44,935 - INFO - Processo finalizado para o usuário: 2042100142
+2024-10-29 02:25:13,887 - INFO - Processo finalizado para o usuário: 2038900098
+2024-10-29 02:25:43,551 - INFO - Processo finalizado para o usuário: 2038900032
+
+Nome do arquivo: quality house/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:23:02", "msg": "Login bem-sucedido para o usu\u00e1rio: 2038900151", "status": "OK"}, {"timestamp": "2024-10-29 02:23:18", "msg": "Feito download do boleto para o usu\u00e1rio: 2038900151", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:23:18
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+[{'timestamp': '2024-10-29 02:23:02', 'msg': 'Login bem-sucedido para o usuário: 2038900151', 'status': 'OK'}, {'timestamp': '2024-10-29 02:23:18', 'msg': 'Feito download do boleto para o usuário: 2038900151', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Não foi encontrado boleto disponivel.
+ Message: 
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:511:5
+dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16
+
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+Nome do arquivo: quality house/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:23:33", "msg": "Login bem-sucedido para o usu\u00e1rio: 2042100142", "status": "OK"}, {"timestamp": "2024-10-29 02:23:45", "msg": "Nenhum boleto dispon\u00edvel para o usu\u00e1rio: 2042100142", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:23:45
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+[{'timestamp': '2024-10-29 02:23:33', 'msg': 'Login bem-sucedido para o usuário: 2042100142', 'status': 'OK'}, {'timestamp': '2024-10-29 02:23:45', 'msg': 'Nenhum boleto disponível para o usuário: 2042100142', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Não foi encontrado boleto disponivel.
+ Message: 
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:511:5
+dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16
+
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+Nome do arquivo: quality house/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:24:00", "msg": "Login bem-sucedido para o usu\u00e1rio: 2066300091", "status": "OK"}, {"timestamp": "2024-10-29 02:24:16", "msg": "Nenhum boleto dispon\u00edvel para o usu\u00e1rio: 2066300091", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:24:16
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+[{'timestamp': '2024-10-29 02:24:00', 'msg': 'Login bem-sucedido para o usuário: 2066300091', 'status': 'OK'}, {'timestamp': '2024-10-29 02:24:16', 'msg': 'Nenhum boleto disponível para o usuário: 2066300091', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Não foi encontrado boleto disponivel.
+ Message: 
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:511:5
+dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16
+
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+Nome do arquivo: quality house/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:24:32", "msg": "Login bem-sucedido para o usu\u00e1rio: 2042100142", "status": "OK"}, {"timestamp": "2024-10-29 02:24:43", "msg": "Nenhum boleto dispon\u00edvel para o usu\u00e1rio: 2042100142", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:24:43
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+[{'timestamp': '2024-10-29 02:24:32', 'msg': 'Login bem-sucedido para o usuário: 2042100142', 'status': 'OK'}, {'timestamp': '2024-10-29 02:24:43', 'msg': 'Nenhum boleto disponível para o usuário: 2042100142', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png
+
+{'data_vencimento': '07/11/2024', 'vlr_boleto': '1.705,40', 'linha_digitavel': 'all_data', 'nome_administradora': 'quality house', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av prefeito dulcidio cardoso, 2848, apto 810 bloco 01 - barra da tijuca - cep 22631-052', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png'}
+
+Boleto adicionada com sucesso.
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+Nome do arquivo: quality house/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:24:59", "msg": "Login bem-sucedido para o usu\u00e1rio: 2038900098", "status": "OK"}, {"timestamp": "2024-10-29 02:25:12", "msg": "Feito download do boleto para o usu\u00e1rio: 2038900098", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:25:12
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+[{'timestamp': '2024-10-29 02:24:59', 'msg': 'Login bem-sucedido para o usuário: 2038900098', 'status': 'OK'}, {'timestamp': '2024-10-29 02:25:12', 'msg': 'Feito download do boleto para o usuário: 2038900098', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png
+
+{'data_vencimento': '07/11/2024', 'vlr_boleto': '1.705,40', 'linha_digitavel': 'all_data', 'nome_administradora': 'quality house', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av prefeito dulcidio cardoso, 2848, apto 304 bloco 01 - barra da tijuca - cep 22631-052', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png'}
+
+Erro ao inserir o boleto: 1062 (23000): Duplicate entry 'all_data' for key 'scrapercondominios.scrapercondominios_unique'
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+Nome do arquivo: quality house/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:25:29", "msg": "Login bem-sucedido para o usu\u00e1rio: 2038900032", "status": "OK"}, {"timestamp": "2024-10-29 02:25:42", "msg": "Feito download do boleto para o usu\u00e1rio: 2038900032", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:25:42
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+[{'timestamp': '2024-10-29 02:25:29', 'msg': 'Login bem-sucedido para o usuário: 2038900032', 'status': 'OK'}, {'timestamp': '2024-10-29 02:25:42', 'msg': 'Feito download do boleto para o usuário: 2038900032', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png
+
+{'data_vencimento': '07/11/2024', 'vlr_boleto': '845,37', 'linha_digitavel': 'response', 'nome_administradora': 'quality house', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'rua mapendi, 366, apto 403 bloco 04 - taquara - cep 22710-255', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png'}
+
+Boleto adicionada com sucesso.
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+Nome do arquivo: quality house/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:25:57", "msg": "Login bem-sucedido para o usu\u00e1rio: 2060900163", "status": "OK"}, {"timestamp": "2024-10-29 02:26:14", "msg": "Feito download do boleto para o usu\u00e1rio: 2060900163", "status": "OK"}]2024-10-29 02:26:15,171 - INFO - Processo finalizado para o usuário: 2060900163
+2024-10-29 02:26:43,481 - INFO - Processo finalizado para o usuário: 2038900336
+2024-10-29 02:27:12,427 - INFO - Processo finalizado para o usuário: 2064700003
+2024-10-29 02:27:42,079 - INFO - Processo finalizado para o usuário: 2038900474
+2024-10-29 02:28:12,719 - INFO - Processo finalizado para o usuário: 2038900032
+
+Horário de salvamento: 2024-10-29 02:26:14
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+[{'timestamp': '2024-10-29 02:25:57', 'msg': 'Login bem-sucedido para o usuário: 2060900163', 'status': 'OK'}, {'timestamp': '2024-10-29 02:26:14', 'msg': 'Feito download do boleto para o usuário: 2060900163', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png
+
+{'data_vencimento': '07/11/2024', 'vlr_boleto': '2.155,43', 'linha_digitavel': 'https://rxq5hfomlissfmqpdjbv6sh4640xnvpd.lambda-url.us-east-1.on.aws/', 'nome_administradora': 'quality house', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av prefeito dulcidio cardoso, 2848, apto 608 bloco 02 - barra da tijuca - cep 22631-052', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png'}
+
+Boleto adicionada com sucesso.
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+Nome do arquivo: quality house/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:26:29", "msg": "Login bem-sucedido para o usu\u00e1rio: 2038900336", "status": "OK"}, {"timestamp": "2024-10-29 02:26:42", "msg": "Feito download do boleto para o usu\u00e1rio: 2038900336", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:26:42
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+[{'timestamp': '2024-10-29 02:26:29', 'msg': 'Login bem-sucedido para o usuário: 2038900336', 'status': 'OK'}, {'timestamp': '2024-10-29 02:26:42', 'msg': 'Feito download do boleto para o usuário: 2038900336', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png
+
+{'data_vencimento': '11/11/2024', 'vlr_boleto': '1.773,42', 'linha_digitavel': 'https://rxq5hfomlissfmqpdjbv6sh4640xnvpd.lambda-url.us-east-1.on.aws/', 'nome_administradora': 'quality house', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av prefeito dulcidio cardoso, 2500, apto 103 bloco 06 - barra da tijuca - cep 22630-021 ', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png'}
+
+Erro ao inserir o boleto: 1062 (23000): Duplicate entry 'https://rxq5hfomlissfmqpdjbv6sh4640xnvpd.lambda-url.us-east-1.on' for key 'scrapercondominios.scrapercondominios_unique'
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+Nome do arquivo: quality house/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:26:58", "msg": "Login bem-sucedido para o usu\u00e1rio: 2064700003", "status": "OK"}, {"timestamp": "2024-10-29 02:27:11", "msg": "Feito download do boleto para o usu\u00e1rio: 2064700003", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:27:11
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+[{'timestamp': '2024-10-29 02:26:58', 'msg': 'Login bem-sucedido para o usuário: 2064700003', 'status': 'OK'}, {'timestamp': '2024-10-29 02:27:11', 'msg': 'Feito download do boleto para o usuário: 2064700003', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png
+
+{'data_vencimento': '07/11/2024', 'vlr_boleto': '2.098,25', 'linha_digitavel': 'https://rxq5hfomlissfmqpdjbv6sh4640xnvpd.lambda-url.us-east-1.on.aws/', 'nome_administradora': 'quality house', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av prefeito dulcidio cardoso, 2848, apto 1802 bloco 02 - barra da tijuca - cep 22631-052', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png'}
+
+Erro ao inserir o boleto: 1062 (23000): Duplicate entry 'https://rxq5hfomlissfmqpdjbv6sh4640xnvpd.lambda-url.us-east-1.on' for key 'scrapercondominios.scrapercondominios_unique'
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+Nome do arquivo: quality house/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:27:28", "msg": "Login bem-sucedido para o usu\u00e1rio: 2038900474", "status": "OK"}, {"timestamp": "2024-10-29 02:27:40", "msg": "Feito download do boleto para o usu\u00e1rio: 2038900474", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:27:40
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+[{'timestamp': '2024-10-29 02:27:28', 'msg': 'Login bem-sucedido para o usuário: 2038900474', 'status': 'OK'}, {'timestamp': '2024-10-29 02:27:40', 'msg': 'Feito download do boleto para o usuário: 2038900474', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png
+
+{'data_vencimento': '07/11/2024', 'vlr_boleto': '1.705,40', 'linha_digitavel': 'def send_message_to_api(all_data):\n    conn = http.client.HTTPSConnection("https://rxq5hfomlissfmqpdjbv6sh4640xnvpd.lambda-url.us-east-1.on.aws/")\n   \n    message = (\n        "🤖 *[AdministramosImoveis]* - Automação de Extração de Boletos\\n\\n" \\\n        "📑 *Status Atual:*\\n" \\\n        "🔍 *Robôs executados com sucesso:*"\n    )\n    \n    payload = {\n        "number": "5571986080639",\n        "message": message\n    }\n    \n    headers = {\n        \'Content-Type\': \'application/json\'\n    }\n    \n    try:\n        conn.request("POST", "/", payload, headers)\n        response = conn.getresponse()\n        data = response.read().decode(\'utf-8\')\n        print("Mensagem enviada com sucesso!")\n        return json.loads(data)  # Retorna a resposta da API\n    except Exception as e:\n        print(f"Erro ao enviar mensagem: {e}")\n        return None\n    finally:\n        conn.close()\n', 'nome_administradora': 'quality house', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av prefeito dulcidio cardoso, 2848, apto 304 bloco 01 - barra da tijuca - cep 22631-052', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png'}
+
+Boleto adicionada com sucesso.
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+Nome do arquivo: quality house/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:27:56", "msg": "Login bem-sucedido para o usu\u00e1rio: 2038900032", "status": "OK"}, {"timestamp": "2024-10-29 02:28:11", "msg": "Feito download do boleto para o usu\u00e1rio: 2038900032", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:28:11
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+[{'timestamp': '2024-10-29 02:27:56', 'msg': 'Login bem-sucedido para o usuário: 2038900032', 'status': 'OK'}, {'timestamp': '2024-10-29 02:28:11', 'msg': 'Feito download do boleto para o usuário: 2038900032', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png
+
+{'data_vencimento': '07/11/2024', 'vlr_boleto': '1.705,40', 'linha_digitavel': 'def send_message_to_api(all_data):\n    conn = http.client.HTTPSConnection("https://rxq5hfomlissfmqpdjbv6sh4640xnvpd.lambda-url.us-east-1.on.aws/")\n   \n    message = (\n        "🤖 *[AdministramosImoveis]* - Automação de Extração de Boletos\\n\\n" \\\n        "📑 *Status Atual:*\\n" \\\n        "🔍 *Robôs executados com sucesso:*"\n    )\n    \n    payload = {\n        "number": "5571986080639",\n        "message": message\n    }\n    \n    headers = {\n        \'Content-Type\': \'application/json\'\n    }\n    \n    try:\n        conn.request("POST", "/", payload, headers)\n        response = conn.getresponse()\n        data = response.read().decode(\'utf-8\')\n        print("Mensagem enviada com sucesso!")\n        return json.loads(data)  # Retorna a resposta da API\n    except Exception as e:\n        print(f"Erro ao enviar mensagem: {e}")\n        return None\n    finally:\n        conn.close()\n', 'nome_administradora': 'quality house', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av prefeito dulcidio cardoso, 2848, apto 1909 bloco 01 - barra da tijuca - cep 22631-052', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png'}2024-10-29 02:28:45,610 - INFO - Processo finalizado para o usuário: 2038900229
+2024-10-29 02:29:23,040 - INFO - Processo finalizado para o usuário: 2038900459
+2024-10-29 02:29:51,048 - INFO - Processo finalizado para o usuário: 2064700003
+2024-10-29 02:30:20,770 - INFO - Processo finalizado para o usuário: 2039800133
+
+
+Erro ao inserir o boleto: 1062 (23000): Duplicate entry 'def send_message_to_api(all_data):
+    conn = http.client.HTTPSC' for key 'scrapercondominios.scrapercondominios_unique'
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+Nome do arquivo: quality house/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:28:27", "msg": "Login bem-sucedido para o usu\u00e1rio: 2038900229", "status": "OK"}, {"timestamp": "2024-10-29 02:28:44", "msg": "Feito download do boleto para o usu\u00e1rio: 2038900229", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:28:44
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+[{'timestamp': '2024-10-29 02:28:27', 'msg': 'Login bem-sucedido para o usuário: 2038900229', 'status': 'OK'}, {'timestamp': '2024-10-29 02:28:44', 'msg': 'Feito download do boleto para o usuário: 2038900229', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png
+
+{'data_vencimento': '07/11/2024', 'vlr_boleto': '2.098,25', 'linha_digitavel': 'def list_s3_files(bucket_name):\n    """Lista todos os arquivos em um bucket S3 com suporte à paginação."""\n    s3_client = boto3.client(\'s3\')\n    files = []\n    \n    try:\n        paginator = s3_client.get_paginator(\'list_objects_v2\')\n        for page in paginator.paginate(Bucket=bucket_name):\n            if \'Contents\' in page:\n                files.extend([obj[\'Key\'] for obj in page[\'Contents\']])\n        \n        return files\n    except Exception as e:\n        raise RuntimeError(f"Erro ao listar arquivos: {str(e)}")\n\ndef filter_files_by_date(file_list):\n    """Filtra arquivos pela data de hoje."""\n    today = datetime.now().strftime("%Y_%m_%d")\n    filtered_files = [file for file in file_list if today in file]\n    return filtered_files\n\ndef read_json(file_content):\n    """Lê o conteúdo de um JSON e retorna a lista."""\n    try:\n        return json.loads(file_content)\n    except json.JSONDecodeError as e:\n        raise ValueError(f"Erro ao decodificar JSON: {str(e)}")\n\ndef get_file_content(bucket_name, file_key):\n    """Lê o conteúdo de um arquivo JSON no S3 e retorna como dicionário."""\n    s3_client = boto3.client(\'s3\')\n    try:\n        response = s3_client.get_object(Bucket=bucket_name, Key=file_key)\n        content = response[\'Body\'].read().decode(\'utf-8\')  # Lê o conteúdo do arquivo\n        return read_json(content)\n    except Exception as e:\n        raise RuntimeError(f"Erro ao ler o arquivo {file_key}: {str(e)}")\n', 'nome_administradora': 'quality house', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av prefeito dulcidio cardoso, 2848, apto 1611 bloco 02 - barra da tijuca - cep 22631-052', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png'}
+
+Boleto adicionada com sucesso.
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+Nome do arquivo: quality house/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:29:05", "msg": "Login bem-sucedido para o usu\u00e1rio: 2038900459", "status": "OK"}, {"timestamp": "2024-10-29 02:29:21", "msg": "Feito download do boleto para o usu\u00e1rio: 2038900459", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:29:21
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+[{'timestamp': '2024-10-29 02:29:05', 'msg': 'Login bem-sucedido para o usuário: 2038900459', 'status': 'OK'}, {'timestamp': '2024-10-29 02:29:21', 'msg': 'Feito download do boleto para o usuário: 2038900459', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png
+
+{'data_vencimento': '11/11/2024', 'vlr_boleto': '1.773,42', 'linha_digitavel': 'from datetime import datetime', 'nome_administradora': 'quality house', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av prefeito dulcidio cardoso, 2500, apto 103 bloco 06 - barra da tijuca - cep 22630-021 ', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png'}
+
+Boleto adicionada com sucesso.
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+Nome do arquivo: quality house/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:29:37", "msg": "Login bem-sucedido para o usu\u00e1rio: 2064700003", "status": "OK"}, {"timestamp": "2024-10-29 02:29:49", "msg": "Feito download do boleto para o usu\u00e1rio: 2064700003", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:29:49
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+[{'timestamp': '2024-10-29 02:29:37', 'msg': 'Login bem-sucedido para o usuário: 2064700003', 'status': 'OK'}, {'timestamp': '2024-10-29 02:29:49', 'msg': 'Feito download do boleto para o usuário: 2064700003', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png
+
+{'data_vencimento': '10/11/2024', 'vlr_boleto': '1.265,29', 'linha_digitavel': 'from datetime import datetime', 'nome_administradora': 'quality house', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av prefeito dulcidio cardoso, 2500, apto 2301 bloco 04 - barra da tijuca - cep 22631-902', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png'}
+
+Erro ao inserir o boleto: 1062 (23000): Duplicate entry 'from datetime import datetime' for key 'scrapercondominios.scrapercondominios_unique'
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+Nome do arquivo: quality house/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:30:05", "msg": "Login bem-sucedido para o usu\u00e1rio: 2039800133", "status": "OK"}, {"timestamp": "2024-10-29 02:30:19", "msg": "Feito download do boleto para o usu\u00e1rio: 2039800133", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:30:19
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+[{'timestamp': '2024-10-29 02:30:05', 'msg': 'Login bem-sucedido para o usuário: 2039800133', 'status': 'OK'}, {'timestamp': '2024-10-29 02:30:19', 'msg': 'Feito download do boleto para o usuário: 2039800133', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png
+
+{'data_vencimento': '07/11/2024', 'vlr_boleto': '2.098,25', 'linha_digitavel': '    message = (\n        "🤖 *[AdministramosImoveis]* - Automação de Extração de Boletos\\n\\n" \\\n        "📑 *Status Atual:*\\n" \\\n        "🔍 *Robôs executados com sucesso:*"\n    )\n    \n    payload = {\n        "number": "5571986080639",\n        "message": message\n    }\n    \n    headers = {\n        \'Content-Type\': \'application/json\'\n    }', 'nome_administradora': 'quality house', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av prefeito dulcidio cardoso, 2848, apto 1912 bloco 02 - barra da tijuca - cep 22631-052', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png'}
+
+Boleto adicionada com sucesso.
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+Nome do arquivo: quality house/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:30:35", "msg": "Login bem-sucedido para o usu\u00e1rio: 2038900496", "status": "OK"}, {"timestamp": "2024-10-29 02:30:47", "msg": "Feito download do boleto para o usu\u00e1rio: 2038900496", "status": "OK"}]2024-10-29 02:30:48,413 - INFO - Processo finalizado para o usuário: 2038900496
+2024-10-29 02:31:20,923 - INFO - Processo finalizado para o usuário: 2066000060
+2024-10-29 02:31:52,334 - INFO - Processo finalizado para o usuário: 2038900513
+2024-10-29 02:32:23,677 - INFO - Processo finalizado para o usuário: 2038900471
+2024-10-29 02:33:03,797 - INFO - Processo finalizado para o usuário: 2038900229
+2024-10-29 02:33:31,132 - INFO - Processo finalizado para o usuário: 2066300091
+
+Horário de salvamento: 2024-10-29 02:30:47
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+[{'timestamp': '2024-10-29 02:30:35', 'msg': 'Login bem-sucedido para o usuário: 2038900496', 'status': 'OK'}, {'timestamp': '2024-10-29 02:30:47', 'msg': 'Feito download do boleto para o usuário: 2038900496', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png
+
+{'data_vencimento': '10/10/2024', 'vlr_boleto': '3.911,33', 'linha_digitavel': '    message = (\n        "🤖 *[AdministramosImoveis]* - Automação de Extração de Boletos\\n\\n" \\\n        "📑 *Status Atual:*\\n" \\\n        "🔍 *Robôs executados com sucesso:*"\n    )\n    \n    payload = {\n        "number": "5571986080639",\n        "message": message\n    }\n    \n    headers = {\n        \'Content-Type\': \'application/json\'\n    }', 'nome_administradora': 'quality house', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av malibu, 143, apto 804 bloco 01 - barra da tijuca - cep 22793-295', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png'}
+
+Erro ao inserir o boleto: 1062 (23000): Duplicate entry '    message = (
+        "? *[AdministramosImoveis]* - Automaçã' for key 'scrapercondominios.scrapercondominios_unique'
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+Nome do arquivo: quality house/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:31:04", "msg": "Login bem-sucedido para o usu\u00e1rio: 2066000060", "status": "OK"}, {"timestamp": "2024-10-29 02:31:19", "msg": "Feito download do boleto para o usu\u00e1rio: 2066000060", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:31:19
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+[{'timestamp': '2024-10-29 02:31:04', 'msg': 'Login bem-sucedido para o usuário: 2066000060', 'status': 'OK'}, {'timestamp': '2024-10-29 02:31:19', 'msg': 'Feito download do boleto para o usuário: 2066000060', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png
+
+{'data_vencimento': '07/11/2024', 'vlr_boleto': '1.705,40', 'linha_digitavel': 'create_msg', 'nome_administradora': 'quality house', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av prefeito dulcidio cardoso, 2848, apto 2105 bloco 02 - barra da tijuca - cep 22631-052', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png'}
+
+Boleto adicionada com sucesso.
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+Nome do arquivo: quality house/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:31:35", "msg": "Login bem-sucedido para o usu\u00e1rio: 2038900513", "status": "OK"}, {"timestamp": "2024-10-29 02:31:51", "msg": "Feito download do boleto para o usu\u00e1rio: 2038900513", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:31:51
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+[{'timestamp': '2024-10-29 02:31:35', 'msg': 'Login bem-sucedido para o usuário: 2038900513', 'status': 'OK'}, {'timestamp': '2024-10-29 02:31:51', 'msg': 'Feito download do boleto para o usuário: 2038900513', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png
+
+{'data_vencimento': '07/11/2024', 'vlr_boleto': '2.098,25', 'linha_digitavel': 'msg', 'nome_administradora': 'quality house', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av prefeito dulcidio cardoso, 2848, apto 1711 bloco 02 - barra da tijuca - cep 22631-052', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png'}
+
+Boleto adicionada com sucesso.
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+Nome do arquivo: quality house/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:32:06", "msg": "Login bem-sucedido para o usu\u00e1rio: 2038900471", "status": "OK"}, {"timestamp": "2024-10-29 02:32:22", "msg": "Feito download do boleto para o usu\u00e1rio: 2038900471", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:32:22
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+[{'timestamp': '2024-10-29 02:32:06', 'msg': 'Login bem-sucedido para o usuário: 2038900471', 'status': 'OK'}, {'timestamp': '2024-10-29 02:32:22', 'msg': 'Feito download do boleto para o usuário: 2038900471', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png
+
+{'data_vencimento': '07/11/2024', 'vlr_boleto': '1.705,40', 'linha_digitavel': 'msg', 'nome_administradora': 'quality house', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av prefeito dulcidio cardoso, 2848, apto 1909 bloco 01 - barra da tijuca - cep 22631-052', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png'}
+
+Erro ao inserir o boleto: 1062 (23000): Duplicate entry 'msg' for key 'scrapercondominios.scrapercondominios_unique'
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+Nome do arquivo: quality house/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:32:38", "msg": "Login bem-sucedido para o usu\u00e1rio: 2038900229", "status": "OK"}, {"timestamp": "2024-10-29 02:33:02", "msg": "Feito download do boleto para o usu\u00e1rio: 2038900229", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:33:02
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+[{'timestamp': '2024-10-29 02:32:38', 'msg': 'Login bem-sucedido para o usuário: 2038900229', 'status': 'OK'}, {'timestamp': '2024-10-29 02:33:02', 'msg': 'Feito download do boleto para o usuário: 2038900229', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Não foi encontrado boleto disponivel.
+ Message: 
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:511:5
+dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16
+
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+Nome do arquivo: quality house/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:33:18", "msg": "Login bem-sucedido para o usu\u00e1rio: 2066300091", "status": "OK"}, {"timestamp": "2024-10-29 02:33:29", "msg": "Nenhum boleto dispon\u00edvel para o usu\u00e1rio: 2066300091", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:33:29
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+[{'timestamp': '2024-10-29 02:33:18', 'msg': 'Login bem-sucedido para o usuário: 2066300091', 'status': 'OK'}, {'timestamp': '2024-10-29 02:33:29', 'msg': 'Nenhum boleto disponível para o usuário: 2066300091', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login inválido para o usuário administrativo2@administramosimoveis.com.br
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+Nome do arquivo: quality house/2024_10_292024-10-29 02:33:37,165 - INFO - Processo finalizado para o usuário: administrativo2@administramosimoveis.com.br
+2024-10-29 02:34:05,155 - INFO - Processo finalizado para o usuário: 2039800133
+2024-10-29 02:34:33,265 - INFO - Processo finalizado para o usuário: 2038900098
+
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:33:36", "msg": "Login falhou para o usu\u00e1rio: administrativo2@administramosimoveis.com.br", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 02:33:36
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+[{'timestamp': '2024-10-29 02:33:36', 'msg': 'Login falhou para o usuário: administrativo2@administramosimoveis.com.br', 'status': 'FAIL'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png
+
+{'data_vencimento': '10/11/2024', 'vlr_boleto': '1.265,29', 'linha_digitavel': 'msg', 'nome_administradora': 'quality house', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av prefeito dulcidio cardoso, 2500, apto 2301 bloco 04 - barra da tijuca - cep 22631-902', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png'}
+
+Erro ao inserir o boleto: 1062 (23000): Duplicate entry 'msg' for key 'scrapercondominios.scrapercondominios_unique'
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+Nome do arquivo: quality house/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:33:51", "msg": "Login bem-sucedido para o usu\u00e1rio: 2039800133", "status": "OK"}, {"timestamp": "2024-10-29 02:34:04", "msg": "Feito download do boleto para o usu\u00e1rio: 2039800133", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:34:04
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+[{'timestamp': '2024-10-29 02:33:51', 'msg': 'Login bem-sucedido para o usuário: 2039800133', 'status': 'OK'}, {'timestamp': '2024-10-29 02:34:04', 'msg': 'Feito download do boleto para o usuário: 2039800133', 'status': 'OK'}]
+Preencheu username, password e clicou em ok.
+Login bem-sucedido e home page carregada.
+Botão de segunda via clicado com sucesso.
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png
+
+{'data_vencimento': '07/11/2024', 'vlr_boleto': '1.705,40', 'linha_digitavel': 'msg', 'nome_administradora': 'quality house', 'download_concluido': True, 'num_pasta': 1, 'endereco_imovel': 'av prefeito dulcidio cardoso, 2848, apto 810 bloco 01 - barra da tijuca - cep 22631-052', 'link_pdf_boleto': 's3://administramosimoveis-rpa-observability/quality house/2024_10_29/boleto.png'}
+
+Erro ao inserir o boleto: 1062 (23000): Duplicate entry 'msg' for key 'scrapercondominios.scrapercondominios_unique'
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+Nome do arquivo: quality house/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:34:19", "msg": "Login bem-sucedido para o usu\u00e1rio: 2038900098", "status": "OK"}, {"timestamp": "2024-10-29 02:34:32", "msg": "Feito download do boleto para o usu\u00e1rio: 2038900098", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:34:32
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/quality house/2024_10_29
+[{'timestamp': '2024-10-29 02:34:19', 'msg': 'Login bem-sucedido para o usuário: 2038900098', 'status': 'OK'}, {'timestamp': '2024-10-29 02:34:32', 'msg': 'Feito download do boleto para o usuário: 2038900098', 'status': 'OK'}]
+Executando arquivos em vortex...
+Executando bots/src/vortex/bot.py
+2024-10-29 02:34:38,446 - INFO - Processo finalizado para o usuário: sergio.l
+2024-10-29 02:34:41,962 - INFO - Processo finalizado para o usuário: sergio.l
+2024-10-29 02:35:34,406 - INFO - Processo finalizado para o usuário: alberto.garcia
+2024-10-29 02:35:38,011 - INFO - Processo finalizado para o usuário: Por e-mail
+2024-10-29 02:35:41,501 - INFO - Processo finalizado para o usuário: 
+2024-10-29 02:35:44,933 - INFO - Processo finalizado para o usuário: sergio.l
+2024-10-29 02:35:48,443 - INFO - Processo finalizado para o usuário: 
+2024-10-29 02:36:01,460 - ERROR - Erro durante a execução para o usuário rogerio.cristovam: cannot access local variable 'boletos_disponiveis' where it is not associated with a value
+2024-10-29 02:36:02,611 - INFO - Processo finalizado para o usuário: rogerio.cristovam
+2024-10-29 02:36:06,328 - INFO - Processo finalizado para o usuário: 
+2024-10-29 02:36:10,446 - INFO - Processo finalizado para o usuário: Por e-mail
+2024-10-29 02:36:13,847 - INFO - Processo finalizado para o usuário: exclusive.administradora
+2024-10-29 02:36:26,919 - ERROR - Erro durante a execução para o usuário airton.fernando: cannot access local variable 'boletos_disponiveis' where it is not associated with a value
+2024-10-29 02:36:28,087 - INFO - Processo finalizado para o usuário: airton.fernando
+2024-10-29 02:36:31,933 - INFO - Processo finalizado para o usuário: sergio.l
+
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:34:37", "msg": "Login falhou para o usu\u00e1rio: sergio.l", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 02:34:37
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:34:37', 'msg': 'Login falhou para o usuário: sergio.l', 'status': 'FAIL'}]
+
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:34:40", "msg": "Login falhou para o usu\u00e1rio: sergio.l", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 02:34:40
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:34:40', 'msg': 'Login falhou para o usuário: sergio.l', 'status': 'FAIL'}]
+
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29/Recibo_0000372534_20241029000000_fefefbe4-f4b9-4e41-905e-391bae6ee516.pdf
+Erro ao inserir o boleto: 1062 (23000): Duplicate entry '34191090083725345878269968790001198910000114359' for key 'scrapercondominios.scrapercondominios_unique'
+Conexão encerrada
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:34:52", "msg": "Login bem-sucedido para o usu\u00e1rio: alberto.garcia", "status": "OK"}, {"timestamp": "2024-10-29 02:35:33", "msg": "Feito download do boleto para o usu\u00e1rio: alberto.garcia", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:35:33
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:34:52', 'msg': 'Login bem-sucedido para o usuário: alberto.garcia', 'status': 'OK'}, {'timestamp': '2024-10-29 02:35:33', 'msg': 'Feito download do boleto para o usuário: alberto.garcia', 'status': 'OK'}]
+
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:35:36", "msg": "Login falhou para o usu\u00e1rio: Por e-mail", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 02:35:36
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:35:36', 'msg': 'Login falhou para o usuário: Por e-mail', 'status': 'FAIL'}]
+
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:35:40", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 02:35:40
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:35:40', 'msg': 'Login falhou para o usuário: ', 'status': 'FAIL'}]
+
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:35:43", "msg": "Login falhou para o usu\u00e1rio: sergio.l", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 02:35:43
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:35:43', 'msg': 'Login falhou para o usuário: sergio.l', 'status': 'FAIL'}]
+
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:35:47", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 02:35:47
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:35:47', 'msg': 'Login falhou para o usuário: ', 'status': 'FAIL'}]
+
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:35:56", "msg": "Login bem-sucedido para o usu\u00e1rio: rogerio.cristovam", "status": "OK"}, {"timestamp": "2024-10-29 02:36:01", "msg": "Nenhum boleto dispon\u00edvel para o usu\u00e1rio: rogerio.cristovam", "status": "OK"}, {"timestamp": "2024-10-29 02:36:01", "msg": "Erro inesperado para o usu\u00e1rio: rogerio.cristovam", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 02:36:01
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:35:56', 'msg': 'Login bem-sucedido para o usuário: rogerio.cristovam', 'status': 'OK'}, {'timestamp': '2024-10-29 02:36:01', 'msg': 'Nenhum boleto disponível para o usuário: rogerio.cristovam', 'status': 'OK'}, {'timestamp': '2024-10-29 02:36:01', 'msg': 'Erro inesperado para o usuário: rogerio.cristovam', 'status': 'FAIL'}]
+
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:36:05", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 02:36:05
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:36:05', 'msg': 'Login falhou para o usuário: ', 'status': 'FAIL'}]
+
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:36:09", "msg": "Login falhou para o usu\u00e1rio: Por e-mail", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 02:36:09
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:36:09', 'msg': 'Login falhou para o usuário: Por e-mail', 'status': 'FAIL'}]
+
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:36:12", "msg": "Login falhou para o usu\u00e1rio: exclusive.administradora", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 02:36:12
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:36:12', 'msg': 'Login falhou para o usuário: exclusive.administradora', 'status': 'FAIL'}]
+
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:36:22", "msg": "Login bem-sucedido para o usu\u00e1rio: airton.fernando", "status": "OK"}, {"timestamp": "2024-10-29 02:36:26", "msg": "Nenhum boleto dispon\u00edvel para o usu\u00e1rio: airton.fernando", "status": "OK"}, {"timestamp": "2024-10-29 02:36:26", "msg": "Erro inesperado para o usu\u00e1rio: airton.fernando", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 02:36:26
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:36:22', 'msg': 'Login bem-sucedido para o usuário: airton.fernando', 'status': 'OK'}, {'timestamp': '2024-10-29 02:36:26', 'msg': 'Nenhum boleto disponível para o usuário: airton.fernando', 'status': 'OK'}, {'timestamp': '2024-10-29 02:36:26', 'msg': 'Erro inesperado para o usuário: airton.fernando', 'status': 'FAIL'}]
+
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:36:30", "msg": "Login falhou para o usu\u00e1rio: sergio.l", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 02:36:30
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:36:30', 'msg': 'Login falhou para o usuário: sergio.l', 'status': 'FAIL'}]
+
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:36:34", "msg": "Login falhou para o usu\u00e1rio: Por e-mail", "status": "FAIL"}]2024-10-29 02:36:35,415 - INFO - Processo finalizado para o usuário: Por e-mail
+2024-10-29 02:36:48,421 - ERROR - Erro durante a execução para o usuário waldyr.monteiro: cannot access local variable 'boletos_disponiveis' where it is not associated with a value
+2024-10-29 02:36:49,542 - INFO - Processo finalizado para o usuário: waldyr.monteiro
+2024-10-29 02:37:02,880 - ERROR - Erro durante a execução para o usuário waldyr.monteiro: cannot access local variable 'boletos_disponiveis' where it is not associated with a value
+2024-10-29 02:37:04,062 - INFO - Processo finalizado para o usuário: waldyr.monteiro
+2024-10-29 02:37:07,457 - INFO - Processo finalizado para o usuário: 
+2024-10-29 02:37:20,646 - ERROR - Erro durante a execução para o usuário leandro.da: cannot access local variable 'boletos_disponiveis' where it is not associated with a value
+2024-10-29 02:37:21,772 - INFO - Processo finalizado para o usuário: leandro.da
+2024-10-29 02:37:25,207 - INFO - Processo finalizado para o usuário: exclusive.administradora
+2024-10-29 02:37:29,383 - INFO - Processo finalizado para o usuário: 
+2024-10-29 02:37:32,868 - INFO - Processo finalizado para o usuário: 
+2024-10-29 02:37:45,848 - ERROR - Erro durante a execução para o usuário leandro.da: cannot access local variable 'boletos_disponiveis' where it is not associated with a value
+2024-10-29 02:37:46,971 - INFO - Processo finalizado para o usuário: leandro.da
+2024-10-29 02:38:34,225 - INFO - Processo finalizado para o usuário: andre.alexandre
+2024-10-29 02:38:37,775 - INFO - Processo finalizado para o usuário: 
+
+Horário de salvamento: 2024-10-29 02:36:34
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:36:34', 'msg': 'Login falhou para o usuário: Por e-mail', 'status': 'FAIL'}]
+
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:36:43", "msg": "Login bem-sucedido para o usu\u00e1rio: waldyr.monteiro", "status": "OK"}, {"timestamp": "2024-10-29 02:36:48", "msg": "Nenhum boleto dispon\u00edvel para o usu\u00e1rio: waldyr.monteiro", "status": "OK"}, {"timestamp": "2024-10-29 02:36:48", "msg": "Erro inesperado para o usu\u00e1rio: waldyr.monteiro", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 02:36:48
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:36:43', 'msg': 'Login bem-sucedido para o usuário: waldyr.monteiro', 'status': 'OK'}, {'timestamp': '2024-10-29 02:36:48', 'msg': 'Nenhum boleto disponível para o usuário: waldyr.monteiro', 'status': 'OK'}, {'timestamp': '2024-10-29 02:36:48', 'msg': 'Erro inesperado para o usuário: waldyr.monteiro', 'status': 'FAIL'}]
+
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:36:58", "msg": "Login bem-sucedido para o usu\u00e1rio: waldyr.monteiro", "status": "OK"}, {"timestamp": "2024-10-29 02:37:02", "msg": "Nenhum boleto dispon\u00edvel para o usu\u00e1rio: waldyr.monteiro", "status": "OK"}, {"timestamp": "2024-10-29 02:37:02", "msg": "Erro inesperado para o usu\u00e1rio: waldyr.monteiro", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 02:37:02
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:36:58', 'msg': 'Login bem-sucedido para o usuário: waldyr.monteiro', 'status': 'OK'}, {'timestamp': '2024-10-29 02:37:02', 'msg': 'Nenhum boleto disponível para o usuário: waldyr.monteiro', 'status': 'OK'}, {'timestamp': '2024-10-29 02:37:02', 'msg': 'Erro inesperado para o usuário: waldyr.monteiro', 'status': 'FAIL'}]
+
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:37:06", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 02:37:06
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:37:06', 'msg': 'Login falhou para o usuário: ', 'status': 'FAIL'}]
+
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:37:15", "msg": "Login bem-sucedido para o usu\u00e1rio: leandro.da", "status": "OK"}, {"timestamp": "2024-10-29 02:37:20", "msg": "Nenhum boleto dispon\u00edvel para o usu\u00e1rio: leandro.da", "status": "OK"}, {"timestamp": "2024-10-29 02:37:20", "msg": "Erro inesperado para o usu\u00e1rio: leandro.da", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 02:37:20
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:37:15', 'msg': 'Login bem-sucedido para o usuário: leandro.da', 'status': 'OK'}, {'timestamp': '2024-10-29 02:37:20', 'msg': 'Nenhum boleto disponível para o usuário: leandro.da', 'status': 'OK'}, {'timestamp': '2024-10-29 02:37:20', 'msg': 'Erro inesperado para o usuário: leandro.da', 'status': 'FAIL'}]
+
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:37:24", "msg": "Login falhou para o usu\u00e1rio: exclusive.administradora", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 02:37:24
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:37:24', 'msg': 'Login falhou para o usuário: exclusive.administradora', 'status': 'FAIL'}]
+
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:37:28", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 02:37:28
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:37:28', 'msg': 'Login falhou para o usuário: ', 'status': 'FAIL'}]
+
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:37:31", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 02:37:31
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:37:31', 'msg': 'Login falhou para o usuário: ', 'status': 'FAIL'}]
+
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:37:41", "msg": "Login bem-sucedido para o usu\u00e1rio: leandro.da", "status": "OK"}, {"timestamp": "2024-10-29 02:37:45", "msg": "Nenhum boleto dispon\u00edvel para o usu\u00e1rio: leandro.da", "status": "OK"}, {"timestamp": "2024-10-29 02:37:45", "msg": "Erro inesperado para o usu\u00e1rio: leandro.da", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 02:37:45
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:37:41', 'msg': 'Login bem-sucedido para o usuário: leandro.da', 'status': 'OK'}, {'timestamp': '2024-10-29 02:37:45', 'msg': 'Nenhum boleto disponível para o usuário: leandro.da', 'status': 'OK'}, {'timestamp': '2024-10-29 02:37:45', 'msg': 'Erro inesperado para o usuário: leandro.da', 'status': 'FAIL'}]
+
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29/Recibo_0000372289_20241029000000_cd70b718-f7ca-44a1-a114-d60b93ee88b1.pdf
+Erro ao inserir o boleto: 1062 (23000): Duplicate entry '34191090083722896878269968790001798910000107891' for key 'scrapercondominios.scrapercondominios_unique'
+Conexão encerrada
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:37:55", "msg": "Login bem-sucedido para o usu\u00e1rio: andre.alexandre", "status": "OK"}, {"timestamp": "2024-10-29 02:38:33", "msg": "Feito download do boleto para o usu\u00e1rio: andre.alexandre", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:38:33
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:37:55', 'msg': 'Login bem-sucedido para o usuário: andre.alexandre', 'status': 'OK'}, {'timestamp': '2024-10-29 02:38:33', 'msg': 'Feito download do boleto para o usuário: andre.alexandre', 'status': 'OK'}]
+
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:38:36", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 02:38:36
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:38:36', 'msg': 'Login falhou para o usuário: ', 'status': 'FAIL'}]
+
+Conectado ao banco de dados
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29/Recibo_0000372534_20241029000000_a30f0637-e0ad-4eaa-9ea4-dee9eaa03c48.pdf
+Erro ao inserir o boleto: 1062 (23000): Duplicate entry '34191090083725345878269968790001198910000114359' for key 'scrapercondominios.scrapercondominios_unique'
+Conexão encerrada
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_292024-10-29 02:39:24,702 - INFO - Processo finalizado para o usuário: alberto.garcia
+2024-10-29 02:39:37,964 - ERROR - Erro durante a execução para o usuário rogerio.cristovam: cannot access local variable 'boletos_disponiveis' where it is not associated with a value
+2024-10-29 02:39:39,079 - INFO - Processo finalizado para o usuário: rogerio.cristovam
+2024-10-29 02:39:42,524 - INFO - Processo finalizado para o usuário: Por e-mail
+2024-10-29 02:39:45,967 - INFO - Processo finalizado para o usuário: 
+
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:38:46", "msg": "Login bem-sucedido para o usu\u00e1rio: alberto.garcia", "status": "OK"}, {"timestamp": "2024-10-29 02:39:23", "msg": "Feito download do boleto para o usu\u00e1rio: alberto.garcia", "status": "OK"}]
+Horário de salvamento: 2024-10-29 02:39:23
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:38:46', 'msg': 'Login bem-sucedido para o usuário: alberto.garcia', 'status': 'OK'}, {'timestamp': '2024-10-29 02:39:23', 'msg': 'Feito download do boleto para o usuário: alberto.garcia', 'status': 'OK'}]
+
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:39:33", "msg": "Login bem-sucedido para o usu\u00e1rio: rogerio.cristovam", "status": "OK"}, {"timestamp": "2024-10-29 02:39:37", "msg": "Nenhum boleto dispon\u00edvel para o usu\u00e1rio: rogerio.cristovam", "status": "OK"}, {"timestamp": "2024-10-29 02:39:37", "msg": "Erro inesperado para o usu\u00e1rio: rogerio.cristovam", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 02:39:37
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:39:33', 'msg': 'Login bem-sucedido para o usuário: rogerio.cristovam', 'status': 'OK'}, {'timestamp': '2024-10-29 02:39:37', 'msg': 'Nenhum boleto disponível para o usuário: rogerio.cristovam', 'status': 'OK'}, {'timestamp': '2024-10-29 02:39:37', 'msg': 'Erro inesperado para o usuário: rogerio.cristovam', 'status': 'FAIL'}]
+
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:39:41", "msg": "Login falhou para o usu\u00e1rio: Por e-mail", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 02:39:41
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:39:41', 'msg': 'Login falhou para o usuário: Por e-mail', 'status': 'FAIL'}]
+
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+Nome do arquivo: vortex/2024_10_29
+Conteúdo do arquivo: [{"timestamp": "2024-10-29 02:39:44", "msg": "Login falhou para o usu\u00e1rio: ", "status": "FAIL"}]
+Horário de salvamento: 2024-10-29 02:39:44
+Arquivo enviado para S3: s3://administramosimoveis-rpa-observability/vortex/2024_10_29
+[{'timestamp': '2024-10-29 02:39:44', 'msg': 'Login falhou para o usuário: ', 'status': 'FAIL'}]
