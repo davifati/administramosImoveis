@@ -1,7 +1,6 @@
 import mysql.connector
 from mysql.connector import Error
 
-
 class MySqlConnector:
     DB_HOST = "24.144.96.26"
     DB_NAME = "alugueseguro_admimo"
