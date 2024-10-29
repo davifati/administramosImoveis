@@ -5,17 +5,18 @@ from datetime import datetime
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
-from src.protest.login_page import ProtestLoginPage
-from src.protest.home_page import ProtestHomePage
-from src.protest.download_page import ProtestDownloadPage
-from common.driver_config import WebDriverConfig
-from common.utils import DynamoDBQuery, admin_login_list, save_rpa_reports
+from bots.src.protest.login_page import ProtestLoginPage
+from bots.src.protest.home_page import ProtestHomePage
+from bots.src.protest.download_page import ProtestDownloadPage
+from bots.common.driver_config import WebDriverConfig
+from bots.common.utils import DynamoDBQuery, admin_login_list, save_rpa_reports
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 class ProtestBot():
     def __init__(self):
-        self.download_dir = r"C:\Users\Jose\Documents\GitHub\administramosImoveis\bots\src\protest\downloads"
+        current_directory = os.getcwd()
+        self.download_dir = os.path.join(current_directory, "downloads")
         self.driver = WebDriverConfig.get_firefox_driver(download_dir=self.download_dir, download=True, headless=False)
         self.login_page = ProtestLoginPage(self.driver)
         self.home_page = ProtestHomePage(self.driver)

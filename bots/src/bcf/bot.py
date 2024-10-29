@@ -1,14 +1,16 @@
 import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
-from bots.bots.bcf.login_page import BcfLoginPage
-from bots.bots.bcf.home_page import BcfHomePage
-from bots.src.bots.protel.driver_config import WebDriverConfig
-from bots.src.bots.protel.utils import DynamoDBQuery, admin_login_list
+from bots.src.bcf.login_page import BcfLoginPage
+from bots.src.bcf.home_page import BcfHomePage
+from bots.common.driver_config import WebDriverConfig
+from bots.common.utils import DynamoDBQuery, admin_login_list
 
 class BcfBot:
     def __init__(self):
-        self.driver = WebDriverConfig.get_firefox_driver(download_dir=r"C:\Users\Jose\Documents\GitHub\administramosImoveis\bots\bcf\downloads", download=False, headless=False)
+        current_directory = os.getcwd()
+        self.download_dir = os.path.join(current_directory, "downloads")
+        self.driver = WebDriverConfig.get_firefox_driver(download_dir=self.download_dir, download=False, headless=False)
         self.login_page = BcfLoginPage(self.driver)
         self.home_page = BcfHomePage(self.driver) 
 

@@ -2,17 +2,21 @@ import sys
 import os
 import logging
 from datetime import datetime
+
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
-from bots.bots.apsa.login_page import ApsaLoginPage
-from bots.bots.apsa.home_page import ApsaHomePage
-from bots.bots.apsa.download_page import ApsaDownloadPage
-from bots.src.bots.protel.driver_config import WebDriverConfig
-from bots.src.bots.protel.utils import DynamoDBQuery, admin_login_list, delete_all_files_in_directory, save_rpa_reports
+
+from bots.src.apsa.login_page import ApsaLoginPage
+from bots.src.apsa.home_page import ApsaHomePage
+from bots.src.apsa.download_page import ApsaDownloadPage
+from bots.common.driver_config import WebDriverConfig
+from bots.common.utils import DynamoDBQuery, admin_login_list, delete_all_files_in_directory, save_rpa_reports
 from datetime import datetime
 
 class ApsaBot:
     def __init__(self):
-        self.download_dir = r"C:\Users\Jose\Documents\GitHub\administramosImoveis\bots\apsa\downloads"
+        current_directory = os.getcwd
+        self.download_dir = os.path.join(current_directory, "downloads")
+        #self.download_dir = r"C:\Users\Jose\Documents\GitHub\administramosImoveis\bots\apsa\downloads"
         self.driver = WebDriverConfig.get_firefox_driver(download_dir=self.download_dir, download=True, headless=True)
         self.login_page = ApsaLoginPage(self.driver)
         self.home_page = ApsaHomePage(self.driver)

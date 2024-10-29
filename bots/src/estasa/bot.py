@@ -5,17 +5,18 @@ from datetime import datetime
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
-from src.estasa.login_page import EstasaLoginPage
-from src.estasa.home_page import EstasaHomePage
-from src.estasa.download_page import EstasaDownloadPage
-from common.driver_config import WebDriverConfig
-from common.utils import DynamoDBQuery, admin_login_list, save_rpa_reports
+from bots.src.estasa.login_page import EstasaLoginPage
+from bots.src.estasa.home_page import EstasaHomePage
+from bots.src.estasa.download_page import EstasaDownloadPage
+from bots.common.driver_config import WebDriverConfig
+from bots.common.utils import DynamoDBQuery, admin_login_list, save_rpa_reports
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 class EstasaBot():
     def __init__(self):
-        self.download_dir = r"C:\Users\Jose\Documents\GitHub\administramosImoveis\bots\src\estasa\downloads"
+        current_directory = os.getcwd()
+        self.download_dir = os.path.join(current_directory, "downloads")
         self.driver = WebDriverConfig.get_firefox_driver(download_dir=self.download_dir, download=True, headless=False)
         self.login_page = EstasaLoginPage(self.driver)
         self.home_page = EstasaHomePage(self.driver)

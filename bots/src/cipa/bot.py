@@ -1,15 +1,17 @@
 import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
-from bots.cipa.cipa_login_page import CipaLoginPage
-from bots.cipa.cipa_home_page import CipaHomePage
-from bots.cipa.cipa_download_page import CipaDownloadPage
-from common.driver_config import WebDriverConfig
-from common.utils import DynamoDBQuery, admin_login_list
+from bots.src.cipa.login_page import CipaLoginPage
+from bots.src.cipa.home_page import CipaHomePage
+from bots.src.cipa.download_page import CipaDownloadPage
+from bots.common.driver_config import WebDriverConfig
+from bots.common.utils import DynamoDBQuery, admin_login_list
 
 class CipaBot:
     def __init__(self):
-        self.driver = self.driver = WebDriverConfig.get_firefox_driver(download_dir=r"C:\Users\Jose\Documents\GitHub\administramosImoveis\bots\protel\downloads", download=False, headless=False)
+        current_directory = os.getcwd()
+        self.download_dir = os.path.join(current_directory, "downloads")
+        self.driver = self.driver = WebDriverConfig.get_firefox_driver(download_dir=self.download_dir, download=False, headless=False)
         self.login_page = CipaLoginPage(self.driver)
         self.home_page = CipaHomePage(self.driver)
         self.download_page = CipaDownloadPage(self.driver)

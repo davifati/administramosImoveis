@@ -2,20 +2,22 @@ import sys
 import os
 import logging
 from datetime import datetime
+
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
 from bots.src.vortex.login_page import VortexLoginPage
 from bots.src.vortex.home_page import VortexHomePage
 from bots.src.vortex.download_page import VortexDownloadPage
-from common.driver_config import WebDriverConfig
-from common.utils import DynamoDBQuery, admin_login_list, save_rpa_reports
+from bots.common.driver_config import WebDriverConfig
+from bots.common.utils import DynamoDBQuery, admin_login_list, save_rpa_reports
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 class VortexBot:
     
     def __init__(self):
-        self.download_dir = r"C:\Users\Jose\Documents\GitHub\administramosImoveis\bots\src\vortex\downloads"
+        current_directory = os.getcwd()
+        self.download_dir = os.path.join(current_directory, "downloads")        
         self.driver = WebDriverConfig.get_firefox_driver(download_dir=self.download_dir, download=True, headless=True)
         self.login_page = VortexLoginPage(self.driver)
         self.home_page = VortexHomePage(self.driver)
@@ -69,44 +71,6 @@ if __name__ == "__main__":
     query = DynamoDBQuery()
     items = query.getAdminLoginDetails(administradora="vortex")
     login_info = admin_login_list(items)
-
-    '''login_info = [{
-    'endereco_condominio': {
-        'S': 'estrada coronel pedro correa, 140, apto 1109 bloco 01 - jacarepagua - cep 22775-090'
-    },
-    'idImobiliaria': {
-        'S': '708'
-    },
-    'condominio': {
-        'S': 'like residencial club'
-    },
-    'id': {
-        'N': '444'
-    },
-    'administradora': {
-        'S': 'vortex'
-    },
-    'login_usuario': {
-        'S': 'andre.alexandre'
-    },
-    'login_senha': {
-        'S': 'Adm12345'
-    },
-    'proprietario': {
-        'S': 'andre alexandre fernandes souto'
-    },
-    'cpf_proprietario': {
-        'S': '082050377-01'
-    },
-    'site_administradora': {
-        'S': 'www.vortexadm.com.br'
-    },
-    'vencimento_aluguel': {
-        'N': '5'
-    }
-    }]'''
-
-    #login_info = admin_login_list(login_info)
 
     if login_info:
         for id_imobiliaria, username, password, condominio, proprietario, endereco in login_info:

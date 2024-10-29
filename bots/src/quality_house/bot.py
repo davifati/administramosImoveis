@@ -5,17 +5,18 @@ from datetime import datetime
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
-from src.quality_house.login_page import QualityHouseLoginPage
-from src.quality_house.home_page import QualityHouseHomePage
-from src.quality_house.download_page import QualityHouseDownloadPage
-from common.driver_config import WebDriverConfig
-from common.utils import DynamoDBQuery, admin_login_list, save_rpa_reports
+from bots.src.quality_house.login_page import QualityHouseLoginPage
+from bots.src.quality_house.home_page import QualityHouseHomePage
+from bots.src.quality_house.download_page import QualityHouseDownloadPage
+from bots.common.driver_config import WebDriverConfig
+from bots.common.utils import DynamoDBQuery, admin_login_list, save_rpa_reports
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 class QualityHouseBot():
     def __init__(self):
-        self.download_dir = r"C:\Users\Jose\Documents\GitHub\administramosImoveis\bots\src\quality_house\downloads"
+        current_directory = os.getcwd()
+        self.download_dir = os.path.join(current_directory, "downloads")        
         self.driver = WebDriverConfig.get_firefox_driver(download_dir=self.download_dir, download=True, headless=False)
         self.login_page = QualityHouseLoginPage(self.driver)
         self.home_page = QualityHouseHomePage(self.driver)
