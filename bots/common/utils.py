@@ -13,6 +13,12 @@ AWS_ACCESS_KEY_ID = "AKIA2OAJT7MOSWOXM6U2"
 AWS_SECRET_ACCESS_KEY = "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"
 REGION_NAME = "us-east-1"
 
+def ajuste_data(data):
+    data_obj = datetime.strptime(data, "%d/%m/%Y")
+    data_vencimento_formatado = data_obj.strftime("%Y-%m-%d")
+    return data_vencimento_formatado
+
+
 def get_latest_pdf(download_dir, extensions=[".pdf", ".png"]):
     files = []
     for ext in extensions:

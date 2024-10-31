@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from common.utils import wait_for_new_file, get_downloaded_files, get_latest_pdf, save_boletos, delete_all_files_in_directory
+from common.utils import wait_for_new_file, get_downloaded_files, get_latest_pdf, save_boletos, delete_all_files_in_directory, ajuste_data
 from common.db import MySqlConnector
 import time
 
@@ -47,6 +47,7 @@ class VortexDownloadPage:
             for boleto in boletos_tabela:
                 vencimento_e = boleto.find_element(*self.vencimento_locator)
                 data_vencimento = vencimento_e.text.strip()
+                data_vencimento = ajuste_data(data_vencimento)
 
                 valor_e = boleto.find_element(*self.valor_locator)
                 vlr_boleto = valor_e.text.strip()

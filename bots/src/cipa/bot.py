@@ -11,7 +11,7 @@ class CipaBot:
     def __init__(self):
         current_directory = os.getcwd()
         self.download_dir = os.path.join(current_directory, "downloads")
-        self.driver = self.driver = WebDriverConfig.get_firefox_driver(download_dir=self.download_dir, download=False, headless=False)
+        self.driver = self.driver = WebDriverConfig.get_firefox_driver(download_dir=self.download_dir, download=False, headless=True)
         self.login_page = CipaLoginPage(self.driver)
         self.home_page = CipaHomePage(self.driver)
         self.download_page = CipaDownloadPage(self.driver)

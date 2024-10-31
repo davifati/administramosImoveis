@@ -12,7 +12,7 @@ class BapBot:
         current_directory = os.getcwd()
         self.download_dir = os.path.join(current_directory, "downloads")
         #self.download_dir = r"C:\Users\Jose\Documents\GitHub\administramosImoveis\bots\src\bap\downloads"
-        self.driver = WebDriverConfig.get_firefox_driver(download_dir=self.download_dir, download=False, headless=False)
+        self.driver = WebDriverConfig.get_firefox_driver(download_dir=self.download_dir, download=False, headless=True)
         self.login_page = BapLoginPage(self.driver)
         self.home_page = BapHomePage(self.driver)
 

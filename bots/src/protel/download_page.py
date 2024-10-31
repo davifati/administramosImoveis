@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from bots.common.utils import ajuste_data
 
 class ProtelDownloadPage:
     def __init__(self, driver):
@@ -32,6 +33,7 @@ class ProtelDownloadPage:
                 boleto_pdf_link_e = wait.until(EC.element_to_be_clickable(self.boleto_pdf_locator))
 
                 vencimento = wait.until(EC.visibility_of_element_located(self.vencimento_locator)).text
+                vencimento = ajuste_data(vencimento)
                 valor = wait.until(EC.visibility_of_element_located(self.valor_pagar_hoje_locator)).text
                 cod_barras = wait.until(EC.visibility_of_element_located(self.linha_digitavel_locator)).text
                 cod_barras = cod_barras.replace("Linha Digitável:", "").replace(".", "").replace(" ", "").replace("-", "").strip()

@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from bots.src.bots.protel.utils import wait_for_new_file, get_downloaded_files
+from bots.common.utils import wait_for_new_file, get_downloaded_files, ajuste_data
 import pyperclip
 import time
 
@@ -49,6 +49,7 @@ class ApsaDownloadPage:
 
                 vencimento_element = item.find_element(*self.vencimento_locator)
                 vencimento = vencimento_element.text.strip()
+                vencimento = ajuste_data(vencimento)
                 #print(vencimento)
 
                 situacao_element = item.find_element(*self.situacao_locator)
