@@ -29,7 +29,7 @@ class BapBot:
             #self.driver.quit()
             print(f"Processo finalizado para usuário: {username}\n")
 
-if __name__ == "__main__":
+'''if __name__ == "__main__":
 
     query = DynamoDBQuery()
     items = query.getAdminLoginDetails(administradora="bap")
@@ -42,4 +42,4 @@ if __name__ == "__main__":
             bot = BapBot()
             bot.run(username, password)
     else:
-        print("Nenhum login encontrado.")    
+        print("Nenhum login encontrado.")'''    
