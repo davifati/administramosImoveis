@@ -16,7 +16,7 @@ class ProtelDownloadPage:
         self.valor_pagar_hoje_locator = (By.XPATH, "/html/body/div[1]/div[3]/table[2]/tbody/tr[2]/td[4]")
         self.vencimento_locator = (By.XPATH, "/html/body/div[1]/div[3]/table[2]/tbody/tr[2]/td[2]")
 
-    def check_boleto(self, endereco):
+    def check_boleto(self, endereco, idImobiliaria):
         try:
             wait = WebDriverWait(self.driver, 20)
 
@@ -35,6 +35,7 @@ class ProtelDownloadPage:
                 vencimento = wait.until(EC.visibility_of_element_located(self.vencimento_locator)).text
                 vencimento = ajuste_data(vencimento)
                 valor = wait.until(EC.visibility_of_element_located(self.valor_pagar_hoje_locator)).text
+                valor = float(valor.replace('.', '').replace(',', '.'))
                 cod_barras = wait.until(EC.visibility_of_element_located(self.linha_digitavel_locator)).text
                 cod_barras = cod_barras.replace("Linha Digitável:", "").replace(".", "").replace(" ", "").replace("-", "").strip()
 
@@ -46,7 +47,8 @@ class ProtelDownloadPage:
                     "data_vencimento": vencimento,
                     "vlr_boleto": valor,
                     "nome_administradora": "protel",
-                    "endereco_imovel": endereco
+                    "endereco_imovel": endereco,
+                    "num_pasta": idImobiliaria
                 }
 
                 #print(boleto_info)

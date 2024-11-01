@@ -5,6 +5,7 @@ from bots.src.bap.login_page import BapLoginPage
 from bots.src.bap.home_page import BapHomePage
 from bots.common.driver_config import WebDriverConfig
 from bots.common.utils import DynamoDBQuery, admin_login_list
+from datetime import datetime
 
 
 class BapBot:
@@ -23,11 +24,19 @@ class BapBot:
                 return                
             
             if self.home_page.check_login_success():
-                pass
+                check_boletos = self.home_page.check_boletos()
+
         
         finally:
-            #self.driver.quit()
+            self.driver.quit()
             print(f"Processo finalizado para usuário: {username}\n")
+
+    def add_report(self, reports, msg, status):
+        reports.append({
+            "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "msg": msg,
+            "status": status
+        })     
 
 if __name__ == "__main__":
 

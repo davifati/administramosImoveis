@@ -40,7 +40,7 @@ class ProtestBot():
             boleto_disponivel = self.download_page.check_boleto()
 
             if boleto_disponivel:
-                download_boleto = self.download_page.get_boleto_info(self.download_dir, endereco)
+                download_boleto = self.download_page.get_boleto_info(self.download_dir, endereco, id_imobiliaria)
                 self.add_report(reports, f"Feito download do boleto para o usuário: {username}", "OK")
             else:
                 self.add_report(reports, f"Nenhum boleto disponível para o usuário: {username}", "OK")
@@ -66,18 +66,9 @@ class ProtestBot():
 if __name__ == "__main__":
 
 
-    '''query = DynamoDBQuery()
+    query = DynamoDBQuery()
     items = query.getAdminLoginDetails(administradora="protest")
-    login_info = admin_login_list(items)'''
-
-    login_info = [
-        ("54",
-         "2280300190",
-         "2656",
-         "Minha Praia III",
-         "MONICA LACERDA SIQUEIRA",
-         "Av Salvador Allende, 931, apto 402 bloco 02 - Recreio dos Bandeirantes - Cep 22783-127")
-    ]    
+    login_info = admin_login_list(items)
 
     print()
     if login_info:

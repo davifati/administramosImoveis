@@ -7,6 +7,7 @@ import requests
 import os
 import time
 import pyperclip
+import base64
 
 
 class ProtestDownloadPage:
@@ -55,7 +56,7 @@ class ProtestDownloadPage:
             #print(f"Erro ao copiar a linha digitável, erro: {e}")
             return e
         
-    def get_boleto_info(self, download_dir, endereco):
+    def get_boleto_info(self, download_dir, endereco, idImobiliaria):
 
         mysql_connector = MySqlConnector()
         delete_all_files_in_directory(download_dir)
@@ -78,14 +79,13 @@ class ProtestDownloadPage:
 
                 vlr_boleto_e = self.driver.find_element(*self.vlr_boleto_locator)
                 vlr_boleto = vlr_boleto_e.text
+                vlr_boleto = float(vlr_boleto.replace('.', '').replace(',', '.'))
 
                 boleto_img_e = self.driver.find_element(*self.boleto_image_locator)
                 boleto_img_src = boleto_img_e.get_attribute("src")
 
-                btn_copiar_linha_digitavel_e = self.driver.find_element(*self.btn_copiar_linha_digitavel_locator)
-                btn_copiar_linha_digitavel_e.click()
-                time.sleep(2)
-                linha_digitavel = pyperclip.paste()
+                linha_digitavel = self.driver.execute_script("return document.getElementById('linha-digitavel').textContent;")
+                linha_digitavel = base64.b64decode(linha_digitavel).decode('utf-8')
                 
                 boleto_download = self.download_boleto_img(download_dir, boleto_img_src)
 
@@ -95,7 +95,7 @@ class ProtestDownloadPage:
                     "linha_digitavel": linha_digitavel,
                     "nome_administradora": "protest",
                     "download_concluido": False,
-                    "num_pasta": 1,
+                    "num_pasta": idImobiliaria,
                     "endereco_imovel": endereco
                 }
 

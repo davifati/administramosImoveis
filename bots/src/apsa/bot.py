@@ -10,11 +10,12 @@ from bots.src.apsa.home_page import ApsaHomePage
 from bots.src.apsa.download_page import ApsaDownloadPage
 from bots.common.driver_config import WebDriverConfig
 from bots.common.utils import DynamoDBQuery, admin_login_list, delete_all_files_in_directory, save_rpa_reports
+from bots.common.db import MySqlConnector
 from datetime import datetime
 
 class ApsaBot:
     def __init__(self):
-        current_directory = os.getcwd
+        current_directory = os.getcwd()
         self.download_dir = os.path.join(current_directory, "downloads")
         #self.download_dir = r"C:\Users\Jose\Documents\GitHub\administramosImoveis\bots\apsa\downloads"
         self.driver = WebDriverConfig.get_firefox_driver(download_dir=self.download_dir, download=True, headless=True)

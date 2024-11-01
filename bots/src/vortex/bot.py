@@ -46,7 +46,7 @@ class VortexBot:
                 self.add_report(reports, f"Nenhum boleto disponível para o usuário: {username}", "OK")
 
             if boletos_disponiveis:
-                boleto_info = self.download_page.get_boleto_info(self.download_dir, boletos_disponiveis, endereco)
+                boleto_info = self.download_page.get_boleto_info(self.download_dir, boletos_disponiveis, endereco, id_imobiliaria)
                 self.add_report(reports, f"Feito download do boleto para o usuário: {username}", "OK")
         
         except Exception as e:

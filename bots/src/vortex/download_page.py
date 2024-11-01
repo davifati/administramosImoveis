@@ -36,7 +36,7 @@ class VortexDownloadPage:
         except Exception as e:
             return False
         
-    def get_boleto_info(self, download_dir, boletos_tabela, endereco):
+    def get_boleto_info(self, download_dir, boletos_tabela, endereco, idImobiliaria):
 
         mysql_connector = MySqlConnector()
         delete_all_files_in_directory(download_dir)
@@ -65,7 +65,7 @@ class VortexDownloadPage:
                     "nome_administradora": "vortex",
                     "endereco_imovel": endereco,
                     "download_concluido": False,
-                    "num_pasta": 1
+                    "num_pasta": idImobiliaria 
                 }
 
                 try:

@@ -40,7 +40,7 @@ class QualityHouseBot():
             boleto_disponivel = self.download_page.check_boleto()
 
             if boleto_disponivel:
-                download_boleto = self.download_page.get_boleto_info(self.download_dir, endereco)
+                download_boleto = self.download_page.get_boleto_info(self.download_dir, endereco, id_imobiliaria)
                 self.add_report(reports, f"Feito download do boleto para o usuário: {username}", "OK")
             else:
                 self.add_report(reports, f"Nenhum boleto disponível para o usuário: {username}", "OK")

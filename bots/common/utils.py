@@ -9,8 +9,8 @@ import fitz
 import tempfile
 from datetime import datetime
 
-AWS_ACCESS_KEY_ID = "AKIA2OAJT7MOSWOXM6U2"
-AWS_SECRET_ACCESS_KEY = "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"
+AWS_ACCESS_KEY_ID = "AKIA2OAJT7MOR3B6LVTS"
+AWS_SECRET_ACCESS_KEY = "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"
 REGION_NAME = "us-east-1"
 
 def ajuste_data(data):
@@ -222,7 +222,7 @@ def save_boletos(pdf_file_path: str, administadora: str):
     os.replace(pdf_file_path, temp_file)
 
     data_atual = datetime.now().strftime("%Y_%m_%d")
-    bucket_name = "administramosimoveis-rpa-observability"
+    bucket_name = "administramos-imoveis-scraper-boletos-salvos"
     object_name = f"{administadora}/{data_atual}/{os.path.basename(temp_file)}"
 
     try:

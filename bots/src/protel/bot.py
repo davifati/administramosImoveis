@@ -25,7 +25,7 @@ class ProtelBot:
         self.home_page = ProtelHomePage(self.driver)
         self.download_page = ProtelDownloadPage(self.driver)
 
-    def run(self, username, password, endereco) -> None:
+    def run(self, username, password, endereco, idImobiliaria) -> None:
         try:
             if not self.login_page.login(username, password):
                 print(
@@ -36,7 +36,7 @@ class ProtelBot:
             if self.home_page.check_login_success():
                 self.home_page.click_boleto()
 
-                boleto_disponivel = self.download_page.check_boleto(endereco)
+                boleto_disponivel = self.download_page.check_boleto(endereco, idImobiliaria)
 
                 if boleto_disponivel:
                     print("Download do boleto realizado com sucesso.")
