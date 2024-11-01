@@ -51,6 +51,7 @@ class VortexDownloadPage:
 
                 valor_e = boleto.find_element(*self.valor_locator)
                 vlr_boleto = valor_e.text.strip()
+                vlr_boleto = float(vlr_boleto.replace('.', '').replace(',', '.'))
 
                 linha_digitavel_e = boleto.find_element(*self.linha_digitavel_locator)
                 linha_digitavel = linha_digitavel_e.text.replace(".", "").replace(" ", "").replace("-", "").strip()
