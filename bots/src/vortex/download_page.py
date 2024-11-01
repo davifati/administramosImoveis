@@ -36,7 +36,7 @@ class VortexDownloadPage:
         except Exception as e:
             return False
         
-    def get_boleto_info(self, download_dir, boletos_tabela, endereco):
+    def get_boleto_info(self, download_dir, boletos_tabela, endereco, idImobiliaria):
 
         mysql_connector = MySqlConnector()
         delete_all_files_in_directory(download_dir)
@@ -51,6 +51,7 @@ class VortexDownloadPage:
 
                 valor_e = boleto.find_element(*self.valor_locator)
                 vlr_boleto = valor_e.text.strip()
+                vlr_boleto = float(vlr_boleto.replace('.', '').replace(',', '.'))
 
                 linha_digitavel_e = boleto.find_element(*self.linha_digitavel_locator)
                 linha_digitavel = linha_digitavel_e.text.replace(".", "").replace(" ", "").replace("-", "").strip()
@@ -65,7 +66,7 @@ class VortexDownloadPage:
                     "nome_administradora": "vortex",
                     "endereco_imovel": endereco,
                     "download_concluido": False,
-                    "num_pasta": 1
+                    "num_pasta": idImobiliaria 
                 }
 
                 try:

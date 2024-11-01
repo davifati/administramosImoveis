@@ -1,12 +1,14 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from common.utils import wait_for_new_file, get_downloaded_files, get_latest_pdf, save_boletos, delete_all_files_in_directory, ajuste_data
-from common.db import MySqlConnector
+from bots.common.utils import wait_for_new_file, get_downloaded_files, get_latest_pdf, save_boletos, delete_all_files_in_directory, ajuste_data
+from bots.common.db import MySqlConnector
 import requests
 import os
 import time
+import base64
 import pyperclip
+
 
 class EstasaDownloadPage:
     def __init__(self, driver):
@@ -20,6 +22,7 @@ class EstasaDownloadPage:
         self.data_vencimento_locator = (By.XPATH, "/html/body/div/div/div[3]/div/table/tbody/tr/td[2]")
         self.vlr_boleto_locator = (By.XPATH, "//td[contains(text(), 'Total')]/following-sibling::td[@class='txt-right']")
         self.btn_copiar_linha_digitavel_locator = (By.ID, "copiar")
+        self.linha_digitavel = (By.ID, "linha-digitavel")
         self.boleto_img_locator = (By.ID, "boleto")
 
     def check_boleto(self):
@@ -76,7 +79,7 @@ class EstasaDownloadPage:
             #print(f"Erro ao copiar a linha digitável, erro: {e}")
             return e
 
-    def get_boleto_info(self, download_dir, endereco):
+    def get_boleto_info(self, download_dir, endereco, idImobiliaria):
 
         mysql_connector = MySqlConnector()
         delete_all_files_in_directory(download_dir)
@@ -99,14 +102,15 @@ class EstasaDownloadPage:
 
                 vlr_boleto_e = self.driver.find_element(*self.vlr_boleto_locator)
                 vlr_boleto = vlr_boleto_e.text
+                vlr_boleto = float(vlr_boleto.replace('.', '').replace(',', '.'))
 
                 boleto_img_e = self.driver.find_element(*self.boleto_image_locator)
                 boleto_img_src = boleto_img_e.get_attribute("src")
-
-                btn_copiar_linha_digitavel_e = self.driver.find_element(*self.btn_copiar_linha_digitavel_locator)
-                btn_copiar_linha_digitavel_e.click()
-                time.sleep(2)
-                linha_digitavel = pyperclip.paste()
+                
+                linha_digitavel = self.driver.execute_script("return document.getElementById('linha-digitavel').textContent;")
+                linha_digitavel = base64.b64decode(linha_digitavel).decode('utf-8')
+                
+                #print(linha_digitavel)
                 
                 boleto_download = self.download_boleto_img(download_dir, boleto_img_src)
 
@@ -116,7 +120,7 @@ class EstasaDownloadPage:
                     "linha_digitavel": linha_digitavel,
                     "nome_administradora": "estasa",
                     "download_concluido": False,
-                    "num_pasta": 1,
+                    "num_pasta": idImobiliaria,
                     "endereco_imovel": endereco
                 }
 

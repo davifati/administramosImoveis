@@ -3,7 +3,8 @@ import os
 import logging
 from datetime import datetime
 
-sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+#sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..')))
 
 from bots.src.estasa.login_page import EstasaLoginPage
 from bots.src.estasa.home_page import EstasaHomePage
@@ -40,7 +41,8 @@ class EstasaBot():
             boleto_disponivel = self.download_page.check_boleto()
 
             if boleto_disponivel:
-                download_boleto = self.download_page.get_boleto_info(self.download_dir, endereco)
+                download_boleto = self.download_page.get_boleto_info(self.download_dir, endereco, id_imobiliaria)
+                print(download_boleto)
                 self.add_report(reports, f"Feito download do boleto para o usuário: {username}", "OK")
             else:
                 self.add_report(reports, f"Nenhum boleto disponível para o usuário: {username}", "OK")

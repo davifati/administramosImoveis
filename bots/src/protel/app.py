@@ -25,6 +25,6 @@ if __name__ == "__main__":
         ) in login_info:
             print(f"Executando o bot para o usuário: {username}")
             bot = ProtelBot()
-            bot.run(username, password, endereco)
+            bot.run(username, password, endereco, id_imobiliaria)
     else:
         print("Nenhum login encontrado.")
