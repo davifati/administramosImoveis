@@ -1,30 +1,45 @@
 import sys
 import os
-sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+import logging
+
+#sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..')))
+
 from bots.src.bap.login_page import BapLoginPage
 from bots.src.bap.home_page import BapHomePage
 from bots.common.driver_config import WebDriverConfig
 from bots.common.utils import DynamoDBQuery, admin_login_list
 from datetime import datetime
 
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 class BapBot:
     def __init__(self):
         current_directory = os.getcwd()
         self.download_dir = os.path.join(current_directory, "downloads")
-        #self.download_dir = r"C:\Users\Jose\Documents\GitHub\administramosImoveis\bots\src\bap\downloads"
-        self.driver = WebDriverConfig.get_firefox_driver(download_dir=self.download_dir, download=False, headless=True)
+        self.driver = WebDriverConfig.get_firefox_driver(download_dir=self.download_dir, download=False, headless=False)
         self.login_page = BapLoginPage(self.driver)
         self.home_page = BapHomePage(self.driver)
 
     def run(self, username, password):
+        
+        reports = []
+
         try:
             if not self.login_page.login(username, password):
-                print(f"Login falhou para o usuário {username}. Pulando para o próximo.")
-                return                
-            
+                self.add_report(reports, f"Login falhou para o usuário: {username}", "FAIL")
+                return
+
             if self.home_page.check_login_success():
-                check_boletos = self.home_page.check_boletos()
+                self.add_report(reports, f"Login bem-sucedido para o usuário: {username}", "OK")
+                boletos = self.home_page.check_boletos()
+                if boletos:
+                    self.home_page.get_boleto_info(lista_boletos=boletos, 
+                                                   download_dir=self.download_dir, 
+                                                   endereco=endereco, 
+                                                   idImobiliaria=id_imobiliaria)
+                    
+                
 
         
         finally:
