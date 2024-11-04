@@ -46,13 +46,6 @@ class BapBot:
             self.driver.quit()
             print(f"Processo finalizado para usuário: {username}\n")
 
-    def add_report(self, reports, msg, status):
-        reports.append({
-            "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-            "msg": msg,
-            "status": status
-        })     
-
 if __name__ == "__main__":
 
     query = DynamoDBQuery()
@@ -66,4 +59,4 @@ if __name__ == "__main__":
             bot = BapBot()
             bot.run(username, password)
     else:
-        print("Nenhum login encontrado.")    
+        print("Nenhum login encontrado.")'''    
