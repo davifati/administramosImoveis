@@ -59,4 +59,4 @@ if __name__ == "__main__":
             bot = BapBot()
             bot.run(username, password)
     else:
-        print("Nenhum login encontrado.")'''    
+        print("Nenhum login encontrado.")    
