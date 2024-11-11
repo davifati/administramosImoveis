@@ -1,10 +1,14 @@
 import sys
 import os
-sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
-from bots.src.bcf.login_page import BcfLoginPage
-from bots.src.bcf.home_page import BcfHomePage
-from bots.common.driver_config import WebDriverConfig
-from bots.common.utils import DynamoDBQuery, admin_login_list
+from pathlib import Path
+
+base_dir = Path(__file__).resolve().parents[2]
+sys.path.append(str(base_dir))
+
+from src.bcf.login_page import BcfLoginPage
+from src.bcf.home_page import BcfHomePage
+from common.driver_config import WebDriverConfig
+from common.db import MySqlConnector
 
 class BcfBot:
     def __init__(self):
@@ -30,17 +34,20 @@ class BcfBot:
             #print(f"Processo finalizado para o usuário: {username}.\n")
 
 if __name__ == "__main__":
+    query = MySqlConnector()
+    items = query.obter_dados("bcf")
+    login_info = query.organizar_dados_unidade(items)
 
-    query = DynamoDBQuery()
-    items = query.getAdminLoginDetails(administradora="bcf")
-    login_info = admin_login_list(items)
-
-    print()
     if login_info:
-        for id_imobiliaria, username, password in login_info:
-            print(f"Executando o bot para o usuário: {username}")
+        for item in login_info:
+            username = item['login']
+            password = item['senha']
+            endereco = item['endereco_completo']
+            num_pasta = item['num_pasta']
+
+            logging.info(f"Executando o bot para o usuário: {username}")
             bot = BcfBot()
-            bot.run(username, password)
+            bot.run(username, password, endereco)
     else:
-        print("Nenhum login encontrado.")
+        logging.warning("Nenhum login encontrado.")         
 

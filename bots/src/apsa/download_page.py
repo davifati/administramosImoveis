@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from bots.common.utils import wait_for_new_file, get_downloaded_files, ajuste_data
+from common.utils import wait_for_new_file, get_downloaded_files, ajuste_data
 import pyperclip
 import time
 

@@ -1,11 +1,15 @@
 import sys
 import os
-sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
-from bots.src.cipa.login_page import CipaLoginPage
-from bots.src.cipa.home_page import CipaHomePage
-from bots.src.cipa.download_page import CipaDownloadPage
-from bots.common.driver_config import WebDriverConfig
-from bots.common.utils import DynamoDBQuery, admin_login_list
+from pathlib import Path
+
+base_dir = Path(__file__).resolve().parents[2]
+sys.path.append(str(base_dir))
+
+from src.cipa.login_page import CipaLoginPage
+from src.cipa.home_page import CipaHomePage
+from src.cipa.download_page import CipaDownloadPage
+from common.driver_config import WebDriverConfig
+from common.db import MySqlConnector
 
 class CipaBot:
     def __init__(self):
@@ -42,12 +46,19 @@ login_info = [('606',
                'av das americas, 13685, subsolo 107 - barra da tijuca - cep 22631-000')]
 
 if __name__ == "__main__":
+    query = MySqlConnector()
+    items = query.obter_dados("apsa")
+    login_info = query.organizar_dados_unidade(items)
 
-    print()
     if login_info:
-        for id_imobiliaria, username, password, condominio, proprietario, endereco in login_info:
-            print(f"Executando o bot para o usuário: {username}")
+        for item in login_info:
+            username = item['login']
+            password = item['senha']
+            endereco = item['endereco_completo']
+            num_pasta = item['num_pasta']
+
+            logging.info(f"Executando o bot para o usuário: {username}")
             bot = CipaBot()
-            bot.run(username, password, condominio)
+            bot.run(username, password, endereco)
     else:
-        print("Nenhum login encontrado.")
+        logging.warning("Nenhum login encontrado.")         

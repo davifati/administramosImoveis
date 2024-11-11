@@ -1,7 +1,8 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from bots.common.utils import ajuste_data
+from common.utils import save_boletos, get_latest_pdf, ajuste_data, wait_for_new_file, delete_all_files_in_directory, get_downloaded_files
+from common.db import MySqlConnector
 
 class ProtelDownloadPage:
     def __init__(self, driver):
@@ -16,9 +17,13 @@ class ProtelDownloadPage:
         self.valor_pagar_hoje_locator = (By.XPATH, "/html/body/div[1]/div[3]/table[2]/tbody/tr[2]/td[4]")
         self.vencimento_locator = (By.XPATH, "/html/body/div[1]/div[3]/table[2]/tbody/tr[2]/td[2]")
 
-    def check_boleto(self, endereco, idImobiliaria):
+    def check_boleto(self, endereco, idImobiliaria, download_dir):
         try:
             wait = WebDriverWait(self.driver, 20)
+
+            mysql_connector = MySqlConnector()
+            delete_all_files_in_directory(download_dir)
+            previous_files = get_downloaded_files(download_dir)
 
             try:
                 no_boleto_message_e = wait.until(EC.presence_of_element_located(self.no_boleto_message_locator))
@@ -35,7 +40,7 @@ class ProtelDownloadPage:
                 vencimento = wait.until(EC.visibility_of_element_located(self.vencimento_locator)).text
                 vencimento = ajuste_data(vencimento)
                 valor = wait.until(EC.visibility_of_element_located(self.valor_pagar_hoje_locator)).text
-                valor = float(valor.replace('.', '').replace(',', '.'))
+                valor = float(valor.replace("R$ ", "").replace(".", "").replace(",", "."))
                 cod_barras = wait.until(EC.visibility_of_element_located(self.linha_digitavel_locator)).text
                 cod_barras = cod_barras.replace("Linha Digitável:", "").replace(".", "").replace(" ", "").replace("-", "").strip()
 
@@ -48,12 +53,38 @@ class ProtelDownloadPage:
                     "vlr_boleto": valor,
                     "nome_administradora": "protel",
                     "endereco_imovel": endereco,
+                    "download_concluido": False,
                     "num_pasta": idImobiliaria
                 }
 
-                #print(boleto_info)
+                try:
+                    new_file = wait_for_new_file(download_dir, previous_files)
+                    boleto_info["download_concluido"] = True
+                except TimeoutError:
+                    boleto_info["download_concluido"] = False
+
+                if boleto_info["download_concluido"] == True:
+                    boleto_path = get_latest_pdf(download_dir)
+                    link_pdf_boleto = save_boletos(boleto_path, "protel")
+                    boleto_info["link_pdf_boleto"] = link_pdf_boleto
+
+
+                print()
+                print()
+                print(boleto_info)
+                print()
+                print()
+
+                try:
+                    mysql_connector.salvar_boleto(boleto_info)
+                except:
+                    return False
+
                 return boleto_info
 
         except Exception as e:
-            #print(f"Erro ao tentar verificar ou clicar no boleto PDF: {e}")
+            print(f"Erro ao tentar verificar ou clicar no boleto PDF: {e}")
             return False
+
+        finally:
+            mysql_connector.close_connection

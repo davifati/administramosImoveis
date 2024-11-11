@@ -62,20 +62,83 @@ class MySqlConnector:
             self.connection.close()
             print("Conexão encerrada")
 
+    def obter_dados(self, administradora):
+        cursor = self.connection.cursor(dictionary=True, buffered=True) 
+        cursor.execute("""
+                SELECT id, nome, site, email, telefones
+                FROM administradoracondominios
+                WHERE nome = %s
+            """, (administradora,))
+            
+        admin_info = cursor.fetchone()
+        cursor.close()
 
-# Exemplo de uso
-if __name__ == "__main__":
-    db = MySqlConnector()
+        if admin_info is None:
+            return {"erro": "Administradora não encontrada"}
+        
+        admin_id = admin_info['id']
 
-    boleto = {
-        "linha_digitavel": "12345678901234567890123456789012345678901234",
-        "vlr_boleto": 100.0,
-        "data_vencimento": "2024-10-15",
-        "nome_administradora": "Administradora XYZ",
-        "link_pdf_boleto": "http://example.com/boleto.pdf",
-        "endereco_imovel": "Rua Exemplo, 123",
-        "num_pasta": 1,
-    }
+        cursor = self.connection.cursor(dictionary=True, buffered=True)
+        cursor.execute("""
+            SELECT id, nome, endereco, complemento_endereco, numero, cep, email
+            FROM administracaocondominios
+            WHERE administradoracondominio_id = %s
+        """, (admin_id,))
+        administracao_condominios = cursor.fetchall()        
+        cursor.close()
 
-    db.salvar_boleto(boleto)
-    db.close_connection()
+        unidades = []
+
+        for adm in administracao_condominios:
+            administracao_id = adm['id']       
+
+            cursor = self.connection.cursor(dictionary=True, buffered=True)
+            cursor.execute("""
+                SELECT id, bloco, num_unidade, num_pasta, documento_proprietario, 
+                        nome_proprietario, login, senha, administracaocondominio_id
+                FROM unidadecondominios
+                WHERE administracaocondominio_id = %s
+            """, (administracao_id,))
+            unidades_condominio = cursor.fetchall()
+            unidades.extend(unidades_condominio)
+            cursor.close()
+
+        resultado = {
+            "administradora": {
+                "id": admin_info['id'],
+                "nome": admin_info['nome'],
+                "site": admin_info['site'],
+                "email": admin_info['email'],
+                "telefones": admin_info['telefones'],
+            },
+            "administracao_condominios": administracao_condominios,
+            "unidades": unidades,
+        }        
+
+        return resultado
+
+    def organizar_dados_unidade(self, dados):
+        if "erro" in dados:
+            return dados  # Retorna o erro diretamente
+
+        nome_administradora = dados['administradora']['nome']
+
+        # Cria um dicionário para mapear cada administração de condomínio ao seu endereço
+        endereco_map = {
+            adm['id']: f"{adm['endereco']}, {adm['complemento_endereco']}, {adm['numero']}, CEP: {adm['cep']}"
+            for adm in dados['administracao_condominios']
+        }
+
+        # Monta a lista de resultados com as informações solicitadas, associando cada unidade ao seu endereço correto
+        resultado = [
+            {
+                "num_pasta": unidade['num_pasta'],
+                "login": unidade['login'],
+                "senha": unidade['senha'],
+                "administradora_nome": nome_administradora,
+                "endereco_completo": endereco_map.get(unidade['administracaocondominio_id'], "Endereço não disponível")
+            }
+            for unidade in dados['unidades']
+        ]
+
+        return resultado

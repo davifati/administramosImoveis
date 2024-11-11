@@ -2,14 +2,17 @@ import sys
 import os
 import logging
 from datetime import datetime
+from pathlib import Path
 
-sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+base_dir = Path(__file__).resolve().parents[2]
+sys.path.append(str(base_dir))
 
-from bots.src.quality_house.login_page import QualityHouseLoginPage
-from bots.src.quality_house.home_page import QualityHouseHomePage
-from bots.src.quality_house.download_page import QualityHouseDownloadPage
-from bots.common.driver_config import WebDriverConfig
-from bots.common.utils import DynamoDBQuery, admin_login_list, save_rpa_reports
+from src.quality_house.login_page import QualityHouseLoginPage
+from src.quality_house.home_page import QualityHouseHomePage
+from src.quality_house.download_page import QualityHouseDownloadPage
+from common.driver_config import WebDriverConfig
+from common.utils import save_rpa_reports
+from common.db import MySqlConnector
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
@@ -40,7 +43,7 @@ class QualityHouseBot():
             boleto_disponivel = self.download_page.check_boleto()
 
             if boleto_disponivel:
-                download_boleto = self.download_page.get_boleto_info(self.download_dir, endereco, id_imobiliaria)
+                download_boleto = self.download_page.get_boleto_info(self.download_dir, endereco, num_pasta)
                 self.add_report(reports, f"Feito download do boleto para o usuário: {username}", "OK")
             else:
                 self.add_report(reports, f"Nenhum boleto disponível para o usuário: {username}", "OK")
@@ -63,14 +66,19 @@ class QualityHouseBot():
         })     
 
 if __name__ == "__main__":
+    query = MySqlConnector()
+    items = query.obter_dados("quality house")
+    login_info = query.organizar_dados_unidade(items)
 
-    query = DynamoDBQuery()
-    items = query.getAdminLoginDetails(administradora="quality house")
-    login_info = admin_login_list(items)
-
-    print()
     if login_info:
-        for id_imobiliaria, username, password, condominio, proprietario, endereco in login_info:
-            #print(f"Executando o bot para o usuário: {username}")
+        for item in login_info:
+            username = item['login']
+            password = item['senha']
+            endereco = item['endereco_completo']
+            num_pasta = item['num_pasta']
+
+            logging.info(f"Executando o bot para o usuário: {username}")
             bot = QualityHouseBot()
-            bot.run(username, password)
+            bot.run(username, password, endereco, num_pasta, )
+    else:
+        logging.warning("Nenhum login encontrado.")         

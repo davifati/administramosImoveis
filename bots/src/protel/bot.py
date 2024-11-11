@@ -1,16 +1,21 @@
 import os
 import sys
 import os
+import logging
+from datetime import datetime
+from pathlib import Path
 
-sys.path.append(
-    os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-)
+base_dir = Path(__file__).resolve().parents[2]
+sys.path.append(str(base_dir))
 
-from bots.bots.protel.login_page import ProtelLoginPage
-from bots.bots.protel.home_page import ProtelHomePage
-from bots.bots.protel.download_page import ProtelDownloadPage
+from src.protel.login_page import ProtelLoginPage
+from src.protel.home_page import ProtelHomePage
+from src.protel.download_page import ProtelDownloadPage
 from common.driver_config import WebDriverConfig
+from common.utils import save_rpa_reports
+from common.db import MySqlConnector
 
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 class ProtelBot:
 
@@ -25,21 +30,57 @@ class ProtelBot:
         self.home_page = ProtelHomePage(self.driver)
         self.download_page = ProtelDownloadPage(self.driver)
 
-    def run(self, username, password, endereco, idImobiliaria) -> None:
+    def add_report(self, reports, msg, status):
+        reports.append({
+            "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "msg": msg,
+            "status": status
+        })     
+
+    def run(self, username, password, endereco, num_pasta) -> None:
+
+        reports = []
+
         try:
             if not self.login_page.login(username, password):
-                print(
-                    f"Login falhou para o usuário {username}. Pulando para o próximo."
-                )
+                self.add_report(reports, f"Login falhou para o usuário: {username}", "FAIL")
                 return
 
             if self.home_page.check_login_success():
+                self.add_report(reports, f"Login bem-sucedido para o usuário: {username}", "OK")
                 self.home_page.click_boleto()
+            else:
+                self.add_report(reports, f"Erro ao tentar checar home page para o usuário: {username}", "FAIL")
 
-                boleto_disponivel = self.download_page.check_boleto(endereco, idImobiliaria)
+            boleto_disponivel = self.download_page.check_boleto(endereco, num_pasta, self.download_dir)
 
-                if boleto_disponivel:
-                    print("Download do boleto realizado com sucesso.")
+            if boleto_disponivel:
+                self.add_report(reports, f"Feito download do boleto para o usuário: {username}", "OK")
+            else:
+                self.add_report(reports, f"Nenhum boleto disponível para o usuário: {username}", "OK")
+            
+        except Exception as e:
+            self.add_report(reports, f"Erro inesperado para o usuário: {username}", "FAIL")
+
         finally:
+            print(reports)
+            save_rpa_reports(reports, "protel")
             self.driver.quit()
-            print(f"Processo finalizado para usuário: {username}.\n")
+
+if __name__ == "__main__":
+    query = MySqlConnector()
+    items = query.obter_dados("protel")
+    login_info = query.organizar_dados_unidade(items)
+
+    if login_info:
+        for item in login_info:
+            username = item['login']
+            password = item['senha']
+            endereco = item['endereco_completo']
+            num_pasta = item['num_pasta']
+
+            logging.info(f"Executando o bot para o usuário: {username}")
+            bot = ProtelBot()
+            bot.run(username, password, endereco, num_pasta, )
+    else:
+        logging.warning("Nenhum login encontrado.")         

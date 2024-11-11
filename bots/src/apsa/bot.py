@@ -1,17 +1,18 @@
 import sys
 import os
 import logging
-from datetime import datetime
+from pathlib import Path
 
-sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+base_dir = Path(__file__).resolve().parents[2]
+sys.path.append(str(base_dir))
 
-from bots.src.apsa.login_page import ApsaLoginPage
-from bots.src.apsa.home_page import ApsaHomePage
-from bots.src.apsa.download_page import ApsaDownloadPage
-from bots.common.driver_config import WebDriverConfig
-from bots.common.utils import DynamoDBQuery, admin_login_list, delete_all_files_in_directory, save_rpa_reports
-from bots.common.db import MySqlConnector
 from datetime import datetime
+from src.apsa.login_page import ApsaLoginPage
+from src.apsa.home_page import ApsaHomePage
+from src.apsa.download_page import ApsaDownloadPage
+from common.driver_config import WebDriverConfig
+from common.utils import delete_all_files_in_directory, save_rpa_reports, get_latest_pdf, save_boletos
+from common.db import MySqlConnector
 
 class ApsaBot:
     def __init__(self):
@@ -75,6 +76,7 @@ class ApsaBot:
             self.add_report(reports, f"Erro inesperado para o usuário: {username}", "FAIL")
 
         finally:
+            print(reports)
             save_rpa_reports(reports, "apsa")
             self.driver.quit()
             logging.info(f"Processo finalizado para usuário: {username}")
@@ -87,12 +89,17 @@ class ApsaBot:
         })
 
 if __name__ == "__main__":
-    query = DynamoDBQuery()
-    items = query.getAdminLoginDetails(administradora="apsa (login: 32179787 senha 123456)")
-    login_info = admin_login_list(items)
+    query = MySqlConnector()
+    items = query.obter_dados("apsa")
+    login_info = query.organizar_dados_unidade(items)
 
     if login_info:
-        for id_imobiliaria, username, password, condominio, proprietario, endereco in login_info:
+        for item in login_info:
+            username = item['login']
+            password = item['senha']
+            endereco = item['endereco_completo']
+            num_pasta = item['num_pasta']
+
             logging.info(f"Executando o bot para o usuário: {username}")
             bot = ApsaBot()
             bot.run(username, password, endereco)

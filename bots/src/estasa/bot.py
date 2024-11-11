@@ -2,15 +2,17 @@ import sys
 import os
 import logging
 from datetime import datetime
+from pathlib import Path
 
-#sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..')))
+base_dir = Path(__file__).resolve().parents[2]
+sys.path.append(str(base_dir))
 
-from bots.src.estasa.login_page import EstasaLoginPage
-from bots.src.estasa.home_page import EstasaHomePage
-from bots.src.estasa.download_page import EstasaDownloadPage
-from bots.common.driver_config import WebDriverConfig
-from bots.common.utils import DynamoDBQuery, admin_login_list, save_rpa_reports
+from src.estasa.login_page import EstasaLoginPage
+from src.estasa.home_page import EstasaHomePage
+from src.estasa.download_page import EstasaDownloadPage
+from common.driver_config import WebDriverConfig
+from common.utils import  save_rpa_reports
+from common.db import MySqlConnector
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
@@ -41,7 +43,7 @@ class EstasaBot():
             boleto_disponivel = self.download_page.check_boleto()
 
             if boleto_disponivel:
-                download_boleto = self.download_page.get_boleto_info(self.download_dir, endereco, id_imobiliaria)
+                download_boleto = self.download_page.get_boleto_info(self.download_dir, endereco, num_pasta)
                 print(download_boleto)
                 self.add_report(reports, f"Feito download do boleto para o usuário: {username}", "OK")
             else:
@@ -52,7 +54,7 @@ class EstasaBot():
             self.add_report(reports, f"Erro inesperado para o usuário: {username}", "FAIL")
 
         finally:
-            save_rpa_reports(reports, "vortex")
+            save_rpa_reports(reports, "estasa")
             print(reports)
             self.driver.quit()
             logging.info(f"Processo finalizado para o usuário: {username}")
@@ -66,14 +68,19 @@ class EstasaBot():
     
         
 if __name__ == "__main__":
+    query = MySqlConnector()
+    items = query.obter_dados("estasa")
+    login_info = query.organizar_dados_unidade(items)
 
-    query = DynamoDBQuery()
-    items = query.getAdminLoginDetails(administradora="estasa")
-    login_info = admin_login_list(items)
-
-    print()
     if login_info:
-        for id_imobiliaria, username, password, condominio, proprietario, endereco in login_info:
-            #print(f"Executando o bot para o usuário: {username}")
+        for item in login_info:
+            username = item['login']
+            password = item['senha']
+            endereco = item['endereco_completo']
+            num_pasta = item['num_pasta']
+
+            logging.info(f"Executando o bot para o usuário: {username}")
             bot = EstasaBot()
-            bot.run(username, password)
+            bot.run(username, password, endereco)
+    else:
+        logging.warning("Nenhum login encontrado.")         

@@ -2,14 +2,17 @@ import sys
 import os
 import logging
 from datetime import datetime
+from pathlib import Path
 
-sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+base_dir = Path(__file__).resolve().parents[2]
+sys.path.append(str(base_dir))
 
-from bots.src.protest.login_page import ProtestLoginPage
-from bots.src.protest.home_page import ProtestHomePage
-from bots.src.protest.download_page import ProtestDownloadPage
-from bots.common.driver_config import WebDriverConfig
-from bots.common.utils import DynamoDBQuery, admin_login_list, save_rpa_reports
+from src.protest.login_page import ProtestLoginPage
+from src.protest.home_page import ProtestHomePage
+from src.protest.download_page import ProtestDownloadPage
+from common.driver_config import WebDriverConfig
+from common.utils import save_rpa_reports
+from common.db import MySqlConnector
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
@@ -64,15 +67,19 @@ class ProtestBot():
         })     
 
 if __name__ == "__main__":
+    query = MySqlConnector()
+    items = query.obter_dados("protest")
+    login_info = query.organizar_dados_unidade(items)
 
-
-    query = DynamoDBQuery()
-    items = query.getAdminLoginDetails(administradora="protest")
-    login_info = admin_login_list(items)
-
-    print()
     if login_info:
-        for id_imobiliaria, username, password, condominio, proprietario, endereco in login_info:
-            #print(f"Executando o bot para o usuário: {username}")
+        for item in login_info:
+            username = item['login']
+            password = item['senha']
+            endereco = item['endereco_completo']
+            num_pasta = item['num_pasta']
+
+            logging.info(f"Executando o bot para o usuário: {username}")
             bot = ProtestBot()
-            bot.run(username, password)
+            bot.run(username, password, endereco, num_pasta, )
+    else:
+        logging.warning("Nenhum login encontrado.")         

@@ -2,12 +2,14 @@ import sys
 import os
 import logging
 from datetime import datetime
+from pathlib import Path
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..')))
+base_dir = Path(__file__).resolve().parents[2]
+sys.path.append(str(base_dir))
 
 from bots.src.promenade.login_page import PromenadeLoginPage
 from bots.common.driver_config import WebDriverConfig
-from bots.common.utils import DynamoDBQuery, admin_login_list
+from bots.common.db import MySqlConnector
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
@@ -51,13 +53,19 @@ class PromenadeBot:
         })     
 
 if __name__ == "__main__":
+    query = MySqlConnector()
+    items = query.obter_dados("promenade")
+    login_info = query.organizar_dados_unidade(items)
 
-    query = DynamoDBQuery()
-    items = query.getAdminLoginDetails(administradora="promenade")
-    login_info = admin_login_list(items)
-
-    print()
     if login_info:
-        for id_imobiliaria, username, password, condominio, proprietario, endereco in login_info:
+        for item in login_info:
+            username = item['login']
+            password = item['senha']
+            endereco = item['endereco_completo']
+            num_pasta = item['num_pasta']
+
+            logging.info(f"Executando o bot para o usuário: {username}")
             bot = PromenadeBot()
-            bot.run(username, password)
+            bot.run(username, password, endereco)
+    else:
+        logging.warning("Nenhum login encontrado.")         
