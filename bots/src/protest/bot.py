@@ -25,7 +25,7 @@ class ProtestBot():
         self.home_page = ProtestHomePage(self.driver)
         self.download_page = ProtestDownloadPage(self.driver)
 
-    def run(self, username, password):
+    def run(self, username, password, endereco, num_pasta):
 
         reports = []
 

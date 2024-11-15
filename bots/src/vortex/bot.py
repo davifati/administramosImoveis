@@ -31,7 +31,7 @@ class VortexBot:
         reports = []
         
         try:
-            if not self.login_page.login(username, password):
+            if not self.login_page.login(username, password, endereco, num_pasta):
                 self.add_report(reports, f"Login falhou para o usuário: {username}", "FAIL")
                 return
             
@@ -83,6 +83,6 @@ if __name__ == "__main__":
 
             logging.info(f"Executando o bot para o usuário: {username}")
             bot = VortexBot()
-            bot.run(username, password, endereco, num_pasta, )
+            bot.run(username, password, endereco, num_pasta)
     else:
         logging.warning("Nenhum login encontrado.")         

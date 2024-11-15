@@ -25,7 +25,7 @@ class QualityHouseBot():
         self.home_page = QualityHouseHomePage(self.driver)
         self.download_page = QualityHouseDownloadPage(self.driver)
 
-    def run(self, username, password):
+    def run(self, username, password, endereco, num_pasta):
 
         reports = []
 
