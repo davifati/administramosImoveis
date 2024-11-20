@@ -20,7 +20,7 @@ class ProtestBot():
     def __init__(self):
         current_directory = os.getcwd()
         self.download_dir = os.path.join(current_directory, "downloads")
-        self.driver = WebDriverConfig.get_firefox_driver(download_dir=self.download_dir, download=True, headless=False)
+        self.driver = WebDriverConfig.get_firefox_driver(download_dir=self.download_dir, download=True, headless=True)
         self.login_page = ProtestLoginPage(self.driver)
         self.home_page = ProtestHomePage(self.driver)
         self.download_page = ProtestDownloadPage(self.driver)
