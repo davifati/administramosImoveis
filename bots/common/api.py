@@ -1,5 +1,6 @@
 from flask import Flask, send_from_directory
 import os
+import uuid
 
 app = Flask(__name__)
 
@@ -27,8 +28,13 @@ def move_to_permanent_folder(src_file):
     if not os.path.exists(PERMANENT_FOLDER):
         os.makedirs(PERMANENT_FOLDER)
 
-    filename = os.path.basename(src_file)
-    dest_file = os.path.join(PERMANENT_FOLDER, filename)
+    original_filename = os.path.basename(src_file)
+    name, ext = os.path.splitext(original_filename)
+
+    unique_id = uuid.uuid4().hex
+
+    unique_filename = f"{name}_{unique_id}{ext}"
+    dest_file = os.path.join(PERMANENT_FOLDER, unique_filename)
 
     os.rename(src_file, dest_file)
     return dest_file
