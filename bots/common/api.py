@@ -5,8 +5,8 @@ import uuid
 app = Flask(__name__)
 
 BASE_DIR = os.getcwd()
-DOWNLOAD_FOLDER = os.path.join(BASE_DIR, "downloads")
-PERMANENT_FOLDER = os.path.join(BASE_DIR, "permanent_files")
+PERMANENT_FOLDER = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../permanent_files")
+PERMANENT_FOLDER = os.path.abspath(PERMANENT_FOLDER)
 
 @app.route('/files/<path:filename>', methods=['GET'])
 def download_file(filename):
