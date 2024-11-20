@@ -1,5 +1,8 @@
 import mysql.connector
 from mysql.connector import Error
+import os
+import shutil
+from datetime import datetime
 
 
 class MySqlConnector:
@@ -142,3 +145,34 @@ class MySqlConnector:
         ]
 
         return resultado
+
+    def save_boletos_localmente(pdf_file_path: str, administradora: str):
+        # Diretório público no servidor
+        public_dir = "/var/www/public_files"
+
+        # Criar o diretório público se não existir
+        if not os.path.exists(public_dir):
+            os.makedirs(public_dir, exist_ok=True)
+
+        # Gerar subdiretório com base na administradora e data
+        data_atual = datetime.now().strftime("%Y_%m_%d")
+        admin_dir = os.path.join(public_dir, administradora, data_atual)
+        os.makedirs(admin_dir, exist_ok=True)
+
+        # Caminho final do arquivo no servidor
+        final_path = os.path.join(admin_dir, os.path.basename(pdf_file_path))
+
+        try:
+            # Mover o arquivo para o local público
+            shutil.move(pdf_file_path, final_path)
+
+            # Gerar o link público
+            server_url = "212.56.42.99/files"  # Substitua pelo domínio ou IP do servidor
+            public_link = f"{server_url}/{administradora}/{data_atual}/{os.path.basename(pdf_file_path)}"
+            
+            print(f"Arquivo salvo no servidor: {final_path}")
+            print(f"Arquivo disponível em: {public_link}")
+            return public_link
+        except Exception as e:
+            print(f"Erro ao salvar o arquivo no servidor: {e}")
+            return None

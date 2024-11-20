@@ -236,7 +236,6 @@ def save_boletos(pdf_file_path: str, administadora: str):
         if os.path.exists(temp_file):
             os.remove(temp_file)
 
-
 #### SAVE PDF
 # pdf_file_path = "info_rpa_aws.pdf"  #
 # administadora = "exemplo_admin"

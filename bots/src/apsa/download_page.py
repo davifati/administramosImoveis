@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from common.utils import wait_for_new_file, get_downloaded_files, ajuste_data
+import os
 import pyperclip
 import time
 
@@ -39,7 +40,8 @@ class ApsaDownloadPage:
             lista_items_e = wait.until(EC.presence_of_all_elements_located(self.lista_items_locator))
             boletos_info = []
 
-            download_dir = r"C:\Users\Jose\Documents\GitHub\administramosImoveis\bots\apsa\downloads"
+            current_directory = os.getcwd
+            download_dir = os.path.join(current_directory, "downloads") 
             previous_files = get_downloaded_files(download_dir)
 
             for item in lista_items_e:

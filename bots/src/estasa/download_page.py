@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from bots.common.api import generate_file_link, move_to_permanent_folder
 from common.utils import wait_for_new_file, get_downloaded_files, get_latest_pdf, save_boletos, delete_all_files_in_directory, ajuste_data
 from common.db import MySqlConnector
 import requests
@@ -132,7 +133,9 @@ class EstasaDownloadPage:
 
                 if boleto_info["download_concluido"] == True:
                     boleto_path = get_latest_pdf(download_dir)
-                    link_pdf_boleto = save_boletos(boleto_path, "estasa")
+                    permanent_path = move_to_permanent_folder(boleto_path)
+                    filename = os.path.basename(permanent_path)
+                    link_pdf_boleto = generate_file_link(filename)
 
                     if link_pdf_boleto:
                         boleto_info["link_pdf_boleto"] = link_pdf_boleto

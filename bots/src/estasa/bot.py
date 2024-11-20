@@ -25,7 +25,7 @@ class EstasaBot():
         self.home_page = EstasaHomePage(self.driver)
         self.download_page = EstasaDownloadPage(self.driver)
 
-    def run(self, username, password):
+    def run(self, username, password, endereco):
 
         reports = []
 
