@@ -46,4 +46,3 @@ def list_files():
 print(f"PERMANENT_FOLDER: {PERMANENT_FOLDER}")
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000)
-
