@@ -20,7 +20,7 @@ class ProtestBot():
     def __init__(self):
         current_directory = os.getcwd()
         self.download_dir = os.path.join(current_directory, "downloads")
-        self.driver = WebDriverConfig.get_firefox_driver(download_dir=self.download_dir, download=True, headless=True)
+        self.driver = WebDriverConfig.get_firefox_driver(download_dir=self.download_dir, download=True, headless=False)
         self.login_page = ProtestLoginPage(self.driver)
         self.home_page = ProtestHomePage(self.driver)
         self.download_page = ProtestDownloadPage(self.driver)
@@ -43,7 +43,7 @@ class ProtestBot():
             boleto_disponivel = self.download_page.check_boleto()
 
             if boleto_disponivel:
-                download_boleto = self.download_page.get_boleto_info(self.download_dir, endereco, id_imobiliaria)
+                download_boleto = self.download_page.get_boleto_info(self.download_dir, endereco, num_pasta)
                 self.add_report(reports, f"Feito download do boleto para o usuário: {username}", "OK")
             else:
                 self.add_report(reports, f"Nenhum boleto disponível para o usuário: {username}", "OK")
@@ -67,6 +67,7 @@ class ProtestBot():
         })     
 
 if __name__ == "__main__":
+
     query = MySqlConnector()
     items = query.obter_dados("protest")
     login_info = query.organizar_dados_unidade(items)

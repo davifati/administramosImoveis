@@ -31,7 +31,7 @@ class ProtestDownloadPage:
             return True
         except Exception as e:
             no_boleto_message_e = wait.until(EC.visibility_of_element_located(self.no_boleto_message_locator))
-            print(f"Não foi encontrado boleto disponivel.\n {e}")
+            print(f"Não foi encontrado boleto disponivel.")
             return False
 
     def download_boleto_img(self, download_dir, url_boleto):
