@@ -31,7 +31,7 @@ class ApsaDownloadPage:
             #print(f"Não conseguiu chegar na listagem de Boletos. Erro: {e}")
             return False
 
-    def get_info_boleto(self, endereco):
+    def get_info_boleto(self, download_dir, endereco, idImobiliaria):
 
         try:
             wait = WebDriverWait(self.driver, 20)
@@ -39,7 +39,6 @@ class ApsaDownloadPage:
             lista_items_e = wait.until(EC.presence_of_all_elements_located(self.lista_items_locator))
             boletos_info = []
 
-            download_dir = r"C:\Users\Jose\Documents\GitHub\administramosImoveis\bots\apsa\downloads"
             previous_files = get_downloaded_files(download_dir)
 
             for item in lista_items_e:
@@ -64,10 +63,10 @@ class ApsaDownloadPage:
                     boletos_info.append({
                         'data_vencimento': vencimento,
                         'vlr_boleto': valor,
-                        'situacao': situacao,
                         'download_concluido': False,
                         'endereco_imovel': endereco,
-                        'nome_administradora': "apsa (login: 32179787 senha 123456)",
+                        'nome_administradora': "apsa",
+                        'num_pasta': idImobiliaria,
                         'linha_digitavel': linha_digitavel
                     })
 
@@ -82,6 +81,9 @@ class ApsaDownloadPage:
                     except TimeoutError:
                         #print("O download do arquivo excedeu o tempo limite.")
                         boletos_info[-1]['download_concluido'] = False
+
+                    if boletos_info["download_concluido"] == True:
+                        pass
 
             return boletos_info
 

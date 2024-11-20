@@ -1,6 +1,6 @@
 import subprocess
 
-bots = [r"C:\Users\Jose\Documents\GitHub\administramosImoveis\bots\src\apsa\bot.py",
+bots = [#r"C:\Users\Jose\Documents\GitHub\administramosImoveis\bots\src\apsa\bot.py",
         r"C:\Users\Jose\Documents\GitHub\administramosImoveis\bots\src\estasa\bot.py",
         r"C:\Users\Jose\Documents\GitHub\administramosImoveis\bots\src\protel\app.py",
         r"C:\Users\Jose\Documents\GitHub\administramosImoveis\bots\src\protest\bot.py",

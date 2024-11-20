@@ -20,7 +20,7 @@ def index():
     return {"message": "File server is running"}
 
 def generate_file_link(filename):
-    base_url = "http://127.0.0.1:5000/files"
+    base_url = "http://212.56.42.99:5000/files"
     return f"{base_url}/{filename}"
 
 def move_to_permanent_folder(src_file):

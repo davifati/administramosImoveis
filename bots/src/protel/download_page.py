@@ -1,8 +1,10 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from common.utils import save_boletos, get_latest_pdf, ajuste_data, wait_for_new_file, delete_all_files_in_directory, get_downloaded_files
+from common.api import move_to_permanent_folder, generate_file_link
+from common.utils import get_latest_pdf, ajuste_data, wait_for_new_file, delete_all_files_in_directory, get_downloaded_files
 from common.db import MySqlConnector
+import os
 
 class ProtelDownloadPage:
     def __init__(self, driver):
@@ -65,14 +67,15 @@ class ProtelDownloadPage:
 
                 if boleto_info["download_concluido"] == True:
                     boleto_path = get_latest_pdf(download_dir)
-                    link_pdf_boleto = save_boletos(boleto_path, "protel")
-                    boleto_info["link_pdf_boleto"] = link_pdf_boleto
+                    permanent_path = move_to_permanent_folder(boleto_path)
+                    filename = os.path.basename(permanent_path)
+                    link_pdf_boleto = generate_file_link(filename)
 
+                    if link_pdf_boleto:
+                        boleto_info["link_pdf_boleto"] = link_pdf_boleto 
 
-                print()
                 print()
                 print(boleto_info)
-                print()
                 print()
 
                 try:
