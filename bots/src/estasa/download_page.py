@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from bots.common.api import generate_file_link, move_to_permanent_folder
+from common.api import generate_file_link, move_to_permanent_folder
 from common.utils import wait_for_new_file, get_downloaded_files, get_latest_pdf, save_boletos, delete_all_files_in_directory, ajuste_data
 from common.db import MySqlConnector
 import requests
