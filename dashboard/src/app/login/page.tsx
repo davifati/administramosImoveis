@@ -8,59 +8,61 @@ import { Logo } from "@/components/ui/Logo"
 import { RiGithubFill, RiGoogleFill } from "@remixicon/react"
 import { useRouter } from "next/navigation"
 import React from "react"
+import { saasName } from "../const"
+import { siteConfig } from "../siteConfig"
 
 export default function Login() {
 
   const [loading, setLoading] = React.useState(false)
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+
     setLoading(true)
     setTimeout(() => {
       console.log("Form submitted")
-      router.push("/reports")
+      router.push(siteConfig.baseLinks.monitor.dailyView)
     }, 1200)
   }
 
   const router = useRouter()
+
   return (
     <div className="flex min-h-dvh items-center justify-center p-4 sm:p-6">
       <div className="flex w-full flex-col items-start sm:max-w-sm">
+
         <div className="relative flex items-center justify-center rounded-lg bg-white p-3 shadow-lg ring-1 ring-black/5">
           <Logo
             className="size-8 text-blue-500 dark:text-blue-500"
             aria-label="Insights logo"
           />
         </div>
+
         <div className="mt-6 flex flex-col">
           <h1 className="text-lg font-semibold text-gray-900 dark:text-gray-50">
-            Log in to Insights
+            Entre em {saasName}
           </h1>
           <p className="mt-1 text-sm text-gray-700 dark:text-gray-300">
-            Don&rsquo;t have an account?{" "}
+            Não possui conta?{" "}
             <a
               className="text-blue-500 hover:text-blue-600 dark:text-blue-500 hover:dark:text-blue-400"
               href="#"
             >
-              Sign up
+              Cadastre-se
             </a>
           </p>
         </div>
+
         <div className="mt-10 w-full">
           <div className="gap-2 sm:flex sm:flex-row sm:items-center">
-            <Button asChild variant="secondary" className="w-full">
-              <a href="#" className="inline-flex items-center gap-2">
-                <RiGithubFill className="size-5 shrink-0" aria-hidden="true" />
-                Login with GitHub
-              </a>
-            </Button>
             <Button asChild variant="secondary" className="mt-2 w-full sm:mt-0">
               <a href="#" className="inline-flex items-center gap-2">
                 <RiGoogleFill className="size-4" aria-hidden="true" />
-                Login with Google
+                Entrar com Google
               </a>
             </Button>
           </div>
-          <Divider className="my-6">or</Divider>
+          <Divider className="my-6">ou</Divider>
           <form
             onSubmit={handleSubmit}
             className="flex w-full flex-col gap-y-6"
@@ -75,22 +77,23 @@ export default function Login() {
                   autoComplete="email"
                   name="email"
                   id="email-form-item"
-                  placeholder="emily.ross@acme.ch"
+                  placeholder="nome@gmail.com"
                 />
               </div>
               <div className="flex flex-col space-y-2">
                 <Label htmlFor="password-form-item" className="font-medium">
-                  Password
+                  Senha
                 </Label>
                 <Input
                   type="password"
                   autoComplete="current-password"
                   name="password"
                   id="password-form-item"
-                  placeholder="Password"
+                  placeholder="senha123"
                 />
               </div>
             </div>
+
             <Button
               type="submit"
               isLoading={loading}
@@ -101,12 +104,12 @@ export default function Login() {
         </div>
         <Divider />
         <p className="text-sm text-gray-700 dark:text-gray-300">
-          Forgot your password?{" "}
+          Esqueceu a senha?{" "}
           <a
             className="text-blue-500 hover:text-blue-600 dark:text-blue-500 hover:dark:text-blue-400"
             href="#"
           >
-            Reset password
+            Redefinir Senha
           </a>
         </p>
       </div>

@@ -5,34 +5,46 @@ import { cx, focusRing } from "@/lib/utils"
 import {
   BarChartBig,
   Compass,
-  Contact,
-  Contact2,
   ContactIcon,
-  ContactRound,
+  FileWarningIcon,
+  HouseIcon,
   PanelRightClose,
   PanelRightOpen,
   PhoneCall,
-  Settings2,
-  Table2,
+  Settings2Icon,
 } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import MobileSidebar from "./MobileSidebar"
 import { UserProfileDesktop, UserProfileMobile } from "./UserProfile"
 import { Logo } from "../Logo"
+import { saasName } from "@/app/const"
 
 export const navigation = [
-  { name: "Financeiro", href: siteConfig.baseLinks.reports, icon: BarChartBig },
+  {
+    name: "Monitoramento e Alertas",
+    href: siteConfig.baseLinks.monitor.dailyView,
+    icon: FileWarningIcon,
+  },
+  {
+    name: "Financeiro",
+    href: siteConfig.baseLinks.reports,
+    icon: BarChartBig
+  },
   {
     name: "Imóveis",
     href: siteConfig.baseLinks.transactions,
-    icon: Table2,
+    icon: HouseIcon,
   },
+] as const
+
+// Adicionando a seção Admin
+export const adminNavigation = [
   {
     name: "Operacional",
-    href: siteConfig.baseLinks.settings.audit,
-    icon: Settings2,
-  },
+    href: siteConfig.baseLinks.admin,
+    icon: Settings2Icon,
+  }
 ] as const
 
 interface SidebarProps {
@@ -48,6 +60,7 @@ export function Sidebar({ isCollapsed, toggleSidebar }: SidebarProps) {
     }
     return pathname === itemHref || pathname.startsWith(itemHref)
   }
+
   return (
     <>
       {/* sidebar (lg+) */}
@@ -79,20 +92,21 @@ export function Sidebar({ isCollapsed, toggleSidebar }: SidebarProps) {
               </button>
               <span
                 className={cx(
-                  "text-sm font-semibold text-gray-900 transition-opacity dark:text-gray-50",
+                  "text-lg font-semibold text-gray-900 transition-opacity dark:text-gray-50",
                   isCollapsed ? "opacity-0" : "opacity-100",
                 )}
               >
-                <a aria-label="Home Link" href="/">
-                  AdministramosImoveis
+                <a aria-label="Home Link" href={siteConfig.baseLinks.monitor.dailyView}>
+                  {saasName}
                 </a>
               </span>
             </div>
           </div>
           <nav
             aria-label="core navigation links"
-            className="flex flex-1 flex-col space-y-10"
+            className="flex 2flex-1 flex-col space-y-10"
           >
+            {/* Seção de Recursos */}
             <div>
               <span
                 aria-hidden={isCollapsed}
@@ -152,6 +166,8 @@ export function Sidebar({ isCollapsed, toggleSidebar }: SidebarProps) {
                 ))}
               </ul>
             </div>
+
+            {/* Seção de Suporte */}
             <div>
               <span
                 aria-hidden={isCollapsed}
@@ -167,7 +183,7 @@ export function Sidebar({ isCollapsed, toggleSidebar }: SidebarProps) {
                   {isCollapsed ? (
                     <Tooltip
                       side="right"
-                      content="Onboarding"
+                      content="Fale Conosco"
                       sideOffset={6}
                       showArrow={false}
                       className="z-[999]"
@@ -175,7 +191,7 @@ export function Sidebar({ isCollapsed, toggleSidebar }: SidebarProps) {
                       <Link
                         href={siteConfig.baseLinks.tellus}
                         className={cx(
-                          isActive("/onboarding")
+                          isActive("/fale-conosco")
                             ? "text-blue-600 dark:text-blue-500"
                             : "text-gray-700 dark:text-gray-300",
                           "inline-flex items-center rounded-md p-2 text-sm font-medium transition hover:bg-gray-200/50 hover:dark:bg-gray-900",
@@ -191,47 +207,89 @@ export function Sidebar({ isCollapsed, toggleSidebar }: SidebarProps) {
                   ) : (
                     <Link
                       href={siteConfig.baseLinks.tellus}
-
                       className={cx(
-                        isActive("/onboarding")
+                        isActive("/fale-conosco")
                           ? "text-blue-600 dark:text-blue-500"
                           : "text-gray-700 dark:text-gray-300",
                         "flex items-center gap-x-2.5 rounded-md p-2 text-sm font-medium transition hover:bg-gray-200/50 hover:dark:bg-gray-900",
                         focusRing,
                       )}
                     >
-                      <PhoneCall className=" size-5 shrink-0" aria-hidden="true" />
+                      <PhoneCall className="size-5 shrink-0" aria-hidden="true" />
                       Fale conosco
-
                     </Link>
                   )}
                 </li>
               </ul>
             </div>
+
+            {/* Seção de Admin */}
+            <div>
+              <span
+                aria-hidden={isCollapsed}
+                className={cx(
+                  "block h-6 text-xs font-medium leading-6 text-gray-500 transition-opacity dark:text-gray-500",
+                  isCollapsed ? "opacity-0" : "opacity-100",
+                )}
+              >
+                Admin
+              </span>
+              <ul role="list" className="mt-1 space-y-2">
+                {adminNavigation.map((item) => (
+                  <li key={item.name}>
+                    {isCollapsed ? (
+                      <Tooltip
+                        side="right"
+                        content={item.name}
+                        sideOffset={6}
+                        showArrow={false}
+                        className="z-[999]"
+                      >
+                        <Link
+                          href={item.href}
+                          className={cx(
+                            isActive(item.href)
+                              ? "text-blue-600 dark:text-blue-500"
+                              : "text-gray-700 dark:text-gray-300",
+                            "inline-flex items-center rounded-md p-2 text-sm font-medium transition hover:bg-gray-200/50 hover:dark:bg-gray-900",
+                            focusRing,
+                          )}
+                        >
+                          <item.icon
+                            className="size-5 shrink-0"
+                            aria-hidden="true"
+                          />
+                        </Link>
+                      </Tooltip>
+                    ) : (
+                      <Link
+                        href={item.href}
+                        className={cx(
+                          isActive(item.href)
+                            ? "text-blue-600 dark:text-blue-500"
+                            : "text-gray-700 dark:text-gray-300",
+                          "flex items-center gap-x-2.5 rounded-md p-2 text-sm font-medium transition-opacity hover:bg-gray-200/50 hover:dark:bg-gray-900",
+                          focusRing,
+                        )}
+                      >
+                        <item.icon
+                          className="size-5 shrink-0"
+                          aria-hidden="true"
+                        />
+                        {item.name}
+                      </Link>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </nav>
+
           <div className="mt-auto border-t border-gray-200 pt-3 dark:border-gray-800">
             <UserProfileDesktop isCollapsed={isCollapsed} />
           </div>
         </aside>
       </nav>
-      {/* Top navbar (xs-lg) */}
-      <div className="sticky top-0 z-40 flex h-16 shrink-0 items-center justify-between border-b border-gray-200 bg-white px-4 shadow-sm sm:px-6 lg:hidden dark:border-gray-800 dark:bg-gray-950">
-        <span
-          className={cx(
-            "font-semibold text-gray-900 sm:text-sm dark:text-gray-50",
-            isCollapsed ? "opacity-0" : "opacity-100",
-          )}
-        >
-          <a aria-label="Home Link" href="/">
-            <Logo className="w-[48px] h-[44px] object-contain" />
-          </a>
-        </span>
-        <div className="flex items-center gap-1 sm:gap-2">
-          <UserProfileMobile />
-          <MobileSidebar />
-        </div>
-      </div>
-
     </>
   )
 }

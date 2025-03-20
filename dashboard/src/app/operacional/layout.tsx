@@ -9,8 +9,9 @@ import { usePathname } from "next/navigation"
 import { siteConfig } from "../siteConfig"
 
 const navigationSettings = [
-  { name: "Monitoramento e Alertas", href: siteConfig.baseLinks.settings.audit },
-  { name: "Usuários", href: siteConfig.baseLinks.settings.users },
+  { name: "Visão Diária e Alertas", href: siteConfig.baseLinks.monitor.dailyView },
+  { name: "Visão Histórica", href: siteConfig.baseLinks.monitor.historicalView },
+  
 ]
 
 export default function Layout({
@@ -34,7 +35,7 @@ export default function Layout({
       >
         <div className="min-h-dvh bg-white p-4 sm:p-6 lg:rounded-lg lg:border lg:border-gray-200 dark:bg-gray-925 lg:dark:border-gray-900">
           <h1 className="text-lg font-semibold text-gray-900 dark:text-gray-50">
-            Operacional
+            Monitoramento e Alertas
           </h1>
 
           <TabNavigation className="mt-6">

@@ -114,13 +114,13 @@ export default function BotExecutionMonitor() {
         <>
             <div className="flex flex-col items-center">
                 <h1 className="mt-3 text-2xl font-semibold text-tremor-content-strong dark:text-dark-tremor-content-strong">
-                    Monitoramento de Captura de Boletos
+                    Visão Mensal de Captura de Boletos
                 </h1>
                 {/* Filtro de Data - Mês e Ano */}
                 <div className="mt-4 flex justify-end w-full">
                     <div className="flex items-center gap-6">
                         <div>
-                            <label htmlFor="date" className="mr-2 text-sm font-medium">Escolha a Data:</label>
+                            <label htmlFor="date" className="mr-2 text-sm font-medium"></label>
                             <DatePicker
                                 id="date"
                                 selected={selectedDate}

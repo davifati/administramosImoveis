@@ -11,7 +11,7 @@ import {
 } from "@/components/Drawer"
 import { cx, focusRing } from "@/lib/utils"
 
-import { BarChartBig, Compass, Menu, Settings2, Table2 } from "lucide-react"
+import { Compass, Menu } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { navigation } from "./Sidebar"
@@ -20,12 +20,14 @@ import { navigation } from "./Sidebar"
 
 export default function MobileSidebar() {
   const pathname = usePathname()
+
   const isActive = (itemHref: string) => {
-    if (itemHref === siteConfig.baseLinks.settings.audit) {
+    if (itemHref === siteConfig.baseLinks.monitor.dailyView) {
       return pathname.startsWith("/settings")
     }
     return pathname === itemHref || pathname.startsWith(itemHref)
   }
+
   return (
     <>
       <Drawer>

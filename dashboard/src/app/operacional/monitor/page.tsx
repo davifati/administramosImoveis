@@ -1,20 +1,25 @@
 "use client"
 
 import { Divider } from "@/components/Divider"
-import BotExecutionMonitor from "./_components/BotMonitorTracker"
-import ErrorTrackingCard from "./_components/BotErrorCard"
+
+import DailyExtractionMonitor from "./_components/DailyExtraction"
+import DailyExtractionCalendar from "../historico/_components/HistoricalExtractionCalendar"
+import BotExecutionMonitor from "../historico/_components/BotMonitorTracker"
+
+
 
 export default function Monitor() {
   return (
-
-
     <div>
 
-      < ErrorTrackingCard />
+      < DailyExtractionCalendar />
       <Divider className="my-10" />
       <BotExecutionMonitor />
+      <Divider className="my-10" />
+      <DailyExtractionMonitor />
+
+
 
     </div>
-
   )
 }

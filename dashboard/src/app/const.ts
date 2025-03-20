@@ -1,0 +1,1 @@
+export const saasName = "Proprius 360"
