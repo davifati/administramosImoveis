@@ -1,7 +1,7 @@
 "use client"
-import { getColumns } from "@/app/(dashboard)/transactions/_components/Columns"
-import { DataTable } from "@/app/(dashboard)/transactions/_components/DataTable"
-import { DataTableDrawer } from "@/app/(dashboard)/transactions/_components/DataTableDrawer"
+import { getColumns } from "@/app/(dashboard)/imoveis/_components/Columns"
+import { DataTable } from "@/app/(dashboard)/imoveis/_components/DataTable"
+import { DataTableDrawer } from "@/app/(dashboard)/imoveis/_components/DataTableDrawer"
 import { Transaction } from "@/data/schema"
 import { transactions } from "@/data/transactions"
 import { Row } from "@tanstack/react-table"
@@ -21,8 +21,8 @@ export default function Example() {
 
   return (
     <>
-      <h1 className="text-lg font-semibold text-gray-900 sm:text-xl dark:text-gray-50">
-        Details
+      <h1 className="text-2lg font-semibold text-gray-900 sm:text-xl dark:text-gray-50">
+        Imóveis
       </h1>
       <div className="mt-4 sm:mt-6 lg:mt-10">
         <DataTable

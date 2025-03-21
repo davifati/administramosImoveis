@@ -28,21 +28,20 @@ export const navigation = [
   },
   {
     name: "Financeiro",
-    href: siteConfig.baseLinks.reports,
+    href: siteConfig.baseLinks.financial,
     icon: BarChartBig
   },
   {
     name: "Imóveis",
-    href: siteConfig.baseLinks.transactions,
+    href: siteConfig.baseLinks.imoveis,
     icon: HouseIcon,
   },
 ] as const
 
-// Adicionando a seção Admin
 export const adminNavigation = [
   {
     name: "Operacional",
-    href: siteConfig.baseLinks.admin,
+    href: siteConfig.baseLinks.users,
     icon: Settings2Icon,
   }
 ] as const

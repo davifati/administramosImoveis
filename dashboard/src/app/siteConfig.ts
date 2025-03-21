@@ -21,6 +21,8 @@ export const siteConfig = {
     users: "/admin/usuarios",
     login: "/login",
     tellus: "/fale-conosco",
+    imoveis: "/imoveis",
+    financial: "/financeiro"
   },
 }
 

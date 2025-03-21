@@ -1,4 +1,3 @@
-// components/UserTable.tsx
 "use client"
 import { Button } from "@/components/Button"
 import {
@@ -30,96 +29,84 @@ import {
     TableRow,
 } from "@/components/Table"
 import { departments } from "@/data/data"
+import { users } from "@/data/usuarios"
 import { Plus, Trash2 } from "lucide-react"
-
-// Definindo os dados de usuários de exemplo
-const users = [
-    {
-        initials: "DL",
-        name: "David Lima",
-        email: "limadavidnascimento@gmail.com",
-        dateAdded: "Jan 21, 2024",
-        lastActive: "Feb 8, 2024",
-        permission: "admin",
-        status: "active",
-    },
-    {
-        initials: "G",
-        name: "Geraldo",
-        email: "geraldo@gmail.com",
-        dateAdded: "Apr 18, 2023",
-        lastActive: "Dec 20, 2023",
-        permission: "Admin",
-        status: "active",
-    },
-]
 
 export default function UserTable() {
     return (
         <div>
-            <div className="flex items-center gap-4">
-                <Dialog>
-                    <DialogTrigger asChild>
-                        <Button className="w-full gap-2 sm:w-fit">
-                            <Plus className="-ml-1 size-4 shrink-0" aria-hidden="true" />
-                            Adicionar
-                        </Button>
-                    </DialogTrigger>
-                    <DialogContent className="sm:max-w-lg">
-                        <DialogHeader>
-                            <DialogTitle>Adicionar Usuário</DialogTitle>
-                            <DialogDescription className="mt-1 text-sm leading-6">
-                                Preencha as informações abaixo.
-                            </DialogDescription>
-                        </DialogHeader>
-                        <form className="mt-4 space-y-4">
-                            <div>
-                                <Label htmlFor="new-user-email" className="font-medium">
-                                    Email
-                                </Label>
-                                <Input
-                                    id="new-user-email"
-                                    type="email"
-                                    name="email"
-                                    className="mt-2"
-                                    placeholder="Email"
-                                    required
-                                />
-                            </div>
+            {/* Adicionando o texto de introdução aqui */}
+            <p className="mt-2 text-sm leading-6 text-gray-500">
+                Administre usuários e controle suas permissões de acesso.
+            </p>
 
-                            <div>
-                                <Label htmlFor="new-user-permission" className="font-medium">
-                                    Perfil
-                                </Label>
-                                <Select name="permission" defaultValue="Administrador">
-                                    <SelectTrigger id="new-user-permission" className="mt-2 w-full">
-                                        <SelectValue placeholder="Defina o perfil de acesso" />
-                                    </SelectTrigger>
-                                    <SelectContent>
-                                        {departments.map((item) => (
-                                            <SelectItem key={item.value} value={item.label}>
-                                                {item.label}
-                                            </SelectItem>
-                                        ))}
-                                    </SelectContent>
-                                </Select>
-                            </div>
+            {/* Botão para adicionar um novo usuário (alinhado à direita) */}
+            <div className="flex items-center gap-4 mt-4">
+                <div className="ml-auto">
+                    <Dialog>
+                        <DialogTrigger asChild>
+                            <Button className="w-full gap-2 sm:w-fit">
+                                <Plus className="-ml-1 size-4 shrink-0" aria-hidden="true" />
+                                Adicionar
+                            </Button>
+                        </DialogTrigger>
+                        <DialogContent className="sm:max-w-lg">
+                            <DialogHeader>
+                                <DialogTitle>Adicionar Usuário</DialogTitle>
+                                <DialogDescription className="mt-1 text-sm leading-6">
+                                    Preencha as informações abaixo.
+                                </DialogDescription>
+                            </DialogHeader>
+                            <form className="mt-4 space-y-4">
+                                <div>
+                                    <Label htmlFor="new-user-email" className="font-medium">
+                                        Email
+                                    </Label>
+                                    <Input
+                                        id="new-user-email"
+                                        type="email"
+                                        name="email"
+                                        className="mt-2"
+                                        placeholder="Email"
+                                        required
+                                    />
+                                </div>
 
-                            <DialogFooter className="mt-6">
-                                <DialogClose asChild>
-                                    <Button className="mt-2 w-full sm:mt-0 sm:w-fit" variant="secondary">
-                                        Cancelar
+                                <div>
+                                    <Label htmlFor="new-user-permission" className="font-medium">
+                                        Perfil
+                                    </Label>
+                                    <Select name="permission" defaultValue="Administrador">
+                                        <SelectTrigger id="new-user-permission" className="mt-2 w-full">
+                                            <SelectValue placeholder="Defina o perfil de acesso" />
+                                        </SelectTrigger>
+                                        <SelectContent>
+                                            {departments.map((item) => (
+                                                <SelectItem key={item.value} value={item.label}>
+                                                    {item.label}
+                                                </SelectItem>
+                                            ))}
+                                        </SelectContent>
+                                    </Select>
+                                </div>
+
+                                <DialogFooter className="mt-6">
+                                    <DialogClose asChild>
+                                        <Button className="mt-2 w-full sm:mt-0 sm:w-fit" variant="secondary">
+                                            Cancelar
+                                        </Button>
+                                    </DialogClose>
+                                    <Button className="w-full sm:w-fit" variant="primary" type="submit">
+                                        Adicionar
                                     </Button>
-                                </DialogClose>
-                                <Button className="w-full sm:w-fit" variant="primary" type="submit">
-                                    Adicionar
-                                </Button>
-                            </DialogFooter>
-                        </form>
-                    </DialogContent>
-                </Dialog>
+                                </DialogFooter>
+                            </form>
+                        </DialogContent>
+                    </Dialog>
+                </div>
             </div>
 
+            {/* Tabela de usuários */}
             <TableRoot className="mt-6" aria-labelledby="users-list-heading">
                 <Table className="border-transparent dark:border-transparent">
                     <TableHead>

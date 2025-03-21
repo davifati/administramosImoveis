@@ -1,7 +1,4 @@
-// Tremor Raw Divider [v0.0.0]
-
 import React from "react"
-
 import { cx } from "@/lib/utils"
 
 interface DividerProps extends React.ComponentPropsWithoutRef<"div"> { }

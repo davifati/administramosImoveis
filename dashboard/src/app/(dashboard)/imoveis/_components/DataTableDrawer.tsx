@@ -1,5 +1,5 @@
 "use client"
-import { DataTableDrawerFeed } from "@/app/(dashboard)/transactions/_components/DataTableDrawerFeed"
+import { DataTableDrawerFeed } from "@/app/(dashboard)/imoveis/_components/DataTableDrawerFeed"
 import { Button } from "@/components/Button"
 import {
   Drawer,

@@ -1,5 +1,4 @@
 "use client"
-
 import { Badge, BadgeProps } from "@/components/Badge"
 import { Button } from "@/components/Button"
 import { Checkbox } from "@/components/Checkbox"
@@ -31,7 +30,7 @@ export const getColumns = ({
           }
           onCheckedChange={() => table.toggleAllPageRowsSelected()}
           className="translate-y-0.5"
-          aria-label="Select all"
+          aria-label="Selecionar todos"
         />
       ),
       cell: ({ row }) => (
@@ -40,28 +39,28 @@ export const getColumns = ({
           onClick={(e) => e.stopPropagation()}
           onCheckedChange={() => row.toggleSelected()}
           className="translate-y-0.5"
-          aria-label="Select row"
+          aria-label="Selecionar linha"
         />
       ),
       enableSorting: false,
       enableHiding: false,
       meta: {
-        displayName: "Select",
+        displayName: "Selecionar",
       },
     }),
     columnHelper.accessor("transaction_date", {
       header: ({ column }) => (
-        <DataTableColumnHeader column={column} title="Purchased on" />
+        <DataTableColumnHeader column={column} title="Cadastrado em" />
       ),
       cell: ({ getValue }) => {
         const date = getValue()
-        return format(new Date(date), "MMM dd, yyyy 'at' h:mma")
+        return format(new Date(date), "MMM dd, yyyy 'às' h:mma")
       },
       enableSorting: true,
       enableHiding: false,
       meta: {
         className: "tabular-nums",
-        displayName: "Purchased",
+        displayName: "Cadastrado em",
       },
     }),
     columnHelper.accessor("expense_status", {
@@ -90,33 +89,33 @@ export const getColumns = ({
     }),
     columnHelper.accessor("merchant", {
       header: ({ column }) => (
-        <DataTableColumnHeader column={column} title="Merchant" />
+        <DataTableColumnHeader column={column} title="Nome da administradora" />
       ),
       enableSorting: false,
       meta: {
         className: "text-left",
-        displayName: "Merchant",
+        displayName: "Nome da administradora",
       },
       filterFn: "arrIncludesSome",
     }),
     columnHelper.accessor("category", {
       header: ({ column }) => (
-        <DataTableColumnHeader column={column} title="Category" />
+        <DataTableColumnHeader column={column} title="Unidade" />
       ),
       enableSorting: false,
       meta: {
         className: "text-left",
-        displayName: "Category",
+        displayName: "Unidade",
       },
     }),
     columnHelper.accessor("amount", {
       header: ({ column }) => (
-        <DataTableColumnHeader column={column} title="Amount" />
+        <DataTableColumnHeader column={column} title="Valor acumulado" />
       ),
       enableSorting: true,
       meta: {
         className: "text-right",
-        displayName: "Amount",
+        displayName: "Valor acumulado",
       },
       cell: ({ getValue }) => {
         return (
@@ -127,13 +126,13 @@ export const getColumns = ({
       },
     }),
     columnHelper.display({
-      id: "edit",
-      header: "Edit",
+      id: "+",
+      header: "+",
       enableSorting: false,
       enableHiding: false,
       meta: {
         className: "text-right",
-        displayName: "Edit",
+        displayName: "Ações",
       },
       cell: ({ row }) => {
         return (
