@@ -7,30 +7,56 @@ import { Label } from "@/components/Label"
 import { Logo } from "@/components/ui/Logo"
 import { RiGoogleFill } from "@remixicon/react"
 import { useRouter } from "next/navigation"
-import React from "react"
-import { saasName } from "../constant"
+import React, { useState } from "react"
 import { siteConfig } from "../siteRotas"
 
-export default function Login() {
+export default function LoginForm() {
+  const [loading, setLoading] = useState(false)
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [error, setError] = useState<string | null>(null)
 
-  const [loading, setLoading] = React.useState(false)
+  const router = useRouter()
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
     setLoading(true)
-    setTimeout(() => {
-      console.log("Form submitted")
-      router.push(siteConfig.baseLinks.monitor.dailyView)
-    }, 1200)
-  }
+    setError(null)
 
-  const router = useRouter()
+    try {
+      const response = await fetch("/api/login/entrar", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      })
+
+      if (response.ok) {
+        const data = await response.json()
+        console.log("Login bem-sucedido:", data)
+
+        // Armazenar o token ou dados do usuário se necessário, 
+        // e redirecionar o usuário para a página desejada
+        router.push(siteConfig.baseLinks.monitor.dailyView)
+
+      } else {
+        const errorData = await response.json()
+        setError(errorData.error || "Erro desconhecido")
+      }
+
+    } catch (err) {
+      console.error("Erro ao fazer login:", err)
+      setError("Erro ao conectar-se com o servidor.")
+    } finally {
+      setLoading(false)
+    }
+  }
 
   return (
     <div className="flex min-h-dvh items-center justify-center p-4 sm:p-6">
       <div className="flex w-full flex-col items-start sm:max-w-sm">
-
         <div className="relative flex items-center justify-center rounded-lg bg-white p-3 shadow-lg ring-1 ring-black/5">
           <Logo
             className="size-8 text-blue-500 dark:text-blue-500"
@@ -40,7 +66,7 @@ export default function Login() {
 
         <div className="mt-6 flex flex-col">
           <h1 className="text-lg font-semibold text-gray-900 dark:text-gray-50">
-            Entre em {saasName}
+            Entre em {siteConfig.name}
           </h1>
           <p className="mt-1 text-sm text-gray-700 dark:text-gray-300">
             Não possui conta?{" "}
@@ -78,6 +104,8 @@ export default function Login() {
                   name="email"
                   id="email-form-item"
                   placeholder="nome@gmail.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="flex flex-col space-y-2">
@@ -90,6 +118,8 @@ export default function Login() {
                   name="password"
                   id="password-form-item"
                   placeholder="senha123"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
             </div>
@@ -98,10 +128,17 @@ export default function Login() {
               type="submit"
               isLoading={loading}
             >
-              {loading ? "" : "Continue"}
+              {loading ? "Carregando..." : "Entrar"}
             </Button>
           </form>
+
+          {error && (
+            <div className="mt-4 text-red-500 text-sm">
+              <p>{error}</p>
+            </div>
+          )}
         </div>
+
         <Divider />
         <p className="text-sm text-gray-700 dark:text-gray-300">
           Esqueceu a senha?{" "}

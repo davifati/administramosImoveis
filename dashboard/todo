@@ -1,6 +1,7 @@
 [OK] modelagem de banco
 [OK] criar diagrama
-[] limpeza frontend
+[OK] limpeza frontend
+[] criar landing page para redirecionar para login
 [] criar paginas restantes do front end
 [] criar banco no supabase -> comecar com sqlite [OK]
 [] mockar banco no supabase
