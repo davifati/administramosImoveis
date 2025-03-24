@@ -1,16 +1,15 @@
-import { saasName } from "./const"
+import { saasName, saasSlogan } from "./constant"
 
 export const siteConfig = {
   name: saasName,
-  url: "https://insights.tremor.so",
-  description: "The only reporting and audit dashboard you will ever need.",
+  url: "",
+  description: saasSlogan,
   baseLinks: {
     reports: "/financeiro",
     transactions: "/transactions",
     settings: {
       audit: "/operacional/monitor",
       users: "/operacional/users",
-      billing: "/operacional/users",
     },
     monitor: {
       historicalView: "/operacional/historico",

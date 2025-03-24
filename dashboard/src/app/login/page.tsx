@@ -8,8 +8,8 @@ import { Logo } from "@/components/ui/Logo"
 import { RiGoogleFill } from "@remixicon/react"
 import { useRouter } from "next/navigation"
 import React from "react"
-import { saasName } from "../const"
-import { siteConfig } from "../siteConfig"
+import { saasName } from "../constant"
+import { siteConfig } from "../siteRotas"
 
 export default function Login() {
 

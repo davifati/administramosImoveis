@@ -4,7 +4,7 @@ import { ThemeProvider } from "next-themes"
 import { NuqsAdapter } from "nuqs/adapters/next/app"
 import React from "react"
 import "./globals.css"
-import { siteConfig } from "./siteConfig"
+import { siteConfig } from "./siteRotas"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://yoururl.com"),

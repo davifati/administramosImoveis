@@ -76,7 +76,7 @@ const DailyExtractionMonitor = () => {
             {/* Exibindo alertas de falha */}
             {extracoes.some((extracao) => extracao.status === 'falha') && (
                 <div className="mt-4 p-4 bg-yellow-500 text-white rounded-lg">
-                    <strong>Atenção:</strong> Houve falhas em algumas extrações. Verifique as imobiliárias com status "Falha".
+                    <strong>Atenção:</strong> Houve falhas em algumas extrações. Verifique as imobiliárias com status 'Falha'.
                 </div>
             )}
         </div>

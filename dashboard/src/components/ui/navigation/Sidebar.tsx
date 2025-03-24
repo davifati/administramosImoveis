@@ -1,5 +1,5 @@
 "use client"
-import { siteConfig } from "@/app/siteConfig"
+import { siteConfig } from "@/app/siteRotas"
 import { Tooltip } from "@/components/Tooltip"
 import { cx, focusRing } from "@/lib/utils"
 import {
@@ -18,7 +18,7 @@ import { usePathname } from "next/navigation"
 import MobileSidebar from "./MobileSidebar"
 import { UserProfileDesktop, UserProfileMobile } from "./UserProfile"
 import { Logo } from "../Logo"
-import { saasName } from "@/app/const"
+import { saasName } from "@/app/constant"
 
 export const navigation = [
   {

@@ -1,6 +1,6 @@
 "use client"
 
-import { siteConfig } from "@/app/siteConfig"
+import { siteConfig } from "@/app/siteRotas"
 import {
   DropdownMenu,
   DropdownMenuContent,

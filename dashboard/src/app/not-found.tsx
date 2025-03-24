@@ -1,7 +1,7 @@
 import { Button } from "@/components/Button"
 import { Logo } from "@/components/ui/Logo"
 import Link from "next/link"
-import { siteConfig } from "./siteConfig"
+import { siteConfig } from "./siteRotas"
 
 export default function NotFound() {
   return (

@@ -6,12 +6,12 @@ import { Sidebar } from "@/components/ui/navigation/Sidebar"
 import { cx } from "@/lib/utils"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { siteConfig } from "../siteConfig"
+import { siteConfig } from "../siteRotas"
 
 const navigationSettings = [
   { name: "Visão Diária e Alertas", href: siteConfig.baseLinks.monitor.dailyView },
   { name: "Visão Histórica", href: siteConfig.baseLinks.monitor.historicalView },
-  
+
 ]
 
 export default function Layout({
