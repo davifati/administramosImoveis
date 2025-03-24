@@ -5,3 +5,6 @@ django-extensions
 pygraphviz
 django-countries
 django-cors-headers
+djangorestframework-simplejwt
+social-auth-app-django
+django-allauth

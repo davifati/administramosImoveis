@@ -1,5 +1,4 @@
 import random
-from tkinter import N
 from django.db import models
 from django.contrib.auth.models import AbstractUser, Group
 from utils.abstract_model import BaseModelTimeStamped
@@ -27,7 +26,11 @@ class Perfil(models.Model):
     ]
 
     nome = models.CharField(
-        max_length=50, choices=PERFIS_CHOICES, verbose_name="Perfil", unique=True
+        max_length=50,
+        choices=PERFIS_CHOICES,
+        verbose_name="Perfil",
+        null=True,
+        blank=True,
     )
 
     # Grupo Django relacionado ao perfil
@@ -45,6 +48,7 @@ class Perfil(models.Model):
 
 
 class Usuario(AbstractUser):
+    # Remover campos que não serão utilizados, como first_name e last_name
     first_name = None
     last_name = None
     date_joined = None
@@ -62,9 +66,10 @@ class Usuario(AbstractUser):
         Perfil,
         on_delete=models.SET_NULL,
         null=True,
-        blank=False,
+        blank=True,
         related_name="usuarios_perfil",
         verbose_name="Perfil de Acesso",
+        default=None,
     )
 
     entrada_em = models.DateTimeField(
@@ -98,7 +103,7 @@ class Usuario(AbstractUser):
                 f"{self.nome.lower()}{self.sobrenome.lower()}{random_numbers}"
             )
 
-        # Ao salvar o usuário, atribui automaticamente o grupo do perfil ao usuário.
+        # Se o perfil existir, atribui o grupo associado a ele
         if self.perfil and self.perfil.grupo:
             self.groups.add(self.perfil.grupo)
 

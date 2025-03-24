@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.admin import AdminSite
 
 from operacional.models import Plano, HistoricoCobranca, Cobranca
-from operacional.models.usuario import Cliente, Usuario
+from login.models.usuario import Cliente, Usuario
 
 
 admin.site.register(Cliente)

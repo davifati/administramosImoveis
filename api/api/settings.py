@@ -39,11 +39,38 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django_extensions",
     "rest_framework",
+    "rest_framework_simplejwt",
+    "django.contrib.sites",  # Para configurar o django-allauth
     "corsheaders",
     "imoveis",
     "monitoramento_boletos",
     "operacional",
+    "login",
+    # "allauth",
+    # "allauth.account",
+    # "allauth.socialaccount",
+    # "allauth.socialaccount.providers.google",
 ]
+
+SITE_ID = 1
+
+# Google OAuth settings
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = "YOUR_GOOGLE_CLIENT_ID"
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = "YOUR_GOOGLE_CLIENT_SECRET"
+
+# A URL de redirecionamento (do Google OAuth2)
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/"
+
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+    ],
+    # "DEFAULT_PERMISSION_CLASSES": [
+    #    "rest_framework.permissions.IsAuthenticated",  # Garante que todas as rotas exijam autenticação
+    # ],
+}
+
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -54,6 +81,8 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "corsheaders.middleware.CorsMiddleware",
+    # Adicione o middleware do allauth
+    # "allauth.account.middleware.AccountMiddleware",
 ]
 
 ROOT_URLCONF = "api.urls"
@@ -74,7 +103,7 @@ TEMPLATES = [
     },
 ]
 
-AUTH_USER_MODEL = "operacional.Usuario"
+AUTH_USER_MODEL = "login.Usuario"
 
 WSGI_APPLICATION = "api.wsgi.application"
 

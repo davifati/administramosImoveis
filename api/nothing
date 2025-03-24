@@ -5,3 +5,11 @@ python manage.py graph_models -a -o model_diagram.png
 python manage.py graph_models -a --disable-abstract -o model_diagram.png
 
 python manage.py graph_models imoveis monitoramento_boletos --disable-abstract -o model_diagram.png
+
+
+{
+  "email": "example@example.com",
+  "nome": "João",
+  "sobrenome": "Silva",
+  "password": "StrongPassword123!"
+}
