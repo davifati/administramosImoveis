@@ -1,0 +1,9 @@
+[OK] modelagem de banco
+[OK] criar diagrama
+[] limpeza frontend
+[] criar paginas restantes do front end
+[] criar banco no supabase -> comecar com sqlite [OK]
+[] mockar banco no supabase
+[] criar backend com dados mockados para aliemntar o front
+[] teste integrado
+[] entrega de SAAS
