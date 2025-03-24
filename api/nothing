@@ -1,3 +1,6 @@
+from curses import OK
+
+
 python manage.py graph_models imoveis -o model_imoveis_diagram.png
 
 python manage.py graph_models -a -o model_diagram.png
@@ -13,3 +16,9 @@ python manage.py graph_models imoveis monitoramento_boletos --disable-abstract -
   "sobrenome": "Silva",
   "password": "StrongPassword123!"
 }
+
+
+[] Login
+    com email e senha OK
+    com google 
+

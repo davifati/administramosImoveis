@@ -62,6 +62,7 @@ class Usuario(AbstractUser):
         null=True,
     )
 
+    """
     perfil = models.ForeignKey(
         Perfil,
         on_delete=models.SET_NULL,
@@ -71,6 +72,7 @@ class Usuario(AbstractUser):
         verbose_name="Perfil de Acesso",
         default=None,
     )
+    """
 
     entrada_em = models.DateTimeField(
         auto_now_add=True, verbose_name="Entrada em", blank=True, null=True
@@ -103,10 +105,7 @@ class Usuario(AbstractUser):
                 f"{self.nome.lower()}{self.sobrenome.lower()}{random_numbers}"
             )
 
-        # Se o perfil existir, atribui o grupo associado a ele
-        if self.perfil and self.perfil.grupo:
-            self.groups.add(self.perfil.grupo)
-
+      
         super().save(*args, **kwargs)
 
     class Meta:

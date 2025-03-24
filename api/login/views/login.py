@@ -23,7 +23,7 @@ class LoginView(APIView):
                 {
                     "access": access_token,
                     "refresh": str(refresh),  # Retornando também o refresh token
-                    "message": "Login successful",
+                    "message": "Login realizado com sucesso",
                 },
                 status=status.HTTP_200_OK,
             )

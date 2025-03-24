@@ -1,3 +1,4 @@
+import random
 from rest_framework import serializers
 from django.contrib.auth import get_user_model
 from login.models.usuario import Perfil
@@ -15,14 +16,17 @@ class RegisterSerializer(serializers.ModelSerializer):
         fields = ["email", "nome", "sobrenome", "password", "perfil"]
 
     def create(self, validated_data):
-        # Verifica se o perfil foi enviado, senão usa o perfil padrão
-        perfil = validated_data.get("perfil", Perfil.objects.get(nome="default"))
+
+        nome = validated_data["nome"]
+        sobrenome = validated_data["sobrenome"]
+        email = validated_data["email"]
+        username = f"{email}{sobrenome}{email}{''.join([str(random.randint(0, 9)) for _ in range(4)])}"
 
         user = get_user_model().objects.create_user(
-            email=validated_data["email"],
-            nome=validated_data["nome"],
-            sobrenome=validated_data["sobrenome"],
+            email=email,
+            nome=nome,
+            sobrenome=sobrenome,
             password=validated_data["password"],
-            perfil=perfil,
+            username=username,
         )
         return user

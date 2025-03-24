@@ -13,7 +13,7 @@ class RegisterView(APIView):
         if serializer.is_valid():
             user = serializer.save()  # Cria o usuário com os dados validados
             return Response(
-                {"message": "User created successfully", "user": serializer.data},
+                {"message": "Usuário cadastrado com sucesso.", "user": serializer.data},
                 status=status.HTTP_201_CREATED,
             )
 

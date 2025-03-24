@@ -22,8 +22,8 @@ from django.urls import path, include
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/monitoramento-boletos/", include("monitoramento_boletos.urls")),
-    # path(
-    #    "api/auth/", include("allauth.urls")
-    # ),  # URLs do django-allauth para login, logout, etc.
+    path(
+        "api/auth/", include("allauth.urls")
+    ),  # URLs do django-allauth para login, logout, etc.
     path("api/login/", include("login.urls")),
 ]
