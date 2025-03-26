@@ -1,10 +1,18 @@
 [OK] modelagem de banco
 [OK] criar diagrama
 [OK] limpeza frontend
+
 [] criar landing page para redirecionar para login
-[] criar paginas restantes do front end
-[] criar banco no supabase -> comecar com sqlite [OK]
-[] mockar banco no supabase
-[] criar backend com dados mockados para aliemntar o front
+
+[] frontend mockados
+    [] monitoramento
+    [] imoveis 
+    [] financeiro
+    [] operacional
+    [] admin ? 
+
+[] remover mocks e criar backend
+[] banco supabase
+
 [] teste integrado
 [] entrega de SAAS

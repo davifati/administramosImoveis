@@ -1,10 +1,13 @@
-import { saasName, saasSlogan } from "./constant"
+import { LOCALHOST, saasName, saasSlogan } from "./constant"
+
+
 
 export const siteConfig = {
   name: saasName,
-  url: "",
+  url: LOCALHOST,
   description: saasSlogan,
   baseLinks: {
+    home: "/home",
     reports: "/financeiro",
     transactions: "/transactions",
     settings: {
@@ -16,12 +19,12 @@ export const siteConfig = {
       dailyView: "/operacional/diario",
       alarm: "/operacional/alertas",
     },
-    admin: "/admin",
+    admin: "/login",
     users: "/admin/usuarios",
     login: "/login",
     tellus: "/fale-conosco",
     imoveis: "/imoveis",
-    financial: "/financeiro"
+    financial: "/financeiro",
   },
 }
 

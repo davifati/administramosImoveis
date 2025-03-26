@@ -3,6 +3,9 @@
 import clsx, { type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
 
+
+
+
 export function cx(...args: ClassValue[]) {
   return twMerge(clsx(...args))
 }
@@ -92,4 +95,10 @@ export const formatters: { [key: string]: any } = {
     }).format(number)
     return `${formattedNumber}M`
   },
+}
+
+
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
 }
