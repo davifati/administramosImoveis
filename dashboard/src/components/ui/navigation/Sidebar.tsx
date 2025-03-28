@@ -5,7 +5,6 @@ import { cx, focusRing } from "@/lib/utils"
 import {
   BarChartBig,
   Compass,
-  ContactIcon,
   FileWarningIcon,
   HouseIcon,
   PanelRightClose,
@@ -15,7 +14,6 @@ import {
 } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import MobileSidebar from "./MobileSidebar"
 import { UserProfileDesktop, UserProfileMobile } from "./UserProfile"
 import { Logo } from "../Logo"
 import { saasName } from "@/app/constant"
@@ -32,7 +30,7 @@ export const navigation = [
     icon: BarChartBig
   },
   {
-    name: "Imóveis",
+    name: "Ativos Imobiliários",
     href: siteConfig.baseLinks.imoveis,
     icon: HouseIcon,
   },
@@ -78,17 +76,18 @@ export function Sidebar({ isCollapsed, toggleSidebar }: SidebarProps) {
                 onClick={toggleSidebar}
               >
                 {isCollapsed ? (
-                  <PanelRightClose
+                  <Logo
                     className="size-5 shrink-0 text-gray-500 group-hover:text-gray-700 dark:text-gray-500 group-hover:dark:text-gray-300"
                     aria-hidden="true"
                   />
                 ) : (
-                  <PanelRightOpen
+                  <Logo
                     className="size-5 shrink-0 text-gray-500 group-hover:text-gray-700 dark:text-gray-500 group-hover:dark:text-gray-300"
                     aria-hidden="true"
                   />
                 )}
               </button>
+
               <span
                 className={cx(
                   "text-lg font-semibold text-gray-900 transition-opacity dark:text-gray-50",
@@ -96,9 +95,10 @@ export function Sidebar({ isCollapsed, toggleSidebar }: SidebarProps) {
                 )}
               >
                 <a aria-label="Home Link" href={siteConfig.baseLinks.monitor.dailyView}>
-                  {saasName}
+                  {siteConfig.name}
                 </a>
               </span>
+
             </div>
           </div>
           <nav

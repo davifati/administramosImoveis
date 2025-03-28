@@ -11,8 +11,8 @@ interface LogoProps {
 const Logo = ({
   className = "",
   alt = "Logo",
-  priority = false,
-  loading = "lazy",
+  priority = true,
+  loading = "eager",
 }: LogoProps) => (
   <div className={`relative flex items-center justify-center ${className}`}>
     <Image

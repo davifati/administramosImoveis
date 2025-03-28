@@ -6,15 +6,15 @@
 
 [] frontend mockados
     [] monitoramento
-    [] imoveis 
+    [OK] imoveis 
     [] financeiro
-    [] operacional
-    [] admin da uma maquiada
+    [OK] operacional
+    [OK] admin 
 
 [] resolver erros de hidratacao
 
-[] remover mocks e criar backend
-[] banco supabase
+[...] remover mocks e criar backend
+[] banco supabase -> primeiro sqlite
 
 [] teste integrado
 [] entrega de SAAS
