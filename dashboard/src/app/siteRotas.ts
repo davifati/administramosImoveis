@@ -6,6 +6,8 @@ export const siteConfig = {
   name: saasName,
   url: LOCALHOST,
   description: saasSlogan,
+  whatsappTellUs: "https://wa.me/15551234567",
+
   baseLinks: {
     home: "/home",
     reports: "/financeiro",

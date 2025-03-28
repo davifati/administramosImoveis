@@ -1,5 +1,5 @@
+"use client"
 import Image from "next/image";
-import * as React from "react";
 
 interface LogoProps {
   className?: string;
@@ -14,12 +14,13 @@ const Logo = ({
   priority = false,
   loading = "lazy",
 }: LogoProps) => (
-  <div className={`relative w-full h-full ${className}`}>
+  <div className={`relative flex items-center justify-center ${className}`}>
     <Image
-      src="/logo.png"
+      src="/img/propius_logo.png" // Caminho para sua imagem
       alt={alt}
-      fill
-      className="object-contain"
+      width={32} // Definindo um tamanho fixo
+      height={32} // Definindo um tamanho fixo
+      className="object-contain" // A imagem não será distorcida
       priority={priority}
       loading={loading}
     />

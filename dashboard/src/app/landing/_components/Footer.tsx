@@ -47,7 +47,7 @@ export function Footer() {
 
               {/* Botão para "Falar com Especialista" */}
               <Link
-                href={siteConfig.baseLinks.admin}
+                href={siteConfig.whatsappTellUs}
                 className="px-8 py-4 text-sm font-small text-center text-gray-500 bg-white border border-gray-300 rounded-md hover:bg-gray-100 transition duration-300"
               >
                 Falar com Especialista

@@ -1,28 +1,27 @@
 "use client"
-
-import { Button } from "@/components/Button"
-import { Divider } from "@/components/Divider"
-import { Input } from "@/components/Input"
-import { Label } from "@/components/Label"
-import { Logo } from "@/components/ui/Logo"
-import { RiGoogleFill } from "@remixicon/react"
-import { useRouter } from "next/navigation"
-import React, { useState } from "react"
-import { siteConfig } from "../siteRotas"
+import { Button } from "@/components/Button";
+import { Divider } from "@/components/Divider";
+import { Input } from "@/components/Input";
+import { Label } from "@/components/Label";
+import { Logo } from "@/components/ui/Logo";
+import { RiGoogleFill } from "@remixicon/react";
+import { useRouter } from "next/navigation";
+import React, { useState } from "react";
+import { siteConfig } from "../siteRotas";
 
 export default function LoginForm() {
-  const [loading, setLoading] = useState(false)
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-  const [error, setError] = useState<string | null>(null)
+  const [loading, setLoading] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState<string | null>(null);
 
-  const router = useRouter()
+  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    setLoading(true)
-    setError(null)
+    setLoading(true);
+    setError(null);
 
     try {
       const response = await fetch("/api/login/entrar", {
@@ -31,40 +30,29 @@ export default function LoginForm() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ email, password }),
-      })
+      });
 
       if (response.ok) {
-        const data = await response.json()
-        console.log("Login bem-sucedido:", data)
+        const data = await response.json();
+        console.log("Login bem-sucedido:", data);
 
-        // Armazenar o token ou dados do usuário se necessário, 
-        // e redirecionar o usuário para a página desejada
-        router.push(siteConfig.baseLinks.monitor.dailyView)
-
+        router.push(siteConfig.baseLinks.monitor.dailyView);
       } else {
-        const errorData = await response.json()
-        setError(errorData.error || "Erro desconhecido")
+        const errorData = await response.json();
+        setError(errorData.error || "Erro desconhecido");
       }
-
     } catch (err) {
-      console.error("Erro ao fazer login:", err)
-      setError("Erro ao conectar-se com o servidor.")
+      console.error("Erro ao fazer login:", err);
+      setError("Erro ao conectar-se com o servidor.");
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   return (
     <div className="flex min-h-dvh items-center justify-center p-4 sm:p-6">
       <div className="flex w-full flex-col items-start sm:max-w-sm">
-        <div className="relative flex items-center justify-center rounded-lg bg-white p-3 shadow-lg ring-1 ring-black/5">
-          <Logo
-            className="size-8 text-blue-500 dark:text-blue-500"
-            aria-label="Insights logo"
-          />
-        </div>
-
-        <div className="mt-6 flex flex-col">
+        .        <div className="mt-6 flex flex-col">
           <h1 className="text-lg font-semibold text-gray-900 dark:text-gray-50">
             Entre em {siteConfig.name}
           </h1>
@@ -72,7 +60,7 @@ export default function LoginForm() {
             Não possui conta?{" "}
             <a
               className="text-blue-500 hover:text-blue-600 dark:text-blue-500 hover:dark:text-blue-400"
-              href="#"
+              href="/login/cadastre-se"
             >
               Cadastre-se
             </a>
@@ -89,10 +77,7 @@ export default function LoginForm() {
             </Button>
           </div>
           <Divider className="my-6">ou</Divider>
-          <form
-            onSubmit={handleSubmit}
-            className="flex w-full flex-col gap-y-6"
-          >
+          <form onSubmit={handleSubmit} className="flex w-full flex-col gap-y-6">
             <div className="flex flex-col gap-y-4">
               <div className="flex flex-col space-y-2">
                 <Label htmlFor="email-form-item" className="font-medium">
@@ -124,10 +109,7 @@ export default function LoginForm() {
               </div>
             </div>
 
-            <Button
-              type="submit"
-              isLoading={loading}
-            >
+            <Button type="submit" isLoading={loading}>
               {loading ? "Carregando..." : "Entrar"}
             </Button>
           </form>
@@ -144,12 +126,12 @@ export default function LoginForm() {
           Esqueceu a senha?{" "}
           <a
             className="text-blue-500 hover:text-blue-600 dark:text-blue-500 hover:dark:text-blue-400"
-            href="#"
+            href="login/redefinicao-senha"
           >
             Redefinir Senha
           </a>
         </p>
       </div>
     </div>
-  )
+  );
 }

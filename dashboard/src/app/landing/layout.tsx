@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "next-themes";
-import "./globals2.css";
+import "./globalsLandingPage.css";
+
 
 import { Navbar } from "./_components/Navbar";
 import { Footer } from "react-day-picker";

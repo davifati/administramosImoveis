@@ -9,7 +9,7 @@ export const CallToActionButtons = () => {
             {/* Botão para "Área do Cliente" */}
             <Link
                 href={siteConfig.baseLinks.login}
-                className="px-8 py-4 text-lg font-medium text-center text-white bg-blue-600 rounded-md hover:bg-indigo-700 transition duration-300"
+                className="px-8 py-4 text-lg font-medium text-center text-white bg-blue-600 rounded-md hover:bg-blue-700 transition duration-300"
             >
                 Testar Grátis
             </Link>
