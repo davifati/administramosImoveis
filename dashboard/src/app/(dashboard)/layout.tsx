@@ -9,7 +9,6 @@ import Link from "next/link";
 
 const navigationSettings = [
   { name: "Visão Geral", href: "/imoveis" },
-  { name: "Captura de Boletos", href: "/imoveis/cronograma-boletos" },
 ];
 
 export default function Layout({
