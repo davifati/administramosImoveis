@@ -92,9 +92,10 @@ export default function ErrorTrackingCard() {
                                 {item.name}
                             </dt>
                             <dd className="mt-3 flex items-center justify-between">
+
                                 <ProgressCircle
                                     value={item.errorPercentage}
-                                    maxValue={100}
+
                                     radius={25}
                                     strokeWidth={5}
                                     color={getColor(item.errorPercentage)}
@@ -103,6 +104,7 @@ export default function ErrorTrackingCard() {
                                         {item.errorPercentage}%
                                     </span>
                                 </ProgressCircle>
+
                                 {expandedImobiliaria === item.name ? (
                                     <RiArrowUpSLine className="h-5 w-5 text-gray-500" />
                                 ) : (

@@ -1,11 +1,10 @@
 "use client";
 
 import { generateRandomStatus, imobiliarias } from '@/data/operacional';
-import React, { useState, useEffect } from 'react';
+import React, { forwardRef, useState, useEffect } from 'react';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css"; // Importando os estilos do DatePicker
 import { twMerge } from 'tailwind-merge';
-
 
 const statusColorLegends = [
     { color: 'bg-emerald-500', label: 'Ok' },
@@ -39,17 +38,16 @@ const Block = ({ color, tooltip, date, hoverEffect, startDate, endDate }) => {
     );
 };
 
-const Tracker = React.forwardRef(
-    ({ data = [], className, hoverEffect, ...props }, forwardedRef) => {
-        return (
-            <div ref={forwardedRef} className={twMerge('flex h-10 items-center', className)} {...props}>
-                {data.map((props, index) => (
-                    <Block key={props.key ?? index} hoverEffect={hoverEffect} {...props} />
-                ))}
-            </div>
-        );
-    }
-);
+
+const Tracker = forwardRef<HTMLDivElement, { data?: any[]; className?: string; hoverEffect?: boolean }>(({ data = [], className, hoverEffect, ...props }, forwardedRef) => {
+    return (
+        <div ref={forwardedRef} className={twMerge('flex h-10 items-center', className)} {...props}>
+            {data.map((props, index) => (
+                <Block key={props.key ?? index} hoverEffect={hoverEffect} {...props} />
+            ))}
+        </div>
+    );
+});
 
 Tracker.displayName = 'Tracker';
 

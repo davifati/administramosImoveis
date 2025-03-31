@@ -34,7 +34,7 @@ export async function POST(request: Request) {
 
     } catch (error) {
         return NextResponse.json(
-            { message: 'Erro ao comunicar com a API do Django', error: error.message },
+            { message: 'Erro ao comunicar com a API do Django' },
             { status: 500 }
         );
     }

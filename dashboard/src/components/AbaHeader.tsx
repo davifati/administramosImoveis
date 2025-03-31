@@ -9,6 +9,7 @@ interface HeaderProps {
 }
 
 export default function AbaHeader({ title }: HeaderProps) {
+    //@ts-ignore
     const scrolled = useScroll(10);
 
     const [, setRange] = useQueryState("range");

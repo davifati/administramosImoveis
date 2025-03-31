@@ -1,205 +1,59 @@
 'use client';
 
 import { RiExternalLinkLine } from '@remixicon/react';
-import { BarChart, Card } from '@tremor/react';
+import { BarChart, Card, Select, SelectItem } from '@tremor/react';
+import { useState } from 'react';
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ');
 }
 
 const data = [
-    {
-        date: 'Aug 01',
-        'Successful requests': 1040,
-        Errors: 0,
-    },
-    {
-        date: 'Aug 02',
-        'Successful requests': 1200,
-        Errors: 0,
-    },
-    {
-        date: 'Aug 03',
-        'Successful requests': 1130,
-        Errors: 0,
-    },
-    {
-        date: 'Aug 04',
-        'Successful requests': 1050,
-        Errors: 0,
-    },
-    {
-        date: 'Aug 05',
-        'Successful requests': 920,
-        Errors: 0,
-    },
-    {
-        date: 'Aug 06',
-        'Successful requests': 870,
-        Errors: 0,
-    },
-    {
-        date: 'Aug 07',
-        'Successful requests': 790,
-        Errors: 0,
-    },
-    {
-        date: 'Aug 08',
-        'Successful requests': 910,
-        Errors: 0,
-    },
-    {
-        date: 'Aug 09',
-        'Successful requests': 951,
-        Errors: 0,
-    },
-    {
-        date: 'Aug 10',
-        'Successful requests': 1232,
-        Errors: 0,
-    },
-    {
-        date: 'Aug 11',
-        'Successful requests': 1230,
-        Errors: 0,
-    },
-    {
-        date: 'Aug 12',
-        'Successful requests': 1289,
-        Errors: 0,
-    },
-    {
-        date: 'Aug 13',
-        'Successful requests': 1002,
-        Errors: 0,
-    },
-    {
-        date: 'Aug 14',
-        'Successful requests': 1034,
-        Errors: 0,
-    },
-    {
-        date: 'Aug 15',
-        'Successful requests': 1140,
-        Errors: 0,
-    },
-    {
-        date: 'Aug 16',
-        'Successful requests': 1280,
-        Errors: 0,
-    },
-    {
-        date: 'Aug 17',
-        'Successful requests': 1345,
-        Errors: 0,
-    },
-    {
-        date: 'Aug 18',
-        'Successful requests': 1432,
-        Errors: 0,
-    },
-    {
-        date: 'Aug 19',
-        'Successful requests': 1321,
-        Errors: 0,
-    },
-    {
-        date: 'Aug 20',
-        'Successful requests': 1230,
-        Errors: 0,
-    },
-    {
-        date: 'Aug 21',
-        'Successful requests': 1020,
-        Errors: 0,
-    },
-    {
-        date: 'Aug 22',
-        'Successful requests': 1040,
-        Errors: 0,
-    },
-    {
-        date: 'Aug 23',
-        'Successful requests': 610,
-        Errors: 81,
-    },
-    {
-        date: 'Aug 24',
-        'Successful requests': 610,
-        Errors: 87,
-    },
-    {
-        date: 'Aug 25',
-        'Successful requests': 610,
-        Errors: 92,
-    },
-    {
-        date: 'Aug 26',
-        'Successful requests': 501,
-        Errors: 120,
-    },
-    {
-        date: 'Aug 27',
-        'Successful requests': 480,
-        Errors: 120,
-    },
-    {
-        date: 'Aug 28',
-        'Successful requests': 471,
-        Errors: 120,
-    },
-    {
-        date: 'Aug 29',
-        'Successful requests': 610,
-        Errors: 89,
-    },
-    {
-        date: 'Aug 30',
-        'Successful requests': 513,
-        Errors: 199,
-    },
-    {
-        date: 'Aug 31',
-        'Successful requests': 500,
-        Errors: 56,
-    },
+    { date: '01/2023', Success: 1040, Errors: 10 },
+    { date: '02/2023', Success: 1200, Errors: 15 },
+    { date: '03/2023', Success: 1130, Errors: 20 },
+    { date: '04/2023', Success: 1050, Errors: 18 },
+    { date: '05/2023', Success: 920, Errors: 22 },
+    { date: '06/2023', Success: 870, Errors: 25 },
+    { date: '07/2023', Success: 790, Errors: 30 },
+    { date: '08/2023', Success: 910, Errors: 28 },
+    { date: '09/2023', Success: 951, Errors: 35 },
+    { date: '10/2023', Success: 1232, Errors: 40 },
+    { date: '11/2023', Success: 1230, Errors: 45 },
+    { date: '12/2023', Success: 1289, Errors: 50 },
 ];
 
 const valueFormatter = (number) =>
     `${Intl.NumberFormat('us').format(number).toString()}`;
 
 const summary = [
-    {
-        name: 'Successful requests',
-        total: 23450,
-        color: 'bg-blue-500',
-    },
-    {
-        name: 'Errors',
-        total: 1397,
-        color: 'bg-red-500',
-    },
+    { name: 'Boletos Capturados', total: 12345, color: 'bg-blue-500' },
+    { name: 'Erros na Captura', total: 395, color: 'bg-red-500' },
 ];
 
 export default function ErrosChart() {
+    const [selectedYear, setSelectedYear] = useState('');
+    //@ts-ignore
+    const uniqueYears = [...new Set(data.map((item) => item.date.split('/')[1]))];
+    const filteredData = selectedYear ? data.filter(item => item.date.endsWith(`/${selectedYear}`)) : data;
+
     return (
         <>
             <Card className="p-0">
-                <div className="p-6">
-                    <h3 className="font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong">
-                        Requests
-                    </h3>
-                    <p className="mt-1 text-tremor-default leading-6 text-tremor-content dark:text-dark-tremor-content">
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                        nonumy eirmod tempor invidunt.{' '}
-                        <a
-                            href="#"
-                            className="inline-flex items-center gap-1 text-tremor-default text-tremor-brand dark:text-dark-tremor-brand"
-                        >
-                            Learn more
-                            <RiExternalLinkLine className="size-4" aria-hidden={true} />
-                        </a>
-                    </p>
+                <div className="p-6 flex justify-between items-center">
+                    <div>
+                        <h3 className="font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong">
+                            Histórico de Captura de Boletos
+                        </h3>
+                        <p className="text-tremor-default text-tremor-content dark:text-dark-tremor-content mt-1">
+                            Análise de erros e sucessos ao longo do tempo.
+                        </p>
+                    </div>
+                    <Select value={selectedYear} onValueChange={setSelectedYear} placeholder="Filtrar por ano" className="w-40">
+                        {uniqueYears.map((year) => (
+                            <SelectItem key={year} value={year}>{year}</SelectItem>
+                        ))}
+                    </Select>
                 </div>
                 <div className="border-t border-tremor-border p-6 dark:border-dark-tremor-border">
                     <ul role="list" className="flex flex-wrap gap-x-20 gap-y-10">
@@ -224,9 +78,9 @@ export default function ErrosChart() {
                         ))}
                     </ul>
                     <BarChart
-                        data={data}
+                        data={filteredData}
                         index="date"
-                        categories={['Successful requests', 'Errors']}
+                        categories={['Success', 'Errors']}
                         colors={['blue', 'red']}
                         stack={true}
                         showLegend={false}
@@ -235,9 +89,9 @@ export default function ErrosChart() {
                         className="mt-10 hidden h-72 md:block"
                     />
                     <BarChart
-                        data={data}
+                        data={filteredData}
                         index="date"
-                        categories={['Successful requests', 'Errors']}
+                        categories={['Success', 'Errors']}
                         colors={['blue', 'red']}
                         stack={true}
                         showLegend={false}

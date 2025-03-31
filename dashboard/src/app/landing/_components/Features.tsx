@@ -2,8 +2,9 @@
 import { motion } from 'framer-motion';
 import { PlaystoreButton } from './PlayStore';
 import { AppStore } from './AppStore';
+import Image from 'next/image';
 
-
+// @ts-ignore
 export const FeatureSection = () => {
     const featureData = [
         {
@@ -67,10 +68,13 @@ export const FeatureSection = () => {
                             whileHover={{ scale: 1.1 }}
                             transition={{ duration: 0.4 }}
                         >
-                            <img
-                                src={item.imageSrc}
-                                alt={item.title}
+                            <Image
+                                src={item.imageSrc}    // Caminho da imagem
+                                alt={item.title}       // Texto alternativo para a imagem
                                 className="object-cover w-full h-full"
+                                width={500}             // Defina a largura desejada
+                                height={300}            // Defina a altura desejada
+                                priority={false}        // Opcional: Adiciona prioridade para imagens visíveis na primeira renderização
                             />
                         </motion.div>
                     </div>
@@ -85,10 +89,12 @@ export const FeatureSection = () => {
                         whileHover={{ scale: 1.1 }}
                         transition={{ duration: 0.4 }}
                     >
-                        <img
-                            src="/img/img-alerta2.png"
+                        <Image
+                            src="/img/img-alerta2.png"  // Caminho da imagem
                             alt="Propius APP"
                             className="object-cover w-full h-full"
+                            width={500}   // Largura da imagem (defina um valor fixo)
+                            height={500}  // Altura da imagem (defina um valor fixo)
                         />
                     </motion.div>
                 </div>

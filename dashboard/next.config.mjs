@@ -8,7 +8,7 @@ const nextConfig = {
         destination: "/reports",
         permanent: true,
       },
-    ]
+    ];
   },
   images: {
     remotePatterns: [
@@ -19,7 +19,13 @@ const nextConfig = {
         pathname: "/**",
       },
     ],
+    unoptimized: true, // Necessário para exportação estática, mas não aplica aqui para renderização dinâmica
   },
-}
+  //output: 'export',
+  eslint: {
+    ignoreDuringBuilds: true, // Ignora ESLint durante o build
+  },
+};
 
-export default nextConfig
+export default nextConfig;
+

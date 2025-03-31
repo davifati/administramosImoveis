@@ -3,7 +3,6 @@ import { Button } from "@/components/Button";
 import { Divider } from "@/components/Divider";
 import { Input } from "@/components/Input";
 import { Label } from "@/components/Label";
-import { Logo } from "@/components/ui/Logo";
 import { RiGoogleFill } from "@remixicon/react";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";

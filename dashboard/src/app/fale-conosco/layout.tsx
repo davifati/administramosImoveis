@@ -3,14 +3,7 @@
 import React from "react";
 import { cx } from "@/lib/utils";
 import { Sidebar } from "@/components/ui/navigation/Sidebar";
-import { TabNavigation, TabNavigationLink } from "@/components/TabNavigation";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
-import Header from "@/components/Header";
 
-const navigationSettings = [
-  { name: "Visão Geral", href: "/imoveis" },
-];
 
 export default function Layout({
   children,
@@ -21,7 +14,6 @@ export default function Layout({
     setIsCollapsed(!isCollapsed);
   };
 
-  const pathname = usePathname();
 
   return (
     <div className="mx-auto max-w-screen-2xl">

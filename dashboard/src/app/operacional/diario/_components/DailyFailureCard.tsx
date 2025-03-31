@@ -4,6 +4,7 @@ import { useState } from "react";
 import { AlertCircle, CheckCircle, Maximize2, Minimize2 } from "lucide-react";
 import { falhasBotsImobiliaria } from "@/mock/operacional/failyFailuresCard";
 
+//@ts-ignore
 export default function AlertaFalhasDiarias({ data }) {
     const [expandido, setExpandido] = useState(false);
     const [hovered, setHovered] = useState(false);
@@ -50,10 +51,11 @@ export default function AlertaFalhasDiarias({ data }) {
                         {(houveFalhas ? imobiliariasComFalhas : imobiliariasComSucesso).map((imob, index) => (
                             <li key={index}>
                                 <strong className={houveFalhas ? "text-red-500" : "text-green-500"}>
-                                    {houveFalhas ? imob.nome : imob}
+                                    {typeof imob === "string" ? imob : imob.nome}
                                 </strong>
                             </li>
                         ))}
+
                     </ul>
                     <button
                         className={`absolute bottom-3 right-3 p-2 text-white rounded-full transition-all

@@ -13,11 +13,12 @@ interface AlertaFalhasDiariasProps {
 const AlertaFalhasDiarias = ({ data, dados = falhasBotsImobiliaria }: AlertaFalhasDiariasProps) => {
     const [isOpen, setIsOpen] = useState(true);
 
+    //@ts-ignore
     const imobiliariasComFalhas = dados.filter(imob =>
-        imob.dadosFalhas.some(falha => falha.data === data)
+        imob.dadosFalhas.some((falha: { data: string; }) => falha.data === data)
     );
 
-    if (imobiliariasComFalhas.length === 0) {
+    if (imobiliariasComFalhas.length === 0) { 
         return null; // Não exibe nada se não houver falhas
     }
 

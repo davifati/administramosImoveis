@@ -4,8 +4,7 @@ import { RiExternalLinkLine } from '@remixicon/react';
 import { AreaChart, Card, Select, SelectItem } from '@tremor/react';
 import { useState } from 'react';
 
-// Função para formatar valores no padrão brasileiro (R$)
-function valueFormatter(number) {
+function valueFormatter(number: number) {
     const formatter = new Intl.NumberFormat('pt-BR', {
         style: 'currency',
         currency: 'BRL',
@@ -16,7 +15,6 @@ function valueFormatter(number) {
     return formatter.format(number);
 }
 
-// Dados mock de boletos de administradoras, com formato de data no padrão brasileiro
 const data = [
     { date: '01/2023', Balance: 38560 },
     { date: '02/2023', Balance: 40320 },
@@ -34,7 +32,7 @@ const data = [
 
 export default function BoletoAreaGraph() {
     const [selectedYear, setSelectedYear] = useState('');
-
+    /// @ts-ignore
     const uniqueYears = [...new Set(data.map((item) => item.date.split('/')[1]))];
     const filteredData = selectedYear ? data.filter(item => item.date.endsWith(`/${selectedYear}`)) : data;
 

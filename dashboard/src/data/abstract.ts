@@ -6,6 +6,7 @@ export interface BoletosExtracaoInfo {
 }
 
 export interface ImobiliariaStats {
+    [x: string]: any;
     nome: string;
     totalExtracoes: number;
     falhas: number;

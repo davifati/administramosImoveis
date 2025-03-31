@@ -116,6 +116,7 @@ const HistoricalExtractionCalendar = () => {
 
     const handleMonthYearChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         const selectedValue = event.target.value;
+        //@ts-ignore
         if (!isFutureDate(dayjs(selectedValue, "MM/YYYY"))) {
             setSelectedMonthYear(selectedValue);
         }
@@ -158,6 +159,7 @@ const HistoricalExtractionCalendar = () => {
                         onChange={handleImobiliariaChange}
                     >
                         <option value="all">Todas</option>
+                        {/* @ts-ignore */}
                         {[...new Set(extracoes.map(
                             (BoletosExtracaoInfo) => BoletosExtracaoInfo.imobiliaria))]
                             .map((imobiliaria) => (

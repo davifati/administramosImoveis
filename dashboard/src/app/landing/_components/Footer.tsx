@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 import { Container } from "./Container";
-import { saasSlogan2 } from "@/app/constant";
 import { siteConfig } from "@/app/siteRotas";
 
 export function Footer() {

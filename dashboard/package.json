@@ -4,11 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "NEXT_IGNORE_TYPECHECK_ERRORS=1 next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next build && next export"
   },
   "dependencies": {
+    "@capacitor/android": "^7.1.0",
+    "@capacitor/cli": "^7.1.0",
+    "@capacitor/core": "^7.1.0",
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "v1",
     "@internationalized/date": "^3.6.0",

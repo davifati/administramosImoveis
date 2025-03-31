@@ -100,7 +100,14 @@ export default function TabelaExecucao() {
             globalFilter,
         },
         onSortingChange: setSorting,
-        onPaginationChange: setPageIndex,
+        onPaginationChange: (updaterOrValue) => {
+            return setPageIndex((prev) => {
+                if (typeof updaterOrValue === "function") {
+                    return updaterOrValue({ pageIndex: prev, pageSize: 5 }).pageIndex;
+                }
+                return updaterOrValue.pageIndex;
+            });
+        },
         getRowId: (row) => row.administradora,
     });
 

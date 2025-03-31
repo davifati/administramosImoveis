@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { RiArrowDownSLine, RiArrowUpSLine, RiArrowLeftDoubleLine, RiArrowLeftSLine, RiArrowRightDoubleLine, RiArrowRightSLine, RiArrowUpLine } from '@remixicon/react';
+import { RiArrowDownSLine, RiArrowUpSLine, RiArrowLeftDoubleLine, RiArrowLeftSLine, RiArrowRightDoubleLine, RiArrowRightSLine } from '@remixicon/react';
 import {
     flexRender,
     getCoreRowModel,
@@ -114,8 +114,9 @@ export default function ImoveisTable({ data }: { data: any }) {
                                     key={header.id}
                                     onClick={header.column.getToggleSortingHandler()}
                                     onKeyDown={(event) => {
-                                        if (event.key === 'Enter') {
-                                            header.column.getToggleSortingHandler()(event);
+                                        const toggleSortingHandler = header.column.getToggleSortingHandler?.();
+                                        if (toggleSortingHandler) {
+                                            toggleSortingHandler(event);
                                         }
                                     }}
                                     className={classNames(
@@ -125,13 +126,13 @@ export default function ImoveisTable({ data }: { data: any }) {
                                         'px-0.5 py-1.5',
                                     )}
                                     tabIndex={header.column.getCanSort() ? 0 : -1}
-                                    aria-sort={header.column.getIsSorted()}
+                                    aria-sort={header.column.getIsSorted() ? (header.column.getIsSorted() === 'asc' ? 'ascending' : 'descending') : 'none'}
                                 >
                                     <div
                                         className={classNames(
-                                            header.column.columnDef.enableSorting === true
+                                            header.column.columnDef.enableSorting
                                                 ? 'flex items-center justify-between gap-2 hover:bg-tremor-background-muted hover:dark:bg-dark-tremor-background-muted'
-                                                : header.column.columnDef.meta.align,
+                                                : (header.column.columnDef.meta as any)?.align ?? '', // Ignora erro de tipo
                                             'rounded-tremor-default px-3 py-1.5',
                                         )}
                                     >

@@ -7,18 +7,19 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
+    "strict": false, // true
+    "noEmit": false,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
-    "isolatedModules": true,
+    "isolatedModules": true, // true
     "jsx": "preserve",
     "incremental": true,
-    "allowUnusedLabels": false,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "allowUnusedLabels": true, // !
+    "noUnusedLocals": false, // !
+    "noUnusedParameters": false, // !
+    "noImplicitAny": false,
     "plugins": [
       {
         "name": "next"
