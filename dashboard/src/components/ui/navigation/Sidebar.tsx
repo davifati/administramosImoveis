@@ -20,9 +20,9 @@ import { saasName } from "@/app/constant"
 
 export const navigation = [
   {
-    name: "Monitoramento e Alertas",
-    href: siteConfig.baseLinks.monitor.dailyView,
-    icon: FileWarningIcon,
+    name: "Ativos Imobiliários",
+    href: siteConfig.baseLinks.imoveis,
+    icon: HouseIcon,
   },
   {
     name: "Financeiro",
@@ -30,10 +30,11 @@ export const navigation = [
     icon: BarChartBig
   },
   {
-    name: "Ativos Imobiliários",
-    href: siteConfig.baseLinks.imoveis,
-    icon: HouseIcon,
+    name: "Monitoramento",
+    href: siteConfig.baseLinks.monitor.dailyView,
+    icon: FileWarningIcon,
   },
+
 ] as const
 
 export const adminNavigation = [
