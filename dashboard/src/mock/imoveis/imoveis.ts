@@ -7,6 +7,7 @@ export const mockFullImoveisInfo = [
         boleto: 13350, // data_vencimento_boleto + valor_boleto + linha_digitavel + link_pdf_boleto
         data_extracao_boletos: "14/10/2024",
         estado: "RJ",
+        status: null
     },
     {
         administradora: "Beta", // site, email, quantidade
@@ -16,7 +17,7 @@ export const mockFullImoveisInfo = [
         // isso fica abstraido no modal
         //telefone: "contato@alpha.com", //email da administradora, administracao e unidade se houver, abrir um modal
         //enderecos: "", // complemento_endereco + complemento_endereco + numero + cep + bloco + num_unidade + cep_unidade + num_pasta + login e senha (protegida),  administradora, administracao e unidade se houver, abrir um modal
-        estado: "RJ",
+        estado: "RJ", status: null
     },
     {
         administradora: "Ceta", // site, email, quantidade
@@ -26,7 +27,7 @@ export const mockFullImoveisInfo = [
         // isso fica abstraido no modal
         //telefone: "contato@alpha.com", //email da administradora, administracao e unidade se houver, abrir um modal
         //enderecos: "", // complemento_endereco + complemento_endereco + numero + cep + bloco + num_unidade + cep_unidade + num_pasta + login e senha (protegida),  administradora, administracao e unidade se houver, abrir um modal
-        estado: "RJ",
+        estado: "RJ", status: null
     },
 ];
 

@@ -13,12 +13,10 @@ interface AlertaFalhasDiariasProps {
 const AlertaFalhasDiarias = ({ data, dados = falhasBotsImobiliaria }: AlertaFalhasDiariasProps) => {
     const [isOpen, setIsOpen] = useState(true);
 
-    // Filtra as imobiliárias que falharam no dia específico
     const imobiliariasComFalhas = dados.filter(imob =>
         imob.dadosFalhas.some(falha => falha.data === data)
     );
 
-    // Se não houver falhas, retorna null
     if (imobiliariasComFalhas.length === 0) {
         return null; // Não exibe nada se não houver falhas
     }
@@ -52,20 +50,6 @@ const AlertaFalhasDiarias = ({ data, dados = falhasBotsImobiliaria }: AlertaFalh
                         <li key={imob.nome} className="text-sm text-gray-700">{imob.nome}</li>
                     ))}
                 </ul>
-            </div>
-
-            {/* Card de Próximas Execuções */}
-            <div className="w-full max-w-md p-4 bg-white shadow-lg rounded-lg border border-green-500">
-                <h3 className="text-lg font-semibold text-green-500">Próximas Execuções</h3>
-                <p className="text-sm mt-1">A próxima execução do processo de boletos está programada para:</p>
-                <ul className="list-disc ml-5 mt-3 text-sm text-gray-700">
-                    <li>APSA - Data: 2025-03-20</li>
-                    <li>PROTEL - Data: 2025-03-21</li>
-                    {/* Adicione outras execuções conforme necessário */}
-                </ul>
-                <button className="mt-4 w-full py-2 bg-green-500 text-white font-semibold rounded-md hover:bg-green-600">
-                    Executar Agora
-                </button>
             </div>
         </div>
     );

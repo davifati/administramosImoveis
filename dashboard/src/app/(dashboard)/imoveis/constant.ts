@@ -39,4 +39,12 @@ export const tableImoveisColumnsConfig = [
             align: 'text-left',
         },
     },
+    {
+        header: 'Status',
+        accessorKey: 'status',
+        enableSorting: true,
+        meta: {
+            align: 'text-left',
+        },
+    },
 ];

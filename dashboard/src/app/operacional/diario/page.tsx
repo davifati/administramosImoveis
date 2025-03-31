@@ -1,13 +1,15 @@
+import AlertaFalhasDiarias from "./_components/DailyFailureCard";
+import DailyTableExecutionStatus from "./_components/TableExecutionStatus";
 
-import { falhasBotsImobiliaria } from "@/data/boletosFalhosPorcetagem";
-import AlertaFalhasDiarias from "./_components/DailyFails";
 
 const PaginaVisaoDiaria = () => {
-    const dataVisaoDiaria = "2025-03-10"; // Exemplo de data para verificação
+    const dataAtual = "2025-03-31";
 
     return (
-        <div className="p-6">
-            <AlertaFalhasDiarias data={dataVisaoDiaria} dados={falhasBotsImobiliaria} />
+        <div>
+            <AlertaFalhasDiarias data={dataAtual} />
+            <div className="mb-6" /> {/* Adiciona um espaço entre os componentes */}
+            <DailyTableExecutionStatus />
         </div>
     );
 };

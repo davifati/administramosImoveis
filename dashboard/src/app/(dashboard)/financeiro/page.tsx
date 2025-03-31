@@ -1,24 +1,17 @@
-import Example from "./_components/Area2"
-import AreaBillGraph from "./_components/AreaChartBillMoney"
-import ErrosChart from "./_components/ErrorsCharts"
-import Header from "../../../components/Header"
-import KPI2 from "./_components/KPi2"
-import KPIOverview from "./_components/KPIOverview"
-import Kpizinho from "./_components/Kpizinho"
+import BoletoAreaGraph from "./_components/BoletoAreaGraph"
+import RankingBoletos from "./_components/RankingBills"
+import StatusKPI from "./_components/StatusKPI"
 
 export default function Page() {
   return (
 
     <section className="my-8">
       <div className="space-y-12">
+        < RankingBoletos />
+        < StatusKPI />
+        <BoletoAreaGraph />
 
-        < KPIOverview />
-        < KPI2 />
 
-        < Kpizinho />
-        < Example />
-
-        <ErrosChart />
 
       </div>
     </section>

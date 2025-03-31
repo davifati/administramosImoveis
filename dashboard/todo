@@ -5,17 +5,18 @@
 [OK] criar landing page para redirecionar para login
 
 [] frontend mockados
-    [] monitoramento: visao historica - OK / Visao geral e alertas? 
+    [OK] monitoramento: visao historica - OK / Visao geral e alertas? 
     [OK] imoveis 
     [] financeiro
     [OK] operacional -> admin django
 
 
 [] revisao 
-[] resolver erros de hidratacao
+[] tauri demo? 
 
-[...] remover mocks e criar backend
-[] banco supabase -> primeiro sqlite
+[] resolver erros de hidratacao - landing page
+[.] remover mocks e criar backend com sqlite 
+
 
 [] teste integrado
 [] entrega de SAAS
