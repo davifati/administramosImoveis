@@ -6,6 +6,7 @@ import { Sidebar } from "@/components/ui/navigation/Sidebar";
 import { TabNavigation, TabNavigationLink } from "@/components/TabNavigation";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Header from "@/components/Header";
 
 const navigationSettings = [
   { name: "Visão Geral", href: "/imoveis" },
@@ -32,9 +33,8 @@ export default function Layout({
         )}
       >
         <div className="bg-white p-4 sm:p-6 lg:rounded-lg lg:border lg:border-gray-200 dark:bg-gray-925 lg:dark:border-gray-900">
-          <h1 className="text-lg font-semibold text-gray-900 dark:text-gray-50">
-            Ativos Imobiliários
-          </h1>
+          <Header title="Ativos Imobiliários" />
+
 
           <TabNavigation className="mt-6">
             {navigationSettings.map((item) => (

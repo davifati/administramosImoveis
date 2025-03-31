@@ -5,11 +5,11 @@
 [OK] criar landing page para redirecionar para login
 
 [] frontend mockados
-    [OK] monitoramento
+    [] monitoramento: visao historica - OK / Visao geral e alertas? 
     [OK] imoveis 
-    [OK] financeiro
-    [OK] operacional
-    [OK] admin 
+    [] financeiro
+    [OK] operacional -> admin django
+
 
 [] revisao 
 [] resolver erros de hidratacao

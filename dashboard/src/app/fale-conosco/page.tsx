@@ -17,8 +17,8 @@ export default function ContactUs() {
                 {/* Botão de WhatsApp */}
                 <Button asChild variant="secondary" className="mt-2 w-full sm:w-auto">
                     <a href="https://wa.me/15551234567" target="_blank" className="inline-flex items-center gap-2">
-                        <RiWhatsappFill className="size-5 shrink-0" aria-hidden="true" />
-                        Fale Conosco pelo WhatsApp
+                        <RiWhatsappFill className="size-8 shrink-0" aria-hidden="true" />
+                        Fale com um especialista
                     </a>
                 </Button>
 
