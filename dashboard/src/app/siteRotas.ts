@@ -21,7 +21,7 @@ export const siteConfig = {
       dailyView: "/operacional/diario",
       alarm: "/operacional/alertas",
     },
-    admin: "/login",
+    admin: `${process.env.NEXT_PUBLIC_API_HOST}/admin`,
     users: "/admin/usuarios",
     login: "/login",
     tellus: "/fale-conosco",

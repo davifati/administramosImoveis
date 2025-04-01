@@ -40,7 +40,7 @@ export const navigation = [
 export const adminNavigation = [
   {
     name: "Operacional",
-    href: siteConfig.baseLinks.users,
+    href: siteConfig.baseLinks.admin,
     icon: Settings2Icon,
   }
 ] as const

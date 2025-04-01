@@ -8,11 +8,10 @@ export default function Page() {
 
     <section className="my-8">
       <div className="space-y-12">
+
         < RankingBoletos />
         < StatusKPI />
         <BoletoAreaGraph />
-
-
 
       </div>
     </section>

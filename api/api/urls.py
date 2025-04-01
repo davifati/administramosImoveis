@@ -26,4 +26,6 @@ urlpatterns = [
         "api/auth/", include("allauth.urls")
     ),  # URLs do django-allauth para login, logout, etc.
     path("api/login/", include("login.urls")),
+    path("api/ativos/imoveis", include("imoveis.urls")),
+    path("api/financeiro/", include("financeiro.urls")),
 ]
