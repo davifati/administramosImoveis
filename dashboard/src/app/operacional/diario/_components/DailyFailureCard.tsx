@@ -1,20 +1,38 @@
 "use client";
-export const dynamic = 'force-static';
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AlertCircle, CheckCircle, Maximize2, Minimize2 } from "lucide-react";
-import { falhasBotsImobiliaria } from "@/mock/operacional/failyFailuresCard";
+import { FalhaBoleto, getBoletoAdministradoraFalhas } from "../../_api/diario";
 
-//@ts-ignore
-export default function AlertaFalhasDiarias({ data }) {
+
+export default function AlertaFalhasDiarias({ data }: { data: string }) {
     const [expandido, setExpandido] = useState(false);
     const [hovered, setHovered] = useState(false);
+    const [falhas, setFalhas] = useState<FalhaBoleto[]>([]); // Estado para armazenar as falhas
+    const [loading, setLoading] = useState(true); // Estado de loading
 
-    const imobiliariasComFalhas = falhasBotsImobiliaria.filter((imob) =>
+    // Busca as falhas da API ao montar o componente
+    useEffect(() => {
+        const fetchFalhas = async () => {
+            try {
+                const falhasData = await getBoletoAdministradoraFalhas(); // Chama a função que faz o fetch
+                setFalhas(falhasData);  // Atualiza o estado com as falhas obtidas
+            } catch (error) {
+                console.error("Erro ao carregar as falhas:", error);
+            } finally {
+                setLoading(false); // Finaliza o loading após tentar carregar os dados
+            }
+        };
+
+        fetchFalhas();
+    }, []); // A função roda uma vez quando o componente é montado
+
+    // Filtra as imobiliárias com falhas para o dia especificado
+    const imobiliariasComFalhas = falhas.filter((imob) =>
         imob.dadosFalhas.some((falha) => falha.data === data)
     );
 
-    const todasImobiliarias = falhasBotsImobiliaria.map(imob => imob.nome);
+    const todasImobiliarias = falhas.map(imob => imob.nome);
     const imobiliariasComSucesso = todasImobiliarias.filter(nome =>
         !imobiliariasComFalhas.some(imob => imob.nome === nome)
     );
@@ -26,8 +44,8 @@ export default function AlertaFalhasDiarias({ data }) {
             {!expandido ? (
                 <div
                     className={`relative w-full max-w-screen-lg mx-auto p-6 bg-white shadow-xl rounded-xl border transition-all duration-300 
-                    ${houveFalhas ? "border-red-500" : "border-green-500"} 
-                    ${hovered ? "scale-105 shadow-2xl" : ""}`}
+          ${houveFalhas ? "border-red-500" : "border-green-500"} 
+          ${hovered ? "scale-105 shadow-2xl" : ""}`}
                     onMouseEnter={() => setHovered(true)}
                     onMouseLeave={() => setHovered(false)}
                 >
@@ -56,11 +74,10 @@ export default function AlertaFalhasDiarias({ data }) {
                                 </strong>
                             </li>
                         ))}
-
                     </ul>
                     <button
                         className={`absolute bottom-3 right-3 p-2 text-white rounded-full transition-all
-                        ${houveFalhas ? "bg-red-600 hover:bg-red-700" : "bg-green-600 hover:bg-green-700"}`}
+            ${houveFalhas ? "bg-red-600 hover:bg-red-700" : "bg-green-600 hover:bg-green-700"}`}
                         onClick={() => setExpandido(true)}
                     >
                         <Maximize2 size={20} />
@@ -68,14 +85,14 @@ export default function AlertaFalhasDiarias({ data }) {
                 </div>
             ) : (
                 <div className={`relative w-full max-w-screen-lg mx-auto p-6 bg-white shadow-xl rounded-xl border 
-                ${houveFalhas ? "border-red-500" : "border-green-500"}`}>
+        ${houveFalhas ? "border-red-500" : "border-green-500"}`}>
                     <div className="flex justify-between items-center mb-4">
                         <h3 className={`text-2xl font-bold ${houveFalhas ? "text-red-600" : "text-green-600"}`}>
                             {houveFalhas ? "Detalhes das Falhas" : "Todas as Admins Processadas"} - {data}
                         </h3>
                         <button
                             className={`p-2 text-white rounded-full transition-all 
-                            ${houveFalhas ? "bg-red-600 hover:bg-red-700" : "bg-green-600 hover:bg-green-700"}`}
+              ${houveFalhas ? "bg-red-600 hover:bg-red-700" : "bg-green-600 hover:bg-green-700"}`}
                             onClick={() => setExpandido(false)}
                         >
                             <Minimize2 size={20} />
@@ -84,7 +101,7 @@ export default function AlertaFalhasDiarias({ data }) {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         {(houveFalhas ? imobiliariasComFalhas : imobiliariasComSucesso).map((imob, index) => (
                             <div key={index} className={`p-4 border rounded-xl shadow-md hover:shadow-lg transition-all 
-                            ${houveFalhas ? "bg-red-100 border-red-300" : "bg-green-100 border-green-300"}`}>
+              ${houveFalhas ? "bg-red-100 border-red-300" : "bg-green-100 border-green-300"}`}>
                                 <h4 className={`text-lg font-semibold ${houveFalhas ? "text-red-700" : "text-green-700"}`}>
                                     {houveFalhas ? imob.nome : imob}
                                 </h4>

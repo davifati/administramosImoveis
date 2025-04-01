@@ -1,12 +1,14 @@
 "use client";
-export const dynamic = 'force-static';
 import { useEffect, useState } from "react";
+import axios from "axios";
 import dayjs from "dayjs";
 import "dayjs/locale/pt-br"; // Importando a localidade em português
 import { BoletosExtracaoInfo } from "@/data/abstract";
-import { mockExtracoes } from "@/data/boletosExtraidosInfo";
+import { getHistoricalExtractionCalendar } from "../../_api/historico";
+
 
 dayjs.locale("pt-br"); // Definindo a localidade como português
+
 
 const HistoricalExtractionCalendar = () => {
     const [extracoes, setExtracoes] = useState<BoletosExtracaoInfo[]>([]);
@@ -17,8 +19,18 @@ const HistoricalExtractionCalendar = () => {
     );
     const [selectedImobiliaria, setSelectedImobiliaria] = useState<string | "all">("all");
 
+    // Chamada à API para buscar as extrações
     useEffect(() => {
-        setExtracoes(mockExtracoes);
+        const fetchExtracoes = async () => {
+            try {
+                const data = await getHistoricalExtractionCalendar();  // Chama a função que busca os dados da API
+                setExtracoes(data); // Atualiza o estado com as extrações obtidas
+            } catch (error) {
+                console.error("Erro ao buscar extracoes:", error);
+            }
+        };
+
+        fetchExtracoes();  // Invoca a função para buscar as extrações
     }, []);
 
     const generateCalendar = () => {

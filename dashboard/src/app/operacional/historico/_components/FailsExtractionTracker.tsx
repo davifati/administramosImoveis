@@ -1,29 +1,36 @@
-export const dynamic = 'force-static';
 import { EstatisticasFalhasProps } from "@/data/abstract";
-import { falhasBotsImobiliaria } from "@/data/boletosFalhosPorcetagem";
 import { AlertCircle } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { getFailsExtractionTracker } from "../../_api/historico";
 
 const FailsExtractionTracker = ({
-    dados = falhasBotsImobiliaria,
     titulo = "Estatísticas de Falhas",
     mostrarTotal = true,
 }: EstatisticasFalhasProps) => {
-
+    const [dados, setDados] = useState<any[]>([]);
     const [ordenacao, setOrdenacao] = useState<"desc" | "asc">("desc");
     const [imobiliariaSelecionada, setImobiliariaSelecionada] = useState<string | null>(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await getFailsExtractionTracker();
+                setDados(response);
+            } catch (error) {
+                console.error("Erro ao buscar dados de falhas:", error);
+            }
+        };
+        fetchData();
+    }, []);
 
     const dadosOrdenados = [...dados].sort((a, b) => {
         return ordenacao === "desc" ? b.taxaFalha - a.taxaFalha : a.taxaFalha - b.taxaFalha;
     });
 
-    // Função para lidar com o clique na imobiliária e exibir a tabela de falhas
     const handleImobiliariaClick = (imobiliariaNome: string) => {
         if (imobiliariaSelecionada === imobiliariaNome) {
-            // Se a imobiliária clicada já estiver selecionada, desmarque
             setImobiliariaSelecionada(null);
         } else {
-            // Caso contrário, selecione a imobiliária
             setImobiliariaSelecionada(imobiliariaNome);
         }
     };
@@ -57,11 +64,8 @@ const FailsExtractionTracker = ({
                                 {imob.falhas} falhas em {imob.totalExtracoes} extrações
                             </div>
                         )}
-
-                        {/* Exibir tabela de falhas quando a imobiliária for selecionada */}
                         {imobiliariaSelecionada === imob.nome && (
                             <div className="mt-4">
-
                                 <table className="min-w-full table-auto">
                                     <thead>
                                         <tr>

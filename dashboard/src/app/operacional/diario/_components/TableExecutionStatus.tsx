@@ -1,7 +1,5 @@
 "use client";
-export const dynamic = 'force-static';
-
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
     flexRender,
     getCoreRowModel,
@@ -19,72 +17,85 @@ import {
     Button,
 } from "@tremor/react";
 import { RiArrowDownSLine, RiArrowUpSLine } from "@remixicon/react";
-import { data } from "@/mock/operacional/dailyExecutionStatus";
-
-
-
-// Configuração das colunas
-const columns = [
-    {
-        accessorKey: "administradora",
-        header: "Administradora",
-    },
-    {
-        accessorKey: "dataExecucao",
-        header: "Data de Execução",
-        cell: ({ getValue }) => {
-            const data = new Date(getValue());
-            return data.toLocaleString("pt-BR", {
-                day: "2-digit",
-                month: "2-digit",
-                year: "numeric",
-                hour: "2-digit",
-                minute: "2-digit",
-            });
-        },
-    },
-    {
-        accessorKey: "status",
-        header: "Status",
-        cell: ({ getValue }) => {
-            const status = getValue();
-            return (
-                <span
-                    className={`px-2 py-1 rounded ${status === "Sucesso"
-                        ? "bg-green-100 text-green-700"
-                        : "bg-red-100 text-red-700"
-                        }`}
-                >
-                    {status}
-                </span>
-            );
-        },
-    },
-    {
-        accessorKey: "estatisticaFalhas",
-        header: "Estatística de Falhas",
-        cell: ({ getValue }) => {
-            const falha = getValue();
-            return (
-                <div className="flex items-center">
-                    <div className="relative w-24 h-3 bg-gray-200 rounded-full overflow-hidden">
-                        <div
-                            className={`h-full transition-all ${parseInt(falha) > 10 ? "bg-red-500" : "bg-green-500"
-                                }`}
-                            style={{ width: falha }}
-                        ></div>
-                    </div>
-                    <span className="ml-2 text-sm">{falha}</span>
-                </div>
-            );
-        },
-    },
-];
+import { getCronogramaExecucaoBots } from "../../_api/diario";
 
 export default function TabelaExecucao() {
+    const [data, setData] = useState<any>([]);
     const [globalFilter, setGlobalFilter] = useState("");
     const [sorting, setSorting] = useState([]);
     const [pageIndex, setPageIndex] = useState(0);
+
+    useEffect(() => {
+        // Função para buscar os dados da API
+        const fetchData = async () => {
+            try {
+                const response = await getCronogramaExecucaoBots();
+                setData(response);  // Atualiza o estado com os dados da API
+            } catch (error) {
+                console.error("Erro ao buscar dados:", error);
+            }
+        };
+
+        fetchData();  // Chama a função quando o componente é montado
+    }, []); // O array vazio garante que a requisição será feita apenas uma vez
+
+    // Configuração das colunas
+    const columns = [
+        {
+            accessorKey: "administradora",
+            header: "Administradora",
+        },
+        {
+            accessorKey: "dataExecucao",
+            header: "Data de Execução",
+            cell: ({ getValue }) => {
+                const data = new Date(getValue());
+                return data.toLocaleString("pt-BR", {
+                    day: "2-digit",
+                    month: "2-digit",
+                    year: "numeric",
+                    hour: "2-digit",
+                    minute: "2-digit",
+                });
+            },
+        },
+        {
+            accessorKey: "status",
+            header: "Status",
+            cell: ({ getValue }) => {
+                const status = getValue();
+                return (
+                    <span
+                        className={`px-2 py-1 rounded ${status === "Sucesso"
+                            ? "bg-green-100 text-green-700"
+                            : "bg-red-100 text-red-700"
+                            }`}
+                    >
+                        {status}
+                    </span>
+                );
+            },
+        },
+        {
+            accessorKey: "estatisticaFalhas",
+            header: "Estatística de Falhas",
+            cell: ({ getValue }) => {
+                const falha = getValue();
+                return (
+                    <div className="flex items-center">
+                        <div className="relative w-24 h-3 bg-gray-200 rounded-full overflow-hidden">
+                            <div
+                                className={`h-full transition-all ${parseInt(falha) > 10 ? "bg-red-500" : "bg-green-500"
+                                    }`}
+                                style={{ width: falha }}
+                            ></div>
+                        </div>
+                        <span className="ml-2 text-sm">{falha}</span>
+                    </div>
+                );
+            },
+        },
+    ];
 
     const table = useReactTable({
         data,

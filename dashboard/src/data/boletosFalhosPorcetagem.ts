@@ -1,6 +1,6 @@
-import { ImobiliariaStats } from "./abstract";
 
-export const falhasBotsImobiliaria: ImobiliariaStats[] = [
+
+export const falhasBotsImobiliaria= [
     {
         nome: "APSA",
         totalExtracoes: 150,

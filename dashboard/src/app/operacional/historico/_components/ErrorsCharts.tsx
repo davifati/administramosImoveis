@@ -1,32 +1,17 @@
 'use client';
 export const dynamic = 'force-static';
 
-
-import { RiExternalLinkLine } from '@remixicon/react';
 import { BarChart, Card, Select, SelectItem } from '@tremor/react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { getExtractionMonthlyStats } from '../../_api/historico';
 
-function classNames(...classes) {
-    return classes.filter(Boolean).join(' ');
-}
-
-const data = [
-    { date: '01/2023', Success: 1040, Errors: 10 },
-    { date: '02/2023', Success: 1200, Errors: 15 },
-    { date: '03/2023', Success: 1130, Errors: 20 },
-    { date: '04/2023', Success: 1050, Errors: 18 },
-    { date: '05/2023', Success: 920, Errors: 22 },
-    { date: '06/2023', Success: 870, Errors: 25 },
-    { date: '07/2023', Success: 790, Errors: 30 },
-    { date: '08/2023', Success: 910, Errors: 28 },
-    { date: '09/2023', Success: 951, Errors: 35 },
-    { date: '10/2023', Success: 1232, Errors: 40 },
-    { date: '11/2023', Success: 1230, Errors: 45 },
-    { date: '12/2023', Success: 1289, Errors: 50 },
-];
 
 const valueFormatter = (number) =>
-    `${Intl.NumberFormat('us').format(number).toString()}`;
+    `${Intl.NumberFormat('pt-BR').format(number)}`;
+
+const classNames = (...classes) => {
+    return classes.filter(Boolean).join(' ');
+};
 
 const summary = [
     { name: 'Boletos Capturados', total: 12345, color: 'bg-blue-500' },
@@ -35,7 +20,27 @@ const summary = [
 
 export default function ErrosChart() {
     const [selectedYear, setSelectedYear] = useState('');
-    //@ts-ignore
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const result = await getExtractionMonthlyStats();
+                setData(result);
+                setLoading(false);
+            } catch (error) {
+                console.error('Erro ao buscar dados de captura de boletos:', error);
+                setLoading(false);
+            }
+        };
+        fetchData();
+    }, []);
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
     const uniqueYears = [...new Set(data.map((item) => item.date.split('/')[1]))];
     const filteredData = selectedYear ? data.filter(item => item.date.endsWith(`/${selectedYear}`)) : data;
 

@@ -1,6 +1,6 @@
-import { BoletosExtracaoInfo } from "./abstract";
 
-export const mockExtracoes: BoletosExtracaoInfo[] = [
+
+export const mockExtracoes= [
     {
         imobiliaria: "APSA",
         ultimaExtracao: "2025-03-01",
