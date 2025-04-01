@@ -1,3 +1,4 @@
+export const dynamic = 'force-static';
 import { EstatisticasFalhasProps } from "@/data/abstract";
 import { falhasBotsImobiliaria } from "@/data/boletosFalhosPorcetagem";
 import { AlertCircle } from "lucide-react";

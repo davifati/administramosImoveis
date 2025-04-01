@@ -1,3 +1,4 @@
+export const dynamic = 'force-static';
 import React, { useState } from 'react';
 import { RiArrowDownSLine, RiArrowUpSLine, RiArrowLeftDoubleLine, RiArrowLeftSLine, RiArrowRightDoubleLine, RiArrowRightSLine } from '@remixicon/react';
 import {

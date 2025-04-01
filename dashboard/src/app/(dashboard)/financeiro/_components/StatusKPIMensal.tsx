@@ -1,7 +1,25 @@
-import { mockRankingBillsKPI } from '@/mock/financeiro/rankingBills';
+"use client"
+import { useState, useEffect } from 'react'; // Importando useState e useEffect
 import { InformationCircleIcon } from '@heroicons/react/solid'; // Importando ícone de info do Heroicons
+import { getKPIMensal } from '../_api/KPIMesAnterior';
 
 export default function StatusKPI() {
+    const [KPIMensalData, setKPIMensalData] = useState([]); // Estado para armazenar os dados
+
+    useEffect(() => {
+        // Função assíncrona para obter os dados
+        const fetchData = async () => {
+            try {
+                const data = await getKPIMensal();
+                setKPIMensalData(data); // Atualizando o estado com os dados obtidos
+            } catch (error) {
+                console.error("Erro ao obter dados do KPI:", error);
+            }
+        };
+
+        fetchData(); // Chamando a função para obter os dados
+    }, []); // O array vazio [] faz com que o efeito seja executado apenas uma vez após a montagem do componente
+
     return (
         <>
             <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-50 mb-4 text-center">
@@ -9,7 +27,7 @@ export default function StatusKPI() {
             </h2>
 
             <div className="flex flex-wrap justify-center gap-4">
-                {mockRankingBillsKPI.map((item, index) => (
+                {KPIMensalData.map((item, index) => (
                     <span
                         key={index}
                         className="inline-flex items-center space-x-1.5 rounded-tremor-full bg-tremor-background px-2.5 py-1 ring-1 ring-inset ring-tremor-ring dark:bg-dark-tremor-background dark:ring-dark-tremor-ring"

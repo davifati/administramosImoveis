@@ -1,3 +1,4 @@
+export const dynamic = 'force-static';
 
 import React from 'react';
 
@@ -26,5 +27,3 @@ export const AppStore = () => {
         </a>
     );
 };
-
-

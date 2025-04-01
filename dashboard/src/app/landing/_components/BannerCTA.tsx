@@ -1,3 +1,4 @@
+export const dynamic = 'force-static';
 export const Banner = () => {
     return (
         <div className="w-full bg-blue-600 text-white py-4 flex items-center justify-center rounded-lg">

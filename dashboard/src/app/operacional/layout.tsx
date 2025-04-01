@@ -1,4 +1,6 @@
 "use client"
+export const dynamic = 'force-static';
+
 import React from "react"
 
 import { TabNavigation, TabNavigationLink } from "@/components/TabNavigation"

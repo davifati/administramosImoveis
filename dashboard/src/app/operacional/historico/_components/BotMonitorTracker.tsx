@@ -1,4 +1,5 @@
 "use client";
+export const dynamic = 'force-static';
 
 import { generateRandomStatus, imobiliarias } from '@/data/operacional';
 import React, { forwardRef, useState, useEffect } from 'react';

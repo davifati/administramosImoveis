@@ -1,4 +1,5 @@
 "use client"
+export const dynamic = 'force-static';
 
 import { Divider } from "@/components/Divider"
 import HistoricalExtractionCalendar from "./_components/HistoricalExtractionCalendar"

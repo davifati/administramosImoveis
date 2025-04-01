@@ -1,3 +1,4 @@
+export const dynamic = 'force-static';
 import { SignUpForm } from "../_components/SignUp";
 
 

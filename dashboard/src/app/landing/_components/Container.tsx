@@ -1,3 +1,4 @@
+export const dynamic = 'force-static';
 import React from "react";
 
 interface ContainerProps {
@@ -14,4 +15,3 @@ export function Container(props: Readonly<ContainerProps>) {
     </div>
   );
 }
-

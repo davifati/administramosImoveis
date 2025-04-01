@@ -1,37 +1,12 @@
 "use client";
+export const dynamic = 'force-static';
 
 import { useState } from "react";
 import { RiSearchLine } from "@remixicon/react";
 import { BarList, Card, Dialog, DialogPanel, TextInput } from "@tremor/react";
-import { boletos } from "@/mock/financeiro/bills";
+import { rankingValores, rankingQuantidade, valueFormatter } from "../_services/useRankingBoletos";
 
 
-// @ts-ignore
-const rankingAdministradoras = boletos.reduce((acc, boleto) => {
-    // @ts-ignore
-    if (!acc[boleto.administradora]) {
-        // @ts-ignore
-        acc[boleto.administradora] = { valor: 0, quantidade: 0 };
-    }
-    // @ts-ignore
-    acc[boleto.administradora].valor += boleto.valor;
-    // @ts-ignore
-    acc[boleto.administradora].quantidade += 1;
-    return acc;
-}, {});
-
-const rankingValores = Object.entries(rankingAdministradoras)
-    // @ts-ignore
-    .map(([name, data]) => ({ name, value: data.valor }))
-    .sort((a, b) => b.value - a.value);
-
-const rankingQuantidade = Object.entries(rankingAdministradoras)
-    // @ts-ignore
-    .map(([name, data]) => ({ name, value: data.quantidade }))
-    .sort((a, b) => b.value - a.value);
-
-const valueFormatter = (number: number) =>
-    `${Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(number)}`;
 
 export default function RankingBoletos() {
     const [isOpen, setIsOpen] = useState(false);
@@ -67,7 +42,7 @@ export default function RankingBoletos() {
                 <p className="text-lg font-semibold text-gray-700">Quantidade de Boletos Capturados</p>
                 <p className="text-2xl font-bold text-gray-900 mt-2">
                     {rankingQuantidade.reduce((acc, item) => acc + item.value, 0)} boletos
-                </p>npm run
+                </p>
                 <BarList data={rankingQuantidade.slice(0, 5)} valueFormatter={(n: number) => `${n} boletos`} className="mt-4" />
                 <button
                     className="mt-6 w-full bg-green-500 text-white font-medium py-2 rounded-lg hover:bg-green-600"

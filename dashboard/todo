@@ -12,9 +12,9 @@
 
 
 [OK] revisao 
-[] tauri -> Capacitor 
+[OK] tauri -> Capacitor: add um index.html copiado do login e a lading page funcionou...
 
-[.] remover mocks e criar backend com sqlite 
+[..] remover mocks e criar backend com sqlite 
 [] resolver erros de hidratacao - landing page
 
 [] teste integrado

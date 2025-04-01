@@ -1,6 +1,7 @@
+export const dynamic = 'force-static';
 import BoletoAreaGraph from "./_components/BoletoAreaGraph"
 import RankingBoletos from "./_components/RankingBills"
-import StatusKPI from "./_components/StatusKPI"
+import StatusKPI from "./_components/StatusKPIMensal"
 
 export default function Page() {
   return (

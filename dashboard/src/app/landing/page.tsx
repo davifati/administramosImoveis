@@ -1,3 +1,4 @@
+export const dynamic = 'force-static';
 import { SaasSloganHighlight } from "@/app/landing/_components/TitleHighlight";
 import { Container } from "./_components/Container";
 import { Footer } from "./_components/Footer";

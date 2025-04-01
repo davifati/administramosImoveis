@@ -1,4 +1,6 @@
 'use client';
+export const dynamic = 'force-static';
+
 
 import { RiExternalLinkLine } from '@remixicon/react';
 import { BarChart, Card, Select, SelectItem } from '@tremor/react';

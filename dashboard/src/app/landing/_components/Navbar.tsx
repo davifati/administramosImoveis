@@ -1,4 +1,5 @@
 "use client";
+export const dynamic = 'force-static';
 import Link from "next/link";
 import ThemeChanger from "./DarkSwitch";
 import Image from "next/image";

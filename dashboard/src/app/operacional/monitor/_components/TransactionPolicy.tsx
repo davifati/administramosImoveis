@@ -1,3 +1,4 @@
+export const dynamic = 'force-static';
 import { Badge } from "@/components/Badge"
 import { Button } from "@/components/Button"
 import { CategoryBar } from "@/components/CategoryBar"

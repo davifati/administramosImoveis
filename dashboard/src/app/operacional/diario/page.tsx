@@ -1,3 +1,4 @@
+export const dynamic = 'force-static';
 import AlertaFalhasDiarias from "./_components/DailyFailureCard";
 import DailyTableExecutionStatus from "./_components/TableExecutionStatus";
 

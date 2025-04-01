@@ -1,4 +1,6 @@
 "use client"
+export const dynamic = 'force-static';
+
 import { Button } from "@/components/Button";
 import { Divider } from "@/components/Divider";
 import { Input } from "@/components/Input";

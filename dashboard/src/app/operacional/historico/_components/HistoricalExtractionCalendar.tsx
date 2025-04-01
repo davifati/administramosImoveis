@@ -1,4 +1,5 @@
 "use client";
+export const dynamic = 'force-static';
 import { useEffect, useState } from "react";
 import dayjs from "dayjs";
 import "dayjs/locale/pt-br"; // Importando a localidade em português

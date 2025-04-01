@@ -1,3 +1,4 @@
+export const dynamic = 'force-static';
 import { Button } from "@/components/Button"
 import { Logo } from "@/components/ui/Logo"
 import Link from "next/link"

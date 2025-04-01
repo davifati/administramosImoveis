@@ -1,4 +1,5 @@
 "use client";
+export const dynamic = 'force-static';
 import { motion } from "motion/react";
 import { HeroHighlight, Highlight } from "../../../components/ui/hero-highlight";
 import { CallToActionButtons } from "./BtnCTA";

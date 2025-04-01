@@ -1,40 +1,41 @@
 'use client';
-
 import { RiExternalLinkLine } from '@remixicon/react';
 import { AreaChart, Card, Select, SelectItem } from '@tremor/react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { valueFormatter } from '../_services/useRankingBoletos';
+import { getHistoricoVolumeFinanceiro } from '../_api/historicoVolume';
 
-function valueFormatter(number: number) {
-    const formatter = new Intl.NumberFormat('pt-BR', {
-        style: 'currency',
-        currency: 'BRL',
-        maximumFractionDigits: 0,
-        notation: 'compact',
-        compactDisplay: 'short',
-    });
-    return formatter.format(number);
-}
 
-const data = [
-    { date: '01/2023', Balance: 38560 },
-    { date: '02/2023', Balance: 40320 },
-    { date: '03/2023', Balance: 50233 },
-    { date: '04/2023', Balance: 55123 },
-    { date: '05/2023', Balance: 56000 },
-    { date: '06/2023', Balance: 100000 },
-    { date: '07/2023', Balance: 85390 },
-    { date: '08/2023', Balance: 80100 },
-    { date: '09/2023', Balance: 75090 },
-    { date: '10/2023', Balance: 71080 },
-    { date: '11/2023', Balance: 68041 },
-    { date: '12/2023', Balance: 60143 },
-];
+
+
 
 export default function BoletoAreaGraph() {
-    const [selectedYear, setSelectedYear] = useState('');
-    /// @ts-ignore
-    const uniqueYears = [...new Set(data.map((item) => item.date.split('/')[1]))];
-    const filteredData = selectedYear ? data.filter(item => item.date.endsWith(`/${selectedYear}`)) : data;
+    const [data, setData] = useState([]); // Estado para armazenar os dados
+    const [selectedYear, setSelectedYear] = useState(''); // Estado para o ano selecionado
+    const [isLoading, setIsLoading] = useState(true); // Estado para controle de carregamento
+
+    // Buscar dados assim que o componente for montado
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const data = await getHistoricoVolumeFinanceiro();
+                setData(data); // Atualiza o estado com os dados
+            } catch (error) {
+                console.error('Erro ao carregar os dados:', error);
+            } finally {
+                setIsLoading(false); // Termina o carregamento
+            }
+        };
+
+        fetchData();
+    }, []); // Executa apenas uma vez após a montagem do componente
+
+    if (isLoading) {
+        return <div>Carregando...</div>; // Exibe uma mensagem enquanto carrega os dados
+    }
+
+    const uniqueYears = [...new Set(data.map((item) => item.date.split('/')[1]))]; // Extraindo anos únicos
+    const filteredData = selectedYear ? data.filter(item => item.date.endsWith(`/${selectedYear}`)) : data; // Filtrando os dados pelo ano selecionado
 
     return (
         <>

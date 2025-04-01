@@ -1,3 +1,4 @@
+export const dynamic = 'force-static';
 import React from "react";
 import { Container } from "./Container";
 
@@ -34,4 +35,3 @@ export const SectionTitle = (props: Readonly<SectionTitleProps>) => {
     </Container>
   );
 }
-
