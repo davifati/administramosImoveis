@@ -1,4 +1,5 @@
 "use client";
+export const dynamic = 'force-static';
 import React, { useState, useEffect } from "react";
 import {
     flexRender,
@@ -120,6 +121,7 @@ export default function TabelaExecucao() {
                 return updaterOrValue.pageIndex;
             });
         },
+        //@ts-ignore
         getRowId: (row) => row.administradora,
     });
 
@@ -127,6 +129,7 @@ export default function TabelaExecucao() {
         <div>
             {/* Campo de filtro */}
             <div className="mb-4 flex justify-between">
+                {/* @ts-ignore */}
                 <input
                     type="text"
                     placeholder="Filtrar administradora..."

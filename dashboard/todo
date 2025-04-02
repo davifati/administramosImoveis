@@ -14,8 +14,11 @@
 [OK] revisao 
 [OK] tauri -> Capacitor: add um index.html copiado do login e a lading page funcionou...
 
+[] migrar banco mysql -> sqlite 
 [..] remover mocks e criar backend com sqlite 
 [] resolver erros de hidratacao - landing page
+
+[] exportar um compacto para app
 
 [] teste integrado
 [] entrega de SAAS

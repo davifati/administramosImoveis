@@ -12,11 +12,14 @@ export const rankingAdministradoras = boletos.reduce((acc, boleto) => {
     return acc;
 }, {});
 
+
 export const rankingValores = Object.entries(rankingAdministradoras)
+    //@ts-ignore
     .map(([name, data]) => ({ name, value: data.valor }))
     .sort((a, b) => b.value - a.value);
 
 export const rankingQuantidade = Object.entries(rankingAdministradoras)
+    //@ts-ignore
     .map(([name, data]) => ({ name, value: data.quantidade }))
     .sort((a, b) => b.value - a.value);
 

@@ -1,4 +1,6 @@
 'use client';
+export const dynamic = 'force-static';
+
 import { AreaChart, Card, Select, SelectItem } from '@tremor/react';
 import { useEffect, useState } from 'react';
 import { valueFormatter } from '../_services/useRankingBoletos';

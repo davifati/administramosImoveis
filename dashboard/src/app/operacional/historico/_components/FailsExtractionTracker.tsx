@@ -1,3 +1,4 @@
+export const dynamic = 'force-static';
 import { EstatisticasFalhasProps } from "@/data/abstract";
 import { AlertCircle } from "lucide-react";
 import { useState, useEffect } from "react";

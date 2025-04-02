@@ -1,4 +1,6 @@
 "use client"
+export const dynamic = 'force-static';
+
 
 import { useEffect, useState } from "react";
 import ImoveisTable from "./_components/table";
@@ -16,6 +18,7 @@ export default function ImoveisPage() {
     const fetchImoveis = async () => {
       try {
         const data = await getImoveis();
+        //@ts-ignore
         setImoveis(data);
       } catch (error) {
         console.error("Erro ao buscar imóveis:", error);
@@ -28,7 +31,7 @@ export default function ImoveisPage() {
   }, []);
 
   if (loading) return <div><FaSpinner className="animate-spin text-2xl text-blue-500" /></div>;
-  
+
   return <ImoveisTable data={imoveis} />;
 
 }

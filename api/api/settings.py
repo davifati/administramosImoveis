@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     "django.contrib.sites",  # Para configurar o django-allauth
     "corsheaders",
     "imoveis",
-    "monitoramento_boletos",
+    "monitoramento",
     "operacional",
     "login",
     "financeiro",

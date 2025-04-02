@@ -1,10 +1,10 @@
-// Importações
-import { cx } from "@/lib/utils"
-import { DEFAULT_RANGE } from "../app/(dashboard)/financeiro/_components/dateRanges"
+"use client"
+import { useEffect, useState } from "react";
+import { cx } from "@/lib/utils";
 
-// Função para gerar a data formatada no lado do servidor
+// Função para gerar a data formatada no lado do cliente
 function getFormattedDate() {
-  const date = new Date(new Date().setHours(new Date().getHours() - 1))
+  const date = new Date(new Date().setHours(new Date().getHours() - 1));
   return date.toLocaleString("en-GB", {
     day: "2-digit",
     month: "2-digit",
@@ -12,13 +12,18 @@ function getFormattedDate() {
     hour: "2-digit",
     minute: "2-digit",
     hour12: false,
-  })
+  });
 }
 
-// Componente Server-Side que aceita título como prop
+// Componente que aceita título como prop
 export default function Header({ title }: { title: string }) {
-  // Obtemos a data formatada no servidor
-  const dateString = getFormattedDate()
+  const [dateString, setDateString] = useState("");
+
+  // UseEffect para definir a data no cliente após a renderização
+  useEffect(() => {
+    const formattedDate = getFormattedDate();
+    setDateString(formattedDate);
+  }, []);
 
   return (
     <section
@@ -34,10 +39,11 @@ export default function Header({ title }: { title: string }) {
         >
           {title}
         </h1>
+        {/* Exibe a data após ser gerada no cliente */}
         <p className="whitespace-nowrap text-sm text-gray-600 dark:text-gray-400">
-          Atualizado em {dateString} {/* Exibe a data gerada no servidor */}
+          Atualizado em {dateString}
         </p>
       </div>
     </section>
-  )
+  );
 }

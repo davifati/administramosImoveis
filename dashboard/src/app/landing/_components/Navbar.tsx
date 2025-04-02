@@ -39,7 +39,7 @@ export const Navbar = () => {
             Entrar
           </Link>
           <Link
-            href="/login"
+            href={`${process.env.NEXT_PUBLIC_API_HOST}/admin`}
             className="px-6 py-2 text-blue-600 border-2 border-blue-600 rounded-md hover:bg-blue-600 hover:text-white transition"
           >
             Área Administrador

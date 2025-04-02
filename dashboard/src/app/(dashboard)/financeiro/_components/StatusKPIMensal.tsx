@@ -1,4 +1,6 @@
 "use client"
+export const dynamic = 'force-static';
+
 import { useState, useEffect } from 'react'; // Importando useState e useEffect
 import { InformationCircleIcon } from '@heroicons/react/solid'; // Importando ícone de info do Heroicons
 import { getKPIMensal } from '../_api/KPIMesAnterior';

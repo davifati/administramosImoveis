@@ -1,6 +1,7 @@
 "use client";
 export const dynamic = 'force-static';
 
+
 import React from "react";
 import { cx } from "@/lib/utils";
 import { Sidebar } from "@/components/ui/navigation/Sidebar";
