@@ -1,36 +1,52 @@
 import pulumi
 import pulumi_aws as aws
 
+git_project_url = "https://github.com/davifati/administramosImoveis.git"
 
 ec2_script = f"""
 
     #!/bin/bash
+    export VAR=VALUE
 
     echo "Atualizando o sistema..."
     sudo yum update -y
 
-    echo "Instalando Python3, Git e pip..."
-    sudo yum install -y python3 git
+    echo "Instalando Python3, Git e outras ferramentas necessárias..."
+    sudo yum install -y python3 git gcc openssl-devel libffi-devel python3-pip
+
+    echo "Criando e ativando ambiente virtual..."
+    python3 -m venv venv
+    source venv/bin/activate
+
+    echo "Atualizando o pip..."
+    sudo pip3 install --upgrade pip
 
     echo "Instalando Selenium..."
     sudo pip3 install selenium
 
     echo "Clonando o repositório do Git..."
-    git clone https://github.com/SEU_REPOSITORIO.git /home/ec2-user/selenium-project
-
-    cd /home/ec2-user/selenium-project
-    echo "Diretório do repositório: $(pwd)"
+    cd /
+    if ! git clone {git_project_url} bot-server; then
+        echo "Erro ao clonar o repositório!"
+        exit 1
+    fi
+    
+    cd bot-server/bots
+    echo "Diretório atual: $(pwd)"
 
     if [ -f "requirements.txt" ]; then
         echo "Instalando dependências do requirements.txt..."
-        sudo pip3 install -r requirements.txt
+        if ! sudo pip3 install -r requirements.txt; then
+            echo "Erro ao instalar dependências!"
+            exit 1
+        fi
     else
         echo "Não foi encontrado o arquivo requirements.txt."
     fi
+    
 
-    # run bots...
-    # echo "Executando script de bots..."
-    # python3 selenium_script.py
+    echo "Executando script de bots..."
+    python3 src/run_bots.py >> bots.log 2>&1
 
 """
 
@@ -56,7 +72,6 @@ security_group = aws.ec2.SecurityGroup(
     ],
 )
 
-# Criando a instância EC2
 ec2_instance = aws.ec2.Instance(
     "selenium-instance",
     ami="ami-0c55b159cbfafe1f0",  # Escolha uma AMI barata, como a Amazon Linux 2
@@ -64,7 +79,8 @@ ec2_instance = aws.ec2.Instance(
     key_name=key_pair_name,
     security_groups=[security_group.name],
     user_data=ec2_script,
+    associate_public_ip_address=False,  # Desabilitando o IP público
 )
 
 # Saída para pegar o IP da instância
-pulumi.export("instance_ip", ec2_instance.public_ip)
+pulumi.export("instance_private_ip", ec2_instance.private_ip)  # IP privado da instância
