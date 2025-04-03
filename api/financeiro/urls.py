@@ -1,12 +1,11 @@
 from django.urls import path
-from .views import (
-    FinanceiroRankingBoletosAPIView,
-    MesAnteriorKPIAPIView,
-    HistoricoValorBoletoAcumladoAPIView,
-)
+from financeiro.views.historico import HistoricoValorBoletoAcumuladoAPIView
+from financeiro.views import MesAnteriorKPIAPIView
+from financeiro.views.ranking import FinanceiroRankingBoletosAPIView
+
 
 urlpatterns = [
     path("ranking-boletos/", FinanceiroRankingBoletosAPIView.as_view()),
     path("kpi-mensal/", MesAnteriorKPIAPIView.as_view()),
-    path("historico-volume/", HistoricoValorBoletoAcumladoAPIView.as_view()),
+    path("historico-volume/", HistoricoValorBoletoAcumuladoAPIView.as_view()),
 ]

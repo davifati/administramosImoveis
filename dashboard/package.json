@@ -9,10 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@capacitor/android": "^7.1.0",
+    "@capacitor/android": "^7.2.0",
     "@capacitor/cli": "^7.2.0",
     "@capacitor/core": "^7.2.0",
-    "@capacitor/ios": "^6.2.1",
+    "@capacitor/ios": "^7.2.0",
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "v1",
     "@internationalized/date": "^3.6.0",

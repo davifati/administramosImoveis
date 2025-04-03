@@ -5,18 +5,12 @@ import { BarChart, Card, Select, SelectItem } from '@tremor/react';
 import { useState, useEffect } from 'react';
 import { getExtractionMonthlyStats } from '../../_api/historico';
 
-
 const valueFormatter = (number) =>
     `${Intl.NumberFormat('pt-BR').format(number)}`;
 
 const classNames = (...classes) => {
     return classes.filter(Boolean).join(' ');
 };
-
-const summary = [
-    { name: 'Boletos Capturados', total: 12345, color: 'bg-blue-500' },
-    { name: 'Erros na Captura', total: 395, color: 'bg-red-500' },
-];
 
 export default function ErrosChart() {
     const [selectedYear, setSelectedYear] = useState('');
@@ -43,6 +37,14 @@ export default function ErrosChart() {
 
     const uniqueYears = [...new Set(data.map((item) => item.date.split('/')[1]))];
     const filteredData = selectedYear ? data.filter(item => item.date.endsWith(`/${selectedYear}`)) : data;
+
+    const totalSuccess = filteredData.reduce((acc, item) => acc + item.Success, 0);
+    const totalErrors = filteredData.reduce((acc, item) => acc + item.Errors, 0);
+
+    const summary = [
+        { name: 'Boletos Capturados', total: totalSuccess, color: 'bg-blue-500' },
+        { name: 'Erros na Captura', total: totalErrors, color: 'bg-red-500' },
+    ];
 
     return (
         <>

@@ -4,10 +4,6 @@ from monitoramento.models.boleto import Boleto
 from monitoramento.serializers.boleto import BoletoSerializer
 
 
-
-
-
-
 class BoletoViewSet(viewsets.ModelViewSet):
 
     queryset = Boleto.objects.all()

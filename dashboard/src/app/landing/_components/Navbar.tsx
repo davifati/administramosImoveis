@@ -35,7 +35,7 @@ export const Navbar = () => {
         {/* Botões e Tema */}
         <div className="flex justify-end items-center gap-4 lg:ml-auto">
           <ThemeChanger />
-          <Link href="/login" className="px-6 py-2 text-white bg-blue-600 rounded-md">
+          <Link href="/financeiro" className="px-6 py-2 text-white bg-blue-600 rounded-md">
             Entrar
           </Link>
           <Link
