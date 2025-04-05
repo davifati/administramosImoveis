@@ -42,16 +42,19 @@ INSTALLED_APPS = [
     "rest_framework_simplejwt",
     "django.contrib.sites",  # Para configurar o django-allauth
     "corsheaders",
+    "drf_spectacular",
+    "tailwind",
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
+    "allauth.socialaccount.providers.google",
     "imoveis",
     "monitoramento",
     "operacional",
     "login",
     "financeiro",
-    "allauth",
-    "allauth.account",
-    "allauth.socialaccount",
-    "allauth.socialaccount.providers.google",
 ]
+
 
 SITE_ID = 1
 
@@ -79,6 +82,7 @@ REST_FRAMEWORK = {
         # "rest_framework.permissions.IsAuthenticated",  # Garante que todas as rotas exijam autenticação
         "rest_framework.permissions.AllowAny"
     ],
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
 
 
@@ -100,7 +104,6 @@ ROOT_URLCONF = "api.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -166,6 +169,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = "static/"
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
