@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
-    <string name="app_name">propius-app</string>
-    <string name="title_activity_main">propius-app</string>
-    <string name="package_name">com.propius.app</string>
-    <string name="custom_url_scheme">com.propius.app</string>
-</resources>
