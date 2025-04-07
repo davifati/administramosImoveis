@@ -1,1 +1,0 @@
-from .mockImoveis import ImoveisAPIView
