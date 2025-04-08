@@ -1,0 +1,37 @@
+from curses import OK
+
+
+python manage.py graph_models imoveis -o model_imoveis_diagram.png
+
+python manage.py graph_models -a -o model_diagram.png
+
+python manage.py graph_models -a --disable-abstract -o model_diagram.png
+
+python manage.py graph_models imoveis monitoramento_boletos --disable-abstract -o model_diagram.png
+
+
+{
+  "email": "example@example.com",
+  "nome": "João",
+  "sobrenome": "Silva",
+  "password": "StrongPassword123!"
+}
+
+
+==
+
+ssh-keygen -t ed25519 -C "propius-deploy" -f ~/.ssh/propius_github_deploy_key
+
+
+cat ~/.ssh/propius_github_deploy_key.pub
+
+
+# no serviddor
+mkdir -p ~/.ssh
+chmod 700 ~/.ssh
+
+vim ~/.ssh/authorized_keys
+
+cat github_actions_key.pub >> ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys
+

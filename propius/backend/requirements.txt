@@ -1,0 +1,16 @@
+djangorestframework
+markdown       # Markdown support for the browsable API.
+django-filter
+django-extensions 
+pygraphviz
+django-countries
+django-cors-headers
+djangorestframework-simplejwt
+social-auth-app-django
+django-allauth
+inflection
+uritemplate
+drf-spectacular
+django-tailwind
+django-tailwind[reload]
+Pillow
