@@ -40,7 +40,8 @@ jobs:
                 exit 1
               fi
 
-              git clone git@github.com:davifati/administramosImoveis.git . || exit 1
+              #git clone git@github.com:davifati/administramosImoveis.git . || exit 1
+              git clone https://github.com/davifati/administramosImoveis.git . || exit 1
               git checkout production || exit 1
 
             else
