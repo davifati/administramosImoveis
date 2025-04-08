@@ -57,7 +57,7 @@ jobs:
             python manage.py migrate || exit 1
 
             # Colete arquivos estáticos
-            python manage.py collectstatic --noinput || exit 1
+            #python manage.py collectstatic --noinput || exit 1
 
             # Reinicie os serviços
 
