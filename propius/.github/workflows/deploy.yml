@@ -23,7 +23,8 @@ jobs:
 
       - name: Deploy Backend to CONTABO SERVER
         run: |
-          ssh -o StrictHostKeyChecking=no username@your-contabo-server-ip << 'EOF'
+          echo "Deploying backend to CONTABO SERVER"
+          ssh -o StrictHostKeyChecking=no root@212.56.42.99 << 'EOF'
             # Defina o diretório onde o projeto será clonado/deployado
             PROJECT_DIR="/root/propius"
 
@@ -32,13 +33,16 @@ jobs:
               echo "Criando diretório do projeto em: \$PROJECT_DsIR"
               mkdir -p "$PROJECT_DIR"
               cd "$PROJECT_DIR"
-              git clone git@github.com:seu-usuario/seu-repo.git .
+
+              git clone git@github.com:davifati/administramosImoveis.git .
+              git checkout production
+
             else
               cd "$PROJECT_DIR"
             fi
 
             # Atualize o código
-            git pull origin master || exit 1
+            git pull origin production || exit 1
 
             # Ative o ambiente virtual (ou crie se não existir)
             if [ ! -d "venv" ]; then
@@ -53,7 +57,7 @@ jobs:
             python manage.py migrate || exit 1
 
             # Colete arquivos estáticos
-            python manage.py collectstatic --noinput || exit 1
+            #python manage.py collectstatic --noinput || exit 1
 
             # Reinicie os serviços
 
