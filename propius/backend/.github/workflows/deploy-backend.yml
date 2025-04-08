@@ -1,0 +1,28 @@
+name: Deploy Backend
+
+on:
+  push:
+    branches:
+      - master # Ou qualquer outra branch de produção
+
+jobs:
+  deploy-backend:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Deploy Backend to Contabo
+        run: |
+          ssh -o StrictHostKeyChecking=no username@your-contabo-server-ip << 'EOF'
+            cd /path/to/backend || exit 1
+            git pull origin master || exit 1
+            source /path/to/virtualenv/bin/activate || exit 1
+            pip install -r requirements.txt || exit 1
+            python manage.py migrate || exit 1
+            python manage.py collectstatic --noinput || exit 1
+            systemctl restart gunicorn || exit 1
+            systemctl restart nginx || exit 1
+            exit 0
+          EOF

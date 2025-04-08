@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     "allauth.account",
     "allauth.socialaccount",
     "allauth.socialaccount.providers.google",
+    "usuarios",
     "imoveis",
     "monitoramento",
     "financeiro",
@@ -72,13 +73,14 @@ AUTHENTICATION_BACKENDS = (
     "django.contrib.auth.backends.ModelBackend",  # backend padrão para usuários locais
 )
 
+#: TODO: expirar token em 10 minutos JWT
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": [
         "rest_framework_simplejwt.authentication.JWTAuthentication",
     ],
     "DEFAULT_PERMISSION_CLASSES": [
-        # "rest_framework.permissions.IsAuthenticated",  # Garante que todas as rotas exijam autenticação
-        "rest_framework.permissions.AllowAny"
+        "rest_framework.permissions.IsAuthenticated",  # Garante que todas as rotas exijam autenticação
+        # "rest_framework.permissions.AllowAny"
     ],
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
@@ -114,7 +116,7 @@ TEMPLATES = [
     },
 ]
 
-#AUTH_USER_MODEL = "login.Usuario"
+AUTH_USER_MODEL = "usuarios.User"
 
 WSGI_APPLICATION = "api.wsgi.application"
 

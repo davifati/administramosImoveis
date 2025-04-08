@@ -13,3 +13,4 @@ uritemplate
 drf-spectacular
 django-tailwind
 django-tailwind[reload]
+Pillow

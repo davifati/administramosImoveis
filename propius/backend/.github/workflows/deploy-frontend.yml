@@ -1,0 +1,37 @@
+name: Deploy Frontend
+
+on:
+  push:
+    branches:
+      - master # Ou a branch que você usa para produção
+
+jobs:
+  deploy-frontend:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build Frontend
+        run: |
+          cd /path/to/web
+          npm install
+          npm run build
+
+      - name: Set up SSH
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Deploy Frontend to Contabo
+        run: |
+          ssh -o StrictHostKeyChecking=no username@your-contabo-server-ip << 'EOF'
+            cd /path/to/web || exit 1
+            git pull origin master || exit 1
+            npm install || exit 1
+            npm run build || exit 1
+            sudo cp -r build/* /path/to/nginx/web || exit 1
+            sudo systemctl restart nginx || exit 1
+            exit 0
+          EOF
