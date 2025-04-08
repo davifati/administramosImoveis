@@ -3,7 +3,10 @@ name: Propius Backend Deploy
 on:
   push:
     branches:
-      - production # ou "main", dependendo da sua branch principal
+      - production
+  pull_request:
+    branches:
+      - production
 
 jobs:
   deploy-backend:
