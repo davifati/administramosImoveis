@@ -34,19 +34,18 @@ jobs:
               mkdir -p "$PROJECT_DIR"
               cd "$PROJECT_DIR"
 
-              git clone git@github.com:davifati/administramosImoveis.git .
-              git checkout production
+              # Garante que estamos em um repo Git válido
+              if [ ! -d ".git" ]; then
+                echo "Erro: o diretório não é um repositório Git."
+                exit 1
+              fi
+
+              git clone git@github.com:davifati/administramosImoveis.git . || exit 1
+              git checkout production || exit 1
 
             else
               cd "$PROJECT_DIR"
             fi
-
-            # Garante que estamos em um repo Git válido
-            if [ ! -d ".git" ]; then
-              echo "Erro: o diretório não é um repositório Git."
-              exit 1
-            fi
-
 
             # Atualize o código
             git fetch origin production || exit 1
