@@ -1,0 +1,61 @@
+name: Propius Backend Deploy
+
+on:
+  push:
+    branches:
+      - master # ou "main", dependendo da sua branch principal
+
+jobs:
+  deploy-backend:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up SSH
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.PROPIUS_SSH_PRIVATE_KEY }}
+
+      - name: Deploy Backend to CONTABO SERVER
+        run: |
+          ssh -o StrictHostKeyChecking=no username@your-contabo-server-ip << 'EOF'
+            # Defina o diretório onde o projeto será clonado/deployado
+            PROJECT_DIR="/root/propius"
+
+            # Crie a pasta se não existir
+            if [ ! -d "$PROJECT_DIR" ]; then
+              echo "Criando diretório do projeto em: \$PROJECT_DsIR"
+              mkdir -p "$PROJECT_DIR"
+              cd "$PROJECT_DIR"
+              git clone git@github.com:seu-usuario/seu-repo.git .
+            else
+              cd "$PROJECT_DIR"
+            fi
+
+            # Atualize o código
+            git pull origin master || exit 1
+
+            # Ative o ambiente virtual (ou crie se não existir)
+            if [ ! -d "venv" ]; then
+              python3 -m venv venv
+            fi
+            source venv/bin/activate || exit 1
+
+            # Instale dependências
+            pip install -r requirements.txt || exit 1
+
+            # Aplique migrações
+            python manage.py migrate || exit 1
+
+            # Colete arquivos estáticos
+            python manage.py collectstatic --noinput || exit 1
+
+            # Reinicie os serviços
+
+            #sudo systemctl restart gunicorn || sudo supervisorctl restart myapp || exit 1
+            #sudo systemctl restart nginx || exit 1
+
+            exit 0
+          EOF
