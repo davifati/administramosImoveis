@@ -23,7 +23,8 @@ jobs:
 
       - name: Deploy Backend to CONTABO SERVER
         run: |
-          ssh -o StrictHostKeyChecking=no username@your-contabo-server-ip << 'EOF'
+          echo "Deploying backend to CONTABO SERVER"
+          ssh -o StrictHostKeyChecking=no root@212.56.42.99 << 'EOF'
             # Defina o diretório onde o projeto será clonado/deployado
             PROJECT_DIR="/root/propius"
 
