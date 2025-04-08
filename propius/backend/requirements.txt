@@ -1,5 +1,5 @@
 djangorestframework
-markdown       # Markdown support for the browsable API.
+markdown    
 django-filter
 django-extensions 
 pygraphviz
