@@ -58,17 +58,14 @@ jobs:
             echo "[STEP 2] Atualizando código"
 
             echo "  > Tentando clonar o repositório"
-            if git clone --branch production git@github.com:davifati/administramosImoveis.git 2>/dev/null; then
-                echo "  > Clonado com sucesso"
-            else
-                echo "  > Repositório já existe ou erro no clone, atualizando manualmente"
-                cd administramosImoveis || { echo "  > Falha ao acessar o diretório do projeto"; exit 1; }
-                git reset --hard
-                git clean -fd
-                git fetch origin production
-                git checkout production
-                git pull origin production
-            fi
+            echo "  > Limpando diretório de projeto antigo (se existir)"
+            rm -rf administramosImoveis
+
+            echo "  > Clonando repositório novamente do zero"
+            git clone --branch production git@github.com:davifati/administramosImoveis.git || {
+              echo "  > Erro ao clonar o repositório"
+              exit 1
+            }
                 
             echo "[✓] Código atualizado"
 
