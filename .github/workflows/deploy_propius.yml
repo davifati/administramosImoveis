@@ -64,8 +64,7 @@ jobs:
               git checkout production || exit 1s            
             else
               echo "  > Repositório já existe, atualizando"
-              git fetch origin production || exit 1
-              git reset --hard origin/production || exit 1
+              git checkout production || exit 1
             fi
             echo "[✓] Código atualizado"
 
