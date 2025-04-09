@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     "imoveis",
     "monitoramento",
     "financeiro",
+    "utils",  # Added utils app
 ]
 
 
