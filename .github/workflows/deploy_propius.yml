@@ -57,9 +57,6 @@ jobs:
 
             echo "[STEP 2] Atualizando código"
 
-            echo "  > Limpando diretório do projeto para garantir clone limpo"
-            rm -rf "${PROJECT_DIR:?}"/* "${PROJECT_DIR:?}"/.??* || true
-
             echo "  > Clonando repositório"
             if [ -d ".git" ]; then
                 echo "  > Repositório já clonado, atualizando"
