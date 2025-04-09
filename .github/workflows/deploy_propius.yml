@@ -60,14 +60,20 @@ jobs:
             echo "  > Limpando diretório do projeto para garantir clone limpo"
             rm -rf "${PROJECT_DIR:?}"/* "${PROJECT_DIR:?}"/.??* || true
 
-            echo "  > Clonando repositório novamente"
-            git clone --branch production git@github.com:davifati/administramosImoveis.git . || {
-              echo "  > Erro ao clonar repositório"
-              exit 1
-            }
-
+            echo "  > Clonando repositório"
+            if [ -d ".git" ]; then
+                echo "  > Repositório já clonado, atualizando"
+                git reset --hard
+                git clean -fd
+                git fetch origin production
+                git checkout production
+                git pull origin production
+            else
+                echo "  > Clonando repositório pela primeira vez"
+                git clone --branch production git@github.com:davifati/administramosImoveis.git  || exit 1
+            fi
+                
             echo "[✓] Código atualizado"
-
 
             echo "Listing files in current directory:"
             ls -la
