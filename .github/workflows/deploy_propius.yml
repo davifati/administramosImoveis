@@ -53,27 +53,18 @@ jobs:
 
             echo "[STEP 2] Atualizando código"
 
-            echo "  > Clonando repositório"
             if [ -d ".git" ]; then
-              echo "  > Repositório já existe, removendo..."
-              rm -rf ./*
-              rm -rf ./.* 2>/dev/null || true
+                echo "  > Repositório já clonado, atualizando"
+                git reset --hard
+                git clean -fd
+                git fetch origin production
+                git checkout production
+                git pull origin production
+            else
+                echo "  > Clonando repositório pela primeira vez"
+                git clone --branch production git@github.com:davifati/administramosImoveis.git .
             fi
-            
-            git clone --progress git@github.com:davifati/administramosImoveis.git . || {
-              echo "  > Erro ao clonar repositório"
-              exit 1
-            }
-
-            echo "  > Atualizando código"
-            git fetch origin production || exit 1
-
-            echo "  > Checkout para a branch production"
-            git checkout production || exit 1
-
-            echo "  > Pulling changes from origin production"
-            git pull origin production || exit 1
-            
+                
             echo "[✓] Código atualizado"
 
             echo "Listing files in current directory:"
