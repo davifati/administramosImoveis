@@ -21,10 +21,15 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.PROPIUS_SSH_PRIVATE_KEY }}
 
+      - name: Add known hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H 212.56.42.99 >> ~/.ssh/known_hosts
+
       - name: Deploy Backend to CONTABO SERVER
         run: |
           echo "Deploying backend to CONTABO SERVER"
-          ssh -o StrictHostKeyChecking=no root@212.56.42.99 << 'EOF'
+          ssh -v root@212.56.42.99 << 'EOF'
             set -e
 
             echo "[STEP 1] Criando/entrando no diretório do projeto"
