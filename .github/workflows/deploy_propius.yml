@@ -64,7 +64,6 @@ jobs:
               git checkout production || exit 1
             else
               echo "  > Repositório já existe, atualizando"
-              git remote set-url origin https://${{ secrets.PROPIUS_SSH_PRIVATE_KEY }}@github.com/davifati/administramosImoveis.git
               git fetch origin production || exit 1
               git reset --hard origin/production || exit 1
             fi
