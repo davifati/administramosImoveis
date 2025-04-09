@@ -59,12 +59,8 @@ jobs:
 
             echo "[STEP 2] Atualizando código"
 
-            echo "  > Tentando clonar o repositório"
-            echo "  > Limpando diretório de projeto antigo (se existir)"
-            rm -rf administramosImoveis
-
             echo "  > Clonando repositório novamente do zero"
-            
+
             GIT_SSH_COMMAND='ssh -i ~/.ssh/propius_deploy_key -o IdentitiesOnly=yes' \
             git clone --branch production git@github.com:davifati/administramosImoveis.git || {
               echo "  > Erro ao clonar o repositório"
