@@ -36,7 +36,7 @@ jobs:
             set -e
 
             echo "[STEP 1] Criando/entrando no diretório do projeto"
-            PROJECT_DIR="/root"
+            PROJECT_DIR="/servers"
 
             if [ ! -d "$PROJECT_DIR" ]; then
               echo "  > Diretório não existe, criando e clonando o repo"
