@@ -54,6 +54,7 @@ jobs:
             ls -la
 
             exit 0 
+            
 
             echo "[STEP 2] Verificando se é um repositório Git"
             if [ ! -d ".git" ]; then
