@@ -42,11 +42,6 @@ jobs:
               echo "  > Diretório não existe, criando e clonando o repo"
               mkdir -p "$PROJECT_DIR"
               cd "$PROJECT_DIR"
-
-              echo "  > Clonando repositório"
-              #git clone https://github.com/davifati/administramosImoveis.git . || exit 1
-              git clone git@github.com:davifati/administramosImoveis.git . || exit 1
-              git checkout production || exit 1
             else
               echo "  > Diretório já existe"
               cd "$PROJECT_DIR"
@@ -56,11 +51,20 @@ jobs:
             echo "Listing files in current directory:"
             ls -la
 
-
             echo "[STEP 2] Atualizando código"
-            git clone https://${{ secrets.PROPIUS_SSH_PRIVATE_KEY }}@github.com/davifati/administramosImoveis.git . || exit 1
-            git checkout production || exit 1s   
-            git checkout pull || exit 1
+
+            echo "  > Clonando repositório"
+            git clone --progress git@github.com:davifati/administramosImoveis.git . || exit 1
+
+            echo "  > Atualizando código"
+            git fetch origin production || exit 1
+
+            echo "  > Checkout para a branch production"
+            git checkout production || exit 1
+
+            echo "  > Pulling changes from origin production"
+            git pull origin production || exit 1
+            
             echo "[✓] Código atualizado"
 
             echo "Listing files in current directory:"
