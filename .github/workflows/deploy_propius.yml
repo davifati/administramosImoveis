@@ -25,53 +25,63 @@ jobs:
         run: |
           echo "Deploying backend to CONTABO SERVER"
           ssh -o StrictHostKeyChecking=no root@212.56.42.99 << 'EOF'
-            # Defina o diretório onde o projeto será clonado/deployado
+            set -e
+
+            echo "[STEP 1] Criando/entrando no diretório do projeto"
             PROJECT_DIR="/root/propius"
 
-            # Crie a pasta se não existir
             if [ ! -d "$PROJECT_DIR" ]; then
-              echo "Criando diretório do projeto em: \$PROJECT_DIR"
+              echo "  > Diretório não existe, criando e clonando o repo"
               mkdir -p "$PROJECT_DIR"
               cd "$PROJECT_DIR"
 
-              # Garante que estamos em um repo Git válido
-              if [ ! -d ".git" ]; then
-                echo "Erro: o diretório não é um repositório Git."
-                exit 1
-              fi
-
-              #git clone git@github.com:davifati/administramosImoveis.git . || exit 1
+              echo "  > Clonando repositório"
               git clone https://github.com/davifati/administramosImoveis.git . || exit 1
               git checkout production || exit 1
-
             else
+              echo "  > Diretório já existe"
               cd "$PROJECT_DIR"
             fi
+            echo "[✓] Diretório pronto"
 
-            # Atualize o código
+            echo "[STEP 2] Verificando se é um repositório Git"
+            if [ ! -d ".git" ]; then
+              echo "Erro: o diretório não é um repositório Git."
+              exit 1
+            fi
+            echo "[✓] Diretório é um repositório Git"
+
+            echo "[STEP 3] Atualizando código"
             git fetch origin production || exit 1
             git checkout production || exit 1
             git pull origin production || exit 1
+            echo "[✓] Código atualizado"
 
-            # Ative o ambiente virtual (ou crie se não existir)
+            echo "[STEP 4] Ativando/criando ambiente virtual"
             if [ ! -d "venv" ]; then
+              echo "  > venv não encontrado, criando"
               python3 -m venv venv
             fi
             source venv/bin/activate || exit 1
+            echo "[✓] Ambiente virtual pronto"
 
-            # Instale dependências
+            echo "[STEP 5] Instalando dependências"
             pip install -r requirements.txt || exit 1
+            echo "[✓] Dependências instaladas"
 
-            # Aplique migrações
+            echo "[STEP 6] Rodando migrações"
             python manage.py migrate || exit 1
+            echo "[✓] Migrações aplicadas"
 
-            # Colete arquivos estáticos
-            #python manage.py collectstatic --noinput || exit 1
+            # echo "[STEP 7] Coletando arquivos estáticos"
+            # python manage.py collectstatic --noinput || exit 1
+            # echo "[✓] Arquivos estáticos coletados"
 
-            # Reinicie os serviços
+            echo "[STEP 8] Reiniciando serviços (comentado por enquanto)"
+            # sudo systemctl restart gunicorn || sudo supervisorctl restart myapp || exit 1
+            # sudo systemctl restart nginx || exit 1
+            # echo "[✓] Serviços reiniciados"
 
-            #sudo systemctl restart gunicorn || sudo supervisorctl restart myapp || exit 1
-            #sudo systemctl restart nginx || exit 1
-
+            echo "[✓] Deploy finalizado com sucesso"
             exit 0
           EOF
