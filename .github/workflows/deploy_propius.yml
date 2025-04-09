@@ -1,5 +1,9 @@
 name: Propius Backend Deploy
 
+# O GitHub Actions acessa o servidor via SSH (usando sua chave privada salva nos secrets).
+# O servidor precisa acessar o GitHub para clonar o repositório.
+# Para isso, o servidor precisa de uma chave SSH válida autorizada no repositório (deploy key).
+
 on:
   push:
     branches:
