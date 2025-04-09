@@ -9,7 +9,7 @@ on:
       - production
 
 jobs:
-  propius-deploy-backend:
+  propius-deploy:
     runs-on: ubuntu-latest
 
     steps:
