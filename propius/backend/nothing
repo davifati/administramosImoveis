@@ -40,6 +40,11 @@ chmod 600 ~/.ssh/authorized_keys
 ===
 
 
+easy connect server: 
+ssh -i ~/.ssh/propius_deploy_key root@212.56.42.99
+
+====
+
 enho esse aqui anotado:
 
 Contabo Server 4

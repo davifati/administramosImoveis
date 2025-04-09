@@ -59,6 +59,7 @@ jobs:
               rm -rf ./*
               rm -rf ./.* 2>/dev/null || true
             fi
+            
             git clone --progress git@github.com:davifati/administramosImoveis.git . || {
               echo "  > Erro ao clonar repositório"
               exit 1
