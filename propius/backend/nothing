@@ -35,3 +35,22 @@ vim ~/.ssh/authorized_keys
 cat github_actions_key.pub >> ~/.ssh/authorized_keys
 chmod 600 ~/.ssh/authorized_keys
 
+
+
+===
+
+
+enho esse aqui anotado:
+
+Contabo Server 4
+robôs/administramos:
+acesso root:
+login: root
+senha: gG1g02TI9Vxu4
+
+IP 212.56.42.99
+VPS 1 SSD (no setup)
+St. Louis (US-central)
+VNC IP and port: 209.126.5.91:63051
+VNC password: 963wBYNM
+login: root
