@@ -50,6 +50,7 @@ jobs:
             echo "[STEP 2] Atualizando código"
             if [ ! -d ".git" ]; then
               echo "  > Repositório git não existe, clonando"
+              rm -rf * .[!.]* ..?*  # Remove all files including hidden ones
               git clone https://github.com/davifati/administramosImoveis.git . || exit 1
               git checkout production || exit 1
             else
