@@ -140,3 +140,7 @@ jobs:
             echo "[✓] Deploy finalizado com sucesso"
             exit 0
           EOF
+
+      - name: Deploy Backend to CONTABO SERVER
+        run: |
+          echo "Deploying Frontend to CONTABO SERVER"

@@ -2,7 +2,7 @@ djangorestframework
 markdown    
 django-filter
 django-extensions 
-pygraphviz
+#pygraphviz
 django-countries
 django-cors-headers
 djangorestframework-simplejwt
