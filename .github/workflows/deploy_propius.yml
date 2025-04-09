@@ -35,7 +35,7 @@ jobs:
           ssh -o StrictHostKeyChecking=no root@212.56.42.99 << 'EOF'
             set -e
 
-            echo "\n[STEP 1] Criando/entrando no diretório do projeto"
+            echo "[STEP 1] Criando/entrando no diretório do projeto"
             PROJECT_DIR="/root"
 
             if [ ! -d "$PROJECT_DIR" ]; then
@@ -50,12 +50,12 @@ jobs:
               echo "  > Diretório já existe"
               cd "$PROJECT_DIR"
             fi
-            echo "\n[✓] Diretório pronto"
+            echo "[✓] Diretório pronto"
 
             echo "Listing files in current directory:"
             ls -la
 
-            echo "\n[STEP 2] Atualizando código"
+            echo "[STEP 2] Atualizando código"
             if [ ! -d ".git" ]; then
               echo "  > Repositório git não existe, clonando"
               rm -rf * .[!.]* ..?*  # Remove all files including hidden ones
@@ -66,18 +66,18 @@ jobs:
               git fetch origin production || exit 1
               git reset --hard origin/production || exit 1
             fi
-            echo "\n[✓] Código atualizado"
+            echo "[✓] Código atualizado"
 
             echo "Listing files in current directory:"
             ls -la
 
-            echo "\n[STEP 3] Entrando no diretório do projeto - propius/backend"
+            echo "[STEP 3] Entrando no diretório do projeto - propius/backend"
             cd propius/backend
 
             echo "Listing files in current directory:"
             ls -la
 
-            echo "\n[STEP 4] Instalando e configurando pyenv"
+            echo "[STEP 4] Instalando e configurando pyenv"
             if ! command -v pyenv &> /dev/null; then
               echo "  > Instalando pyenv"
               curl https://pyenv.run | bash || exit 1
@@ -91,31 +91,34 @@ jobs:
             sudo apt update
             sudo apt install -y python3.12 python3.12-venv || exit 1
 
-            echo "\n[STEP 5] Ativando/criando ambiente virtual"
+            echo "[STEP 5] Ativando/criando ambiente virtual"
+            echo ""
             if [ ! -d "venv" ]; then
               echo "  > venv não encontrado, criando"
               python3.12 -m venv venv || exit 1
             fi
             source venv/bin/activate || exit 1
-            echo "\n[✓] Ambiente virtual pronto com Python 3.12"
+            echo "[✓] Ambiente virtual pronto com Python 3.12"
 
-            echo "\n[STEP 6] Instalando dependências"
+            echo "[STEP 6] Instalando dependências"
+            echo ""
             pip install -r requirements.txt || exit 1
-            echo "\n[✓] Dependências instaladas"
+            echo "[✓] Dependências instaladas"
 
-            echo "\n[STEP 7] Rodando migrações"
+            echo "[STEP 7] Rodando migrações"
+            echo ""
             python manage.py migrate || exit 1
-            echo "\n[✓] Migrações aplicadas"
+            echo "[✓] Migrações aplicadas"
 
             # echo "[STEP 7] Coletando arquivos estáticos"
             # python manage.py collectstatic --noinput || exit 1
             # echo "[✓] Arquivos estáticos coletados"
 
-            echo "\n[STEP 8] Reiniciando serviços (comentado por enquanto)"
+            echo "[STEP 8] Reiniciando serviços (comentado por enquanto)"
             # sudo systemctl restart gunicorn || sudo supervisorctl restart myapp || exit 1
             # sudo systemctl restart nginx || exit 1
             # echo "[✓] Serviços reiniciados"
 
-            echo "\n[✓] Deploy finalizado com sucesso"
+            echo "[✓] Deploy finalizado com sucesso"
             exit 0
           EOF
