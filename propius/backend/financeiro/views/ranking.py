@@ -4,8 +4,12 @@ from rest_framework import status
 
 from financeiro.services.ranking import RankingService
 from imoveis.models.administradora import Administradora
+from drf_spectacular.utils import extend_schema
 
 
+@extend_schema(
+    tags=["Financeiro"], summary="Ranking de administradoras por valor total de boletos"
+)
 class FinanceiroRankingBoletosAPIView(APIView):
     """
     Obtenha o ranking de administradoras por valor total de boletos.

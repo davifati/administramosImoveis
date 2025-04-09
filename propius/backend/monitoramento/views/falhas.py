@@ -11,8 +11,10 @@ from monitoramento.models.boleto import Boleto
 from imoveis.models.unidade import Unidade
 from imoveis.models.administradora import Administradora
 from monitoramento.serializers.imobiliaria import ImobiliariaSerializer
+from drf_spectacular.utils import extend_schema
 
 
+@extend_schema(tags=["Monitoramento"], summary="Falhas de captura de boletos")
 class FalhasBotsImobiliariaView(APIView):
     def get(self, request, *args, **kwargs):
         administradoras = Administradora.objects.all()
@@ -59,6 +61,7 @@ class FalhasBotsImobiliariaView(APIView):
         return Response(resultado)
 
 
+@extend_schema(tags=["Monitoramento"], summary="Falhas de captura de boletos")
 class FailsExtractionTrackerAPIView(APIView):
     def get(self, request):
         administradoras = Administradora.objects.all()
@@ -109,6 +112,10 @@ class FailsExtractionTrackerAPIView(APIView):
         return Response(resultado, status=200)
 
 
+@extend_schema(
+    tags=["Monitoramento"],
+    summary="Estatísticas mensais de falhas de captura de boletos",
+)
 class MonthlyStatsView(APIView):
     def get(self, request):
         example_graph = False  # TODO: DELETE ME

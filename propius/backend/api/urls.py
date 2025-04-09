@@ -22,7 +22,7 @@ from drf_spectacular.views import (
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    # path("api/monitoramento-boletos/", include("monitoramento.urls")),
+    path("api/monitoramento/", include("monitoramento.urls")),
     path(
         "api/auth/", include("allauth.urls")
     ),  # URLs do django-allauth para login, logout, etc.

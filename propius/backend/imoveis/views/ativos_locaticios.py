@@ -9,8 +9,10 @@ from imoveis.serializers import (
     UnidadeSerializer,
     AtivoImovelSerializer,
 )
+from drf_spectacular.utils import extend_schema
 
 
+@extend_schema(tags=["Imóveis"])
 class AtivosLocaticiosViewSet(viewsets.ViewSet):
     """
     Gerencia informações completas dos ativos imobiliários, incluindo Administradora,

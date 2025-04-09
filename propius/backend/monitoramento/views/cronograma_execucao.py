@@ -7,8 +7,10 @@ from datetime import timedelta
 
 from imoveis.models.administradora import Administradora
 from monitoramento.models.boleto import Boleto
+from drf_spectacular.utils import extend_schema
 
 
+@extend_schema(tags=["Monitoramento"], summary="Cronograma de execução dos bots")
 class CronogramaExecucaoBotsView(APIView):
     def get(self, request):
         administradoras = Administradora.objects.all()
@@ -45,6 +47,9 @@ class CronogramaExecucaoBotsView(APIView):
         return Response(resultado)
 
 
+@extend_schema(
+    tags=["Monitoramento"], summary="Cronograma histórico de execução dos bots"
+)
 class HistoricalExtractionCalendarView(APIView):
 
     def get(self, request):
@@ -84,6 +89,9 @@ class HistoricalExtractionCalendarView(APIView):
         return Response(data=data)
 
 
+@extend_schema(
+    tags=["Monitoramento"], summary="Cronograma histórico de execução dos bots"
+)
 class HistoricalExtractionCalendarView_2(APIView):
     def get(self, request):
 

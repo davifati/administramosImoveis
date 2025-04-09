@@ -6,6 +6,7 @@ from drf_spectacular.utils import extend_schema
 from monitoramento.models.boleto import Boleto
 
 
+@extend_schema(tags=["Financeiro"], summary="Histórico de valores acumulados de boletos")
 class HistoricoValorBoletoAcumuladoAPIView(APIView):
 
     def get(self, request, *args, **kwargs) -> Response:

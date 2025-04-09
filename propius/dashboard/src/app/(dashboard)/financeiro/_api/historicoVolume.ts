@@ -1,9 +1,9 @@
 import axios from "axios";
-
+import { API_ENDPOINTS } from "@/endpoints";
 
 export const getHistoricoVolumeFinanceiro = async () => {
     try {
-        const url = `${process.env.NEXT_PUBLIC_API_HOST}/${process.env.NEXT_PUBLIC_ROTA_HISTORICO_VOLUME}`;
+        const url = API_ENDPOINTS.FINANCEIRO_VOLUME_HISTORICO;
         const response = await axios.get(url);
         return response.data;
     } catch (error) {
