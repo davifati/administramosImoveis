@@ -18,30 +18,30 @@ router.register(r"boletos", BoletoViewSet)
 urlpatterns = [
     path("", include(router.urls)),
     path(
-        "falhas-imobiliaria/",
+        "falhas/imobiliaria/",
         FalhasBotsImobiliariaView.as_view(),
         name="falhas-imobiliaria",
     ),
     path(
-        "falhas-extracao/",
+        "falhas/extracao/",
         FailsExtractionTrackerAPIView.as_view(),
         name="falhas-extracao",
     ),
     path(
-        "estatisticas-mensais/", MonthlyStatsView.as_view(), name="estatisticas-mensais"
+        "estatisticas/mensais/", MonthlyStatsView.as_view(), name="estatisticas-mensais"
     ),
     path(
-        "historico-extracao/",
+        "historico/extracao/",
         HistoricalExtractionCalendarView.as_view(),
         name="historico-extracao",
     ),
     path(
-        "historico-extracao-2/",
+        "historico-extracao-2-not-used/",
         HistoricalExtractionCalendarView_2.as_view(),
         name="historico-extracao-2",
     ),
     path(
-        "cronograma-execucao/",
+        "cronograma/execucao/",
         CronogramaExecucaoBotsView.as_view(),
         name="cronograma-execucao",
     ),
