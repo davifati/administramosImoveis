@@ -61,6 +61,11 @@ jobs:
             echo "  > Limpando diretório de projeto antigo (se existir)"
             rm -rf administramosImoveis
 
+            echo "  > Adicionando GitHub aos hosts confiáveis"
+            mkdir -p ~/.ssh
+            ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+            chmod 644 ~/.ssh/known_hosts
+
             echo "  > Clonando repositório novamente do zero"
             git clone --branch production git@github.com:davifati/administramosImoveis.git || {
               echo "  > Erro ao clonar o repositório"
