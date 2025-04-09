@@ -28,7 +28,7 @@ jobs:
             set -e
 
             echo "[STEP 1] Criando/entrando no diretório do projeto"
-            PROJECT_DIR="/root/servers"
+            PROJECT_DIR="/root"
 
             if [ ! -d "$PROJECT_DIR" ]; then
               echo "  > Diretório não existe, criando e clonando o repo"
@@ -44,11 +44,19 @@ jobs:
             fi
             echo "[✓] Diretório pronto"
 
+            echo "Listing files in current directory:"
+            ls -la
+
             echo "[STEP 2] Atualizando código"
-            #git clone git@github.com:davifati/administramosImoveis.git . || exit 1
-            git clone https://github.com/davifati/administramosImoveis.git . || exit 1
-            git checkout production || exit 1
-            git pull origin production || exit 1
+            if [ ! -d ".git" ]; then
+              echo "  > Repositório git não existe, clonando"
+              git clone https://github.com/davifati/administramosImoveis.git . || exit 1
+              git checkout production || exit 1
+            else
+              echo "  > Repositório já existe, atualizando"
+              git fetch origin production || exit 1
+              git reset --hard origin/production || exit 1
+            fi
             echo "[✓] Código atualizado"
 
             echo "Listing files in current directory:"
