@@ -94,7 +94,7 @@ jobs:
             source ~/.bashrc
 
             echo "  > Removendo instalação anterior do Pyenv"
-            rm -rf /root/.pyenv
+            rm -rf /root/.pyenv || exit 1
             echo "  > Instalando Python 3.10 com Pyenv"
             pyenv install 3.10.0 || exit 1
             pyenv global 3.10.0 || exit 1
