@@ -59,10 +59,11 @@ jobs:
             if [ ! -d ".git" ]; then
               echo "  > Repositório git não existe, clonando"
               rm -rf * .[!.]* ..?*  # Remove all files including hidden ones
-              git clone https://github.com/davifati/administramosImoveis.git . || exit 1
+              git clone https://${{ secrets.GITHUB_TOKEN }}@github.com/davifati/administramosImoveis.git . || exit 1
               git checkout production || exit 1
             else
               echo "  > Repositório já existe, atualizando"
+              git remote set-url origin https://${{ secrets.GITHUB_TOKEN }}@github.com/davifati/administramosImoveis.git
               git fetch origin production || exit 1
               git reset --hard origin/production || exit 1
             fi
