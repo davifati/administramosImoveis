@@ -5,7 +5,7 @@ from monitoramento.serializers.boleto import BoletoSerializer
 from drf_spectacular.utils import extend_schema
 
 
-@extend_schema(tags=["Monitoramento"], summary="Gerencia os boletos")
+@extend_schema(tags=["Monitoramento de Boletos"], summary="Gerencia os boletos")
 class BoletoViewSet(viewsets.ModelViewSet):
 
     queryset = Boleto.objects.all()
