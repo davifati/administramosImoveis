@@ -44,18 +44,23 @@ jobs:
             fi
             echo "[✓] Diretório pronto"
 
-            echo "[STEP 2] Verificando se é um repositório Git"
-            if [ ! -d ".git" ]; then
-              echo "Erro: o diretório não é um repositório Git."
-              exit 1
-            fi
-            echo "[✓] Diretório é um repositório Git"
+
 
             echo "[STEP 3] Atualizando código"
             git fetch origin production || exit 1
             git checkout production || exit 1
             git pull origin production || exit 1
             echo "[✓] Código atualizado"
+            
+            ls -la
+
+
+            echo "[STEP 2] Verificando se é um repositório Git"
+            if [ ! -d ".git" ]; then
+              echo "Erro: o diretório não é um repositório Git."
+              exit 1
+            fi
+            echo "[✓] Diretório é um repositório Git"
 
             echo "[STEP 4] Ativando/criando ambiente virtual"
             if [ ! -d "venv" ]; then
