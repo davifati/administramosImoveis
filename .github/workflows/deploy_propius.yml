@@ -54,7 +54,14 @@ jobs:
             echo "[STEP 2] Atualizando código"
 
             echo "  > Clonando repositório"
-            git clone --progress git@github.com:davifati/administramosImoveis.git . || exit 1
+            if [ -d ".git" ]; then
+              echo "  > Repositório já existe, removendo..."
+              rm -rf .git
+            fi
+            git clone --progress git@github.com:davifati/administramosImoveis.git . || {
+              echo "  > Erro ao clonar repositório"
+              exit 1
+            }
 
             echo "  > Atualizando código"
             git fetch origin production || exit 1
