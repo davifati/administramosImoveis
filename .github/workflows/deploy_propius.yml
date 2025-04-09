@@ -72,7 +72,9 @@ jobs:
             echo "[STEP 4] Ativando/criando ambiente virtual"
             if [ ! -d "venv" ]; then
               echo "  > venv não encontrado, criando"
-              python3 -m venv venv
+              echo "  > Instalando python3.8-venv"
+              apt install -y python3.8-venv || exit 1
+              python3 -m venv venv || exit 1
             fi
             source venv/bin/activate || exit 1
             echo "[✓] Ambiente virtual pronto"
