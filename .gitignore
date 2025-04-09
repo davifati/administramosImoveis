@@ -19,6 +19,8 @@ db
 *.tfstate
 *.tfstate.*
 
+**propius_deploy_key
+**propius_deploy_key.pub
 # Crash log files
 crash.log
 crash.*.log

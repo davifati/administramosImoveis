@@ -29,9 +29,11 @@ jobs:
 
       - name: Add known hosts
         run: |
+          echo "[STEP 0] Adicionando GitHub aos known_hosts do servidor"
           mkdir -p ~/.ssh
-          ssh-keyscan -H 212.56.42.99 >> ~/.ssh/known_hosts
+          ssh-keyscan -H github.com >> ~/.ssh/known_hosts
           chmod 644 ~/.ssh/known_hosts
+
 
       - name: Deploy Backend to CONTABO SERVER
         run: |
@@ -61,12 +63,9 @@ jobs:
             echo "  > Limpando diretório de projeto antigo (se existir)"
             rm -rf administramosImoveis
 
-            echo "  > Adicionando GitHub aos hosts confiáveis"
-            mkdir -p ~/.ssh
-            ssh-keyscan -H github.com >> ~/.ssh/known_hosts
-            chmod 644 ~/.ssh/known_hosts
-
             echo "  > Clonando repositório novamente do zero"
+            
+            GIT_SSH_COMMAND='ssh -i ~/.ssh/propius_deploy_key -o IdentitiesOnly=yes' \
             git clone --branch production git@github.com:davifati/administramosImoveis.git || {
               echo "  > Erro ao clonar o repositório"
               exit 1
@@ -148,4 +147,3 @@ jobs:
         run: |
           echo "Deploying Frontend to CONTABO SERVER"
 
-          
