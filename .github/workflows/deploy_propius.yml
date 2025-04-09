@@ -78,15 +78,6 @@ jobs:
             ls -la
 
             echo "[STEP 4] Instalando e configurando pyenv"
-            if ! command -v pyenv &> /dev/null; then
-              echo "  > Instalando pyenv"
-              curl https://pyenv.run | bash || exit 1
-              echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
-              echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
-              echo 'eval "$(pyenv init -)"' >> ~/.bashrc
-              source ~/.bashrc
-            fi
-
             echo "  > Instalando Python 3.12"
             sudo apt update
             sudo apt install -y python3.12 python3.12-venv || exit 1
