@@ -63,9 +63,7 @@ jobs:
               git clone https://${{ secrets.PROPIUS_SSH_PRIVATE_KEY }}@github.com/davifati/administramosImoveis.git . || exit 1
               git checkout production || exit 1s            
             else
-              echo "${{ secrets.GITHUB_TOKEN }}"
               echo "  > Repositório já existe, atualizando"
-              git remote set-url origin https://${{ secrets.GITHUB_TOKEN }}@github.com/davifati/administramosImoveis.git
               git fetch origin production || exit 1
               git reset --hard origin/production || exit 1
             fi
