@@ -83,22 +83,28 @@ jobs:
             sudo apt install -y make build-essential libssl-dev zlib1g-dev \
             libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
             libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev || exit 1
+            
             echo "  > Removendo instalação anterior do Pyenv"
             rm -rf /root/.pyenv || exit 1
+            
             echo "  > Instalando Pyenv"
             curl https://pyenv.run | bash || exit 1
 
             echo "  > Configurando Pyenv"
             echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
-            echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
-            echo 'eval "$(pyenv init -)"' >> ~/.bashrc
-            source ~/.bashrc
+            echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+            echo 'eval "$(pyenv init - bash)"' >> ~/.bashrc
+            echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
+            
+            # Ensure pyenv is available in current session
+            export PYENV_ROOT="$HOME/.pyenv"
+            [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+            eval "$(pyenv init - bash)"
+            eval "$(pyenv virtualenv-init -)"
 
-            echo "  > Removendo instalação anterior do Pyenv"
-            rm -rf /root/.pyenv || exit 1
             echo "  > Instalando Python 3.10 com Pyenv"
-            pyenv install 3.10.0 || exit 1
-            pyenv global 3.10.0 || exit 1
+            $PYENV_ROOT/bin/pyenv install 3.10.0 || exit 1
+            $PYENV_ROOT/bin/pyenv global 3.10.0 || exit 1
 
             echo "[STEP 5] Ativando/criando ambiente virtual"
             echo ""
