@@ -30,7 +30,7 @@ jobs:
       - name: Deploy Backend to CONTABO SERVER
         run: |
           echo "Deploying backend to CONTABO SERVER"
-          ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -l ${{ secrets.SSH_USER }} -v 212.56.42.99 << 'EOF'
+          ssh -o StrictHostKeyChecking=no root@212.56.42.99 << 'EOF'
             set -e
 
             echo "[STEP 1] Criando/entrando no diretório do projeto"
