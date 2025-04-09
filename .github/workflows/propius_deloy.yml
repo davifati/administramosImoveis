@@ -1,4 +1,4 @@
-name: Propius Deploy
+name: Propius Backend Deploy
 
 on:
   push:
@@ -23,22 +23,35 @@ jobs:
 
       - name: Deploy Backend to CONTABO SERVER
         run: |
-          ssh -o StrictHostKeyChecking=no username@your-contabo-server-ip << 'EOF'
+          echo "Deploying backend to CONTABO SERVER"
+          ssh -o StrictHostKeyChecking=no root@212.56.42.99 << 'EOF'
             # Defina o diretório onde o projeto será clonado/deployado
             PROJECT_DIR="/root/propius"
 
             # Crie a pasta se não existir
             if [ ! -d "$PROJECT_DIR" ]; then
-              echo "Criando diretório do projeto em: \$PROJECT_DsIR"
+              echo "Criando diretório do projeto em: \$PROJECT_DIR"
               mkdir -p "$PROJECT_DIR"
               cd "$PROJECT_DIR"
-              git clone git@github.com:seu-usuario/seu-repo.git .
+
+              # Garante que estamos em um repo Git válido
+              if [ ! -d ".git" ]; then
+                echo "Erro: o diretório não é um repositório Git."
+                exit 1
+              fi
+
+              #git clone git@github.com:davifati/administramosImoveis.git . || exit 1
+              git clone https://github.com/davifati/administramosImoveis.git . || exit 1
+              git checkout production || exit 1
+
             else
               cd "$PROJECT_DIR"
             fi
 
             # Atualize o código
-            git pull origin master || exit 1
+            git fetch origin production || exit 1
+            git checkout production || exit 1
+            git pull origin production || exit 1
 
             # Ative o ambiente virtual (ou crie se não existir)
             if [ ! -d "venv" ]; then
@@ -53,7 +66,7 @@ jobs:
             python manage.py migrate || exit 1
 
             # Colete arquivos estáticos
-            python manage.py collectstatic --noinput || exit 1
+            #python manage.py collectstatic --noinput || exit 1
 
             # Reinicie os serviços
 
