@@ -87,14 +87,14 @@ jobs:
               source ~/.bashrc
             fi
 
-            echo "  > Instalando Python 3.12 via pyenv"
-            pyenv install 3.12.0 || exit 1
-            pyenv global 3.12.0 || exit 1
+            echo "  > Instalando Python 3.12"
+            sudo apt update
+            sudo apt install -y python3.12 python3.12-venv || exit 1
 
             echo "\n[STEP 5] Ativando/criando ambiente virtual"
             if [ ! -d "venv" ]; then
               echo "  > venv não encontrado, criando"
-              python -m venv venv || exit 1
+              python3.12 -m venv venv || exit 1
             fi
             source venv/bin/activate || exit 1
             echo "\n[✓] Ambiente virtual pronto com Python 3.12"
