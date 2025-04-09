@@ -25,11 +25,12 @@ jobs:
         run: |
           mkdir -p ~/.ssh
           ssh-keyscan -H 212.56.42.99 >> ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
 
       - name: Deploy Backend to CONTABO SERVER
         run: |
           echo "Deploying backend to CONTABO SERVER"
-          ssh -v root@212.56.42.99 << 'EOF'
+          ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -v ${{ secrets.SSH_USER }}@212.56.42.99 << 'EOF'
             set -e
 
             echo "[STEP 1] Criando/entrando no diretório do projeto"
@@ -78,7 +79,7 @@ jobs:
             if [ ! -d "venv" ]; then
               echo "  > venv não encontrado, criando"
               echo "  > Instalando python3.8-venv"
-              #apt install -y python3.8-venv || exit 1
+              apt install -y python3.8-venv || exit 1
               python3 -m venv venv || exit 1
             fi
             source venv/bin/activate || exit 1
