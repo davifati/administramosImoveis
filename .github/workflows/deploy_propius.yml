@@ -66,7 +66,7 @@ jobs:
                 git pull origin production
             else
                 echo "  > Clonando repositório pela primeira vez"
-                git clone --branch production git@github.com:davifati/administramosImoveis.git . || exit 1
+                git clone --branch production git@github.com:davifati/administramosImoveis.git  || exit 1
             fi
                 
             echo "[✓] Código atualizado"
@@ -75,7 +75,7 @@ jobs:
             ls -la
 
             echo "[STEP 3] Entrando no diretório do projeto - propius/backend"
-            cd propius/backend
+            cd administramosImoveis/propius/backend || exit 1
 
             echo "Listing files in current directory:"
             ls -la
