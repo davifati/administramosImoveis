@@ -8,6 +8,8 @@ on:
     branches:
       - production
 
+# ssh -i ~/.ssh/propius_deploy_key root@212.56.42.99
+
 jobs:
   propius-deploy:
     runs-on: ubuntu-latest
