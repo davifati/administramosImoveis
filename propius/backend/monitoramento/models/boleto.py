@@ -12,6 +12,9 @@ class Boleto(BaseModelTimeStamped):
         verbose_name="Unidade",
         help_text="A unidade à qual o boleto pertence.",
     )
+
+    pasta = models.IntegerField(unique=True, verbose_name="Número da Pasta")
+
     data_vencimento = models.DateField(
         verbose_name="Data de Vencimento", help_text="Data de vencimento do boleto."
     )
@@ -28,6 +31,13 @@ class Boleto(BaseModelTimeStamped):
         unique=True,
         verbose_name="Linha Digitável",
         help_text="Linha digitável do boleto (única).",
+    )
+
+    origem = models.CharField(
+        max_length=255,
+        verbose_name="Origem",
+        help_text="Origem do boleto.",
+        default="",
     )
 
     link_pdf = models.URLField(

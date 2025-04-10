@@ -4,6 +4,7 @@ import sqlite3
 import pymysql
 import psycopg2
 import datetime
+import decimal
 import psycopg2.extras
 from django.core.management.base import BaseCommand
 from django.conf import settings
@@ -227,10 +228,12 @@ class Command(BaseCommand):
                     elif source_type == "postgresql":
                         data = dict(row)
 
-                    # Convert datetime objects to ISO format
+                    # Convert special types to JSON serializable format
                     for key, value in data.items():
-                        if isinstance(value, datetime.datetime):
+                        if isinstance(value, (datetime.datetime, datetime.date)):
                             data[key] = value.isoformat()
+                        elif isinstance(value, decimal.Decimal):
+                            data[key] = str(value)
 
                     fixture_data.append({"model": table, "fields": data})
 

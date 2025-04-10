@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo ""
+
+
+python manage.py load_adapted_fixture \
+--fixture mysql_fixture.json \
+--mapping mysql_to_models_mapping.json \
+--order "administradoracondominios,administracaocondominios" \
+--clear
