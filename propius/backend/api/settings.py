@@ -43,12 +43,10 @@ INSTALLED_APPS = [
     "django.contrib.sites",  # Para configurar o django-allauth
     "corsheaders",
     "drf_spectacular",
-    "tailwind",
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
     "allauth.socialaccount.providers.google",
-    "usuarios",
     "imoveis",
     "monitoramento",
     "financeiro",
@@ -117,7 +115,7 @@ TEMPLATES = [
     },
 ]
 
-AUTH_USER_MODEL = "usuarios.User"
+# AUTH_USER_MODEL = "usuarios.User"  # Comment out or remove this line
 
 WSGI_APPLICATION = "api.wsgi.application"
 
