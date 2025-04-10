@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "django.contrib.sites",  # Para configurar o django-allauth
     "corsheaders",
     "drf_spectacular",
+    "tailwind",
     "allauth",
     "allauth.account",
     "allauth.socialaccount",

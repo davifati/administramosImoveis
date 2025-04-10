@@ -5,24 +5,15 @@ from .administradora import Administradora
 
 class Condominio(BaseModelTimeStamped):
 
-    id_migracao = models.IntegerField(
-        unique=True,
-        null=True,
-        blank=True,
-        verbose_name="ID de migração",
-        help_text="ID único para acompanhamento de migrações",
+    # Add the proper ForeignKey relationship
+    administradora = models.ForeignKey(
+        Administradora,
+        on_delete=models.CASCADE,
+        related_name="condominios",
+        verbose_name="Administradora da qual o condomínio faz parte",
+        help_text="Refere-se à administradora responsável por esse condomínio.",
     )
-    administradoracondominio_id = models.IntegerField(
-        verbose_name="ID da administradora",
-        help_text="ID da administradora a qual o condomínio faz parte",
-    )
-    # administradora = models.ForeignKey(
-    #    Administradora,
-    #    on_delete=models.CASCADE,
-    #    related_name="condominios",
-    #    verbose_name="Administradora da qual o condomínio faz parte",
-    #    help_text="Refere-se à administradora responsável por esse condomínio.",
-    # )
+
     nome = models.CharField(max_length=200, verbose_name="Nome do Condomínio")
     endereco = models.CharField(max_length=200, verbose_name="Endereço")
 

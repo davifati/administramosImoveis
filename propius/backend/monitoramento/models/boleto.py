@@ -12,13 +12,7 @@ class Boleto(BaseModelTimeStamped):
     #    verbose_name="Unidade",
     #    help_text="A unidade à qual o boleto pertence.",
     # )
-    id_migracao = models.IntegerField(
-        unique=True,
-        null=True,
-        blank=True,
-        verbose_name="ID de migração",
-        help_text="ID único para acompanhamento de migrações",
-    )
+
     pasta = models.IntegerField(unique=True, verbose_name="Número da Pasta")
 
     data_vencimento = models.DateField(

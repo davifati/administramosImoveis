@@ -4,43 +4,41 @@ import json
 
 # Mapeamento entre colunas antigas e novas
 MAPEAMENTO_COLUNAS = {
-    # "administradoracondominios": {
-    #    "id": "id_migracao",
-    #    "nome": "nome",
-    #    "email": "email",
-    #    "site": "site",
-    #    "telefones": "telefone",
-    #    "created": "criado_em",
-    #    "updated": "atualizado_em",
-    # },
-    # "administracaocondominios": {
-    #    "id": "id_migracao",
-    #    "administradoracondominio_id": "administradoracondominio_id",
-    #    "nome": "nome",
-    #    "endereco": "endereco",
-    #    "numero": "numero",
-    #    "cep": "cep",
-    #    "email": "email",
-    #    "telefones": "telefone",
-    #    "created": "criado_em",
-    #    "updated": "atualizado_em",
-    # },
-    # "unidadecondominios": {
-    #    "id": "id_migracao",
-    #    "administracaocondominio_id": "administracaocondominio_id",
-    #    "bloco": "bloco",
-    #    "num_unidade": "unidade",
-    #    "cep": "cep",
-    #    "num_pasta": "pasta",
-    #   "documento_proprietario": "proprietario_documento",
-    #   "nome_proprietario": "proprietario_nome",
-    #    "login": "login",
-    #    "senha": "senha",
-    #    "created": "criado_em",
-    #    "updated": "atualizado_em",
-    # },
+    "administradoracondominios": {
+        "id": "id",
+        "nome": "nome",
+        "email": "email",
+        "site": "site",
+        "telefones": "telefone",
+        "created": "criado_em",
+    },
+    "administracaocondominios": {
+        "id": "id",
+        "administradoracondominio_id": "administradoracondominio_id",
+        "nome": "nome",
+        "endereco": "endereco",
+        "numero": "numero",
+        "cep": "cep",
+        "email": "email",
+        "telefones": "telefone",
+        "created": "criado_em",
+        "updated": "atualizado_em",
+    },
+    "unidadecondominios": {
+        "id": "id",
+        "administracaocondominio_id": "administracaocondominio_id",
+        "bloco": "bloco",
+        "num_unidade": "unidade",
+        "cep": "cep",
+        "num_pasta": "pasta",
+        "documento_proprietario": "proprietario_documento",
+        "nome_proprietario": "proprietario_nome",
+        "login": "login",
+        "senha": "senha",
+        "created": "criado_em",
+    },
     "scrapercondominios": {
-        "id": "id_migracao",
+        "id": "id",
         "num_pasta": "pasta",
         "data_vencimento": "data_vencimento",
         "vlr_boleto": "valor",
@@ -49,7 +47,7 @@ MAPEAMENTO_COLUNAS = {
         "link_pdf_boleto": "link_pdf",
         "endereco_imovel": "endereco",
         "created": "criado_em",
-    }
+    },
 }
 
 
@@ -97,7 +95,9 @@ def inserir_json_em_sqlite(caminho_json, nome_tabela, db_path="meubanco.db"):
                 agora = datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
                 campos_mapeados["atualizado_em"] = agora
                 campos_mapeados["criado_em"] = agora
-                campos_mapeados["status"] = "vencido"
+
+                if model == "scrapercondominios":
+                    campos_mapeados["status"] = "vencido"
 
                 colunas = ", ".join(campos_mapeados.keys())
                 placeholders = ", ".join(["?" for _ in campos_mapeados])
@@ -132,10 +132,46 @@ def inserir_json_em_sqlite(caminho_json, nome_tabela, db_path="meubanco.db"):
 
 
 try:
-    inserir_json_em_sqlite(
-        caminho_json="fixtures/scrapercondominios.json",
-        nome_tabela="monitoramento_boleto",
-        db_path="db.sqlite3",
-    )
+    administradoracondominios = "imoveis_administradora"
+    administracaocondominios = "imoveis_condominio"
+    unidadecondominios = "imoveis_unidade"
+    scrapercondominios = "monitoramento_boleto"
+
+    try:
+        inserir_json_em_sqlite(
+            caminho_json="fixtures/administradoracondominios.json",
+            nome_tabela=administradoracondominios,
+            db_path="db.sqlite3",
+        )
+    except Exception as e:
+        print(f"Erro ao inserir dados na tabela {administradoracondominios}: {e}")
+
+    try:
+        inserir_json_em_sqlite(
+            caminho_json="fixtures/administracaocondominios.json",
+            nome_tabela=administracaocondominios,
+            db_path="db.sqlite3",
+        )
+    except Exception as e:
+        print(f"Erro ao inserir dados na tabela {administracaocondominios}: {e}")
+
+    try:
+        inserir_json_em_sqlite(
+            caminho_json="fixtures/unidadecondominios.json",
+            nome_tabela=unidadecondominios,
+            db_path="db.sqlite3",
+        )
+    except Exception as e:
+        print(f"Erro ao inserir dados na tabela {administracaocondominios}: {e}")
+
+    try:
+        inserir_json_em_sqlite(
+            caminho_json="fixtures/scrapercondominios.json",
+            nome_tabela=scrapercondominios,
+            db_path="db.sqlite3",
+        )
+    except Exception as e:
+        print(f"Erro ao inserir dados na tabela {scrapercondominios}: {e}")
+
 except Exception as e:
     print(f"Erro ao executar o script: {e}")
