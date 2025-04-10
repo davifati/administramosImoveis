@@ -58,3 +58,41 @@ class BasePessoa(BaseModelTimeStamped):
 
     def __str__(self):
         return self.nome
+
+
+class BaseModelEndereco(models.Model):
+    logradouro = models.CharField(max_length=200, verbose_name="Logradouro")
+    numero = models.CharField(max_length=20, verbose_name="Número")
+    complemento = models.CharField(
+        max_length=200, blank=True, null=True, verbose_name="Complemento"
+    )
+    bairro = models.CharField(max_length=100, verbose_name="Bairro")
+    cidade = models.CharField(max_length=100, verbose_name="Cidade")
+    estado = models.CharField(max_length=2, verbose_name="Estado")
+    cep = models.CharField(max_length=9, verbose_name="CEP")
+
+    class Meta:
+        verbose_name = "Endereço"
+        verbose_name_plural = "Endereços"
+        ordering = ["estado", "cidade", "bairro", "logradouro"]
+
+    def __str__(self):
+        return f"{self.logradouro}, {self.numero} - {self.complemento} - {self.bairro} - {self.cidade} - {self.estado} - {self.cep}"
+
+
+class BaseTelefone(models.Model):
+    numero = models.CharField(max_length=20, verbose_name="Número do Telefone")
+    tipo = models.CharField(
+        max_length=20,
+        choices=[
+            ("celular", "Celular"),
+            ("whatsapp", "WhatsApp"),
+        ],
+        default="comercial",
+        verbose_name="Tipo",
+    )
+
+    class Meta:
+        abstract = True
+        verbose_name = "Telefone"
+        verbose_name_plural = "Telefones"

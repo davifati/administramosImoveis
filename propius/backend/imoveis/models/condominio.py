@@ -5,6 +5,7 @@ from .administradora import Administradora
 
 class Condominio(BaseModelTimeStamped):
 
+    # Add the proper ForeignKey relationship
     administradora = models.ForeignKey(
         Administradora,
         on_delete=models.CASCADE,
@@ -12,16 +13,17 @@ class Condominio(BaseModelTimeStamped):
         verbose_name="Administradora da qual o condomínio faz parte",
         help_text="Refere-se à administradora responsável por esse condomínio.",
     )
+
     nome = models.CharField(max_length=200, verbose_name="Nome do Condomínio")
     endereco = models.CharField(max_length=200, verbose_name="Endereço")
-    complemento = models.CharField(
-        max_length=200, blank=True, null=True, verbose_name="Complemento"
-    )
+
     numero = models.CharField(
         max_length=20, blank=True, null=True, verbose_name="Número do Imóvel"
     )
     cep = models.CharField(max_length=20, verbose_name="CEP")
-    email = models.EmailField(max_length=200, unique=True, verbose_name="E-mail")
+    email = models.CharField(
+        max_length=200, blank=True, null=True, verbose_name="E-mail"
+    )
     telefone = models.CharField(
         max_length=100, blank=True, null=True, verbose_name="Telefone"
     )

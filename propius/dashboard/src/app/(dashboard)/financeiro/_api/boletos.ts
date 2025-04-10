@@ -1,12 +1,12 @@
 
 import axios from "axios";
 import { IBoletoAcumuladoAdministradora } from "../_abstract/boleto";
-
+import { API_ENDPOINTS } from "@/endpoints";
 
 
 export const getBoletoAcumuladoAdministradora = async () => {
     try {
-        const url = `${process.env.NEXT_PUBLIC_API_HOST}/${process.env.NEXT_PUBLIC_ROTA_RANKING_BOLETOS}`;
+        const url = API_ENDPOINTS.FINANCEIRO_BOLETOS_RANKING;
         const response = await axios.get(url);
         return response.data as IBoletoAcumuladoAdministradora[];
     } catch (error) {

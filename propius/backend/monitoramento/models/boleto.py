@@ -5,13 +5,16 @@ from utils.abstract_model import BaseModelTimeStamped
 
 class Boleto(BaseModelTimeStamped):
 
-    unidade = models.ForeignKey(
-        Unidade,
-        on_delete=models.CASCADE,
-        related_name="boletos",  # Acesso aos boletos pela unidade
-        verbose_name="Unidade",
-        help_text="A unidade à qual o boleto pertence.",
-    )
+    # unidade = models.ForeignKey(
+    #    Unidade,
+    #    on_delete=models.CASCADE,
+    #    related_name="boletos",  # Acesso aos boletos pela unidade
+    #    verbose_name="Unidade",
+    #    help_text="A unidade à qual o boleto pertence.",
+    # )
+
+    pasta = models.IntegerField(unique=True, verbose_name="Número da Pasta")
+
     data_vencimento = models.DateField(
         verbose_name="Data de Vencimento", help_text="Data de vencimento do boleto."
     )
@@ -30,6 +33,13 @@ class Boleto(BaseModelTimeStamped):
         help_text="Linha digitável do boleto (única).",
     )
 
+    origem = models.CharField(
+        max_length=255,
+        verbose_name="Origem",
+        help_text="Origem do boleto.",
+        default="",
+    )
+
     link_pdf = models.URLField(
         max_length=255,
         blank=True,
@@ -46,8 +56,15 @@ class Boleto(BaseModelTimeStamped):
             ("cancelado", "Cancelado"),
             ("a vencer", "A Vencer"),
         ),
-        default="a vencer",
+        default="vencido",
         verbose_name="Status",
+    )
+
+    endereco = models.CharField(
+        max_length=255,
+        verbose_name="Endereço",
+        help_text="Endereço do boleto.",
+        default="",
     )
 
     class Meta:

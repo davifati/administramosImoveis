@@ -59,3 +59,33 @@ St. Louis (US-central)
 VNC IP and port: 209.126.5.91:63051
 VNC password: 963wBYNM
 login: root
+
+
+====
+
+
+'host' => '24.144.96.26',
+'login' => 'alugueseguro_admim',
+'password' => 'xGriWP!Ut#Hd1v9K',
+'database' => 'alugueseguro_admimo'
+
+
+python manage.py migrate_db \
+--source-type mysql \
+--host localhost \
+--database your_db \
+--user your_user \
+--password your_password \
+--output-file data.json
+
+python manage.py migrate_db \
+--source-type mysql \
+--host '24.144.96.26' \
+--database alugueseguro_admimo \
+--user 'alugueseguro_admim' \
+--password 'xGriWP!Ut#Hd1v9K' \
+--tables "administradoracondominios administracaocondominios" \
+--output-file mysql_fixture.json
+
+
+python manage.py migrate_db --source-type sqlite --source-file db.sqlite3 --output-file sqlite-data.json

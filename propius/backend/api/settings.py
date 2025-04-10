@@ -48,10 +48,10 @@ INSTALLED_APPS = [
     "allauth.account",
     "allauth.socialaccount",
     "allauth.socialaccount.providers.google",
-    "usuarios",
     "imoveis",
     "monitoramento",
     "financeiro",
+    "utils",  # Added utils app
 ]
 
 
@@ -116,7 +116,7 @@ TEMPLATES = [
     },
 ]
 
-AUTH_USER_MODEL = "usuarios.User"
+# AUTH_USER_MODEL = "usuarios.User"  # Comment out or remove this line
 
 WSGI_APPLICATION = "api.wsgi.application"
 
