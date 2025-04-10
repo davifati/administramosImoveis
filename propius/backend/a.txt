@@ -1,0 +1,77 @@
+Sample of fixture data:
+
+Model: administracaocondominios
+Total items: 274
+First item:
+{
+  "model": "administracaocondominios",
+  "fields": {
+    "id": 1,
+    "administradoracondominio_id": 1,
+    "nome": "Barra One",
+    "endereco": "Rua Jornalista Henrique Cordeiro     ",
+    "complemento_endereco": "",
+    "numero": "350",
+    "cep": "",
+    "email": "condominio@residencialbarraone.com.br",
+    "telefones": "2491-2636 / 97907-2552 (Nicole)",
+    "created": "2025-02-25T16:23:46",
+    "updated": "2025-02-25T16:23:46"
+  }
+}
+
+Model: administradoracondominios
+Total items: 93
+First item:
+{
+  "model": "administradoracondominios",
+  "fields": {
+    "id": 1,
+    "nome": "ABRJ",
+    "site": "https://abrj.superlogica.net/clients/areadocondomino",
+    "email": "marcele.triani@abrj.com.br;heloisa.silva@rochameirelles.com.br;contato@abrj.com.br",
+    "telefones": "3253 7001",
+    "created": "2025-02-25T16:23:46",
+    "updated": "2025-02-25T16:23:46",
+    "qtdeimoveis": null
+  }
+}
+
+Model: scrapercondominios
+Total items: 12
+First item:
+{
+  "model": "scrapercondominios",
+  "fields": {
+    "id": 1,
+    "num_pasta": "41",
+    "endereco_imovel": "Av das Acacias da Peninsula, Barra da Tijuca,  540, CEP: 22776-000 ",
+    "data_vencimento": "2024-12-10",
+    "vlr_boleto": "3505.06",
+    "linha_digitavel": "34191090084044361293884756840009699260000350506",
+    "nome_administradora": "protel",
+    "link_pdf_boleto": "http://212.56.42.99:5000/files/boleto_4e6a135519064b72bffb6b2ed8b0bde2.pdf",
+    "created": "2024-11-26T19:36:41"
+  }
+}
+
+Model: unidadecondominios
+Total items: 392
+First item:
+{
+  "model": "unidadecondominios",
+  "fields": {
+    "id": 1,
+    "administracaocondominio_id": 1,
+    "bloco": "2",
+    "num_unidade": "1403",
+    "cep": "",
+    "num_pasta": "308",
+    "documento_proprietario": "1391235711",
+    "nome_proprietario": "MARCELO VAZ DE T BOMBANA",
+    "login": "administrativo1@administramosimoveis.com.br",
+    "senha": "Seletto311",
+    "created": "2025-02-25T16:23:46",
+    "updated": "2025-02-25T16:23:46"
+  }
+}

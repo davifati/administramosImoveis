@@ -5,23 +5,34 @@ from .administradora import Administradora
 
 class Condominio(BaseModelTimeStamped):
 
-    administradora = models.ForeignKey(
-        Administradora,
-        on_delete=models.CASCADE,
-        related_name="condominios",
-        verbose_name="Administradora da qual o condomínio faz parte",
-        help_text="Refere-se à administradora responsável por esse condomínio.",
+    id_migracao = models.IntegerField(
+        unique=True,
+        null=True,
+        blank=True,
+        verbose_name="ID de migração",
+        help_text="ID único para acompanhamento de migrações",
     )
+    administradoracondominio_id = models.IntegerField(
+        verbose_name="ID da administradora",
+        help_text="ID da administradora a qual o condomínio faz parte",
+    )
+    # administradora = models.ForeignKey(
+    #    Administradora,
+    #    on_delete=models.CASCADE,
+    #    related_name="condominios",
+    #    verbose_name="Administradora da qual o condomínio faz parte",
+    #    help_text="Refere-se à administradora responsável por esse condomínio.",
+    # )
     nome = models.CharField(max_length=200, verbose_name="Nome do Condomínio")
     endereco = models.CharField(max_length=200, verbose_name="Endereço")
-    complemento = models.CharField(
-        max_length=200, blank=True, null=True, verbose_name="Complemento"
-    )
+
     numero = models.CharField(
         max_length=20, blank=True, null=True, verbose_name="Número do Imóvel"
     )
     cep = models.CharField(max_length=20, verbose_name="CEP")
-    email = models.EmailField(max_length=200, unique=True, verbose_name="E-mail")
+    email = models.CharField(
+        max_length=200, blank=True, null=True, verbose_name="E-mail"
+    )
     telefone = models.CharField(
         max_length=100, blank=True, null=True, verbose_name="Telefone"
     )

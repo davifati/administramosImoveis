@@ -7,8 +7,15 @@ class Administradora(BaseModelTimeStamped):
     Administradora é a empresa que gerencia os imóveis.
     """
 
+    id_migracao = models.IntegerField(
+        unique=True,
+        null=True,
+        blank=True,
+        verbose_name="ID de migração",
+        help_text="ID único para acompanhamento de migrações",
+    )
     nome = models.CharField(max_length=200, verbose_name="Nome")
-    email = models.EmailField(max_length=200, unique=True, verbose_name="E-mail")
+    email = models.CharField(max_length=200, blank=True, null=True, verbose_name="E-mail")
     site = models.URLField(max_length=200, blank=True, null=True, verbose_name="Site")
     # endereco = models.OneToOneField(
     #     BaseModelEndereco,
@@ -20,16 +27,16 @@ class Administradora(BaseModelTimeStamped):
     telefone = models.CharField(
         max_length=100, null=True, blank=True, verbose_name="Telefone"
     )
-    endereco = models.CharField(
-        max_length=100, null=True, blank=True, verbose_name="Endereço"
-    )
-    complemento = models.CharField(
-        max_length=100, null=True, blank=True, verbose_name="Complemento"
-    )
-    numero = models.CharField(
-        max_length=100, null=True, blank=True, verbose_name="Número"
-    )
-    cep = models.CharField(max_length=100, null=True, blank=True, verbose_name="CEP")
+    # endereco = models.CharField(
+    #     max_length=100, null=True, blank=True, verbose_name="Endereço"
+    # )
+    # complemento = models.CharField(
+    #     max_length=100, null=True, blank=True, verbose_name="Complemento"
+    # )
+    # numero = models.CharField(
+    #     max_length=100, null=True, blank=True, verbose_name="Número"
+    # )
+    # cep = models.CharField(max_length=100, null=True, blank=True, verbose_name="CEP")
 
     class Meta:
         verbose_name = "Administradora"
