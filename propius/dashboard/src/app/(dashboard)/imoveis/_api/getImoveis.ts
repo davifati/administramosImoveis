@@ -13,4 +13,3 @@ export const getImoveis = async () => {
         throw new Error('Erro ao buscar imóveis');
     }
 };
-

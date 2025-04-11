@@ -79,8 +79,8 @@ REST_FRAMEWORK = {
         "rest_framework_simplejwt.authentication.JWTAuthentication",
     ],
     "DEFAULT_PERMISSION_CLASSES": [
-        "rest_framework.permissions.IsAuthenticated",  # Garante que todas as rotas exijam autenticação
-        # "rest_framework.permissions.AllowAny"
+        # "rest_framework.permissions.IsAuthenticated",  # Garante que todas as rotas exijam autenticação
+        "rest_framework.permissions.AllowAny"
     ],
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
