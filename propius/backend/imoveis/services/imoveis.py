@@ -73,5 +73,57 @@ class ImoveisService:
                 "total_items": unit_paginator.count,
             },
         }
-
         return response_data
+
+    @staticmethod
+    def build_flat_imoveis_data():
+        """
+        Retorna uma lista com dicionários que representam cada unidade,
+        contendo campos flat da unidade, condomínio e administradora.
+        """
+        unidades = Unidade.objects.select_related(
+            "condominio", "condominio__administradora"
+        ).all()
+
+        flat_data = []
+
+        for unidade in unidades:
+            cond = unidade.condominio
+            adm = cond.administradora
+
+            item = {
+                # Unidade
+                "unidade_id": unidade.id,
+                "bloco": unidade.bloco,
+                "unidade_numero": unidade.unidade,
+                "proprietario_nome": unidade.proprietario_nome,
+                "proprietario_documento": unidade.proprietario_documento,
+                "login": unidade.login,
+                "senha": unidade.senha,
+                "pasta": unidade.pasta,
+                "unidade_cep": unidade.cep,
+                "unidade_criado_em": unidade.criado_em,
+                "unidade_atualizado_em": unidade.atualizado_em,
+                # Condominio
+                "condominio_id": cond.id,
+                "condominio_nome": cond.nome,
+                "condominio_endereco": cond.endereco,
+                "condominio_numero": cond.numero,
+                "condominio_cep": cond.cep,
+                "condominio_telefone": cond.telefone,
+                "condominio_email": cond.email,
+                "condominio_criado_em": cond.criado_em,
+                "condominio_atualizado_em": cond.atualizado_em,
+                # Administradora
+                "administradora_id": adm.id,
+                "administradora_nome": adm.nome,
+                "administradora_email": adm.email,
+                "administradora_telefone": adm.telefone,
+                "administradora_site": adm.site,
+                "administradora_criado_em": adm.criado_em,
+                "administradora_atualizado_em": adm.atualizado_em,
+            }
+
+            flat_data.append(item)
+
+        return flat_data

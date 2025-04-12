@@ -8,18 +8,20 @@ import ErrosChart from "./_components/ErrorsCharts"
 
 
 
-export default function Historico() {
+export default function FinanceiroHistoricoPage() {
     return (
         <div>
-
             < HistoricalExtractionCalendar />
             <Divider className="my-10" />
             <FailsExtractionTracker />
-            <Divider className="my-10" />
-            <ErrosChart />
+
 
 
 
         </div>
     )
 }
+
+//<FailsExtractionTracker />
+//<Divider className="my-10" />
+//<ErrosChart />

@@ -7,7 +7,7 @@ import { BoletosExtracaoInfo } from "@/data/abstract";
 import { getHistoricalExtractionCalendar } from "../../_api/historico";
 
 
-dayjs.locale("pt-br"); // Definindo a localidade como português
+dayjs.locale("pt-br"); 
 
 
 const HistoricalExtractionCalendar = () => {

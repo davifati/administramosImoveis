@@ -8,32 +8,56 @@ export const tableImoveisColumnsConfig = [
         },
     },
     {
-        header: 'Administração',
-        accessorKey: 'administracao',
+        header: 'Site',
+        accessorKey: 'site',
         enableSorting: true,
         meta: {
             align: 'text-left',
         },
     },
     {
-        header: 'Boleto',
-        accessorKey: 'boleto',
+        header: 'Telefone',
+        accessorKey: 'telefone',
         enableSorting: true,
         meta: {
             align: 'text-left',
         },
     },
     {
-        header: 'Data da Extração',
-        accessorKey: 'data_extracao_boletos',
+        header: 'Condomínio',
+        accessorKey: 'condominio',
         enableSorting: true,
         meta: {
             align: 'text-left',
         },
     },
     {
-        header: 'Estado',
-        accessorKey: 'estado',
+        header: 'Endereço',
+        accessorKey: 'endereco',
+        enableSorting: true,
+        meta: {
+            align: 'text-left',
+        },
+    },
+    {
+        header: 'Proprietário(a)',
+        accessorKey: 'proprietario',
+        enableSorting: true,
+        meta: {
+            align: 'text-left',
+        },
+    },
+    {
+        header: 'Data extração',
+        accessorKey: 'data_extracao',
+        enableSorting: true,
+        meta: {
+            align: 'text-left',
+        },
+    },
+    {
+        header: 'Data vencimento',
+        accessorKey: 'data_vencimento',
         enableSorting: true,
         meta: {
             align: 'text-left',
@@ -47,4 +71,5 @@ export const tableImoveisColumnsConfig = [
             align: 'text-left',
         },
     },
+
 ];

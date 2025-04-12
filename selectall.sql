@@ -1,3 +1,4 @@
+
 SELECT 
     administradora.id AS administradora_id,
     administradora.nome AS administradora_nome,
@@ -51,3 +52,5 @@ LEFT JOIN
 LEFT JOIN 
     scrapercondominios AS scraper ON administradora.id = scraper.id
 LIMIT 50;
+
+select * from administradoracondominios

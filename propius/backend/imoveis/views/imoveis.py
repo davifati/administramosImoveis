@@ -63,7 +63,7 @@ class ImoveisViewSet(viewsets.ViewSet):
         ],
         responses={200: AtivoImovelSerializer},
     )
-    @action(detail=False, methods=["get"], url_path="info")
+    @action(detail=False, methods=["get"], url_path="all-info")
     def info_ativos_imoveis(self, request) -> Response:
         """
         Retorna informações detalhadas de todos os ativos imobiliários, incluindo
@@ -82,6 +82,15 @@ class ImoveisViewSet(viewsets.ViewSet):
         response_data = self.ImoveisService.build_imoveis_info_paginated(
             page=page, page_size=page_size
         )
+        return Response(response_data, status=status.HTTP_200_OK)
+
+    @action(detail=False, methods=["get"], url_path="info")
+    def flat_info_ativos_imoveis(self, request) -> Response:
+        """
+        Retorna informações achatadas de todos os ativos imobiliários, incluindo
+        administradoras, condomínios e unidades.
+        """
+        response_data = self.ImoveisService.build_flat_imoveis_data()
         return Response(response_data, status=status.HTTP_200_OK)
 
     @action(detail=False, methods=["post"], url_path="cadastro")
