@@ -9,8 +9,8 @@ export const getHistoricalExtractionCalendar = async (): Promise<IExtracao[]> =>
         const response = await axios.get(url);
         return response.data as IExtracao[];
     } catch (error) {
-        console.error('Erro ao buscar falhas de boletos:', error);
-        throw new Error('Erro ao buscar falhas de boletos. Verifique o log para mais detalhes.');
+        console.error('Erro ao buscar calendário de extrações:', error);
+        throw new Error('Erro ao buscar calendário de extrações:');
     }
 };
 
@@ -22,8 +22,8 @@ export const getFailsExtractionTracker = async (): Promise<any> => {
 
         return response.data as any;
     } catch (error) {
-        console.error('Erro ao buscar falhas de boletos:', error);
-        throw new Error('Erro ao buscar falhas de boletos. Verifique o log para mais detalhes.');
+        console.error('Erro ao buscar estatísticas de falhas:', error);
+        throw new Error('Erro ao buscar estatísticas de falhas:');
     }
 };
 
@@ -35,7 +35,7 @@ export const getExtractionMonthlyStats = async (): Promise<any> => {
 
         return response.data as any;
     } catch (error) {
-        console.error('Erro ao buscar falhas de boletos:', error);
-        throw new Error('Erro ao buscar falhas de boletos. Verifique o log para mais detalhes.');
+        console.error('Erro ao buscar estatísticas de falhas:', error);
+        throw new Error('Erro ao buscar estatísticas de falhas:');
     }
 };
