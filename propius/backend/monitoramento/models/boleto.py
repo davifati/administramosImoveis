@@ -73,4 +73,10 @@ class Boleto(BaseModelTimeStamped):
         ordering = ["data_vencimento"]
 
     def __str__(self):
-        return f"Boleto {self.linha_digitavel} - {self.unidade}"
+        valor_formatado = (
+            f"{self.valor:,.2f}".replace(",", "v").replace(".", ",").replace("v", ".")
+        )
+        data_formatada = self.data_vencimento.strftime("%d/%m/%Y")
+        return (
+            f"Boleto do {self.origem.upper()}: R$ {valor_formatado} | {data_formatada}"
+        )

@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -31,6 +32,9 @@ ALLOWED_HOSTS = ["*"]  # TODO: change to specific host in production
 # Application definition
 
 INSTALLED_APPS = [
+    "admin_interface",
+    "colorfield",
+    "webpack_boilerplate",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -103,6 +107,7 @@ ROOT_URLCONF = "api.urls"
 
 TEMPLATES = [
     {
+        "DIRS": [BASE_DIR / "templates"],
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "APP_DIRS": True,
         "OPTIONS": {
@@ -115,6 +120,10 @@ TEMPLATES = [
         },
     },
 ]
+
+# Isso é necessário para produção, onde os arquivos estáticos serão armazenados
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+
 
 # AUTH_USER_MODEL = "usuarios.User"  # Comment out or remove this line
 
