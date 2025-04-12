@@ -1,37 +1,23 @@
 "use client";
-import { useEffect, useState } from "react";
-import axios from "axios";
+
+import { useState } from "react";
 import dayjs from "dayjs";
-import "dayjs/locale/pt-br"; // Importando a localidade em português
+import "dayjs/locale/pt-br";
 import { BoletosExtracaoInfo } from "@/data/abstract";
-import { getHistoricalExtractionCalendar } from "../../_api/historico";
 
+dayjs.locale("pt-br");
 
-dayjs.locale("pt-br"); 
-
-
-const HistoricalExtractionCalendar = () => {
-    const [extracoes, setExtracoes] = useState<BoletosExtracaoInfo[]>([]);
+const HistoricalExtractionCalendar = ({
+    extracoes,
+}: {
+    extracoes: BoletosExtracaoInfo[];
+}) => {
     const [selectedDate, setSelectedDate] = useState<string | null>(null);
     const [hoveredDate, setHoveredDate] = useState<string | null>(null);
     const [selectedMonthYear, setSelectedMonthYear] = useState<string>(
         dayjs().format("MM/YYYY")
     );
     const [selectedImobiliaria, setSelectedImobiliaria] = useState<string | "all">("all");
-
-    // Chamada à API para buscar as extrações
-    useEffect(() => {
-        const fetchExtracoes = async () => {
-            try {
-                const data = await getHistoricalExtractionCalendar();  // Chama a função que busca os dados da API
-                setExtracoes(data); // Atualiza o estado com as extrações obtidas
-            } catch (error) {
-                console.error("Erro ao buscar extracoes:", error);
-            }
-        };
-
-        fetchExtracoes();  // Invoca a função para buscar as extrações
-    }, []);
 
     const generateCalendar = () => {
         const [month, year] = selectedMonthYear.split("/").map(Number);
@@ -50,9 +36,8 @@ const HistoricalExtractionCalendar = () => {
         return calendar;
     };
 
-    // Função para verificar se uma data está no futuro
     const isFutureDate = (dateString: string): boolean => {
-        return dayjs(dateString).isAfter(dayjs(), 'day');
+        return dayjs(dateString).isAfter(dayjs(), "day");
     };
 
     const handleDateClick = (date: string) => {
@@ -80,45 +65,76 @@ const HistoricalExtractionCalendar = () => {
         if (!selectedDate) return null;
         const filteredExtracoes = getExtracoesByDate(selectedDate);
 
+        const columns = [
+            {
+                label: "Administradora",
+                render: (item: BoletosExtracaoInfo) => item.imobiliaria,
+            },
+            {
+                label: "Origem",
+                render: (item: BoletosExtracaoInfo) => item.origem || null,
+            },
+            {
+                label: "Condomínio",
+                render: (item: BoletosExtracaoInfo) => item.unidade || null,
+            },
+            {
+                label: "Última Extração",
+                render: (item: BoletosExtracaoInfo) =>
+                    dayjs(item.ultimaExtracao).format("DD/MM/YYYY"),
+            },
+            {
+                label: "Próxima Extração",
+                render: (item: BoletosExtracaoInfo) =>
+                    dayjs(item.proximaExtracao).format("DD/MM/YYYY"),
+            },
+            {
+                label: "Status",
+                render: (item: BoletosExtracaoInfo) => {
+                    const statusMap: Record<string, { label: string; color: string }> = {
+                        sucesso: { label: "Sucesso", color: "text-green-500" },
+                        falha: { label: "Falha", color: "text-red-500" },
+                        inatividade: { label: "Inatividade", color: "text-gray-500" },
+                    };
+                    const status = statusMap[item.status] || statusMap["inatividade"];
+                    return (
+                        <span className={`font-semibold ${status.color}`}>
+                            {status.label}
+                        </span>
+                    );
+                },
+            },
+        ];
+
         return (
             <div className="mt-4 p-4 bg-white rounded-lg shadow-md">
                 <h3 className="text-xl font-semibold text-gray-800">
-                    Detalhes da Extração para {selectedDate}
+                    Detalhes da Extração: {dayjs(selectedDate).format("DD/MM/YYYY")}
                 </h3>
                 <table className="min-w-full table-auto mt-4">
                     <thead className="bg-gray-100">
                         <tr>
-                            <th className="px-4 py-2 text-left text-gray-600">Imobiliária</th>
-                            <th className="px-4 py-2 text-left text-gray-600">Última Extração</th>
-                            <th className="px-4 py-2 text-left text-gray-600">Próxima Extração</th>
-                            <th className="px-4 py-2 text-left text-gray-600">Status</th>
+                            {columns.map((col, index) => (
+                                <th
+                                    key={index}
+                                    className="px-4 py-2 text-left text-gray-600"
+                                >
+                                    {col.label}
+                                </th>
+                            ))}
                         </tr>
                     </thead>
                     <tbody>
-                        {filteredExtracoes.map((BoletosExtracaoInfo, index) => (
+                        {filteredExtracoes.map((item, index) => (
                             <tr key={index} className="border-t">
-                                <td className="px-4 py-2 text-gray-800">{BoletosExtracaoInfo.imobiliaria}</td>
-                                <td className="px-4 py-2 text-gray-800">
-                                    {new Date(BoletosExtracaoInfo.ultimaExtracao).toLocaleDateString()}
-                                </td>
-                                <td className="px-4 py-2 text-gray-800">
-                                    {new Date(BoletosExtracaoInfo.proximaExtracao).toLocaleDateString()}
-                                </td>
-                                <td className="px-4 py-2">
-                                    <span
-                                        className={`font-semibold ${BoletosExtracaoInfo.status === "sucesso"
-                                            ? "text-green-500"
-                                            : BoletosExtracaoInfo.status === "falha"
-                                                ? "text-red-500"
-                                                : "text-gray-500"}`}
+                                {columns.map((col, colIndex) => (
+                                    <td
+                                        key={colIndex}
+                                        className="px-4 py-2 text-gray-800"
                                     >
-                                        {BoletosExtracaoInfo.status === "sucesso"
-                                            ? "Sucesso"
-                                            : BoletosExtracaoInfo.status === "falha"
-                                                ? "Falha"
-                                                : "Inatividade"}
-                                    </span>
-                                </td>
+                                        {col.render(item)}
+                                    </td>
+                                ))}
                             </tr>
                         ))}
                     </tbody>
@@ -126,6 +142,7 @@ const HistoricalExtractionCalendar = () => {
             </div>
         );
     };
+
 
     const handleMonthYearChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         const selectedValue = event.target.value;
@@ -146,16 +163,14 @@ const HistoricalExtractionCalendar = () => {
                     Visão Histórica de Captura de Boletos
                 </h2>
 
-                {/* Filtros ao lado direito do título */}
                 <div className="flex space-x-4">
-                    {/* Filtro de Mês/Ano */}
                     <select
                         className="p-2 border rounded-md"
                         value={selectedMonthYear}
                         onChange={handleMonthYearChange}
                     >
                         {Array.from({ length: 12 }, (_, index) => {
-                            const month = dayjs().subtract(index, 'months');
+                            const month = dayjs().subtract(index, "months");
                             const monthString = month.format("MM/YYYY");
                             return (
                                 <option key={monthString} value={monthString}>
@@ -165,21 +180,19 @@ const HistoricalExtractionCalendar = () => {
                         })}
                     </select>
 
-                    {/* Filtro de Imobiliária */}
                     <select
                         className="p-2 border rounded-md w-auto"
                         value={selectedImobiliaria}
                         onChange={handleImobiliariaChange}
                     >
                         <option value="all">Todas</option>
-                        {/* @ts-ignore */}
-                        {[...new Set(extracoes.map(
-                            (BoletosExtracaoInfo) => BoletosExtracaoInfo.imobiliaria))]
-                            .map((imobiliaria) => (
+                        {[...new Set(extracoes.map((BoletosExtracaoInfo) => BoletosExtracaoInfo.imobiliaria))].map(
+                            (imobiliaria) => (
                                 <option key={imobiliaria} value={imobiliaria}>
                                     {imobiliaria}
                                 </option>
-                            ))}
+                            )
+                        )}
                     </select>
                 </div>
             </div>
@@ -200,24 +213,22 @@ const HistoricalExtractionCalendar = () => {
                     const isAllSucesso = extracaoStatus.every(
                         (BoletosExtracaoInfo) => BoletosExtracaoInfo.status === "sucesso"
                     );
-                    const status =
-                        hasFalha
-                            ? "text-red-500"
-                            : isAllSucesso
-                                ? "text-green-500"
-                                : "text-gray-600";
+                    const status = hasFalha
+                        ? "text-red-500"
+                        : isAllSucesso
+                            ? "text-green-500"
+                            : "text-gray-600";
 
                     return (
                         <div
                             key={index}
                             className={`w-12 h-12 flex items-center justify-center mx-2 my-2 rounded-lg cursor-pointer
-                ${isFutureDate(date || '') ? 'opacity-50 cursor-not-allowed' : ''}`}
+                ${isFutureDate(date || "") ? "opacity-50 cursor-not-allowed" : ""}`}
                             onClick={() => handleDateClick(date || "")}
                             onMouseEnter={() => handleDateHover(date || "")}
                             onMouseLeave={() => setHoveredDate(null)}
                             style={{
-                                backgroundColor:
-                                    date === hoveredDate ? "#f3f4f6" : "transparent",
+                                backgroundColor: date === hoveredDate ? "#f3f4f6" : "transparent",
                             }}
                         >
                             {date && (
