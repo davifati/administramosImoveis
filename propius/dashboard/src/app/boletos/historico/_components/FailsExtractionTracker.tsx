@@ -1,44 +1,17 @@
-"use client"
-
-import { EstatisticasFalhasProps } from "@/data/abstract";
 import { AlertCircle } from "lucide-react";
-import { useState, useEffect } from "react";
-import { getFailsExtractionTracker } from "../../_api/historico";
+import { EstatisticaImobiliaria, EstatisticasFalhasProps } from "../../_abstract/boletos";
+
+
+interface FailsExtractionTrackerProps extends EstatisticasFalhasProps {
+    data: EstatisticaImobiliaria[];
+}
 
 const FailsExtractionTracker = ({
     titulo = "Estatísticas de Falhas",
     mostrarTotal = true,
-}: EstatisticasFalhasProps) => {
-
-    const [dados, setDados] = useState<any[]>([]);
-    const [ordenacao, setOrdenacao] = useState<"desc" | "asc">("desc");
-    const [imobiliariaSelecionada, setImobiliariaSelecionada] = useState<string | null>(null);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await getFailsExtractionTracker();
-                setDados(response);
-            } catch (error) {
-                console.error("Erro ao buscar dados de falhas:", error);
-            }
-        };
-        fetchData();
-    }, []);
-
-    const dadosOrdenados = [...dados].sort((a, b) => {
-        return ordenacao === "desc" ?
-            b.taxaFalha - a.taxaFalha :
-            a.taxaFalha - b.taxaFalha;
-    });
-
-    const handleImobiliariaClick = (imobiliariaNome: string) => {
-        if (imobiliariaSelecionada === imobiliariaNome) {
-            setImobiliariaSelecionada(null);
-        } else {
-            setImobiliariaSelecionada(imobiliariaNome);
-        }
-    };
+    data,
+}: FailsExtractionTrackerProps) => {
+    const dadosOrdenados = [...data].sort((a, b) => b.taxaFalha - a.taxaFalha);
 
     return (
         <div className="w-full bg-white shadow-lg rounded-lg p-6">
@@ -49,10 +22,7 @@ const FailsExtractionTracker = ({
             <div className="space-y-4 mt-4">
                 {dadosOrdenados.map((imob) => (
                     <div key={imob.nome} className="space-y-2">
-                        <div
-                            className="flex justify-between items-center cursor-pointer"
-                            onClick={() => handleImobiliariaClick(imob.nome)}
-                        >
+                        <div className="flex justify-between items-center">
                             <span className="font-medium">{imob.nome}</span>
                             <span className={`font-bold ${imob.taxaFalha > 15 ? "text-red-500" : "text-orange-500"}`}>
                                 {imob.taxaFalha}%
@@ -67,26 +37,6 @@ const FailsExtractionTracker = ({
                         {mostrarTotal && (
                             <div className="text-sm text-gray-500">
                                 {imob.falhas} falhas em {imob.totalExtracoes} extrações
-                            </div>
-                        )}
-                        {imobiliariaSelecionada === imob.nome && (
-                            <div className="mt-4">
-                                <table className="min-w-full table-auto">
-                                    <thead>
-                                        <tr>
-                                            <th className="px-4 py-2 border">Data</th>
-                                            <th className="px-4 py-2 border">Falhas</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {imob.dadosFalhas.map((falha, index) => (
-                                            <tr key={index}>
-                                                <td className="px-4 py-2 border">{falha.data}</td>
-                                                <td className="px-4 py-2 border">{falha.motivo}</td>
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
                             </div>
                         )}
                     </div>

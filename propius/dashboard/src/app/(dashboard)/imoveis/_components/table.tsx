@@ -87,7 +87,7 @@ export default function ImoveisTable({ data }: { data: any }) {
             {/* Botão Exportar CSV */}
             <div className="flex justify-end mb-4">
                 <Button
-                    onClick={() => exportToCSV(table.getRowModel().rows, tableImoveisColumnsConfig)}
+                    onClick={() => exportToCSV(data, tableImoveisColumnsConfig)}
                     className="font-medium text-center text-white bg-blue-500 rounded-md hover:bg-blue-600 transition duration-300"
                 >
                     Exportar

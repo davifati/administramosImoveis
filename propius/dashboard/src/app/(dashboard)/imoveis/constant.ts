@@ -47,29 +47,5 @@ export const tableImoveisColumnsConfig = [
             align: 'text-left',
         },
     },
-    {
-        header: 'Data extração',
-        accessorKey: 'data_extracao',
-        enableSorting: true,
-        meta: {
-            align: 'text-left',
-        },
-    },
-    {
-        header: 'Data vencimento',
-        accessorKey: 'data_vencimento',
-        enableSorting: true,
-        meta: {
-            align: 'text-left',
-        },
-    },
-    {
-        header: 'Status',
-        accessorKey: 'status',
-        enableSorting: true,
-        meta: {
-            align: 'text-left',
-        },
-    },
 
 ];

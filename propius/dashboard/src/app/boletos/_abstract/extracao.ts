@@ -17,3 +17,11 @@ export interface IFalhaBotImobiliaria {
     taxaFalha: number;
     dadosFalhas: DadoFalha[];
 }
+
+export interface ExecucaoBot {
+    administradora: string;
+    condominio: string;
+    ultima_execucao: string;
+    proxima_execucao: string;
+    status: "Sucesso" | "Falha";
+}

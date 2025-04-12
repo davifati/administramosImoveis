@@ -36,7 +36,6 @@ export default function Layout({
         <div className="bg-white p-4 sm:p-6 lg:rounded-lg lg:border lg:border-gray-200 dark:bg-gray-925 lg:dark:border-gray-900">
           <Header title="Imóveis" />
 
-
           <TabNavigation className="mt-6">
             {navigationSettings.map((item) => (
               <TabNavigationLink

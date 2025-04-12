@@ -1,16 +1,23 @@
 import dayjs from "dayjs";
 import "dayjs/locale/pt-br";
 import HistoricalExtractionCalendar from "./_components/HistoricalExtractionCalendar";
-import { getHistoricalExtractionCalendar } from "../_api/historico";
+import { getExtractionMonthlyStats, getFailsExtractionTracker, getHistoricalExtractionCalendar } from "../_api/historico";
 import FailsExtractionTracker from "./_components/FailsExtractionTracker";
 import { Divider } from "@/components/Divider";
 import ErrosChart from "./_components/ErrorsCharts";
+import { EstatisticaImobiliaria, MonthlyStats } from "../_abstract/boletos";
+
 
 dayjs.locale("pt-br");
 
-const FinanceiroHistoricoPage = async () => {
+
+const HistoricalMonitorBoletoPage = async () => {
 
     const historicalExtractions = await getHistoricalExtractionCalendar();
+    const monthlyBoletosExtractionFails: MonthlyStats[] = await getExtractionMonthlyStats()
+    const totallyFailsExtractionTracker: EstatisticaImobiliaria[] = await getFailsExtractionTracker()
+
+    console.log("@@@ ", totallyFailsExtractionTracker)
 
     return (
         <div className="p-4">
@@ -18,14 +25,14 @@ const FinanceiroHistoricoPage = async () => {
 
             <Divider className="my-10" />
 
-            <FailsExtractionTracker />
+            <FailsExtractionTracker data={totallyFailsExtractionTracker} mostrarTotal />
 
             <Divider className="my-10" />
 
-            <ErrosChart />
+            <ErrosChart data={monthlyBoletosExtractionFails} />
         </div>
     );
 };
 
 
-export default FinanceiroHistoricoPage;
+export default HistoricalMonitorBoletoPage;

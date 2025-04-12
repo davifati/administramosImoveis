@@ -10,4 +10,4 @@ class BoletoViewSet(viewsets.ModelViewSet):
 
     queryset = Boleto.objects.all()
     serializer_class = BoletoSerializer
-    permission_classes = [IsAuthenticated]
+    #permission_classes = [IsAuthenticated]

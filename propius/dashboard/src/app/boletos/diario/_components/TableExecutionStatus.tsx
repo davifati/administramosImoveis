@@ -46,8 +46,26 @@ export default function TabelaExecucao() {
             header: "Administradora",
         },
         {
-            accessorKey: "dataExecucao",
-            header: "Data de Execução",
+            accessorKey: "condominio",
+            header: "Condomínio",
+        },
+        {
+            accessorKey: "ultima_execucao",
+            header: "Última Execução",
+            cell: ({ getValue }) => {
+                const data = new Date(getValue());
+                return data.toLocaleString("pt-BR", {
+                    day: "2-digit",
+                    month: "2-digit",
+                    year: "numeric",
+                    hour: "2-digit",
+                    minute: "2-digit",
+                });
+            },
+        },
+        {
+            accessorKey: "proxima_execucao",
+            header: "Próxima Execução",
             cell: ({ getValue }) => {
                 const data = new Date(getValue());
                 return data.toLocaleString("pt-BR", {
@@ -73,25 +91,6 @@ export default function TabelaExecucao() {
                     >
                         {status}
                     </span>
-                );
-            },
-        },
-        {
-            accessorKey: "estatisticaFalhas",
-            header: "Estatística de Falhas",
-            cell: ({ getValue }) => {
-                const falha = getValue();
-                return (
-                    <div className="flex items-center">
-                        <div className="relative w-24 h-3 bg-gray-200 rounded-full overflow-hidden">
-                            <div
-                                className={`h-full transition-all ${parseInt(falha) > 10 ? "bg-red-500" : "bg-green-500"
-                                    }`}
-                                style={{ width: falha }}
-                            ></div>
-                        </div>
-                        <span className="ml-2 text-sm">{falha}</span>
-                    </div>
                 );
             },
         },

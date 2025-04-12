@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { IExtracao } from '../_abstract/extracao';
 import { API_ENDPOINTS } from '@/endpoints';
+import { ErrosChartProps, EstatisticaImobiliaria, MonthlyStats } from '../_abstract/boletos';
 
 
 export const getHistoricalExtractionCalendar = async (): Promise<IExtracao[]> => {
@@ -15,12 +16,11 @@ export const getHistoricalExtractionCalendar = async (): Promise<IExtracao[]> =>
 };
 
 
-export const getFailsExtractionTracker = async (): Promise<any> => {
+export const getFailsExtractionTracker = async (): Promise<EstatisticaImobiliaria[]> => {
     try {
-        const url = `${process.env.NEXT_PUBLIC_API_HOST}/${process.env.NEXT_PUBLIC_ROTA_RELATORIO_EXTRACAO_ESTATISTICA_FALHAS}`;
+        const url = API_ENDPOINTS.MONITORAMENTO_ESTATISTICA_TOTAIS_FALHAS;
         const response = await axios.get(url);
-
-        return response.data as any;
+        return response.data;
     } catch (error) {
         console.error('Erro ao buscar estatísticas de falhas:', error);
         throw new Error('Erro ao buscar estatísticas de falhas:');
@@ -28,11 +28,10 @@ export const getFailsExtractionTracker = async (): Promise<any> => {
 };
 
 
-export const getExtractionMonthlyStats = async (): Promise<any> => {
+export const getExtractionMonthlyStats = async (): Promise<MonthlyStats[]> => {
     try {
-        const url = `${process.env.NEXT_PUBLIC_API_HOST}/${process.env.NEXT_PUBLIC_ROTA_RELATORIO_HISTORICO_EXTRACAO_CAPTURA_BOLETOS}`;
+        const url = API_ENDPOINTS.MONITORAMENTO_ESTATISTICAS_MENSAIS_RESUMO_FALHAS;
         const response = await axios.get(url);
-
         return response.data as any;
     } catch (error) {
         console.error('Erro ao buscar estatísticas de falhas:', error);

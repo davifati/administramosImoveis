@@ -12,9 +12,49 @@ from drf_spectacular.utils import extend_schema
 
 @extend_schema(
     tags=["Monitoramento de Cronograma de Execução"],
-    summary="Cronograma de execução dos bots",
+    summary="Mock de cronograma de execução dos bots",
 )
 class CronogramaExecucaoBotsView(APIView):
+    def get(self, request):
+        mock_data = [
+            {
+                "administradora": "Alpha Gestão",
+                "condominio": "Alpha Gestão",
+                "ultima_execucao": "2024-03-30T14:30:00",
+                "proxima_execucao": "2024-03-30T14:30:00",
+                "status": "Sucesso",
+            },
+            {
+                "administradora": "Alpha Gestão 2",
+                "condominio": "Alpha Gestão",
+                "ultima_execucao": "2024-03-30T14:30:00",
+                "proxima_execucao": "2024-03-30T14:30:00",
+                "status": "Sucesso",
+            },
+            {
+                "administradora": "Alpha Gestão 3",
+                "condominio": "Alpha Gestão",
+                "ultima_execucao": "2024-03-30T14:30:00",
+                "proxima_execucao": "2024-03-30T14:30:00",
+                "status": "Sucesso",
+            },
+            {
+                "administradora": "Alpha Gestão 4 ",
+                "condominio": "Alpha Gestão",
+                "ultima_execucao": "2024-03-30T14:30:00",
+                "proxima_execucao": "2024-03-30T14:30:00",
+                "status": "Sucesso",
+            },
+        ]
+
+        return Response(mock_data)
+
+
+@extend_schema(
+    tags=["Monitoramento de Cronograma de Execução"],
+    summary="Cronograma de execução dos bots",
+)
+class CronogramaExecucaoBotsView_DB(APIView):
     def get(self, request):
         administradoras = Administradora.objects.all()
         data_execucao = "2024-03-30T14:30:00"
