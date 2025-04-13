@@ -1,8 +1,17 @@
-import { NextConfig } from 'next';
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   images: {
-    unoptimized: true, // Imagens não otimizadas para exportação
+    unoptimized: true,
+  },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/boletos/diario',
+        permanent: true, // ou false se preferir
+      },
+    ];
   },
 };
 
