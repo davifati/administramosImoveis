@@ -1,3 +1,4 @@
+import { Divider } from "@/components/Divider";
 import BoletoAreaGraph from "./_components/BoletoAreaGraph"
 import RankingBoletos from "./_components/RankingBills"
 import RemessaGenerator from "./_components/RemessaBancaria";
@@ -10,9 +11,13 @@ export default function Page() {
       <div className="space-y-12">
 
         < RankingBoletos />
+        <Divider />
+
         < StatusKPI />
+        <Divider />
+
         < BoletoAreaGraph />
-        < RemessaGenerator />
+
 
       </div>
     </section>

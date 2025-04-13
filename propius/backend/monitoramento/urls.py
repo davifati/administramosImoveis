@@ -11,6 +11,7 @@ from monitoramento.views.falhas import (
     FailsExtractionTrackerAPIView,
     MonthlyStatsView,
 )
+from monitoramento.views.admin_graph import admin_grafico_boletos
 
 router = DefaultRouter()
 router.register(r"boletos", BoletoViewSet)
@@ -45,4 +46,5 @@ urlpatterns = [
         CronogramaExecucaoBotsView.as_view(),
         name="cronograma-execucao",
     ),
+    path("admin/grafico-boletos/", admin_grafico_boletos, name="admin_grafico_boletos"),
 ]

@@ -1,8 +1,14 @@
-export interface IImovel {
+export interface ImovelTableRow {
     administradora: string;
-    administracao: string;
-    boleto: number;
-    data_extracao_boletos: string;
-    estado: string;
-    status: string | null;
+    site: string;
+    telefone: string;
+    condominio: string;
+    endereco: string;
+    proprietario: string;
+    data_extracao: string;
+    data_vencimento: string;
+    status: string;
+    origem_extracao: string;
+    valor_boleto: string;
 }
+

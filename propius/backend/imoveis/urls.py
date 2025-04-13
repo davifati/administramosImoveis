@@ -1,6 +1,6 @@
 from django.urls import include, path
 from rest_framework.routers import DefaultRouter
-from imoveis.views.ativos_locaticios import AtivosLocaticiosViewSet
+from imoveis.views.imoveis import ImoveisViewSet
 from imoveis.views.administradora import AdministradoraViewSet
 from imoveis.views.condominio import CondominioViewSet
 from imoveis.views.unidade import UnidadeViewSet
@@ -13,7 +13,7 @@ router.register(
 )
 router.register(r"condominios", CondominioViewSet, basename="ativos-condominios")
 router.register(r"unidades", UnidadeViewSet, basename="ativos-unidades")
-router.register(r"ativos-imobiliarios", AtivosLocaticiosViewSet, basename="ativos-locaticios")
+router.register(r"ativos-imobiliarios", ImoveisViewSet, basename="ativos-locaticios")
 
 
 urlpatterns = [

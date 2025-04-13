@@ -17,9 +17,9 @@ export const siteConfig = {
       users: "/operacional/users",
     },
     monitor: {
-      historicalView: "/operacional/historico",
-      dailyView: "/operacional/diario",
-      alarm: "/operacional/alertas",
+      historicalView: "/boletos/historico",
+      dailyView: "/boletos/diario",
+      alarm: "/boletos/alertas",
     },
     admin: `${process.env.NEXT_PUBLIC_API_HOST}/admin`,
     users: "/admin/usuarios",

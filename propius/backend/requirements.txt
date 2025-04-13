@@ -18,3 +18,5 @@ pandas
 pymysql>=1.1.0
 psycopg2-binary>=2.9.9 
 pymysql
+django-admin-interface
+python-webpack-boilerplate
