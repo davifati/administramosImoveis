@@ -72,11 +72,11 @@ const HistoricalExtractionCalendar = ({
             },
             {
                 label: "Origem",
-                render: (item: BoletosExtracaoInfo) => item.origem || null,
+                render: (item: BoletosExtracaoInfo) => item.imobiliaria || null,
             },
             {
                 label: "Condomínio",
-                render: (item: BoletosExtracaoInfo) => item.unidade || null,
+                render: (item: BoletosExtracaoInfo) => item.imobiliaria || null,
             },
             {
                 label: "Última Extração",
