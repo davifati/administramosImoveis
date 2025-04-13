@@ -7,22 +7,20 @@ import {
   Compass,
   FileWarningIcon,
   HouseIcon,
-  PanelRightClose,
-  PanelRightOpen,
   PhoneCall,
   Settings2Icon,
 } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { UserProfileDesktop, UserProfileMobile } from "./UserProfile"
+import { UserProfileDesktop } from "./UserProfile"
 import { Logo } from "../Logo"
-import { saasName } from "@/app/constant"
+
 
 export const navigation = [
   {
-    name: "Imóveis",
-    href: siteConfig.baseLinks.imoveis,
-    icon: HouseIcon,
+    name: "Boletos",
+    href: siteConfig.baseLinks.monitor.dailyView,
+    icon: FileWarningIcon,
   },
   {
     name: "Financeiro",
@@ -30,11 +28,10 @@ export const navigation = [
     icon: BarChartBig
   },
   {
-    name: "Boletos",
-    href: siteConfig.baseLinks.monitor.dailyView,
-    icon: FileWarningIcon,
+    name: "Imóveis",
+    href: siteConfig.baseLinks.imoveis,
+    icon: HouseIcon,
   },
-
 ] as const
 
 export const adminNavigation = [
