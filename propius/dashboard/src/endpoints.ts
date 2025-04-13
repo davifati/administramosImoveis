@@ -31,7 +31,6 @@ const ENDPOINTS = {
     MONITORAMENTO_CRONOGRAMA_EXECUCAO: `${process.env.NEXT_PUBLIC_API_HOST}/${process.env.NEXT_PUBLIC_ENDPOINT_MONITORAMENTO_CRONOGRAMA_EXECUCAO}` || null
 };
 
-
 export const getApiEndpoints = () => {
     const nullEndpoints = Object.entries(ENDPOINTS)
         .filter(([key, value]) => value === null)
